@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           return <C.NavbarItem key={index}>{item}</C.NavbarItem>;
         })}
       </C.Navbar>
-      <Button text="Fale conosco" />
+      <Button text="Entre em contato!" />
     </C.Container>
   );
 };
