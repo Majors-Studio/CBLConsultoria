@@ -3,8 +3,7 @@ import * as C from "./styles";
 import Image from "next/image";
 import { Subtitle, Title } from "@/components";
 
-import bgImg from "../../../public/assets/images/bgAbout.jpg";
-// import { Container } from './styles';
+import bgImg from "../../../public/assets/images/bgImg.jpg";
 
 const about: React.FC = () => {
   return (
