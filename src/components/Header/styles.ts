@@ -14,6 +14,7 @@ export const Logo = styled.img`
   width: 200px;
   margin-top: 20px;
   height: 100%;
+  max-height: 200px;
   object-fit: cover;
   background-position: center;
   background-size: cover;

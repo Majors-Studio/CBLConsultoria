@@ -1,17 +1,19 @@
-import React from 'react';
+import { Header } from "@/components";
+import React from "react";
 
 // import { Container } from './styles';
 
-
 interface LayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({children}) => {
-    return <div>
-    layout
-    {children}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div>
+      <Header />
+      {children}
     </div>
-}
+  );
+};
 
 export default Layout;

@@ -1,8 +1,8 @@
-import "@/styles/global.css"
-import type { AppProps } from "next/app"
-import React from "react"
-import Head from "next/head"
-import Layout from "@/layout"
+import "@/styles/global.css";
+import type { AppProps } from "next/app";
+import React from "react";
+import Head from "next/head";
+import Layout from "@/layout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,5 +17,5 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </>
-  )
+  );
 }
