@@ -36,7 +36,15 @@ const about: React.FC = () => {
 
       <C.FlexCol>
         <Title fontSize="36px" fontWeight="bold" text="Conheça a D.Andrade" />
-        <C.Video />
+        <iframe
+          style={{ marginBottom: "20px", marginTop: "20px" }}
+          allowFullScreen
+          uk-video="automute: true"
+          width="70%"
+          height="600px"
+          uk-responsive
+          src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
+        ></iframe>
       </C.FlexCol>
 
       <C.JustifyBetween>
