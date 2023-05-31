@@ -1,8 +1,24 @@
-import React from "react"
+"use client";
 
-
-const Button: React.FC = () => {
-  return <div>buttoa</div>
+import React from "react";
+import * as C from "./styles";
+export interface iButton {
+  bgColor?: string;
+  color?: string;
+  fontWeight?: string;
+  bgHover?: string;
+  text?: string;
+  padding?: string;
 }
 
-export default Button
+const Button: React.FC<iButton> = ({
+  text,
+  bgColor,
+  color,
+  fontWeight,
+  bgHover,
+}) => {
+  return <C.Button bgColor="#7a4726">{text}</C.Button>;
+};
+
+export default Button;
