@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-interface TitleProps {
-  fontSize: string;
+export interface iTitle {
+  fontSize?: string;
 }
 
-export const Title = styled.h1<TitleProps>`
-  font-size: ${(props) => props.fontSize};
+export const Title = styled.h3<iTitle>`
+  font-size: ${(props) => props.fontSize || "30px"};
   color: #823b1d;
   text-align: center;
 `;
