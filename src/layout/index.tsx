@@ -1,7 +1,5 @@
-import { Header,Footer } from "@/components";
+import { Header, Footer } from "@/components";
 import React from "react";
-
-// import { Container } from './styles';
 
 interface LayoutProps {
   children: React.ReactNode;
