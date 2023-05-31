@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  width: 1280px;
-  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  height: 120px;
   padding: 0 20px;
-  margin: 30px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,13 +30,13 @@ export const Logo = styled.img`
 export const Navbar = styled.nav`
   margin-top: 20px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 920px) {
     display: none;
   }
 `;
 export const NavbarItem = styled.a`
   margin-left: 20px;
-  font-size: 15x;
+  font-size: 15px;
 
   &:hover {
     opacity: 0.7;
@@ -42,22 +45,8 @@ export const NavbarItem = styled.a`
   }
 `;
 
-export const Hamburger = styled.div`
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-
-  @media (max-width: 1280px) {
-    display: flex;
-  }
-`;
-
-export const HamburgerItem = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: #7a4726;
+export const AccordionItem = styled.div`
+  padding: 10px;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 `;

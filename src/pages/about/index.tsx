@@ -42,7 +42,6 @@ const about: React.FC = () => {
           uk-video="automute: true"
           width="70%"
           height="600px"
-          uk-responsive
           src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
         ></iframe>
       </C.FlexCol>
@@ -76,7 +75,6 @@ const about: React.FC = () => {
           uk-video="automute: true"
           width="70%"
           height="600px"
-          uk-responsive
           src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
         ></iframe>
       </C.FlexCol>

@@ -15,7 +15,7 @@ export const Button = styled.button<iButton>`
     background: ${(props) => props.bgHover};
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: 768px) {
     /* width: 100%; */
     display: none;
   }

@@ -5,12 +5,17 @@ export const ContainerImg = styled.div`
   width: 100%;
   max-width: 100vw;
   position: relative;
+  margin-top: 120px;
   margin-bottom: 71px;
 `;
 export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 export const MeetTitle = styled.h1``;
 // export const Video = styled.video``;
@@ -48,4 +53,8 @@ export const ContainerText = styled.div`
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
