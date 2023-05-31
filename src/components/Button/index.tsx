@@ -18,7 +18,18 @@ const Button: React.FC<iButton> = ({
   fontWeight,
   bgHover,
 }) => {
-  return <C.Button bgColor="#7a4726">{text}</C.Button>;
+  return (
+    <C.Button
+      style={{
+        backgroundColor: bgColor,
+        color: color,
+        fontWeight: fontWeight,
+      }}
+      bgHover="#000"
+    >
+      {text}
+    </C.Button>
+  );
 };
 
 export default Button;

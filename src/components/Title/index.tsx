@@ -9,6 +9,8 @@ interface TitleProps extends iTitle {
   top?: string;
   left?: string;
   transform?: string;
+  marginTop?: string;
+  marginBottom?: string;
 }
 
 const Title: React.FC<TitleProps> = ({
@@ -20,6 +22,8 @@ const Title: React.FC<TitleProps> = ({
   top,
   left,
   transform,
+  marginTop,
+  marginBottom,
 }) => {
   return (
     <C.Title
@@ -31,6 +35,8 @@ const Title: React.FC<TitleProps> = ({
         top: top,
         left: left,
         transform: transform,
+        marginTop: marginTop,
+        marginBottom: marginBottom,
       }}
     >
       {text}

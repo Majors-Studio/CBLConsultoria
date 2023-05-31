@@ -1,7 +1,7 @@
 import React from "react";
 import * as C from "./styles";
 import Image from "next/image";
-import { Subtitle, Title } from "@/components";
+import { CustomQuality, Subtitle, Title } from "@/components";
 
 import bgImg from "../../../public/assets/images/bgImg.jpg";
 
@@ -48,22 +48,43 @@ const about: React.FC = () => {
       </C.FlexCol>
 
       <C.JustifyBetween>
-        {/* Componente com image, title e text */}
+        <CustomQuality />
       </C.JustifyBetween>
 
-      <Title
-        fontSize="29px"
-        fontWeight="600"
-        text="Somos líderes em antecipações de precatórios no Brasil"
-      />
-      <Subtitle text="A D.Andrade  é referência em precatórios. Com mais de uma década de experiência negociamos mais de R$ 1 bilhão em precatórios e contramos com a satisfação de mais de 7 mil clientes." />
+      <C.ContainerText>
+        <Title
+          marginTop="80px"
+          fontSize="29px"
+          fontWeight="600"
+          text="Somos líderes em antecipações de precatórios no Brasil"
+          marginBottom="20px"
+        />
+        <Subtitle text="A D.Andrade  é referência em precatórios. Com mais de uma década de experiência negociamos mais de R$ 1 bilhão em precatórios e contramos com a satisfação de mais de 7 mil clientes." />
+      </C.ContainerText>
 
-      {/* Componente com ( subtititle e text) */}
+      <C.FlexCol>
+        <Title
+          fontSize="36px"
+          fontWeight="bold"
+          text="Faça o tour virtual pelo nosso escritório"
+          marginBottom="20px"
+          marginTop="20px"
+        />
+        <iframe
+          style={{ marginBottom: "20px", marginTop: "20px" }}
+          allowFullScreen
+          uk-video="automute: true"
+          width="70%"
+          height="600px"
+          uk-responsive
+          src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
+        ></iframe>
+      </C.FlexCol>
 
-      <Title text="Nossa missão" />
-      <C.Video></C.Video>
-
-      <C.Title></C.Title>
+      <C.FlexCol>
+        <Title text="Conheça nossos especialistas" marginBottom="50px" />
+        <Subtitle text="Nossa equipe está pronta para oferecer suporte especializado em todas as etapas da negociação do seu precatório." />
+      </C.FlexCol>
     </C.Container>
   );
 };
