@@ -1,27 +1,17 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import * as C from "./styles";
-import { Button } from "@/components";
-import Logo from "../Logo";
+import React, { useState } from "react"
+import * as C from "./styles"
+import { Button } from "@/components"
+import Logo from "../Logo"
+import { useDevice } from "@/hooks/useDevice"
 
 const Header: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isOpenAccordion, setIsOpenAccordion] = useState(false);
+  const { isMobile } = useDevice()
+  const [isOpenAccordion, setIsOpenAccordion] = useState(false)
 
   const handleOpenAccordion = () => {
-    setIsOpenAccordion(!isOpenAccordion);
-  };
-
-  //  se o tamanho da tela for menor que 768px, seta o estado de isMobile para true
-  if (typeof window !== "undefined") {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
+    setIsOpenAccordion(!isOpenAccordion)
   }
 
   const navitems = [
@@ -30,9 +20,10 @@ const Header: React.FC = () => {
     "Sobre Nós",
     "Contato",
     "Notícias",
-  ];
+  ]
   return (
     <C.Container>
+      <C.Content>
       <Logo />
       <div>
         {isMobile && (
@@ -55,14 +46,16 @@ const Header: React.FC = () => {
 
         <C.Navbar>
           {navitems.map((item, index) => {
-            return <C.NavbarItem key={index}>{item}</C.NavbarItem>;
+            return <C.NavbarItem key={index}>{item}</C.NavbarItem>
           })}
         </C.Navbar>
       </div>
 
-      <Button text="Fale Conosco" />
+        <Button text="Fale Conosco" />
+      </C.Content>
+        
     </C.Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

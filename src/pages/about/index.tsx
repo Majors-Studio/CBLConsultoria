@@ -1,5 +1,5 @@
 import React from "react";
-import * as C from "./styles";
+import * as C from "@/styles/about";
 import Image from "next/image";
 import { CustomQuality, Subtitle, Title } from "@/components";
 
