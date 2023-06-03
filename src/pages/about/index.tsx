@@ -49,7 +49,6 @@ const about: React.FC = () => {
       <C.JustifyBetween>
         <CustomQuality />
       </C.JustifyBetween>
-
       <C.ContainerText>
         <Title
           marginTop="80px"
