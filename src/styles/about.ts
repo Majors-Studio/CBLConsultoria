@@ -12,6 +12,7 @@ export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 70px 0;
 
   @media (max-width: 768px) {
     padding: 0 20px;

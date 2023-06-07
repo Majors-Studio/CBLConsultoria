@@ -33,7 +33,7 @@ const CustomQuality: React.FC = () => {
     <>
       {qualities.map((item) => (
         <C.Container key={item.id}>
-          <Image src={item.img} width={120} height={120} alt="image" />
+          <Image src={item.img as any} width={120} height={120} alt="image" />
           <Title
             color="#000"
             fontSize="22px"
