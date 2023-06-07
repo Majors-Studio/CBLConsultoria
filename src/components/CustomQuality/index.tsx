@@ -37,7 +37,7 @@ const CustomQuality: React.FC = () => {
           <Title
             color="#000"
             fontSize="22px"
-            fontWeight="600"
+            fontWeight="700"
             text={item.title}
           />
           <Subtitle fontSize="17px" text={item.subtitle} />

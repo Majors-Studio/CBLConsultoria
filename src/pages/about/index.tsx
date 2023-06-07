@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Card, CustomQuality, Subtitle, Title } from "@/components";
 
 import bgImg from "../../../public/assets/images/bgImg.jpg";
+import governimg from "../../../public/assets/images/government.jpg";
+import PurposeForm from "@/components/PurposeForm";
 
 const about: React.FC = () => {
   return (
@@ -18,7 +20,7 @@ const about: React.FC = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
-          src={bgImg}
+          src={governimg}
           alt="bg"
         />
         <C.Overlay />
@@ -86,6 +88,11 @@ const about: React.FC = () => {
         title="Mais de R$ 1 bilhão negociados"
         description="Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes."
       />
+
+      <C.FormContainer>
+        <Image style={{ opacity: "0.8" }} src={bgImg} width={500} alt="image" />
+        <PurposeForm />
+      </C.FormContainer>
     </C.Container>
   );
 };

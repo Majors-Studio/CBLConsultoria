@@ -7,5 +7,5 @@ export const Container = styled.div`
   align-items: center;
   gap: 15px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 `;

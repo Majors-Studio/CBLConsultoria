@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import * as S from "./styles"
+import * as S from "./styles";
 
 const PurposeForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,14 +9,14 @@ const PurposeForm: React.FC = () => {
     phone: "",
     cpf: "",
     message: "",
-  })
+  });
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = event.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <S.Container>
@@ -48,7 +48,7 @@ const PurposeForm: React.FC = () => {
         <S.Button type="submit">Enviar</S.Button>
       </S.Form>
     </S.Container>
-  )
-}
+  );
+};
 
-export default PurposeForm
+export default PurposeForm;

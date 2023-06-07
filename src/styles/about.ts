@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: 100%;
+  max-width: 100vw;
+`;
 export const ContainerImg = styled.div`
   width: 100%;
   max-width: 100vw;
@@ -18,8 +21,6 @@ export const FlexCol = styled.div`
     padding: 0 20px;
   }
 `;
-export const MeetTitle = styled.h1``;
-// export const Video = styled.video``;
 
 export const JustifyBetween = styled.div`
   display: flex;
@@ -38,8 +39,6 @@ export const JustifyBetween = styled.div`
   }
 `;
 
-export const Title = styled.h1``;
-export const Description = styled.p``;
 export const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -57,5 +56,22 @@ export const ContainerText = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 20px;
+  }
+`;
+
+export const FormContainer = styled.div`
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  margin: 80px 0;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 920px) {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
   }
 `;

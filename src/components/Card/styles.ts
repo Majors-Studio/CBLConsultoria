@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
   width: 250px;
   margin: 0 auto;
   margin-bottom: 32px;
-  background-color: #ccc;
+  background-color: #eee;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   padding: 16px;
@@ -14,7 +14,7 @@ export const CardContainer = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  animation: pulse 5s infinite;
+  animation: pulse 3s infinite;
 
   @keyframes pulse {
     0% {
@@ -39,6 +39,6 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-size: 1rem;
   font-weight: 400;
-  color: #000;
+  color: #333;
   margin-bottom: 16px;
 `;
