@@ -32,12 +32,15 @@ export const Logo = styled.img`
 `
 export const Navbar = styled.nav`
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 920px) {
     display: none;
   }
 `
-export const NavbarItem = styled.a`
+export const NavbarItem = styled.div`
   margin-left: 20px;
   font-size: 15px;
 

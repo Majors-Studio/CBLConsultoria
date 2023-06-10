@@ -24,7 +24,6 @@ const Header: React.FC = () => {
         <div>
           {isMobile && (
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8 relative cursor-pointer"
               onClick={handleOpenAccordion}
               fill="none"
