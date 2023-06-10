@@ -2,7 +2,7 @@ export const navitems = [
   {
     id: 1,
     title: "Início",
-    url: "",
+    url: "/",
   },
   {
     id: 2,
