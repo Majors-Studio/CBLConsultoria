@@ -15,7 +15,10 @@ export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px 0;
+  max-width: 100vw;
+  width: 100%;
+  margin: 70px 0px;
+  padding: 0 50px;
 
   @media (max-width: 768px) {
     padding: 0 20px;
@@ -73,5 +76,19 @@ export const FormContainer = styled.div`
     justify-content: center;
     align-items: center;
     box-shadow: none;
+  }
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  max-width: 100vw;
+  width: 100%;
+  padding: 0 30px;
+  margin: 80px 0;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;

@@ -44,7 +44,7 @@ const about: React.FC = () => {
           text="Somos líderes em antecipações de precatórios no Brasil"
           marginBottom="20px"
         />
-        <Subtitle text="A D.Andrade  é referência em precatórios. Com mais de uma década de experiência negociamos mais de R$ 1 bilhão em precatórios e contramos com a satisfação de mais de 7 mil clientes." />
+        <Subtitle text="Somos referência quando se fala em precatório, com mais de uma década de experiência negociamos mais de R$ 1 bilhão em precatórios e contramos com a satisfação de mais de 7 mil clientes." />
       </C.ContainerText>
 
       <C.FlexCol>
@@ -69,28 +69,24 @@ const about: React.FC = () => {
         <CustomQuality />
       </C.JustifyBetween>
 
-      <C.FlexCol>
-        <Title text="Conheça nossos especialistas" marginBottom="50px" />
-        <Subtitle text="Nossa equipe está pronta para oferecer suporte especializado em todas as etapas da negociação do seu precatório." />
-      </C.FlexCol>
-
       {/* Área para cards (conhecimento de especialistas), ideia de coloar animações */}
-
-      <Card
-        title="Início da nossa trajetória de sucesso"
-        description="Em 2009, demos nossos primeiros passos, dando início de um compromisso de excelência."
-      />
-      <Card
-        title="Profissionais especializados"
-        description="Nossa equipe é formada por profissionais especializados em precatórios, com mais de 10 anos de experiência no mercado."
-      />
-      <Card
-        title="Mais de R$ 1 bilhão negociados"
-        description="Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes."
-      />
+      <C.CardContainer>
+        <Card
+          title="Início da nossa trajetória de sucesso"
+          description="Em 2009, demos nossos primeiros passos, dando início de um compromisso de excelência."
+        />
+        <Card
+          title="Profissionais especializados"
+          description="Nossa equipe é formada por profissionais especializados em precatórios, com mais de 10 anos de experiência no mercado."
+        />
+        <Card
+          title="Mais de R$ 1 bilhão negociados"
+          description="Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes."
+        />
+      </C.CardContainer>
 
       <C.FormContainer>
-        <Image style={{ opacity: "0.8" }} src={bgImg} width={500} alt="image" />
+        <Image src={governimg} width={750} alt="image" />
         <PurposeForm />
       </C.FormContainer>
     </C.Container>

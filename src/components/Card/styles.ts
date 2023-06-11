@@ -14,17 +14,15 @@ export const CardContainer = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  animation: pulse 3s infinite;
+  animation: fade-in 4s;
 
-  @keyframes pulse {
+  @keyframes fade-in {
     0% {
-      transform: scale(1);
+      opacity: 0;
     }
-    50% {
-      transform: scale(1.05);
-    }
+
     100% {
-      transform: scale(1);
+      opacity: 1;
     }
   }
 `;
