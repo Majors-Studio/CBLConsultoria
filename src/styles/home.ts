@@ -167,6 +167,8 @@ export const ChooseContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-bottom: 120px;
 `
 
 export const ChooseTitle = styled.h1`
@@ -198,7 +200,7 @@ export const ChooseList = styled.ul`
 `
 
 export const ChooseItem = styled.li`
-background-color: #fff; 
+  background-color: #fff;
 `
 
 export const ChooseItemTitle = styled.h1`
@@ -208,8 +210,8 @@ export const ChooseItemTitle = styled.h1`
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
-text-align: center;
-padding: 20px 0;
+  text-align: center;
+  padding: 20px 0;
 `
 
 export const ChooseItemList = styled.ul`
@@ -217,6 +219,7 @@ export const ChooseItemList = styled.ul`
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
+  padding: 80px 50px;
 `
 
 export const ChooseItemListItem = styled.li`
@@ -233,3 +236,34 @@ export const ChooseItemListItemStatus = styled.span`
 `
 
 export const ChooseItemListItemText = styled.p``
+
+export const WhyContainer = styled.div`
+  background-color: #121212;
+  width: 100%;
+`
+
+export const WhyTitle = styled.h1`
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+`
+
+export const WhyList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+`
+
+export const WhyItem = styled.li``
+
+export const WhyItemIcon = styled.div``
+
+export const WhyItemTexts = styled.div``
+
+export const WhyItemTitle = styled.h1``
+
+export const WhyItemDescription = styled.p``

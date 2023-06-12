@@ -116,6 +116,37 @@ export default function Home() {
     },
   ]
 
+  const whyList = [
+    {
+      id: 0,
+      title: "Atendimento Personalizado",
+      description:
+        "Nós cuidamos para que o processo de negociação seja 100% seguro e transparente, desde a análise até o recebimento do seu precatório.",
+      icon: <></>,
+    },
+    {
+      id: 1,
+      title: "1 bilhão em precatórios negociados",
+      description:
+        "Ao longo da nossa história, foram mais de 7 mil credores satisfeitos com a antecipação de seus precatórios",
+      icon: <></>,
+    },
+    {
+      id: 2,
+      title: "Total segurança na negociação",
+      description:
+        "Empresa consolidada, com mais de uma década no mercado de precatórios.",
+      icon: <></>,
+    },
+    {
+      id: 3,
+      title: "Pagamento à vista",
+      description:
+        "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
+      icon: <></>,
+    },
+  ]
+
   return (
     <div>
       <Head>
@@ -183,7 +214,8 @@ export default function Home() {
 
           <S.ChooseContainer>
             <S.ChooseTitle>
-              Por que escolher a <span>Harmony</span>?
+              A Harmony é a melhor opção para você que deseja antecipar o seu
+              precatório
             </S.ChooseTitle>
             <S.ChooseSubtitle>
               Se livre da longa fila de espera do Governo para pagamento de seu
@@ -216,6 +248,25 @@ export default function Home() {
             </S.ChooseList>
           </S.ChooseContainer>
         </S.Content>
+
+        <S.WhyContainer>
+          <S.WhyTitle>Porque escolher a Harmony?</S.WhyTitle>
+
+          <S.WhyList>
+            {whyList.map((item) => (
+              <S.WhyItem key={item.id}>
+                <S.WhyItemIcon>{item.icon}</S.WhyItemIcon>
+
+                <S.WhyItemTexts>
+                  <S.WhyItemTitle>{item.title}</S.WhyItemTitle>
+                  <S.WhyItemDescription>
+                    {item.description}
+                  </S.WhyItemDescription>
+                </S.WhyItemTexts>
+              </S.WhyItem>
+            ))}
+          </S.WhyList>
+        </S.WhyContainer>
       </S.Container>
     </div>
   )
