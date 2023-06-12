@@ -92,3 +92,10 @@ export const CardContainer = styled.div`
     flex-direction: column;
   }
 `;
+
+export const SwiperContainer = styled.div`
+  max-width: 100vw;
+  width: 100%;
+  margin: 80px 0;
+  padding: 0 20px;
+`;

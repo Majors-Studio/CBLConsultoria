@@ -6,13 +6,17 @@ import { Title, Subtitle } from "@/components";
 
 // Swiper configs
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Autoplay, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { useDevice } from "@/hooks/useDevice";
+
 const CustomQuality: React.FC = () => {
+  const { isMobile } = useDevice();
+
   const qualities = [
     {
       id: 1,
@@ -41,10 +45,10 @@ const CustomQuality: React.FC = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      modules={[Navigation, Pagination, Autoplay]}
-      navigation
+      modules={isMobile ? [Pagination, Autoplay] : [Navigation, Autoplay]}
+      navigation={isMobile ? false : true}
       autoplay={{ delay: 3000 }}
-      pagination={{ clickable: true }}
+      pagination={{ clickable: true } && isMobile ? true : false}
     >
       {qualities.map((item) => (
         <SwiperSlide>

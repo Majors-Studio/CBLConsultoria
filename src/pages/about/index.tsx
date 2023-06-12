@@ -3,11 +3,14 @@ import * as C from "@/styles/about";
 import Image from "next/image";
 import { Card, CustomQuality, Subtitle, Title } from "@/components";
 
-import bgImg from "../../../public/assets/images/bgImg.jpg";
 import governimg from "../../../public/assets/images/government.jpg";
 import PurposeForm from "@/components/PurposeForm";
 
+import { useDevice } from "@/hooks/useDevice";
+
 const about: React.FC = () => {
+  const { isMobile } = useDevice();
+
   return (
     <C.Container>
       <C.ContainerImg>
@@ -41,17 +44,17 @@ const about: React.FC = () => {
           marginTop="80px"
           fontSize="29px"
           fontWeight="600"
-          text="Somos líderes em antecipações de precatórios no Brasil"
+          text="Descubra uma nova oportunidade de investimento seguro e rentável com a nossa plataforma de venda de precatórios."
           marginBottom="20px"
         />
-        <Subtitle text="Somos referência quando se fala em precatório, com mais de uma década de experiência negociamos mais de R$ 1 bilhão em precatórios e contramos com a satisfação de mais de 7 mil clientes." />
+        <Subtitle text="Aqui, você encontrará uma seleção abrangente de precatórios verificados e validados, garantindo transparência e segurança em todas as transações." />
       </C.ContainerText>
 
       <C.FlexCol>
         <Title
           fontSize="36px"
           fontWeight="bold"
-          text="Faça o tour virtual pelo nosso escritório"
+          text="Fique um pouco mais por dentro do nosso trabalho"
           marginBottom="20px"
           marginTop="20px"
         />
@@ -65,9 +68,9 @@ const about: React.FC = () => {
         ></iframe>
       </C.FlexCol>
 
-      <C.JustifyBetween>
+      <C.SwiperContainer>
         <CustomQuality />
-      </C.JustifyBetween>
+      </C.SwiperContainer>
 
       {/* Área para cards (conhecimento de especialistas), ideia de coloar animações */}
       <C.CardContainer>
