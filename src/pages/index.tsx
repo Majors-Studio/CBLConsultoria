@@ -2,13 +2,26 @@ import Head from "next/head"
 
 import * as S from "@/styles/home"
 import PurposeForm from "@/components/PurposeForm"
-import ConfirmIcon from "@/assets/icons/ConfirmIcon"
-import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
-import NewsIcon from "@/assets/icons/NewsIcon"
-import ListIcon from "@/assets/icons/ListIcon"
-import MoneyIcon from "@/assets/icons/MoneyIcon"
-import DangerIcon from "@/assets/icons/DangerIcon"
-import SuccessIcon from "@/assets/icons/SucessIcon"
+import SpeechBox from "@/components/SpeechBox"
+import {
+  ConfirmIcon,
+  DangerIcon,
+  ListIcon,
+  MagnifyingIcon,
+  MoneyIcon,
+  NewsIcon,
+  SuccessIcon,
+} from "@/assets/icons"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { A11y, Autoplay } from "swiper"
+
+SwiperCore.use([A11y, Autoplay])
+
+import "swiper/swiper-bundle.min.css"
+import "swiper/swiper.min.css"
+
+import Avatar from "@/components/Avatar"
 
 export default function Home() {
   const infoList = [
@@ -36,7 +49,7 @@ export default function Home() {
       title: "Análise",
       description:
         "Nossos advogados analisam detalhadamente o processo judicial do seu precatório de forma rápida e segura",
-      icon: <MagnifyingGlass />,
+      icon: <MagnifyingIcon />,
     },
     {
       id: 1,
@@ -144,6 +157,63 @@ export default function Home() {
       description:
         "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
       icon: <></>,
+    },
+  ]
+
+  const whatList = [
+    {
+      id: 0,
+      name: "João da Silva",
+      city: "São Paulo",
+      state: "SP",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+    {
+      id: 1,
+      name: "João da Silva 2",
+      city: "Rio de Janeiro",
+      state: "RJ",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+    {
+      id: 2,
+      name: "João da Silva 3",
+      city: "Belo horizonte",
+      state: "MG",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+  ]
+
+  const faqList = [
+    {
+      id: 0,
+      title: "Como funciona a antecipação de precatórios?",
+      description:
+        "A antecipação de precatórios é uma operação financeira que consiste na compra de precatórios federais, estaduais e municipais. A Harmony realiza a compra do seu precatório e você recebe o valor à vista, sem burocracia e sem esperar anos para receber do Governo.",
+    },
+    {
+      id: 1,
+      title: "Quais são os tipos de precatórios?",
+      description:
+        "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
+    },
+    {
+      id: 2,
+      title: "Quais são os tipos de precatórios?",
+      description:
+        "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
+    },
+    {
+      id: 3,
+      title: "Quais são os tipos de precatórios?",
+      description:
+        "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
     },
   ]
 
@@ -267,6 +337,43 @@ export default function Home() {
             ))}
           </S.WhyList>
         </S.WhyContainer>
+
+        <S.WhatContainer>
+          <S.WhatTitle>O que os clientes dizem sobre a Harmony</S.WhatTitle>
+
+          <S.WhatList>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              modules={[Autoplay, A11y]}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+            >
+              {whatList.map((item) => (
+                <SwiperSlide>
+                  <S.WhatItem>
+                    <SpeechBox text="TESTEEE!" />
+                    <S.WhatTexts>
+                      <Avatar src={item.avatar} size="large" />
+                      <S.WhatName>{item.name}</S.WhatName>
+                      <S.WhatPlace>
+                        {item.city}, {item.state} - {item.country}
+                      </S.WhatPlace>
+                    </S.WhatTexts>
+                  </S.WhatItem>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </S.WhatList>
+        </S.WhatContainer>
+
+        <S.Content>
+          <S.FaqContainer>
+            <S.FaqTitle>FAQ - Perguntas Frequentes</S.FaqTitle>
+            <S.FaqDescription>
+              Dúvidas? Estamos aqui para ajudar.
+            </S.FaqDescription>
+          </S.FaqContainer>
+        </S.Content>
       </S.Container>
     </div>
   )

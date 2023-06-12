@@ -21,17 +21,29 @@ export const Content = styled.div`
 export const Head = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 
   margin-top: 100px;
   margin-bottom: 180px;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `
 
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 120px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `
 
 export const InfoTitle = styled.h1`
@@ -240,6 +252,8 @@ export const ChooseItemListItemText = styled.p``
 export const WhyContainer = styled.div`
   background-color: #121212;
   width: 100%;
+
+  padding: 70px 0;
 `
 
 export const WhyTitle = styled.h1`
@@ -256,14 +270,108 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
+  margin-top: 70px;
 `
 
-export const WhyItem = styled.li``
+export const WhyItem = styled.li`
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 26px 20px 40px;
+  border-radius: 10px;
+`
 
-export const WhyItemIcon = styled.div``
+export const WhyItemIcon = styled.div`
+  background-color: #f2eae6;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+`
 
-export const WhyItemTexts = styled.div``
+export const WhyItemTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`
 
-export const WhyItemTitle = styled.h1``
+export const WhyItemTitle = styled.h1`
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+`
 
-export const WhyItemDescription = styled.p``
+export const WhyItemDescription = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #121212;
+`
+
+export const WhatContainer = styled.div`
+  background-color: #e3dcd7;
+
+  padding: 90px 0 60px;
+  width: 100%;
+`
+
+export const WhatTitle = styled.h1`
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+`
+
+export const WhatList = styled.ul`
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto 0;
+`
+
+export const WhatItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`
+
+export const WhatTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const WhatName = styled.h1`
+  margin-top: 12px;
+`
+
+export const WhatPlace = styled.h1``
+
+export const FaqContainer = styled.div`
+  padding: 90px 20px 80px;
+  width: 100%;
+`
+
+export const FaqTitle = styled.h1`
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+`
+
+export const FaqDescription = styled.p`
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+`

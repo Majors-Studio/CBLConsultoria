@@ -1,0 +1,7 @@
+export { default as ConfirmIcon } from './ConfirmIcon'
+export { default as MagnifyingIcon } from './MagnifyingIcon'
+export { default as NewsIcon } from './NewsIcon'
+export { default as ListIcon } from './ListIcon'
+export { default as MoneyIcon } from './MoneyIcon'
+export { default as DangerIcon } from './DangerIcon'
+export { default as SuccessIcon } from './SucessIcon'
