@@ -64,10 +64,10 @@ export const ContainerText = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  max-width: 100vw;
-  width: 100%;
+  max-width: 1200px;
   display: flex;
-  margin: 80px 0;
+  align-items: center;
+  margin: 80px auto;
   justify-content: center;
   width: 100%;
 
