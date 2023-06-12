@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 100vw;
 `;
+
 export const ContainerImg = styled.div`
   width: 100%;
   max-width: 100vw;
@@ -98,4 +99,14 @@ export const SwiperContainer = styled.div`
   width: 100%;
   margin: 80px 0;
   padding: 0 20px;
+`;
+
+export const VideoContainer = styled.div`
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 80px 0;
+  padding: 0 40px;
 `;

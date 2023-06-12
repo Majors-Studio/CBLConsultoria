@@ -50,7 +50,7 @@ const about: React.FC = () => {
         <Subtitle text="Aqui, você encontrará uma seleção abrangente de precatórios verificados e validados, garantindo transparência e segurança em todas as transações." />
       </C.ContainerText>
 
-      <C.FlexCol>
+      <C.VideoContainer>
         <Title
           fontSize="36px"
           fontWeight="bold"
@@ -66,7 +66,7 @@ const about: React.FC = () => {
           height="600px"
           src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
         ></iframe>
-      </C.FlexCol>
+      </C.VideoContainer>
 
       <C.SwiperContainer>
         <CustomQuality />
