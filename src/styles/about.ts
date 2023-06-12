@@ -85,9 +85,10 @@ export const CardContainer = styled.div`
   max-width: 100vw;
   width: 100%;
   padding: 0 30px;
+  align-items: center;
   margin: 80px 0;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 
   @media (max-width: 768px) {
     flex-direction: column;

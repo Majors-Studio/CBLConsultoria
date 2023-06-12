@@ -11,6 +11,27 @@ import { useDevice } from "@/hooks/useDevice";
 const about: React.FC = () => {
   const { isMobile } = useDevice();
 
+  const cardsList = [
+    {
+      id: 0,
+      title: "Início da nossa trajetória de sucesso",
+      description:
+        "Em 2009, demos nossos primeiros passos, dando início de um compromisso de excelência.",
+    },
+    {
+      id: 1,
+      title: "Profissionais especializados",
+      description:
+        "Nossa equipe é formada por profissionais especializados em precatórios, com mais de 10 anos de experiência no mercado.",
+    },
+    {
+      id: 2,
+      title: "Mais de R$ 1 bilhão negociados",
+      description:
+        "Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes.",
+    },
+  ];
+
   return (
     <C.Container>
       <C.ContainerImg>
@@ -74,18 +95,16 @@ const about: React.FC = () => {
 
       {/* Área para cards (conhecimento de especialistas), ideia de coloar animações */}
       <C.CardContainer>
-        <Card
-          title="Início da nossa trajetória de sucesso"
-          description="Em 2009, demos nossos primeiros passos, dando início de um compromisso de excelência."
-        />
-        <Card
-          title="Profissionais especializados"
-          description="Nossa equipe é formada por profissionais especializados em precatórios, com mais de 10 anos de experiência no mercado."
-        />
-        <Card
-          title="Mais de R$ 1 bilhão negociados"
-          description="Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes."
-        />
+        {cardsList.map((card) => (
+          <>
+            <Card
+              key={card.id}
+              index={card.id}
+              title={card.title}
+              description={card.description}
+            />
+          </>
+        ))}
       </C.CardContainer>
 
       <C.FormContainer>
