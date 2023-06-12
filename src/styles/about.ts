@@ -111,3 +111,42 @@ export const VideoContainer = styled.div`
   margin: 80px 0;
   padding: 0 40px;
 `;
+
+export const AvatarName = styled.h3`
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 120px;
+  text-align: center;
+  color: #7a4726;
+  margin-top: 20px;
+`;
+
+export const AvatarCharge = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 5px;
+`;
+
+export const AvatarsContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 80px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  margin-top: 80px;
+  margin-bottom: 120px;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+`;
