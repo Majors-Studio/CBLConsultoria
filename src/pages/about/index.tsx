@@ -32,6 +32,59 @@ const about: React.FC = () => {
     },
   ];
 
+  const avatarData = [
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Natália de Andrade",
+      charge: "CEO",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Vanda Dias",
+      charge: "Sócia Diretora",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Luis Ferraz",
+      charge: "Jurídico",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Cezar Malafaia",
+      charge: "Jurídico",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      name: "Carlos José",
+      charge: "Sócio Diretor",
+    },
+  ];
+
   return (
     <C.Container>
       <C.ContainerImg>
@@ -106,6 +159,23 @@ const about: React.FC = () => {
           </>
         ))}
       </C.CardContainer>
+
+      <Title text="Conheça os responsáveis pelos nossos negócios" />
+      <C.AvatarsContainer>
+        {avatarData.map((avatar, index) => (
+          <C.Info key={index}>
+            <Image
+              src={avatar.img}
+              alt="avatar"
+              style={{ borderRadius: "505%" }}
+              width={60}
+              height={60}
+            />
+            <C.AvatarName>{avatar.name}</C.AvatarName>
+            <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
+          </C.Info>
+        ))}
+      </C.AvatarsContainer>
 
       <C.FormContainer>
         <Image src={governimg} width={750} alt="image" />
