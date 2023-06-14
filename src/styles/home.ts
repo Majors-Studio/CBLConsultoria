@@ -270,7 +270,9 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  margin-top: 70px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 70px auto 0;
 `
 
 export const WhyItem = styled.li`
@@ -374,4 +376,63 @@ export const FaqDescription = styled.p`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+`
+
+export const FaqList = styled.ul`
+  margin-top: 60px;
+
+  box-shadow: 0px 3px 10px 0px #00000029;
+`
+
+export const FaqItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  height: 100%;
+
+  transition: max-height 0.4s ease-in-out;
+
+  background-color: #fff;
+  overflow: hidden;
+
+  border-bottom: 3px solid #7a4726;
+`
+
+export const FaqItemHeader = styled.div`
+  height: 84px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  padding: 0 20px;
+`
+
+export const FaqItemTitle = styled.h1`
+  color: #0a0400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+`
+
+export const FaqItemIcon = styled.div`
+  width: 20px;
+  height: 20px;
+
+
+`
+
+export const FaqItemDescription = styled.p`
+  padding: 0 20px 20px;
+  height: fit-content;
+  width: 100%;
+
+  color: #686868;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
 `
