@@ -1,5 +1,5 @@
+import React, { useState } from "react"
 import Head from "next/head"
-
 import * as S from "@/styles/home"
 import PurposeForm from "@/components/PurposeForm"
 import SpeechBox from "@/components/SpeechBox"
@@ -22,8 +22,11 @@ import "swiper/swiper-bundle.min.css"
 import "swiper/swiper.min.css"
 
 import Avatar from "@/components/Avatar"
+import TriangleDownIcon from "@/assets/icons/TriangleDownIcon"
 
 export default function Home() {
+  const [faqOpened, setFaqOpened] = useState<number | null>(null)
+
   const infoList = [
     {
       id: 0,
@@ -372,6 +375,43 @@ export default function Home() {
             <S.FaqDescription>
               Dúvidas? Estamos aqui para ajudar.
             </S.FaqDescription>
+
+            <S.FaqList>
+              {faqList.map((item, index) => (
+                <S.FaqItem
+                  key={item.id}
+                  onClick={() => {
+                    if (faqOpened === index) return setFaqOpened(null)
+
+                    setFaqOpened(index)
+                  }}
+                  ref={(el) => {
+                    if (el && faqOpened === index) {
+                      el.style.maxHeight = `${el.scrollHeight}px`
+                    } else if (el) {
+                      el.style.maxHeight = `84px`
+                    } else {
+                      return
+                    }
+                  }}
+                >
+                  <S.FaqItemHeader>
+                    <S.FaqItemTitle>{item.title}</S.FaqItemTitle>
+                    <S.FaqItemIcon
+                      style={{
+                        transform: faqOpened === index ? "rotate(180deg)" : "",
+                        transition: "transform 0.4s ease-in-out",
+                      }}
+                    >
+                      <TriangleDownIcon />
+                    </S.FaqItemIcon>
+                  </S.FaqItemHeader>
+                  <S.FaqItemDescription>
+                    {item.description}
+                  </S.FaqItemDescription>
+                </S.FaqItem>
+              ))}
+            </S.FaqList>
           </S.FaqContainer>
         </S.Content>
       </S.Container>
