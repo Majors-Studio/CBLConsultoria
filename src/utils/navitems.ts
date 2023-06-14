@@ -7,7 +7,7 @@ export const navitems = [
   {
     id: 2,
     title: "Cenário dos Precatórios",
-    url: "",
+    url: "/precatory",
   },
   {
     id: 3,
