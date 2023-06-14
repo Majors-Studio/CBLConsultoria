@@ -53,7 +53,7 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const ContainerText = styled.div`
+export const ContainerChart = styled.div`
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
@@ -98,8 +98,6 @@ export const CardContainer = styled.div`
 export const SwiperContainer = styled.div`
   max-width: 100vw;
   width: 100%;
-  margin: 80px 0;
-  padding: 0 20px;
 `;
 
 export const VideoContainer = styled.div`

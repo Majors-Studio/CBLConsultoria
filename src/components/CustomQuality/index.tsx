@@ -45,12 +45,12 @@ const CustomQuality: React.FC = () => {
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      modules={isMobile ? [Pagination, Autoplay] : [Navigation, Autoplay]}
-      navigation={isMobile ? false : true}
+      modules={[Pagination]}
+      navigation={false}
       autoplay={{ delay: 3000 }}
-      pagination={{ clickable: true } && isMobile ? true : false}
+      pagination={{ clickable: true }}
     >
-      {qualities.map((item,index) => (
+      {qualities.map((item, index) => (
         <SwiperSlide key={index}>
           <C.Container key={item.id}>
             <Image src={item.img} width={50} height={50} alt="img" />

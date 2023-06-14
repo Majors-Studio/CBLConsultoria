@@ -7,6 +7,7 @@ import governimg from "../../../public/assets/images/government.jpg";
 import PurposeForm from "@/components/PurposeForm";
 
 import { useApp } from "@/context/contextApi";
+import Chart from "@/components/Chart";
 
 const About: React.FC = () => {
   const { cardsList, avatarData } = useApp();
@@ -39,21 +40,21 @@ const About: React.FC = () => {
         />
       </C.ContainerImg>
 
-      <C.ContainerText>
+      <C.ContainerChart>
         <Title
           marginTop="80px"
           fontSize="29px"
           fontWeight="600"
-          text="Descubra uma nova oportunidade de investimento seguro e rentável com a nossa plataforma de venda de precatórios."
-          marginBottom="20px"
+          text="Conheça um pouco sobre o investimento em preacatórios"
+          marginBottom="80px"
         />
-        <Subtitle text="Aqui, você encontrará uma seleção abrangente de precatórios verificados e validados, garantindo transparência e segurança em todas as transações." />
-      </C.ContainerText>
+        <Chart />
+      </C.ContainerChart>
 
       <C.VideoContainer>
         <Title
           fontSize="36px"
-          fontWeight="bold"
+          fontWeight="500"
           text="Fique um pouco mais por dentro do nosso trabalho"
           marginBottom="20px"
           marginTop="20px"
