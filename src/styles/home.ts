@@ -160,9 +160,19 @@ export const CardIndex = styled.div`
   right: 32px;
 `
 
-export const VideoContainer = styled.div``
+export const VideoContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-export const VideoWrapper = styled.div``
+  margin-bottom: 120px;
+`
+
+export const VideoWrapper = styled.div`
+  width: 100%;
+`
 
 export const VideoTitle = styled.h1`
   color: #121212;
@@ -171,6 +181,8 @@ export const VideoTitle = styled.h1`
   font-weight: 600;
   line-height: 50px;
   text-align: center;
+
+  margin-bottom: 20px;
 `
 
 export const VideoCta = styled.button``
@@ -421,8 +433,6 @@ export const FaqItemTitle = styled.h1`
 export const FaqItemIcon = styled.div`
   width: 20px;
   height: 20px;
-
-
 `
 
 export const FaqItemDescription = styled.p`
@@ -435,4 +445,80 @@ export const FaqItemDescription = styled.p`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
+`
+
+export const FollowContainer = styled.div`
+  height: 220px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+`
+
+export const FollowTitle = styled.h1`
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+`
+
+export const BlogContainer = styled.div`
+  width: 100%;
+
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+`
+
+export const BlogItem = styled.div`
+  height: 440px;
+  width: 100%;
+  box-shadow: 0px 3px 10px 0px #00000029;
+  background-color: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+`
+
+export const BlogImageContainer = styled.div`
+  width: 100%;
+  height: 236px;
+`
+
+export const BlogImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
+export const BlogTitle = styled.h1`
+  padding: 40px 30px;
+  color: #7a4726;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 25px;
+`
+
+export const BlogLink = styled.a`
+  padding: 0 30px;
+  align-self: flex-end;
+
+  color: #7a4726;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+`
+
+export const BlogCta = styled.button`
+  margin-bottom: 60px;
 `
