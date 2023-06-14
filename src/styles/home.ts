@@ -163,19 +163,15 @@ export const CardIndex = styled.div`
 export const VideoContainer = styled.div`
   width: 100%;
   height: 100%;
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 
-margin-bottom: 120px;
-
-
+  margin-bottom: 120px;
 `
 
 export const VideoWrapper = styled.div`
   width: 100%;
-
-
 `
 
 export const VideoTitle = styled.h1`
@@ -186,7 +182,7 @@ export const VideoTitle = styled.h1`
   line-height: 50px;
   text-align: center;
 
-margin-bottom: 20px;
+  margin-bottom: 20px;
 `
 
 export const VideoCta = styled.button``
