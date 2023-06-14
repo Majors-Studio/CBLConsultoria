@@ -10,7 +10,7 @@ export const ContainerImg = styled.div`
   max-width: 100vw;
   position: relative;
   margin-top: 120px;
-  margin-bottom: 71px;
+  margin-bottom: 30px;
 `;
 export const FlexCol = styled.div`
   display: flex;
@@ -98,6 +98,9 @@ export const CardContainer = styled.div`
 export const SwiperContainer = styled.div`
   max-width: 100vw;
   width: 100%;
+  background-color: #e3dcd7;
+
+  margin-bottom: 50px;
 `;
 
 export const VideoContainer = styled.div`
@@ -106,8 +109,9 @@ export const VideoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 2px 0;
   padding: 0 40px;
+
+  margin-bottom: 50px;
 `;
 
 export const AvatarName = styled.h3`
@@ -148,3 +152,41 @@ export const Info = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const WhatContainer = styled.div`
+  /* background-color: #e3dcd7; */
+
+  padding: 90px 0 60px;
+  width: 100%;
+`;
+
+export const WhatTitle = styled.h1`
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+`;
+export const WhatList = styled.ul`
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto 0;
+`;
+
+export const WhatItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
+export const WhatTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const WhatName = styled.h1`
+  margin-top: 12px;
+`;
+
+export const WhatPlace = styled.h1``;
