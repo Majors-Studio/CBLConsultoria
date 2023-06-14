@@ -6,6 +6,7 @@ interface SubtitleProps extends iProps {
   text?: string;
   fontWeight?: string;
   color?: string;
+  marginBottom?: string;
 }
 
 const Subtitle: React.FC<SubtitleProps> = ({
@@ -13,6 +14,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
   fontSize,
   fontWeight,
   color,
+  marginBottom,
 }) => {
   return (
     <C.Subtitle
@@ -20,6 +22,7 @@ const Subtitle: React.FC<SubtitleProps> = ({
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: color,
+        marginBottom: marginBottom,
       }}
     >
       {text}

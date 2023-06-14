@@ -106,7 +106,7 @@ export const VideoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 80px 0;
+  margin: 2px 0;
   padding: 0 40px;
 `;
 

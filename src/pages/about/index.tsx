@@ -12,6 +12,14 @@ import Chart from "@/components/Chart";
 const About: React.FC = () => {
   const { cardsList, avatarData } = useApp();
 
+  const points = [
+    "Potencial de retorno financeiro significativo, uma vez que os precatórios podem ser adquiridos com descontos substanciais.",
+    "Estabilidade e segurança jurídica, pois os precatórios são obrigações judiciais emitidas pelo governo, geralmente garantindo o pagamento futuro.",
+    "Diversificação de portfólio, permitindo aos investidores mitigar riscos e aproveitar oportunidades alternativas de investimento.",
+    "Possibilidade de utilização de precatórios para compensação de débitos fiscais, proporcionando benefícios fiscais adicionais.",
+    "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
+  ];
+
   return (
     <C.Container>
       <C.ContainerImg>
@@ -42,19 +50,31 @@ const About: React.FC = () => {
 
       <C.ContainerChart>
         <Title
+          color="#000"
           marginTop="80px"
           fontSize="29px"
           fontWeight="600"
-          text="Conheça um pouco sobre o investimento em preacatórios"
-          marginBottom="80px"
+          text="Porquê investir em precatórios?"
+          marginBottom="50px"
         />
+        {points.map((point, index) => (
+          <Subtitle
+            key={index}
+            color="#000"
+            fontSize="18px"
+            fontWeight="400"
+            marginBottom="10px"
+            text={point}
+          />
+        ))}
         <Chart />
       </C.ContainerChart>
 
       <C.VideoContainer>
         <Title
-          fontSize="36px"
+          fontSize="32px"
           fontWeight="500"
+          color="#000"
           text="Fique um pouco mais por dentro do nosso trabalho"
           marginBottom="20px"
           marginTop="20px"
