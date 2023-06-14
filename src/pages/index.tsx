@@ -379,8 +379,8 @@ export default function Home() {
               modules={[Autoplay, A11y]}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
             >
-              {whatList.map((item) => (
-                <SwiperSlide>
+              {whatList.map((item,index) => (
+                <SwiperSlide key={index}>
                   <S.WhatItem>
                     <SpeechBox text="TESTEEE!" />
                     <S.WhatTexts>

@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
       </S.Midia>
       <S.MiddleInfo>
         {middleInfoData.map((item, index) => (
-          <S.Subtitle>{item}</S.Subtitle>
+          <S.Subtitle key={index}>{item}</S.Subtitle>
         ))}
       </S.MiddleInfo>
       <S.Info>

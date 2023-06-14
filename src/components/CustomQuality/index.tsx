@@ -50,8 +50,8 @@ const CustomQuality: React.FC = () => {
       autoplay={{ delay: 3000 }}
       pagination={{ clickable: true } && isMobile ? true : false}
     >
-      {qualities.map((item) => (
-        <SwiperSlide>
+      {qualities.map((item,index) => (
+        <SwiperSlide key={index}>
           <C.Container key={item.id}>
             <Image src={item.img} width={50} height={50} alt="img" />
             <Title fontWeight="500" color="#000" text={item.title} />

@@ -6,12 +6,9 @@ import { Card, CustomQuality, Subtitle, Title } from "@/components";
 import governimg from "../../../public/assets/images/government.jpg";
 import PurposeForm from "@/components/PurposeForm";
 
-import { useDevice } from "@/hooks/useDevice";
-
 import { useApp } from "@/context/contextApi";
 
-const about: React.FC = () => {
-  const { isMobile } = useDevice();
+const About: React.FC = () => {
   const { cardsList, avatarData } = useApp();
 
   return (
@@ -114,4 +111,4 @@ const about: React.FC = () => {
   );
 };
 
-export default about;
+export default About;
