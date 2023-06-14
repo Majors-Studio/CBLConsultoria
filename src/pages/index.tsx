@@ -220,6 +220,27 @@ export default function Home() {
     },
   ]
 
+  const blogList = [
+    {
+      id: 0,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 1,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    },
+    {
+      id: 2,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
+    },
+  ]
+
   return (
     <div>
       <Head>
@@ -278,7 +299,14 @@ export default function Home() {
               </S.VideoTitle>
 
               <S.VideoWrapper>
-                <iframe />
+                <iframe
+                  style={{ marginBottom: "20px", marginTop: "20px" }}
+                  allowFullScreen
+                  uk-video="automute: true"
+                  width="100%"
+                  height="600px"
+                  src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
+                ></iframe>
               </S.VideoWrapper>
 
               <S.VideoCta>Acesse nosso tour virtual!</S.VideoCta>
@@ -413,6 +441,25 @@ export default function Home() {
               ))}
             </S.FaqList>
           </S.FaqContainer>
+        </S.Content>
+
+        <S.FollowContainer>
+          <S.FollowTitle>Acompanhe as notícias sobre precatórios</S.FollowTitle>
+        </S.FollowContainer>
+
+        <S.Content>
+          <S.BlogContainer>
+            {blogList.map((item) => (
+              <S.BlogItem key={item.id}>
+                <S.BlogImageContainer>
+                  <S.BlogImage src={item.image} />
+                </S.BlogImageContainer>
+                <S.BlogTitle>{item.title}</S.BlogTitle>
+                <S.BlogLink>Consulte mais informações</S.BlogLink>
+              </S.BlogItem>
+            ))}
+          </S.BlogContainer>
+          <S.BlogCta>Ver mais notícias</S.BlogCta>
         </S.Content>
       </S.Container>
     </div>
