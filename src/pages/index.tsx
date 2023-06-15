@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import Head from "next/head"
-import * as S from "@/styles/home"
-import PurposeForm from "@/components/PurposeForm"
-import SpeechBox from "@/components/SpeechBox"
+import React, { useState } from "react";
+import Head from "next/head";
+import * as S from "@/styles/home";
+import PurposeForm from "@/components/PurposeForm";
+import SpeechBox from "@/components/SpeechBox";
 import {
   ConfirmIcon,
   DangerIcon,
@@ -11,21 +11,23 @@ import {
   MoneyIcon,
   NewsIcon,
   SuccessIcon,
-} from "@/assets/icons"
+} from "@/assets/icons";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { A11y, Autoplay } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { A11y, Autoplay } from "swiper";
 
-SwiperCore.use([A11y, Autoplay])
+SwiperCore.use([A11y, Autoplay]);
 
-import "swiper/swiper-bundle.min.css"
-import "swiper/swiper.min.css"
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
-import Avatar from "@/components/Avatar"
-import TriangleDownIcon from "@/assets/icons/TriangleDownIcon"
+import Avatar from "@/components/Avatar";
+import TriangleDownIcon from "@/assets/icons/TriangleDownIcon";
+import { useApp } from "@/context/contextApi";
 
 export default function Home() {
-  const [faqOpened, setFaqOpened] = useState<number | null>(null)
+  const [faqOpened, setFaqOpened] = useState<number | null>(null);
+  const { whatList } = useApp();
 
   const infoList = [
     {
@@ -44,7 +46,7 @@ export default function Home() {
       id: 3,
       title: "+13 anos no mercado de precatórios.",
     },
-  ]
+  ];
 
   const cardList = [
     {
@@ -75,7 +77,7 @@ export default function Home() {
         "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia",
       icon: <MoneyIcon />,
     },
-  ]
+  ];
 
   const chooseList = [
     {
@@ -130,7 +132,7 @@ export default function Home() {
         },
       ],
     },
-  ]
+  ];
 
   const whyList = [
     {
@@ -161,37 +163,7 @@ export default function Home() {
         "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
       icon: <></>,
     },
-  ]
-
-  const whatList = [
-    {
-      id: 0,
-      name: "João da Silva",
-      city: "São Paulo",
-      state: "SP",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar: "",
-    },
-    {
-      id: 1,
-      name: "João da Silva 2",
-      city: "Rio de Janeiro",
-      state: "RJ",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar: "",
-    },
-    {
-      id: 2,
-      name: "João da Silva 3",
-      city: "Belo horizonte",
-      state: "MG",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar: "",
-    },
-  ]
+  ];
 
   const faqList = [
     {
@@ -218,7 +190,7 @@ export default function Home() {
       description:
         "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
     },
-  ]
+  ];
 
   const blogList = [
     {
@@ -239,7 +211,7 @@ export default function Home() {
       image:
         "https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
     },
-  ]
+  ];
 
   return (
     <div>
@@ -379,7 +351,7 @@ export default function Home() {
               modules={[Autoplay, A11y]}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
             >
-              {whatList.map((item,index) => (
+              {whatList.map((item, index) => (
                 <SwiperSlide key={index}>
                   <S.WhatItem>
                     <SpeechBox text="TESTEEE!" />
@@ -409,17 +381,17 @@ export default function Home() {
                 <S.FaqItem
                   key={item.id}
                   onClick={() => {
-                    if (faqOpened === index) return setFaqOpened(null)
+                    if (faqOpened === index) return setFaqOpened(null);
 
-                    setFaqOpened(index)
+                    setFaqOpened(index);
                   }}
                   ref={(el) => {
                     if (el && faqOpened === index) {
-                      el.style.maxHeight = `${el.scrollHeight}px`
+                      el.style.maxHeight = `${el.scrollHeight}px`;
                     } else if (el) {
-                      el.style.maxHeight = `84px`
+                      el.style.maxHeight = `84px`;
                     } else {
-                      return
+                      return;
                     }
                   }}
                 >
@@ -463,5 +435,5 @@ export default function Home() {
         </S.Content>
       </S.Container>
     </div>
-  )
+  );
 }

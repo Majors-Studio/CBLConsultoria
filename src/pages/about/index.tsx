@@ -3,6 +3,12 @@ import * as C from "@/styles/about";
 import Image from "next/image";
 import { Card, CustomQuality, Subtitle, Title } from "@/components";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, A11y } from "swiper";
+
+import SpeechBox from "@/components/SpeechBox";
+import Avatar from "@/components/Avatar";
+
 import governimg from "../../../public/assets/images/government.jpg";
 import PurposeForm from "@/components/PurposeForm";
 
@@ -11,6 +17,44 @@ import Chart from "@/components/Chart";
 
 const About: React.FC = () => {
   const { cardsList, avatarData } = useApp();
+
+  const points = [
+    {
+      id: 0,
+      name: "João da Silva",
+      message:
+        "Potencial de retorno financeiro significativo, uma vez que os precatórios podem ser adquiridos com descontos substanciais.",
+      avatar: "https://i.pravatar.cc/300?img=1",
+    },
+    {
+      id: 1,
+      name: "Carlos Almeida",
+      message:
+        "Estabilidade e segurança jurídica, pois os precatórios são obrigações judiciais emitidas pelo governo, geralmente garantindo o pagamento futuro.",
+      avatar: "https://i.pravatar.cc/300?img=2",
+    },
+    {
+      id: 2,
+      name: "Joana Castro",
+      message:
+        "Diversificação de portfólio, permitindo aos investidores mitigar riscos e aproveitar oportunidades alternativas de investimento.",
+      avatar: "https://i.pravatar.cc/300?img=3",
+    },
+    {
+      id: 3,
+      name: "Maria dos Santos",
+      message:
+        "Possibilidade de utilização de precatórios para compensação de débitos fiscais, proporcionando benefícios fiscais adicionais.",
+      avatar: "https://i.pravatar.cc/300?img=4",
+    },
+    {
+      id: 4,
+      name: "Hildo Augusto",
+      message:
+        "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
+      avatar: "https://i.pravatar.cc/300?img=5",
+    },
+  ];
 
   return (
     <C.Container>
@@ -41,39 +85,33 @@ const About: React.FC = () => {
       </C.ContainerImg>
 
       <C.ContainerChart>
-        <Title
-          marginTop="80px"
-          fontSize="29px"
-          fontWeight="600"
-          text="Conheça um pouco sobre o investimento em preacatórios"
-          marginBottom="80px"
-        />
+        <C.WhatContainer>
+          <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
+
+          <C.WhatList>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              modules={[Autoplay, A11y]}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+            >
+              {points.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <C.WhatItem>
+                    <SpeechBox text={item.message} />
+                    <C.WhatTexts>
+                      <Avatar src={item.avatar} size="large" />
+                      <C.WhatName>{item.name}</C.WhatName>
+                    </C.WhatTexts>
+                  </C.WhatItem>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </C.WhatList>
+        </C.WhatContainer>
         <Chart />
       </C.ContainerChart>
 
-      <C.VideoContainer>
-        <Title
-          fontSize="36px"
-          fontWeight="500"
-          text="Fique um pouco mais por dentro do nosso trabalho"
-          marginBottom="20px"
-          marginTop="20px"
-        />
-        <iframe
-          style={{ marginBottom: "20px", marginTop: "20px" }}
-          allowFullScreen
-          uk-video="automute: true"
-          width="70%"
-          height="600px"
-          src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
-        ></iframe>
-      </C.VideoContainer>
-
-      <C.SwiperContainer>
-        <CustomQuality />
-      </C.SwiperContainer>
-
-      {/* Área para cards (conhecimento de especialistas), ideia de coloar animações */}
       <C.CardContainer>
         {cardsList.map((card) => (
           <>
@@ -86,6 +124,29 @@ const About: React.FC = () => {
           </>
         ))}
       </C.CardContainer>
+
+      <C.SwiperContainer>
+        <CustomQuality />
+      </C.SwiperContainer>
+
+      <C.VideoContainer>
+        <Title
+          fontSize="32px"
+          fontWeight="500"
+          color="#000"
+          text="Fique mais por dentro do nosso trabalho"
+          marginBottom="20px"
+          marginTop="20px"
+        />
+        <iframe
+          style={{ marginBottom: "20px", marginTop: "20px" }}
+          allowFullScreen
+          uk-video="automute: true"
+          width="70%"
+          height="600px"
+          src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
+        ></iframe>
+      </C.VideoContainer>
 
       <Title text="Conheça os responsáveis pelos nossos negócios" />
       <C.AvatarsContainer>

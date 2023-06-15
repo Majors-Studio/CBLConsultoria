@@ -17,6 +17,15 @@ interface AppContextProps {
     name: string;
     charge: string;
   }[];
+  whatList: {
+    id: number;
+    name: string;
+    city: string;
+    state: string;
+    country: string;
+    text: string;
+    avatar: string;
+  }[];
 }
 
 const AppContext = createContext<AppContextProps>({} as any);
@@ -96,7 +105,37 @@ export function AppProvider({ children }: any) {
     },
   ];
 
-  const value = { cardsList, avatarData };
+  const whatList = [
+    {
+      id: 0,
+      name: "João da Silva",
+      city: "São Paulo",
+      state: "SP",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+    {
+      id: 1,
+      name: "João da Silva 2",
+      city: "Rio de Janeiro",
+      state: "RJ",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+    {
+      id: 2,
+      name: "João da Silva 3",
+      city: "Belo horizonte",
+      state: "MG",
+      country: "Brasil",
+      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+      avatar: "",
+    },
+  ];
+
+  const value = { cardsList, avatarData, whatList };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
