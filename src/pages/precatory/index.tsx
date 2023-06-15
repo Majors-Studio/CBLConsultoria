@@ -1,8 +1,18 @@
 import React from "react"
 import * as C from "@/styles/precatory"
 import BrazilGraph from "@/assets/svg/BrazilGraph"
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, ChartData } from "chart.js"
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  ChartData,
+} from "chart.js"
 import { Doughnut } from "react-chartjs-2"
+import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons"
+import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
+import ContractIcon from "@/assets/icons/ContractIcon"
+import PurposeForm from "@/components/PurposeForm"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -31,7 +41,128 @@ const Precatory: React.FC = () => {
       },
     ],
   } as ChartData<"doughnut", number[], string>
-  
+
+  const newsList = [
+    {
+      id: 0,
+      title:
+        "Aliados de Lula analisam proposta para alongar precatórios de prefeituras até 2040.",
+      source: "Folha de São Paulo",
+      link: "https://www1.folha.uol.com.br/colunas/painel/2021/09/aliados-de-lula-analisam-proposta-para-alongar-precatorios-de-prefeituras-ate-2040.shtml",
+      date: "14/09/2021",
+    },
+    {
+      id: 1,
+      title: "Precatórios: o que são e como investir nesses títulos?",
+      source: "Valor Investe",
+      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
+      date: "14/09/2021",
+    },
+    {
+      id: 2,
+      title: "Precatórios: o que são e como investir nesses títulos?",
+      source: "Valor Investe",
+      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
+      date: "14/09/2021",
+    },
+    {
+      id: 3,
+      title: "Precatórios: o que são e como investir nesses títulos?",
+      source: "Valor Investe",
+      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
+      date: "14/09/2021",
+    },
+  ]
+
+  const whyToSellList = [
+    {
+      id: 0,
+      text: (
+        <>
+          <span>
+            Os pagamentos não são realizados no prazo pelo poder público.
+          </span>{" "}
+          A data de pagamento muda o tempo todo, portanto a fila de credores só
+          aumenta.
+        </>
+      ),
+    },
+    {
+      id: 1,
+      text: (
+        <>
+          Liquidez: Receber rapidamente e à vista.{" "}
+          <span>Dinheiro na conta sem burocracia.</span>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      text: (
+        <>
+          <span>Não faça dívidas com juros abusivos</span>, a venda do
+          precatório é a melhor opção para retomar sua saúde financeira.
+        </>
+      ),
+    },
+    {
+      id: 3,
+      text: (
+        <>
+          Acabe com a incerteza de recebimento,{" "}
+          <span>venda com segurança jurídica e financeira.</span>
+        </>
+      ),
+    },
+  ]
+
+  const stepsList = [
+    {
+      id: 0,
+      title: "1. Análise do seu precatório",
+      text: (
+        <>
+          Nosso time jurídico faz uma análise criteriosa do processo judicial do
+          seu precatório para garantir <span>segurança e transparência</span> em
+          todo o processo de compra.
+        </>
+      ),
+      icon: <MagnifyingGlass />,
+    },
+    {
+      id: 1,
+      title: "2. Proposta de Valor",
+      text: (
+        <>Oferecemos o melhor valor do mercado com propostas éticas e justas.</>
+      ),
+      icon: <ListIcon />,
+    },
+    {
+      id: 2,
+      title: "3. Assinatura do Contrato",
+      text: (
+        <>
+          Após o aceite da proposta, <span>assinamos o contrato</span> de venda{" "}
+          <span>no cartório</span>, seguindo todas as obrigações legais, de
+          forma <span>rápida e segura</span>.
+        </>
+      ),
+      icon: <ContractIcon />,
+    },
+    {
+      id: 3,
+      title: "4. Pagamento no ato da assinatura",
+      text: (
+        <>
+          À vista e sem burocracia direto na sua conta.{" "}
+          <span>O dinheiro é creditado em conta no momento da assinatura</span>{" "}
+          e o comprovante de transferência entregue ao credor.
+        </>
+      ),
+      icon: <MoneyIcon />,
+    },
+  ]
+
   return (
     <>
       <C.ContainerImg>
@@ -167,13 +298,126 @@ const Precatory: React.FC = () => {
                   legend: {
                     display: false,
                   },
-                  
                 },
               }}
             />
           </C.RankingChart>
         </C.RankingContent>
       </C.RankingContainer>
+
+      <C.NewsContainer>
+        <C.NewsContent>
+          <C.NewsInfos>
+            <C.NewsTitle>Notícias</C.NewsTitle>
+
+            <C.NewsText>
+              Veja a seguir as notícias nos principais veículos da mídia (Folha
+              de São Paulo, Estadão, Valor Investe, Gazeta, entre outros) e
+              matérias dos maiores escritórios de advocacia.
+            </C.NewsText>
+
+            <C.NewsText>
+              Os <span>pagamentos</span> que inicialmente deveriam ser
+              realizados <span>em SP até 2020</span>, foram postergados para{" "}
+              <span>2024</span> e novamente prorrogados para
+              <span>2029</span>.
+            </C.NewsText>
+
+            <C.NewsText>
+              As notícias abordam justamente os atrasos, a mudança constante na
+              data limite de pagamento e a <span>incerteza</span> no{" "}
+              <span>recebimento</span> dos precatórios, que vem{" "}
+              <span>prejudicando milhares de credores</span>.
+            </C.NewsText>
+          </C.NewsInfos>
+
+          <C.NewsList>
+            {newsList.map((news) => (
+              <C.NewsItem key={news.id}>
+                <C.NewsItemTop>
+                  <C.NewsItemInfo>
+                    {news.source} | {news.date}
+                  </C.NewsItemInfo>
+                  <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
+                </C.NewsItemTop>
+                <C.NewsItemLink href={news.link} target="_blank">
+                  Leia mais
+                </C.NewsItemLink>
+              </C.NewsItem>
+            ))}
+          </C.NewsList>
+        </C.NewsContent>
+      </C.NewsContainer>
+
+      <C.WhyToSellContainer>
+        <C.WhyToSellContent>
+          <C.WhyToSellTitle>Por que vender seus precatórios?</C.WhyToSellTitle>
+
+          <C.WhyToSellList>
+            {whyToSellList.map((why) => (
+              <C.WhyToSellItem key={why.id}>
+                <C.WhyToSellItemIcon>
+                  <SuccessIcon />
+                </C.WhyToSellItemIcon>
+
+                <C.WhyToSellItemText>{why.text}</C.WhyToSellItemText>
+              </C.WhyToSellItem>
+            ))}
+
+            <C.WhyToSellCta>Quero vender meu precatório</C.WhyToSellCta>
+          </C.WhyToSellList>
+        </C.WhyToSellContent>
+      </C.WhyToSellContainer>
+
+      <C.StepsContainer>
+        <C.StepsContent>
+          <C.StepsTitle>
+            Receba a antecipação do seu precatório em apenas 4 passos
+          </C.StepsTitle>
+          <C.StepsSubtitle>
+            É simples, rápido e o principal, seguro
+          </C.StepsSubtitle>
+
+          <C.StepsList>
+            {stepsList.map((step) => (
+              <C.StepsItem key={step.id}>
+                <C.StepsItemIcon>{step.icon}</C.StepsItemIcon>
+                <C.StepsItemTitle>{step.title}</C.StepsItemTitle>
+                <C.StepsItemText>{step.text}</C.StepsItemText>
+              </C.StepsItem>
+            ))}
+          </C.StepsList>
+
+          <C.StepsInfo>
+            <C.StepsInfoText>
+              A venda do precatório é realizada com muita segurança e agilidade,
+              todo o procedimento é reconhecido em cartório e o ente público, o
+              devedor, não se opõe a cessões de crédito, trata-se de um ato
+              TOTALMENTE LEGAL.
+            </C.StepsInfoText>
+
+            <C.StepsInfoText>
+              A CESSÃO É SEGURA, mas sempre deve ser realizada por uma empresa
+              capacitada para analisar todos os processos e documentos
+              necessários.
+            </C.StepsInfoText>
+          </C.StepsInfo>
+        </C.StepsContent>
+      </C.StepsContainer>
+
+      <C.LeadContainer>
+        <C.LeadContent>
+          <C.LeadInfo>
+            <C.LeadTitle>Somos especialistas em precatórios</C.LeadTitle>
+            <C.LeadText>
+              Preencha nosso formulário para <span>vender seu precatório</span>{" "}
+              ou <span>tirar dúvidas</span>.<br/>
+              <strong>Nosso time entrará em contato.</strong>
+            </C.LeadText>
+          </C.LeadInfo>
+          <PurposeForm/>
+        </C.LeadContent>
+      </C.LeadContainer>
     </>
   )
 }
