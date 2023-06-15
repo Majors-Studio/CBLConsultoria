@@ -32,6 +32,7 @@ const PurposeForm: React.FC = () => {
           placeholder="Email"
           name="email"
           onChange={handleInputChange}
+          
         />
         <S.Input
           placeholder="Telefone"

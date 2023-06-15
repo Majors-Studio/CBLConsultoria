@@ -5,9 +5,10 @@ export const Container = styled.header`
   width: 100%;
   top: 0;
   z-index: 999;
-  background-color: #fff;
+  background-color: #f8f8f8;
   height: 120px;
   padding: 0 20px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 `
 
 export const Content = styled.div`
@@ -15,7 +16,6 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-
   max-width: 1200px;
   margin: 0 auto;
 `

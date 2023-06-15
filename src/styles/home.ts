@@ -3,18 +3,17 @@ import styled from "styled-components"
 export const Container = styled.div`
   height: fit-content;
   width: 100vw;
-  background-color: #f2f2f2;
-
+  background-color: #f8f8f8;
   margin-top: 120px;
+  
 `
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 `
 
@@ -24,11 +23,9 @@ export const Head = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-
-  margin-top: 100px;
-  margin-bottom: 180px;
+  margin-top: 60px;
+  margin-bottom: 120px;
   padding: 0 20px;
-
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
@@ -38,21 +35,23 @@ export const Head = styled.div`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 120px;
-
+  gap: 40px;
   @media (max-width: 768px) {
     margin-bottom: 0;
   }
 `
 
 export const InfoTitle = styled.h1`
-  font-size: 35px;
-  font-weight: 600;
-  line-height: 38px;
-  max-width: 520px;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.2;
+  max-width: 550px;
   width: 100%;
   text-align: left;
+  color: #4f665a;
+  strong{
+    text-decoration: underline;
+  }
 `
 
 export const InfoList = styled.ul`
@@ -66,15 +65,33 @@ export const PrecatoryInfoItem = styled.li`
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: context-menu;
+  &:hover{
+    color: #4f665a;
+  }
 `
 
 export const CtaButton = styled.button`
-  width: 192px;
-  height: 39px;
-  background-color: #7a4726;
-  border-radius: 50px;
-  border: none;
-  color: #fff;
+font-weight: 700;
+border-radius: 0.5rem;
+border: 2px solid #4f665a;
+box-shadow: inset 0 0 0 0px #4f665a;
+transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
+transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+padding-inline: 1.5rem;
+height: 4.5rem;
+width: fit-content;
+font-size: 1.5rem;
+color: #4f665a;
+&:hover{
+  color: #e7e7e7;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 40px #4f665a;
+	transition-delay: 0s, 0s, 0.2s;
+  border: 2px solid transparent;
+}
 `
 
 export const PurposeContainer = styled.div``
@@ -82,22 +99,21 @@ export const PurposeContainer = styled.div``
 export const CardContainer = styled.div``
 
 export const CardTitle = styled.h1`
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 38px;
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
-  color: #111111;
+  color: #333;
   text-align: center;
 
   span {
-    color: #7a4726;
+    color: #4f665a;
   }
 `
 
 export const Cards = styled.div`
   margin: 60px 0;
-
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -108,47 +124,63 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 280px;
   height: 415px;
   background: #ffffff;
-  box-shadow: -1px 3px 10px 0px #000;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   border-radius: 20px;
-
   position: relative;
-
   padding: 50px 20px;
+  transition: all 0.3s ease;
+
+  &:hover{
+    background-color: #4f665a;
+    div{
+      color: #fff;
+    }
+    svg{
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    }
+    h1{
+      color: #fff;
+    }
+    p{
+      color: #fff;
+    }
+  }
 `
 
 export const CardIcon = styled.div`
   width: 50px;
   height: 50px;
+  svg{
+    filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg) brightness(90%) contrast(94%);
+  }
 `
 
 export const CardInfo = styled.div``
 
 export const CardInfoTitle = styled.h1`
-  color: #7a4726;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 24px;
   text-align: center;
-
   margin: 30px 0 36px;
 `
 
 export const CardInfoDescription = styled.p`
-  color: #000000;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.2;
   text-align: center;
 `
 
 export const CardIndex = styled.div`
-  color: #7a4726;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   font-weight: 600;
@@ -228,7 +260,7 @@ export const ChooseItem = styled.li`
 `
 
 export const ChooseItemTitle = styled.h1`
-  background-color: #7a4726;
+  background-color: #4f665a;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -282,7 +314,7 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   margin: 70px auto 0;
 `
@@ -408,7 +440,7 @@ export const FaqItem = styled.li`
   background-color: #fff;
   overflow: hidden;
 
-  border-bottom: 3px solid #7a4726;
+  border-bottom: 3px solid #4f665a;
 `
 
 export const FaqItemHeader = styled.div`
@@ -500,7 +532,7 @@ export const BlogImage = styled.img`
 
 export const BlogTitle = styled.h1`
   padding: 40px 30px;
-  color: #7a4726;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 21px;
   font-weight: 600;
@@ -511,7 +543,7 @@ export const BlogLink = styled.a`
   padding: 0 30px;
   align-self: flex-end;
 
-  color: #7a4726;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 500;
