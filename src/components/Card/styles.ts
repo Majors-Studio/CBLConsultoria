@@ -17,6 +17,23 @@ export const CardContainer = styled.div`
   transition: all 0.3s ease-in-out;
   animation: fade-in 4s;
 
+  &:hover {
+    background-color: #4f665a;
+    div {
+      color: #fff;
+    }
+    svg {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
+    }
+    h1 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
+  }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -28,15 +45,15 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Title = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #7a4726;
+export const Title = styled.h1`
+  font-size: 24px;
+  font-weight: 700;
+  color: #4f665a;
   margin-bottom: 16px;
 `;
 
 export const Description = styled.p`
-  font-size: 1rem;
+  font-size: 19.2px;
   font-weight: 400;
   color: #333;
   margin-bottom: 16px;
@@ -45,7 +62,7 @@ export const Description = styled.p`
 `;
 
 export const CardIndex = styled.div`
-  color: #7a4726;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   font-weight: 600;

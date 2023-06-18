@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100vw;
   background-color: #f8f8f8;
   margin-top: 120px;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -48,10 +48,10 @@ export const InfoTitle = styled.h1`
   width: 100%;
   text-align: left;
   color: #4f665a;
-  strong{
+  strong {
     text-decoration: underline;
   }
-`
+`;
 
 export const InfoList = styled.ul`
   display: flex;
@@ -67,31 +67,31 @@ export const PrecatoryInfoItem = styled.li`
   font-size: 1.2rem;
   color: #333;
   cursor: context-menu;
-  &:hover{
+  &:hover {
     color: #4f665a;
   }
-`
+`;
 
 export const CtaButton = styled.button`
-font-weight: 700;
-border-radius: 0.5rem;
-border: 2px solid #4f665a;
-box-shadow: inset 0 0 0 0px #4f665a;
-transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
-transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
-padding-inline: 1.5rem;
-height: 4.5rem;
-width: fit-content;
-font-size: 1.5rem;
-color: #4f665a;
-&:hover{
-  color: #e7e7e7;
-	border-radius: 50%;
-	box-shadow: inset 0 0 0 40px #4f665a;
-	transition-delay: 0s, 0s, 0.2s;
-  border: 2px solid transparent;
-}
-`
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 2px solid #4f665a;
+  box-shadow: inset 0 0 0 0px #4f665a;
+  transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+  padding-inline: 1.5rem;
+  height: 4.5rem;
+  width: fit-content;
+  font-size: 1.5rem;
+  color: #4f665a;
+  &:hover {
+    color: #e7e7e7;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 40px #4f665a;
+    transition-delay: 0s, 0s, 0.2s;
+    border: 2px solid transparent;
+  }
+`;
 
 export const PurposeContainer = styled.div``;
 
@@ -136,30 +136,32 @@ export const Card = styled.div`
   padding: 50px 20px;
   transition: all 0.3s ease;
 
-  &:hover{
+  &:hover {
     background-color: #4f665a;
-    div{
+    div {
       color: #fff;
     }
-    svg{
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    svg {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
     }
-    h1{
+    h1 {
       color: #fff;
     }
-    p{
+    p {
       color: #fff;
     }
   }
-`
+`;
 
 export const CardIcon = styled.div`
   width: 50px;
   height: 50px;
-  svg{
-    filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg) brightness(90%) contrast(94%);
+  svg {
+    filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg)
+      brightness(90%) contrast(94%);
   }
-`
+`;
 
 export const CardInfo = styled.div``;
 
@@ -252,7 +254,6 @@ export const ChooseSubtitle = styled.h1`
 
 export const ChooseList = styled.ul`
   margin-top: 30px;
-
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -260,6 +261,9 @@ export const ChooseList = styled.ul`
 
 export const ChooseItem = styled.li`
   background-color: #fff;
+
+  border-radius: 20px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 `;
 
 export const ChooseItemTitle = styled.h1`
@@ -270,7 +274,9 @@ export const ChooseItemTitle = styled.h1`
   font-weight: 600;
   line-height: 28px;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
 
 export const ChooseItemList = styled.ul`
@@ -278,7 +284,7 @@ export const ChooseItemList = styled.ul`
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
-  padding: 80px 50px;
+  padding: 40px 35px;
 `;
 
 export const ChooseItemListItem = styled.li`
@@ -440,7 +446,7 @@ export const FaqItem = styled.li`
   overflow: hidden;
 
   border-bottom: 3px solid #4f665a;
-`
+`;
 
 export const FaqItemHeader = styled.div`
   height: 84px;

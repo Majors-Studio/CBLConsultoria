@@ -226,7 +226,8 @@ export default function Home() {
           <S.Head>
             <S.Info>
               <S.InfoTitle>
-                Receba seu <strong>precatório</strong> com <strong>agilidade</strong> e <strong>segurança!</strong>
+                Receba seu <strong>precatório</strong> com{" "}
+                <strong>agilidade</strong> e <strong>segurança!</strong>
               </S.InfoTitle>
               <S.InfoList>
                 {infoList.map((item) => (

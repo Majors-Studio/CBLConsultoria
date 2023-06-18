@@ -109,8 +109,17 @@ const About: React.FC = () => {
             </Swiper>
           </C.WhatList>
         </C.WhatContainer>
+        <C.WhatTitle>
+          Evolução de investimentos em precatórios{" "}
+          <span style={{ fontSize: "18px" }}>(2018 - 2022)</span>
+        </C.WhatTitle>
+
         <Chart />
       </C.ContainerChart>
+
+      <C.SwiperContainer>
+        <CustomQuality />
+      </C.SwiperContainer>
 
       <C.CardContainer>
         {cardsList.map((card) => (
@@ -124,10 +133,6 @@ const About: React.FC = () => {
           </>
         ))}
       </C.CardContainer>
-
-      <C.SwiperContainer>
-        <CustomQuality />
-      </C.SwiperContainer>
 
       <C.VideoContainer>
         <Title

@@ -98,7 +98,7 @@ export const CardContainer = styled.div`
 export const SwiperContainer = styled.div`
   max-width: 100vw;
   width: 100%;
-  background-color: #e3dcd7;
+  background-color: #ffffff;
 
   margin-bottom: 50px;
 `;
