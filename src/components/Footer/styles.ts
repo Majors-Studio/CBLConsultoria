@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: #040506;
+  background-color: #4f665a;
   max-width: 100vw;
   width: 100%;
   height: fit-content;

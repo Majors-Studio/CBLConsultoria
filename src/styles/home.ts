@@ -77,7 +77,7 @@ export const CtaButton = styled.button`
   border-radius: 0.5rem;
   border: 2px solid #4f665a;
   box-shadow: inset 0 0 0 0px #4f665a;
-  transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
   height: 4.5rem;
@@ -203,8 +203,7 @@ export const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-bottom: 120px;
+  margin: 120px 0;
 `;
 
 export const VideoWrapper = styled.div`
@@ -212,7 +211,7 @@ export const VideoWrapper = styled.div`
 `;
 
 export const VideoTitle = styled.h1`
-  color: #121212;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: 600;
@@ -222,7 +221,15 @@ export const VideoTitle = styled.h1`
   margin-bottom: 20px;
 `;
 
-export const VideoCta = styled.button``;
+export const VideoCta = styled.button`
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #4f665a;
+  padding-inline: 1.5rem;
+  height: 4.5rem;
+  color: #4f665a;
+`;
 
 export const ChooseContainer = styled.div`
   display: flex;
@@ -233,7 +240,7 @@ export const ChooseContainer = styled.div`
 `;
 
 export const ChooseTitle = styled.h1`
-  color: #121212;
+  color: #4f665a;
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: 600;
@@ -277,6 +284,7 @@ export const ChooseItemTitle = styled.h1`
   padding: 20px 12px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  padding-inline: 2rem;
 `;
 
 export const ChooseItemList = styled.ul`
@@ -300,7 +308,28 @@ export const ChooseItemListItemStatus = styled.span`
   height: 20px;
 `;
 
-export const ChooseItemListItemText = styled.p``;
+export const ChooseItemListItemText = styled.p`
+  color: #555555;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #4f665a;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    :before {
+      width: 100%;
+    }
+  }
+`;
 
 export const WhyContainer = styled.div`
   background-color: #121212;
