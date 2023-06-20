@@ -22,6 +22,6 @@ export const navitems = [
   {
     id: 5,
     title: "Notícias",
-    url: "",
+    url: "/news",
   },
 ];
