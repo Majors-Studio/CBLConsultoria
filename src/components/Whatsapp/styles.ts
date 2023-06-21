@@ -13,6 +13,18 @@ export const ButtonWpp = styled.button`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 9999;
+  animation: fade-bottom 0.5s ease-in-out;
+
+  @keyframes fade-bottom {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   &:hover {
     transform: scale(1.1);

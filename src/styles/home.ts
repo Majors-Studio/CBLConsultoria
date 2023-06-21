@@ -5,6 +5,10 @@ export const Container = styled.div`
   width: 100vw;
   background-color: #f8f8f8;
   margin-top: 120px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Content = styled.div`
@@ -57,6 +61,9 @@ export const InfoList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media (max-width: 768px) {
+  }
 `;
 
 export const PrecatoryInfoItem = styled.li`
@@ -95,7 +102,14 @@ export const CtaButton = styled.button`
 
 export const PurposeContainer = styled.div``;
 
-export const CardContainer = styled.div``;
+export const CardContainer = styled.div`
+  max-width: 100vw;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+`;
 
 export const WhatName = styled.h1`
   margin-top: 12px;
@@ -121,6 +135,11 @@ export const Cards = styled.div`
   flex-direction: row;
   gap: 20px;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Card = styled.div`
@@ -138,6 +157,7 @@ export const Card = styled.div`
 
   &:hover {
     background-color: #4f665a;
+    cursor: default;
     div {
       color: #fff;
     }
@@ -237,6 +257,10 @@ export const ChooseContainer = styled.div`
   align-items: center;
 
   margin-bottom: 120px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const ChooseTitle = styled.h1`
@@ -264,6 +288,12 @@ export const ChooseList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 `;
 
 export const ChooseItem = styled.li`
@@ -333,9 +363,13 @@ export const ChooseItemListItemText = styled.p`
 
 export const WhyContainer = styled.div`
   background-color: #121212;
+  max-width: 100vw;
   width: 100%;
 
   padding: 70px 0;
+
+  @media (max-width: 768px) {
+  }
 `;
 
 export const WhyTitle = styled.h1`
@@ -355,6 +389,11 @@ export const WhyList = styled.ul`
   max-width: 1280px;
   width: 100%;
   margin: 70px auto 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20px;
+  }
 `;
 
 export const WhyItem = styled.li`
@@ -403,6 +442,11 @@ export const WhatContainer = styled.div`
 
   padding: 90px 0 60px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 60px 0 40px;
+    background-color: #fff;
+  }
 `;
 
 export const WhatTitle = styled.h1`
@@ -523,6 +567,10 @@ export const FollowContainer = styled.div`
   justify-content: center;
 
   background-color: #000;
+
+  @media (max-width: 768px) {
+    background-color: #fff;
+  }
 `;
 
 export const FollowTitle = styled.h1`
@@ -531,6 +579,12 @@ export const FollowTitle = styled.h1`
   font-size: 36px;
   font-weight: 600;
   line-height: 40px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+  }
 `;
 
 export const BlogContainer = styled.div`
@@ -542,6 +596,12 @@ export const BlogContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
 `;
 
 export const BlogItem = styled.div`
