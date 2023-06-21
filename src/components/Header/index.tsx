@@ -29,6 +29,7 @@ const Header: React.FC = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              color="#fff"
             >
               <path
                 strokeLinecap="round"
