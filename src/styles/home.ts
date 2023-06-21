@@ -368,7 +368,7 @@ export const WhyContainer = styled.div`
 
   padding: 70px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
   }
 `;
 
@@ -390,9 +390,15 @@ export const WhyList = styled.ul`
   width: 100%;
   margin: 70px auto 0;
 
+  @media (max-width: 920px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    grid-gap: 10px;
+  }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 20px;
+    grid-gap: 10px;
   }
 `;
 

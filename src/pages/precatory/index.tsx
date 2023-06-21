@@ -1,20 +1,20 @@
-import React from "react"
-import * as C from "@/styles/precatory"
-import BrazilGraph from "@/assets/svg/BrazilGraph"
+import React from "react";
+import * as C from "@/styles/precatory";
+import BrazilGraph from "@/assets/svg/BrazilGraph";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
   Legend,
   ChartData,
-} from "chart.js"
-import { Doughnut } from "react-chartjs-2"
-import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons"
-import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
-import ContractIcon from "@/assets/icons/ContractIcon"
-import PurposeForm from "@/components/PurposeForm"
+} from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons";
+import MagnifyingGlass from "@/assets/icons/MagnifyingIcon";
+import ContractIcon from "@/assets/icons/ContractIcon";
+import PurposeForm from "@/components/PurposeForm";
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Precatory: React.FC = () => {
   const chartData = {
@@ -40,7 +40,7 @@ const Precatory: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"doughnut", number[], string>
+  } as ChartData<"doughnut", number[], string>;
 
   const newsList = [
     {
@@ -72,7 +72,7 @@ const Precatory: React.FC = () => {
       link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
       date: "14/09/2021",
     },
-  ]
+  ];
 
   const whyToSellList = [
     {
@@ -114,7 +114,7 @@ const Precatory: React.FC = () => {
         </>
       ),
     },
-  ]
+  ];
 
   const stepsList = [
     {
@@ -161,7 +161,7 @@ const Precatory: React.FC = () => {
       ),
       icon: <MoneyIcon />,
     },
-  ]
+  ];
 
   return (
     <>
@@ -411,15 +411,15 @@ const Precatory: React.FC = () => {
             <C.LeadTitle>Somos especialistas em precatórios</C.LeadTitle>
             <C.LeadText>
               Preencha nosso formulário para <span>vender seu precatório</span>{" "}
-              ou <span>tirar dúvidas</span>.<br/>
+              ou <span>tirar dúvidas</span>.<br />
               <strong>Nosso time entrará em contato.</strong>
             </C.LeadText>
           </C.LeadInfo>
-          <PurposeForm/>
+          <PurposeForm />
         </C.LeadContent>
       </C.LeadContainer>
     </>
-  )
-}
+  );
+};
 
-export default Precatory
+export default Precatory;
