@@ -3,7 +3,7 @@ import { iButton } from ".";
 
 export const Button = styled.button<iButton>`
   border: 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: ${(props) => props.padding || "10px 25px"};
   background: ${(props) => props.bgColor || "#fff"};
   color: ${(props) => props.color || "#4f665a"};
@@ -11,9 +11,7 @@ export const Button = styled.button<iButton>`
   font-size: 1.2rem;
   transition: background 0.2s;
 
-
-  @media (max-width: 920px) {
-    /* width: 100%; */
+  @media (max-width: 1200px) {
     display: none;
   }
 `;

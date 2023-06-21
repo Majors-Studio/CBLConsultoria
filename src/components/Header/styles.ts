@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.header`
   position: fixed;
@@ -9,7 +9,7 @@ export const Container = styled.header`
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const Content = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-`
+`;
 
 export const Logo = styled.img`
   width: 200px;
@@ -29,15 +29,16 @@ export const Logo = styled.img`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`
+`;
 export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 920px) {
+  background-color: red;
+  @media (max-width: 1200px) {
     display: none;
   }
-`
+`;
 export const NavbarItem = styled.div`
   margin-left: 20px;
   font-size: 1.2rem;
@@ -58,11 +59,15 @@ export const NavbarItem = styled.div`
     &:after {
       width: 100%;
     }
+
+    @media (max-width: 920px) {
+      display: none;
+    }
   }
-`
+`;
 
 export const AccordionItem = styled.div`
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
-`
+`;
