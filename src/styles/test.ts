@@ -1,14 +1,13 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 interface ContainerProps {
-  active?: boolean
+  active?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
   width: 100px;
   height: 100px;
-  background-color: red;
   margin-top: 200px;
 
   ${({ active }) =>
@@ -19,6 +18,6 @@ export const Container = styled.div<ContainerProps>`
 
 
 `}
-`
+`;
 
-export const Title = styled.h1
+export const Title = styled.h1;

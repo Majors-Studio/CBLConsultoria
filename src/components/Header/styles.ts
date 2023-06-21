@@ -34,7 +34,6 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
   @media (max-width: 1200px) {
     display: none;
   }
