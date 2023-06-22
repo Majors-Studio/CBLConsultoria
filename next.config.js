@@ -12,7 +12,7 @@ const nextConfig = {
     styledComponents: true,
   },
   env: {
-    PHONE_NUMBER: "5521999999999",
+    PHONE_NUMBER: "5511973664376",
   },
 };
 
