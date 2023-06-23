@@ -7,6 +7,7 @@ import * as S from "./styles";
 import Logo from "../Logo";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   // google maps config
@@ -50,10 +51,22 @@ const Footer: React.FC = () => {
   ];
 
   const middleInfoData = [
-    "Política de privacidade",
-    "Termos de uso",
-    "Contato",
-    "Sobre",
+    {
+      name: "Política de privacidade",
+      url: "/",
+    },
+    {
+      name: "Termos de uso",
+      url: "/",
+    },
+    {
+      name: "Contato",
+      url: "/",
+    },
+    {
+      name: "Sobre",
+      url: "/",
+    },
   ];
 
   if (!isLoaded) {
@@ -75,7 +88,9 @@ const Footer: React.FC = () => {
       </S.Midia>
       <S.MiddleInfo>
         {middleInfoData.map((item, index) => (
-          <S.Subtitle key={index}>{item}</S.Subtitle>
+          <Link href={item.url}>
+            <S.Subtitle key={index}>{item.name}</S.Subtitle>
+          </Link>
         ))}
       </S.MiddleInfo>
       <S.Info>
@@ -110,7 +125,8 @@ const Footer: React.FC = () => {
             onLoad={() => console.log("Marker Loaded")}
           />
         </GoogleMap>
-        <S.Subtitle>Rua Timote Silva, 280</S.Subtitle>
+        <S.Subtitle>Rua Leandro Dupret, 353</S.Subtitle>
+        <S.Subtitle>Bairro: Vila Clementino</S.Subtitle>
 
         <S.Title>
           <svg
@@ -129,7 +145,7 @@ const Footer: React.FC = () => {
           </svg>
           Email
         </S.Title>
-        <S.Subtitle>Clbconsultoria@gmail.com</S.Subtitle>
+        <S.Subtitle>caue@cblconsultoria.com.br</S.Subtitle>
       </S.Info>
     </S.Container>
   );
