@@ -7,7 +7,6 @@ export const ButtonWpp = styled.button`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #25d366;
   border: none;
   outline: none;
   cursor: pointer;
@@ -29,4 +28,10 @@ export const ButtonWpp = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+`;
+
+export const IconWpp = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

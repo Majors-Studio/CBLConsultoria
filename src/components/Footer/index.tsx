@@ -88,8 +88,8 @@ const Footer: React.FC = () => {
       </S.Midia>
       <S.MiddleInfo>
         {middleInfoData.map((item, index) => (
-          <Link href={item.url}>
-            <S.Subtitle key={index}>{item.name}</S.Subtitle>
+          <Link key={index} href={item.url}>
+            <S.Subtitle>{item.name}</S.Subtitle>
           </Link>
         ))}
       </S.MiddleInfo>

@@ -8,9 +8,9 @@ export default function Whatsapp() {
   return (
     <Link target="_blank" href={`https://wa.me/${phone}`}>
       <C.ButtonWpp>
-        <img
+        <C.IconWpp
           src="https://i0.wp.com/www.multarte.com.br/wp-content/uploads/2018/11/whatsapp-logo-icone.png?resize=696%2C712&ssl=1"
-          alt=""
+          alt="Whatsapp"
         />
       </C.ButtonWpp>
     </Link>
