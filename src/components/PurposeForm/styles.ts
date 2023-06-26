@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import { tokens } from "../../utils/tokens"
 
 export const Container = styled.div`
   /* width: 520px; */
@@ -14,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -57,7 +58,7 @@ export const Input = styled.input`
   color: #333;
   width: 100%;
   &:focus-visible {
-    outline: 1px solid #4f665a;
+    outline: 1px solid ${tokens.colors.brand.pure};
   }
   ::placeholder {
     color: #333;
@@ -70,7 +71,7 @@ export const TextArea = styled.textarea`
   border-radius: 15px;
   width: 100%;
   &:focus-visible {
-    outline: 1px solid #4f665a;
+    outline: 1px solid ${tokens.colors.brand.pure};
   }
   ::placeholder {
     color: #333;
@@ -80,19 +81,19 @@ export const TextArea = styled.textarea`
 export const Button = styled.button`
   font-weight: 700;
   border-radius: 0.5rem;
-  border: 2px solid #4f665a;
-  box-shadow: inset 0 0 0 0px #4f665a;
+  border: 2px solid ${tokens.colors.brand.pure};
+  box-shadow: inset 0 0 0 0px ${tokens.colors.brand.pure};
   transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
   height: 4.5rem;
   width: 220px;
   font-size: 1.5rem;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   &:hover {
     color: #e7e7e7;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 40px #4f665a;
+    box-shadow: inset 0 0 0 40px ${tokens.colors.brand.pure};
     transition-delay: 0s, 0s, 0.2s;
     border: 2px solid transparent;
   }
