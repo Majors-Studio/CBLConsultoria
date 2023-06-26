@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { tokens } from "../utils/tokens"
+
 
 export const Container = styled.div`
   height: fit-content;
@@ -61,7 +63,7 @@ export const InfoTitle = styled.h1`
   line-height: 1.2;
   width: 100%;
   text-align: left;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   strong {
     text-decoration: underline;
   }
@@ -85,26 +87,26 @@ export const PrecatoryInfoItem = styled.li`
   color: #333;
   cursor: context-menu;
   &:hover {
-    color: #4f665a;
+    color: ${tokens.colors.brand.pure};
   }
 `
 
 export const CtaButton = styled.button`
   font-weight: 700;
   border-radius: 0.5rem;
-  border: 2px solid #4f665a;
-  box-shadow: inset 0 0 0 0px #4f665a;
+  border: 2px solid ${tokens.colors.brand.pure};
+  box-shadow: inset 0 0 0 0px ${tokens.colors.brand.pure};
   transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
   height: 4.5rem;
   width: fit-content;
   font-size: 1.5rem;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   &:hover {
     color: #e7e7e7;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 40px #4f665a;
+    box-shadow: inset 0 0 0 40px ${tokens.colors.brand.pure};
     transition-delay: 0s, 0s, 0.2s;
     border: 2px solid transparent;
   }
@@ -130,7 +132,7 @@ export const CardTitle = styled.h1`
   text-align: center;
 
   span {
-    color: #4f665a;
+    color: ${tokens.colors.brand.pure};
   }
 `
 
@@ -163,7 +165,7 @@ export const Card = styled.div`
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #4f665a;
+    background-color: ${tokens.colors.brand.pure};
     cursor: default;
     div {
       color: #fff;
@@ -193,7 +195,7 @@ export const CardIcon = styled.div`
 export const CardInfo = styled.div``
 
 export const CardInfoTitle = styled.h1`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -212,7 +214,7 @@ export const CardInfoDescription = styled.p`
 `
 
 export const CardIndex = styled.div`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   font-weight: 600;
@@ -238,7 +240,7 @@ export const VideoWrapper = styled.div`
 `
 
 export const VideoTitle = styled.h1`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: 600;
@@ -252,10 +254,10 @@ export const VideoCta = styled.button`
   font-weight: 700;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  border: 2px solid #4f665a;
+  border: 2px solid ${tokens.colors.brand.pure};
   padding-inline: 1.5rem;
   height: 4.5rem;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
 `
 
 export const ChooseContainer = styled.div`
@@ -268,7 +270,7 @@ export const ChooseContainer = styled.div`
 `
 
 export const ChooseTitle = styled.h1`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: 600;
@@ -308,7 +310,7 @@ export const ChooseItem = styled.li`
 `
 
 export const ChooseItemTitle = styled.h1`
-  background-color: #4f665a;
+  background-color: ${tokens.colors.brand.pure};
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -355,7 +357,7 @@ export const ChooseItemListItemText = styled.p`
     bottom: -3px;
     width: 0;
     height: 1px;
-    background-color: #4f665a;
+    background-color: ${tokens.colors.brand.pure};
     transition: all 0.3s ease-in-out;
   }
   &:hover {
@@ -528,7 +530,7 @@ export const FaqItem = styled.li`
   background-color: #fff;
   overflow: hidden;
 
-  border-bottom: 3px solid #4f665a;
+  border-bottom: 3px solid ${tokens.colors.brand.pure};
 `
 
 export const FaqItemHeader = styled.div`
@@ -636,7 +638,7 @@ export const BlogImage = styled.img`
 
 export const BlogTitle = styled.h1`
   padding: 40px 30px;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 21px;
   font-weight: 600;
@@ -647,7 +649,7 @@ export const BlogLink = styled.a`
   padding: 0 30px;
   align-self: flex-end;
 
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -666,9 +668,9 @@ export const BlogCta = styled.button`
   max-width: 300px;
   height: 60px;
   border-radius: 10px;
-  border: 2px solid #4f665a;
+  border: 2px solid ${tokens.colors.brand.pure};
 
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -678,7 +680,7 @@ export const BlogCta = styled.button`
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #4f665a;
+    background-color: ${tokens.colors.brand.pure};
     color: #fff;
   }
 

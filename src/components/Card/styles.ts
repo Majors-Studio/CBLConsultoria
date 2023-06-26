@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { tokens } from "../../utils/tokens";
 
 export const CardContainer = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const CardContainer = styled.div`
   animation: fade-in 4s;
 
   &:hover {
-    background-color: #4f665a;
+    background-color: ${tokens.colors.brand.pure};
     div {
       color: #fff;
     }
@@ -48,7 +49,7 @@ export const CardContainer = styled.div`
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: 700;
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   margin-bottom: 16px;
 `;
 
@@ -62,7 +63,7 @@ export const Description = styled.p`
 `;
 
 export const CardIndex = styled.div`
-  color: #4f665a;
+  color: ${tokens.colors.brand.pure};
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   font-weight: 600;
