@@ -24,6 +24,7 @@ import "swiper/swiper.min.css";
 import Avatar from "@/components/Avatar";
 import TriangleDownIcon from "@/assets/icons/TriangleDownIcon";
 import { useApp } from "@/context/contextApi";
+import Link from "next/link";
 
 export default function Home() {
   const [faqOpened, setFaqOpened] = useState<number | null>(null);
@@ -432,7 +433,9 @@ export default function Home() {
               </S.BlogItem>
             ))}
           </S.BlogContainer>
-          <S.BlogCta>Ver mais notícias</S.BlogCta>
+          <Link href="/news">
+            <S.BlogCta>Ver mais notícias</S.BlogCta>
+          </Link>
         </S.Content>
       </S.Container>
     </div>

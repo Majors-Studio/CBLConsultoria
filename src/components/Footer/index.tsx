@@ -11,26 +11,26 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   // google maps config
-  const libraries = useMemo(() => ["places"], []);
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY as string,
-    libraries: libraries as any,
-  });
+  // const libraries = useMemo(() => ["places"], []);
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY as string,
+  //   libraries: libraries as any,
+  // });
 
-  const mapOptions = useMemo<google.maps.MapOptions>(
-    () => ({
-      disableDefaultUI: true,
-      clickableIcons: true,
-      scrollwheel: false,
-    }),
-    []
-  );
+  // const mapOptions = useMemo<google.maps.MapOptions>(
+  //   () => ({
+  //     disableDefaultUI: true,
+  //     clickableIcons: true,
+  //     scrollwheel: false,
+  //   }),
+  //   []
+  // );
 
-  // map position
-  const mapCenter = useMemo(
-    () => ({ lat: 27.672932021393862, lng: 85.31184012689732 }),
-    []
-  );
+  // // map position
+  // const mapCenter = useMemo(
+  //   () => ({ lat: 27.672932021393862, lng: 85.31184012689732 }),
+  //   []
+  // );
 
   const midiaItems = [
     {
@@ -50,104 +50,60 @@ const Footer: React.FC = () => {
     },
   ];
 
-  const middleInfoData = [
-    {
-      name: "Política de privacidade",
-      url: "/",
-    },
-    {
-      name: "Termos de uso",
-      url: "/",
-    },
-    {
-      name: "Contato",
-      url: "/",
-    },
-    {
-      name: "Sobre",
-      url: "/",
-    },
-  ];
-
-  if (!isLoaded) {
-    return <p>Loading...</p>;
-  }
+  // if (!isLoaded) {
+  //   return <p>Loading...</p>;
+  // }
 
   return (
-    <S.Container>
-      <S.Midia>
-        <Logo />
-        <S.MidiaItems>
-          {midiaItems.map((item, index) => (
-            <S.MidiaItem key={index} href={item.url}>
-              <Image width={36} height={36} src={item.logo} alt={item.name} />
-              <S.InfoText>{item.name}</S.InfoText>
-            </S.MidiaItem>
-          ))}
-        </S.MidiaItems>
-      </S.Midia>
-      <S.MiddleInfo>
-        {middleInfoData.map((item, index) => (
-          <Link key={index} href={item.url}>
-            <S.Subtitle>{item.name}</S.Subtitle>
-          </Link>
-        ))}
-      </S.MiddleInfo>
-      <S.Info>
-        <S.Title>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
-            />
-          </svg>
-          Localização
-        </S.Title>
-        <GoogleMap
-          options={mapOptions}
-          zoom={14}
-          center={mapCenter}
-          mapTypeId={google.maps.MapTypeId.ROADMAP}
-          mapContainerStyle={{ width: "500px", height: "200px" }}
-          onLoad={() => console.log("Map Component Loaded...")}
-        >
-          <MarkerF
-            position={mapCenter}
-            icon="https://picsum.photos/64"
-            onLoad={() => console.log("Marker Loaded")}
-          />
-        </GoogleMap>
-        <S.Subtitle>Rua Leandro Dupret, 353</S.Subtitle>
-        <S.Subtitle>Bairro: Vila Clementino</S.Subtitle>
-
-        <S.Title>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
-            />
-          </svg>
-          Email
-        </S.Title>
-        <S.Subtitle>caue@cblconsultoria.com.br</S.Subtitle>
-      </S.Info>
-    </S.Container>
+    <>
+      <S.Container>
+        <S.Content>
+          <S.Midia>
+            <Logo />
+            <S.MainText>
+              <S.BiggerText>
+                We growing up your business with personal AI manager.
+              </S.BiggerText>
+              <S.Desc>caue@cblconsultoria.com.br</S.Desc>
+            </S.MainText>
+          </S.Midia>
+          <S.ContainerInfo>
+            <S.Info>
+              <S.Title>Company</S.Title>
+              <S.Subtitle>Blog</S.Subtitle>
+              <S.Subtitle>Carreiras</S.Subtitle>
+              <S.Subtitle>Preços</S.Subtitle>
+            </S.Info>
+            <S.Info>
+              <S.Title>Resources</S.Title>
+              <S.Subtitle>Documentação</S.Subtitle>
+              <S.Subtitle>Papéis</S.Subtitle>
+              <S.Subtitle>Conferências</S.Subtitle>
+            </S.Info>
+            <S.Info>
+              <S.Title>Legal</S.Title>
+              <S.Subtitle>Termos de serviço</S.Subtitle>
+              <S.Subtitle>Política e Privacidade</S.Subtitle>
+              <S.Subtitle>Processamento de dados</S.Subtitle>
+            </S.Info>
+          </S.ContainerInfo>
+        </S.Content>
+      </S.Container>
+      <S.Line />
+      <S.Rights>
+        <S.Content>
+          <S.Text>© 2023 CBLCONSULTORIA. All rights reserved.</S.Text>
+          <S.MidiaItems>
+            {midiaItems.map((item, index) => (
+              <S.MidiaItem key={index} href={item.url}>
+                <Image width={36} height={36} src={item.logo} alt={item.name} />
+                <S.InfoText>{item.name}</S.InfoText>
+              </S.MidiaItem>
+            ))}
+          </S.MidiaItems>
+        </S.Content>
+      </S.Rights>
+    </>
   );
 };
 

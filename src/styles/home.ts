@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-top: 120px;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 `;
 
@@ -18,6 +18,14 @@ export const Content = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Head = styled.div`
@@ -451,7 +459,9 @@ export const WhatContainer = styled.div`
 
   @media (max-width: 768px) {
     padding: 60px 0 40px;
-    background-color: #fff;
+    background-color: transparent;
+    width: 80%;
+    margin: 0 auto;
   }
 `;
 
@@ -617,6 +627,12 @@ export const BlogItem = styled.div`
   background-color: #fff;
   border-radius: 28px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 420px;
+    width: 75%;
+    margin: 0 auto;
+  }
 `;
 
 export const BlogImageContainer = styled.div`
@@ -649,6 +665,11 @@ export const BlogLink = styled.a`
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (max-width: 920px) {
+    align-self: center;
+    display: block;
+  }
 `;
 
 export const BlogCta = styled.button`

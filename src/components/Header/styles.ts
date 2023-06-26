@@ -5,7 +5,7 @@ export const Container = styled.header`
   width: 100%;
   top: 0;
   z-index: 999;
-  background-color: #4f665a;
+  background-color: #000;
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
