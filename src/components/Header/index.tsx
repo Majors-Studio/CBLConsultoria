@@ -70,7 +70,9 @@ const Header: React.FC = () => {
           </C.Navbar>
         </div>
 
-        <Button text="Fale Conosco" />
+        <Link href="#purposeForm">
+          <Button text="Fale Conosco" />
+        </Link>
       </C.Content>
     </C.Container>
   );
