@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as C from "./styles";
 import { Button } from "@/components";
 import Logo from "../Logo";
@@ -16,9 +16,28 @@ const Header: React.FC = () => {
   const handleOpenAccordion = () => {
     setIsOpenAccordion(!isOpenAccordion);
   };
+  
+    const [isOnTop, setIsOnTop] = useState(true)
+  const [menuOpened, setMenuOpened] = useState(false)
+
+  useEffect(() => {
+    let lastScrollTop = 0
+    const handleScroll = () => {
+      setMenuOpened(false)
+      const st = window.pageYOffset || document.documentElement.scrollTop
+      if (st > lastScrollTop) {
+        setIsOnTop(false)
+      } else {
+        setIsOnTop(true)
+      }
+      lastScrollTop = st <= 0 ? 0 : st
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <C.Container>
+    <C.Container show={isOnTop}>
       <C.Content>
         <Logo />
         <div>

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+interface IProps {
+  show: boolean
+}
+
+
+export const Container = styled.header<IProps>`
   position: fixed;
   width: 100%;
   top: 0;
@@ -9,6 +14,11 @@ export const Container = styled.header`
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+
+  transition: all 0.5s ease-in-out;
+
+  ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
 `;
 
 export const Content = styled.div`
