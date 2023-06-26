@@ -1,11 +1,10 @@
+import { tokens } from "@/utils/tokens"
 import styled from "styled-components"
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    padding: 20px 0;
-
-
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
 `
 
 export const Content = styled.div`
@@ -28,12 +27,16 @@ export const Tab = styled.div`
 `
 
 export const Grid = styled.div`
-    margin-top: 20px;
+  margin-top: 20px;
 
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Left = styled.div`
@@ -43,7 +46,8 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: red;
+  border: 1px solid ${tokens.colors.neutral.lowLight};
+
 `
 
 export const Right = styled.div``
@@ -58,10 +62,40 @@ export const Image = styled.img`
   object-position: center;
 `
 
-export const Category = styled.div``
+export const Category = styled.div`
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 0 4px;
 
-export const Title = styled.div``
+  color: ${tokens.colors.neutral.lowLight};
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+`
 
-export const Description = styled.div``
+export const Title = styled.h1`
+  font-size: 38px;
+  color: ${tokens.colors.neutral.lowDark};
+  font-weight: 400;
+  line-height: 55px;
+`
 
-export const Text = styled.div``
+export const Description = styled.div`
+  font-size: 12px;
+  color: ${tokens.colors.neutral.lowMedium};
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 12px;
+letter-spacing: 1px;
+
+`
+
+export const Text = styled.div`
+  font-size: 18px;
+  color: ${tokens.colors.neutral.lowDark};
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 12px;
+
+`
