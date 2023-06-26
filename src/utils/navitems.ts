@@ -16,11 +16,6 @@ export const navitems = [
   },
   {
     id: 4,
-    title: "Contato",
-    url: "",
-  },
-  {
-    id: 5,
     title: "Notícias",
     url: "/news",
   },

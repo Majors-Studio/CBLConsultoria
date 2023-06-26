@@ -97,7 +97,6 @@ const Footer: React.FC = () => {
             {midiaItems.map((item, index) => (
               <S.MidiaItem key={index} href={item.url}>
                 <Image width={36} height={36} src={item.logo} alt={item.name} />
-                <S.InfoText>{item.name}</S.InfoText>
               </S.MidiaItem>
             ))}
           </S.MidiaItems>
