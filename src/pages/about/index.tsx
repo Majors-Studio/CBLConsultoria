@@ -123,14 +123,12 @@ const About: React.FC = () => {
 
       <C.CardContainer>
         {cardsList.map((card) => (
-          <>
-            <Card
-              key={card.id}
-              index={card.id}
-              title={card.title}
-              description={card.description}
-            />
-          </>
+          <Card
+            key={card.id}
+            index={card.id}
+            title={card.title}
+            description={card.description}
+          />
         ))}
       </C.CardContainer>
 
