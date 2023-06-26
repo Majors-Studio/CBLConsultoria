@@ -1,7 +1,6 @@
 import React from "react"
 import * as C from "../../styles/blog"
 
-// import Image from "next/image";
 import CardBlog from "@/components/CardBlog"
 import Link from "next/link"
 import { useApp } from "@/context/contextApi"

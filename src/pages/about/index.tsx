@@ -1,22 +1,22 @@
-import React from "react";
-import * as C from "@/styles/about";
-import Image from "next/image";
-import { Card, CustomQuality, Subtitle, Title } from "@/components";
+import React from "react"
+import * as C from "@/styles/about"
+import Image from "next/image"
+import { Card, CustomQuality, Subtitle, Title } from "@/components"
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, A11y, Pagination,Navigation } from "swiper"
 
-import SpeechBox from "@/components/SpeechBox";
-import Avatar from "@/components/Avatar";
+import SpeechBox from "@/components/SpeechBox"
+import Avatar from "@/components/Avatar"
 
-import governimg from "../../../public/assets/images/government.jpg";
-import PurposeForm from "@/components/PurposeForm";
+import governimg from "../../../public/assets/images/government.jpg"
+import PurposeForm from "@/components/PurposeForm"
 
-import { useApp } from "@/context/contextApi";
-import Chart from "@/components/Chart";
+import { useApp } from "@/context/contextApi"
+import Chart from "@/components/Chart"
 
 const About: React.FC = () => {
-  const { cardsList, avatarData } = useApp();
+  const { cardsList, avatarData } = useApp()
 
   const points = [
     {
@@ -54,7 +54,7 @@ const About: React.FC = () => {
         "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
       avatar: "https://i.pravatar.cc/300?img=5",
     },
-  ];
+  ]
 
   return (
     <C.Container>
@@ -121,16 +121,45 @@ const About: React.FC = () => {
         <CustomQuality />
       </C.SwiperContainer>
 
-      <C.CardContainer>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        modules={[Autoplay, A11y, Navigation,]}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        navigation={{
+          
+        }}
+        style={{
+          width: "100%",
+          margin: "0 auto",
+          height: "100%",
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
         {cardsList.map((card) => (
-          <Card
+          <SwiperSlide
             key={card.id}
-            index={card.id}
-            title={card.title}
-            description={card.description}
-          />
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Card
+              index={card.id}
+              title={card.title}
+              description={card.description}
+            />
+          </SwiperSlide>
         ))}
-      </C.CardContainer>
+      </Swiper>
 
       <C.VideoContainer>
         <Title
@@ -173,7 +202,7 @@ const About: React.FC = () => {
         <PurposeForm />
       </C.FormContainer>
     </C.Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About

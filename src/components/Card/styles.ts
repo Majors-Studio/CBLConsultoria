@@ -14,6 +14,8 @@ export const CardContainer = styled.div`
 
   position: relative;
 
+margin: 20px 0;
+
   padding: 50px 20px;
   transition: all 0.3s ease-in-out;
   animation: fade-in 4s;

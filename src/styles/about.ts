@@ -80,20 +80,7 @@ export const FormContainer = styled.div`
   }
 `;
 
-export const CardContainer = styled.div`
-  display: flex;
-  max-width: 100vw;
-  width: 100%;
-  padding: 0 30px;
-  align-items: center;
-  margin: 80px 0;
-  justify-content: center;
-  gap: 30px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
 
 export const SwiperContainer = styled.div`
   max-width: 100vw;
