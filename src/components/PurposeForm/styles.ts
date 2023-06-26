@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
   /* width: 520px; */
@@ -7,7 +7,11 @@ export const Container = styled.div`
   padding: 40px 20px 40px;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-`;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`
 
 export const Title = styled.h1`
   color: #4f665a;
@@ -29,7 +33,7 @@ export const Subtitle = styled.h2`
   max-width: 440px;
   text-align: center;
   margin: 0 auto;
-`;
+`
 
 export const Form = styled.form`
   display: flex;
@@ -39,7 +43,7 @@ export const Form = styled.form`
   width: 100%;
   margin: 40px auto 0;
   align-items: center;
-`;
+`
 
 export const Input = styled.input`
   background-color: #f8f8f8;
@@ -54,7 +58,7 @@ export const Input = styled.input`
   ::placeholder {
     color: #333;
   }
-`;
+`
 
 export const TextArea = styled.textarea`
   background-color: #f8f8f8;
@@ -67,7 +71,7 @@ export const TextArea = styled.textarea`
   ::placeholder {
     color: #333;
   }
-`;
+`
 
 export const Button = styled.button`
   font-weight: 700;

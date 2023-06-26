@@ -1,24 +1,206 @@
-export const token = {
-  colors: {
-    primary: "#F2F2F2",
-    secondary: "#333333",
-    tertiary: "#F2F2F2",
-  },
-  fonts: {
-    family: {
-      primary: "Roboto, sans-serif",
-      secondary: "Roboto, sans-serif",
-    },
 
-    sizes: {
-      small: "1.2rem",
-      medium: "1.4rem",
-      large: "1.6rem",
+/*
+ * 
+  Exemplos:
+  
+    Uso em uma props de css:
+    
+    Possibilidade 1:
+      const Div = styled.div`
+        background-color: ${tokens.colors.brand.pure}
+      `
+      
+    Possibilidade 2 (desestruturando):
+      const {
+        brand: { pure },
+      } = tokens.colors
+      
+      const Div = styled.div`
+        background-color: ${pure}
+      `
+      
+    Possibilidade 3 (desestruturando e renomeando):
+      const {
+        brand: { pure: brandPure },
+      } = tokens.colors
+      
+      const Div = styled.div`
+        background-color: ${brandPure}
+      `
+ */
+
+
+export const tokens = {
+  colors: {
+    brand: {
+      pure: '#3533cd',
+      light: '#fff',
+      dark: '#000',
+    },
+    // highlight: {
+    //   pure: '#FF8A00',
+    //   light: '#FFE3C2',
+    //   medium: '#CC6E00',
+    //   dark: '#7A4200',
+    // },
+    neutral: {
+      lowPure: '#000000',
+      lowLight: '#A3A3A3',
+      lowMedium: '#666666',
+      lowDark: '#292929',
+      highPure: '#FFFFFF',
+      highLight: '#F5F5F5',
+      highMedium: '#E0E0E0',
+      highDark: '#CCCCCC',
+    },
+    feedback: {
+      errorPure: '#EA1F1F',
+      errorLight: '#FDC4C4',
+      errorMedium: '#F05656',
+      errorDark: '#710A0A',
+      successPure: '#3AA141',
+      successLight: '#D2EFD4',
+      successMedium: '#78CE7E',
+      successDark: '#205A24',
+    },
+  },
+  shadow: {
+    shadowLevel1: {
+      shadowColor: '#707070',
+      shadowOffset: {
+        width: -2,
+        height: 8,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 6,
+      elevation: 1,
+    },
+    shadowLevel2: {
+      shadowColor: '#707070',
+      shadowOffset: {
+        width: 4,
+        height: 12,
+      },
+      shadowOpacity: 0.15,
+      shadowRadius: 8,
+      elevation: 1,
+    },
+    shadowLevel3: {
+      shadowColor: '#707070',
+      shadowOffset: {
+        width: 0,
+        height: 12,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 14,
+      elevation: 1,
+    },
+  },
+  font: {
+    family: {
+      interRegular: 'Lastica',
+      interMedium: 'Inter_Medium',
+      interSemiBold: 'Inter_SemiBold',
+      interBold: 'Inter_Bold',
     },
     weight: {
-      light: 300,
-      normal: 400,
+      regular: 400,
+      medium: 500,
       bold: 700,
     },
+    // lineHeight: {
+    //   lineHeightDefault: ({ fontSize }: LineHeightTokenProps) =>
+    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 100 }),
+    //   lineHeightXs: ({ fontSize }: LineHeightTokenProps) =>
+    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 116 }),
+    //   lineHeightSm: ({ fontSize }: LineHeightTokenProps) =>
+    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 124 }),
+    //   lineHeightMd: ({ fontSize }: LineHeightTokenProps) =>
+    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 133 }),
+    //   lineHeightLg: ({ fontSize }: LineHeightTokenProps) =>
+    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 150 }),
+    // },
+    sizes: {
+      xxs: 14,
+      xs: 16,
+      sm: 20,
+      md: 24,
+      lg: 32,
+      xl: 48,
+    },
+  },
+  space: {
+    sizeQuarck: '4px',
+    sizeNano: '8px',
+    sizeXxxs: '16px',
+    sizeXxs: '24px',
+    sizeXs: '32px',
+    sizeSm: '40px',
+    sizeMd: '48px',
+    sizeLg: '56px',
+    sizeXl: '64px',
+    sizeXxl: '80px',
+    sizeXxxl: '120px',
+    sizeHuge: '160px',
+    sizeGiant: '200px',
+  },
+  spaceNumber: {
+    sizeQuarck: 4,
+    sizeNano: 8,
+    sizeXxxs: 16,
+    sizeXxs: 24,
+    sizeXs: 32,
+    sizeSm: 40,
+    sizeMd: 48,
+    sizeLg: 56,
+    sizeXl: 64,
+    sizeXxl: 80,
+    sizeXxxl: 120,
+    sizeHuge: 160,
+    sizeGiant: 200,
+  },
+  extraSpace: {
+    typeString: {
+      borderBottomTab: '2px',
+    },
+    typeNumber: {
+      borderBottomTab: 2,
+    },
+  },
+  border: {
+    radius: {
+      none: 0,
+      sm: 2,
+      md: 8,
+      lg: 16,
+      pill: 500,
+      circular: 50,
+    },
+    width: {
+      none: 0,
+      hairline: 1,
+      thin: 2,
+      thick: 4,
+      heavy: 8,
+    },
+    opacityLevel: {
+      semiopaque: 0.72,
+      intense: 0.64,
+      medium: 0.32,
+      light: 0.16,
+      semitransparent: 0.08,
+    },
+  },
+  opacityLevel: {
+    semiopaque: 0.72,
+    semiopaqueHex: 'B8',
+    intense: 0.64,
+    intenseHex: 'A3',
+    medium: 0.32,
+    mediumHex: '52',
+    light: 0.16,
+    lightHex: '29',
+    semitransparent: 0.08,
+    semitransparentHex: '14',
   },
 };

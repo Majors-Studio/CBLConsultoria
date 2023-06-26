@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import * as S from "@/styles/home";
-import PurposeForm from "@/components/PurposeForm";
-import SpeechBox from "@/components/SpeechBox";
+import React, { useState } from "react"
+import Head from "next/head"
+import * as S from "@/styles/home"
+import PurposeForm from "@/components/PurposeForm"
+import SpeechBox from "@/components/SpeechBox"
 import {
   ConfirmIcon,
   DangerIcon,
@@ -11,24 +11,23 @@ import {
   MoneyIcon,
   NewsIcon,
   SuccessIcon,
-} from "@/assets/icons";
+} from "@/assets/icons"
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { A11y, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react"
+import SwiperCore, { A11y, Autoplay } from "swiper"
 
-SwiperCore.use([A11y, Autoplay]);
+SwiperCore.use([A11y, Autoplay])
 
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
+import "swiper/swiper-bundle.min.css"
+import "swiper/swiper.min.css"
 
 import Avatar from "@/components/Avatar";
 import TriangleDownIcon from "@/assets/icons/TriangleDownIcon";
 import { useApp } from "@/context/contextApi";
-import Link from "next/link";
 
 export default function Home() {
-  const [faqOpened, setFaqOpened] = useState<number | null>(null);
-  const { whatList } = useApp();
+  const [faqOpened, setFaqOpened] = useState<number | null>(null)
+  const { whatList } = useApp()
 
   const infoList = [
     {
@@ -47,7 +46,7 @@ export default function Home() {
       id: 3,
       title: "+13 anos no mercado de precatórios.",
     },
-  ];
+  ]
 
   const cardList = [
     {
@@ -78,7 +77,7 @@ export default function Home() {
         "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia",
       icon: <MoneyIcon />,
     },
-  ];
+  ]
 
   const chooseList = [
     {
@@ -133,7 +132,7 @@ export default function Home() {
         },
       ],
     },
-  ];
+  ]
 
   const whyList = [
     {
@@ -164,7 +163,7 @@ export default function Home() {
         "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
       icon: <></>,
     },
-  ];
+  ]
 
   const faqList = [
     {
@@ -191,7 +190,7 @@ export default function Home() {
       description:
         "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
     },
-  ];
+  ]
 
   const blogList = [
     {
@@ -212,7 +211,7 @@ export default function Home() {
       image:
         "https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
     },
-  ];
+  ]
 
   return (
     <div>
@@ -240,9 +239,7 @@ export default function Home() {
               </S.InfoList>
               <S.CtaButton>Quero antecipar </S.CtaButton>
             </S.Info>
-            <S.PurposeContainer>
-              <PurposeForm />
-            </S.PurposeContainer>
+            <PurposeForm />
           </S.Head>
 
           <S.CardContainer>
@@ -265,27 +262,27 @@ export default function Home() {
                 </S.Card>
               ))}
             </S.Cards>
-
-            <S.VideoContainer>
-              <S.VideoTitle>
-                Há mais de uma década no mercado, somos a maior empresa na
-                antecipação de precatórios do Brasil
-              </S.VideoTitle>
-
-              <S.VideoWrapper>
-                <iframe
-                  style={{ marginBottom: "20px", marginTop: "20px" }}
-                  allowFullScreen
-                  uk-video="automute: true"
-                  width="100%"
-                  height="600px"
-                  src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
-                ></iframe>
-              </S.VideoWrapper>
-
-              <S.VideoCta>Acesse nosso tour virtual!</S.VideoCta>
-            </S.VideoContainer>
           </S.CardContainer>
+
+          <S.VideoContainer>
+            <S.VideoTitle>
+              Há mais de uma década no mercado, somos a maior empresa na
+              antecipação de precatórios do Brasil
+            </S.VideoTitle>
+
+            <S.VideoWrapper>
+              <iframe
+                style={{ marginBottom: "20px", marginTop: "20px" }}
+                allowFullScreen
+                uk-video="automute: true"
+                width="100%"
+                height="600px"
+                src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
+              ></iframe>
+            </S.VideoWrapper>
+
+            <S.VideoCta>Acesse nosso tour virtual!</S.VideoCta>
+          </S.VideoContainer>
 
           <S.ChooseContainer>
             <S.ChooseTitle>
@@ -383,17 +380,17 @@ export default function Home() {
                 <S.FaqItem
                   key={item.id}
                   onClick={() => {
-                    if (faqOpened === index) return setFaqOpened(null);
+                    if (faqOpened === index) return setFaqOpened(null)
 
-                    setFaqOpened(index);
+                    setFaqOpened(index)
                   }}
                   ref={(el) => {
                     if (el && faqOpened === index) {
-                      el.style.maxHeight = `${el.scrollHeight}px`;
+                      el.style.maxHeight = `${el.scrollHeight}px`
                     } else if (el) {
-                      el.style.maxHeight = `84px`;
+                      el.style.maxHeight = `84px`
                     } else {
-                      return;
+                      return
                     }
                   }}
                 >
@@ -417,27 +414,22 @@ export default function Home() {
           </S.FaqContainer>
         </S.Content>
 
-        <S.FollowContainer>
-          <S.FollowTitle>Acompanhe as notícias sobre precatórios</S.FollowTitle>
-        </S.FollowContainer>
-
+        <S.FollowTitle>Acompanhe as notícias sobre precatórios</S.FollowTitle>
+        <S.BlogContainer>
+          {blogList.map((item) => (
+            <S.BlogItem key={item.id}>
+              <S.BlogImageContainer>
+                <S.BlogImage src={item.image} />
+              </S.BlogImageContainer>
+              <S.BlogTitle>{item.title}</S.BlogTitle>
+              <S.BlogLink>Consulte mais informações</S.BlogLink>
+            </S.BlogItem>
+          ))}
+        </S.BlogContainer>
         <S.Content>
-          <S.BlogContainer>
-            {blogList.map((item) => (
-              <S.BlogItem key={item.id}>
-                <S.BlogImageContainer>
-                  <S.BlogImage src={item.image} />
-                </S.BlogImageContainer>
-                <S.BlogTitle>{item.title}</S.BlogTitle>
-                <S.BlogLink>Consulte mais informações</S.BlogLink>
-              </S.BlogItem>
-            ))}
-          </S.BlogContainer>
-          <Link href="/news">
-            <S.BlogCta>Ver mais notícias</S.BlogCta>
-          </Link>
+          <S.BlogCta>Ver mais notícias</S.BlogCta>
         </S.Content>
       </S.Container>
     </div>
-  );
+  )
 }
