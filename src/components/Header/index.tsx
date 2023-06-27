@@ -37,7 +37,7 @@ const Header: React.FC = () => {
     <C.Navbar>
       {navitems.map((item, index) => {
         return (
-          <C.NavbarItem key={index} onClick={()=>setMenuOpened(false)}>
+          <C.NavbarItem key={index} onClick={() => setMenuOpened(false)}>
             <Link href={item.url}>{item.title}</Link>
           </C.NavbarItem>
         )
@@ -47,7 +47,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <C.MenuMobile show={menuOpened}>{navBar}</C.MenuMobile>
+      {(isMobile || isTablet) && (
+        <C.MenuMobile show={menuOpened}>{navBar}</C.MenuMobile>
+      )}
       <C.Container show={isOnTop}>
         <C.Content>
           <Logo />
