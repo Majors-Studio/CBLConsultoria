@@ -10,8 +10,7 @@ export const Container = styled.header<IProps>`
   width: 100%;
   top: 0;
   z-index: 99999;
-  background-color: #00246a;
-  opacity: 0.8;
+  background-color: #324f87;
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);

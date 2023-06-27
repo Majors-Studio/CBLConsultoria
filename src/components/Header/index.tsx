@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       setMenuOpened(false);
       const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        setIsOnTop(false);
+        setIsOnTop(st < 250);
       } else {
         setIsOnTop(true);
       }

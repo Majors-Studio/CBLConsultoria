@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 280px;
+  width: 100%;
   height: 415px;
   background: #ffffff;
   box-shadow: -1px 3px 10px 0px #000;
@@ -14,7 +14,7 @@ export const CardContainer = styled.div`
 
   position: relative;
 
-margin: 20px 0;
+  margin: 20px 0;
 
   padding: 50px 20px;
   transition: all 0.3s ease-in-out;

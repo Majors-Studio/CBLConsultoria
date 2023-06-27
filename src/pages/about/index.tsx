@@ -2,8 +2,6 @@ import React from "react";
 import * as C from "@/styles/about";
 import Image from "next/image";
 import { Card, CustomQuality, Subtitle, Title } from "@/components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, A11y, Pagination, Navigation } from "swiper";
 import governimg from "../../../public/assets/images/government.jpg";
 import PurposeForm from "@/components/PurposeForm";
 import { useApp } from "@/context/contextApi";
@@ -43,43 +41,15 @@ const About: React.FC = () => {
         <CustomQuality />
       </C.SwiperContainer>
 
-      <Swiper
-        spaceBetween={0}
-        slidesPerView={1}
-        modules={[Autoplay, A11y, Navigation]}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        navigation={{}}
-        style={{
-          width: "100%",
-          margin: "0 auto",
-          height: "100%",
-        }}
-        breakpoints={{
-          768: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-      >
+      <C.CardsContainer>
         {cardsList.map((card) => (
-          <SwiperSlide
-            key={card.id}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Card
-              index={card.id}
-              title={card.title}
-              description={card.description}
-            />
-          </SwiperSlide>
+          <Card
+            index={card.id}
+            title={card.title}
+            description={card.description}
+          />
         ))}
-      </Swiper>
+      </C.CardsContainer>
 
       <C.VideoContainer>
         <Title
@@ -163,7 +133,6 @@ const About: React.FC = () => {
       </C.AvatarsContainer>
 
       <C.FormContainer>
-        <Image src={governimg} width={750} alt="image" />
         <PurposeForm />
       </C.FormContainer>
     </C.Container>

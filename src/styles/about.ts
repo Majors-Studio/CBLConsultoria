@@ -53,6 +53,27 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
+export const CardsContainer = styled.div`
+  display: grid;
+  padding: 0 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media (max-width: 920px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
 export const FormContainer = styled.div`
   max-width: 1200px;
   display: flex;
