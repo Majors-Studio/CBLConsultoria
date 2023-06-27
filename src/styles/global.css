@@ -19,4 +19,5 @@ body {
   height: 100vh;
   margin-top: 120px;
   background-color: #f8f8f8;
+position: relative;
 }
