@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setTimeoutId(false)
-    }, 1000)
+    }, 2000)
 
     return () => {
       if (timeoutId) clearTimeout(timeoutId)
@@ -77,7 +77,7 @@ export default function App({ Component, pageProps }: AppProps) {
             gap: "20px",
             overflow: "hidden",
             backgroundColor: tokens.colors.brand.dark,
-            animation: "fadeout 1.1s ease-in-out",
+            animation: "fadeout 2s linear forwards",
           }}
         >
           <div
