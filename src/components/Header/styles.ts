@@ -25,18 +25,22 @@ interface IPropsMenu {
 }
 
 export const MenuMobile = styled.div<IPropsMenu>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #000;
   z-index: 9999;
+
+padding-top: 120px;
 
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-`;
+overflow: hidden;
+
+`
 
 export const Content = styled.div`
   display: flex;
@@ -66,6 +70,8 @@ export const Navbar = styled.nav`
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+overflow: hidden;
+height:fit-content;
   }
 `;
 
