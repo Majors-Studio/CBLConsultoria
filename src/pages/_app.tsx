@@ -51,34 +51,49 @@ export default function App({ Component, pageProps }: AppProps) {
             opacity: 1;
         }
             }
+
+            @keyframes fadeout {
+            0% {
+            opacity: 1;
+            }
+      80% {
+            opacity: 1;
+}
+            100% {
+            opacity: 0;
+          }
+}
           `}
         </style>
-        <div style={{
-          width: "100vw",
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-          gap: "20px",
-          overflow: "hidden",
-          backgroundColor: tokens.colors.brand.dark
-        }}>
         <div
           style={{
-            width: "45px",
-            height: "45px",
-            // top: "50%",
-            left: "50%",
-            transform: "rotate(0deg)",
-              animation: "rotate 0.8s infinite",
-            color: tokens.colors.brand.light,
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            gap: "20px",
+            overflow: "hidden",
+            backgroundColor: tokens.colors.brand.dark,
+            animation: "fadeout 1.1s ease-in-out",
           }}
         >
-          <LoadingIcon />
-        </div>
-        <Logo />
+          <div
+            style={{
+              width: "45px",
+              height: "45px",
+              // top: "50%",
+              left: "50%",
+              transform: "rotate(0deg)",
+              animation: "rotate 0.8s infinite",
+              color: tokens.colors.brand.light,
+            }}
+          >
+            <LoadingIcon />
+          </div>
+          <Logo />
         </div>
       </>
     )
