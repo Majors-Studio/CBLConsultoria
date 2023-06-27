@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
   position: relative;
 `;
@@ -37,7 +36,6 @@ export const WhatContainer = styled.div`
 
 export const WhatList = styled.ul`
   width: 100%;
-  max-width: 800px;
   margin: 80px auto 0;
 `;
 
@@ -234,20 +232,28 @@ export const RankingContent = styled.div`
   max-width: 1280px;
   margin: 0 auto;
 
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
+
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap: 32px;
+
 `;
 
 export const RankingInfos = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+width: 100%;
+flex-shrink: 0;
 `;
 
 export const RankingChart = styled.div`
-  width: 390px;
-  height: 390px;
+  width: 100%;
+flex-shrink: 0;
+display: flex;
 `;
 
 export const RankingTitle = styled.h1`
@@ -258,7 +264,6 @@ export const RankingTitle = styled.h1`
 
   padding-bottom: 12px;
   border-bottom: 1px solid #e2a141;
-  width: fit-content;
 `;
 
 export const RankingText = styled.p`
@@ -266,8 +271,6 @@ export const RankingText = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
-
-  max-width: 350px;
 
   span {
     color: #e2a141;
@@ -365,7 +368,6 @@ export const WhyToSellContainer = styled.div`
 
 export const WhyToSellContent = styled.div`
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
 `;
 
@@ -381,7 +383,8 @@ export const WhyToSellList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-top: 72px;
+max-width: 1280px;
+  margin: 72px auto 0;
 `;
 
 export const WhyToSellItem = styled.li`

@@ -1,27 +1,28 @@
-import React from "react";
-import * as C from "@/styles/precatory";
-import BrazilGraph from "@/assets/svg/BrazilGraph";
+import React from "react"
+import * as C from "@/styles/precatory"
+import BrazilGraph from "@/assets/svg/BrazilGraph"
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
   Legend,
   ChartData,
-} from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons";
-import MagnifyingGlass from "@/assets/icons/MagnifyingIcon";
-import ContractIcon from "@/assets/icons/ContractIcon";
-import PurposeForm from "@/components/PurposeForm";
+} from "chart.js"
+import { Doughnut } from "react-chartjs-2"
+import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons"
+import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
+import ContractIcon from "@/assets/icons/ContractIcon"
+import PurposeForm from "@/components/PurposeForm"
 // import Swiper from "swiper";
-import { SwiperSlide, Swiper } from "swiper/react";
-import { Autoplay, A11y } from "swiper";
+import { SwiperSlide, Swiper } from "swiper/react"
+import { Autoplay, A11y } from "swiper"
 
-import SpeechBox from "@/components/SpeechBox";
-import Avatar from "@/components/Avatar";
-import Chart from "@/components/Chart";
+import SpeechBox from "@/components/SpeechBox"
+import Avatar from "@/components/Avatar"
+import Chart from "@/components/Chart"
+import CtaButton from "@/components/CtaButton"
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 const Precatory: React.FC = () => {
   const chartData = {
@@ -47,7 +48,7 @@ const Precatory: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"doughnut", number[], string>;
+  } as ChartData<"doughnut", number[], string>
 
   const points = [
     {
@@ -85,7 +86,7 @@ const Precatory: React.FC = () => {
         "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
       avatar: "https://i.pravatar.cc/300?img=5",
     },
-  ];
+  ]
 
   const newsList = [
     {
@@ -117,7 +118,7 @@ const Precatory: React.FC = () => {
       link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
       date: "14/09/2021",
     },
-  ];
+  ]
 
   const whyToSellList = [
     {
@@ -159,7 +160,7 @@ const Precatory: React.FC = () => {
         </>
       ),
     },
-  ];
+  ]
 
   const stepsList = [
     {
@@ -206,7 +207,7 @@ const Precatory: React.FC = () => {
       ),
       icon: <MoneyIcon />,
     },
-  ];
+  ]
 
   return (
     <>
@@ -336,12 +337,30 @@ const Precatory: React.FC = () => {
           <C.RankingChart>
             <Doughnut
               data={chartData}
+              width={320}
+              height={320}
               options={{
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
                   legend: {
-                    display: false,
+                    display: true,
+                    fullSize: true,
+                    position: "right",
+                    title: {
+                      display: true,
+                      text: "Ranking Nacional",
+                      color: "#fff",
+                      font: {
+                        size: 14,
+                      },
+                    },
+                    labels: {
+                      color: "#fff",
+                      font: {
+                        size: 16,
+                      },
+                    },
                   },
                 },
               }}
@@ -408,42 +427,42 @@ const Precatory: React.FC = () => {
                 <C.WhyToSellItemText>{why.text}</C.WhyToSellItemText>
               </C.WhyToSellItem>
             ))}
-
-            <C.WhyToSellCta>Quero vender meu precatório</C.WhyToSellCta>
-
-            <C.ContainerChart>
-              <C.WhatContainer>
-                <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
-
-                <C.WhatList>
-                  <Swiper
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    modules={[Autoplay, A11y]}
-                    autoplay={{ delay: 5000, disableOnInteraction: false }}
-                  >
-                    {points.map((item, index) => (
-                      <SwiperSlide key={index}>
-                        <C.WhatItem>
-                          <SpeechBox text={item.message} />
-                          <C.WhatTexts>
-                            <Avatar src={item.avatar} size="large" />
-                            <C.WhatName>{item.name}</C.WhatName>
-                          </C.WhatTexts>
-                        </C.WhatItem>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </C.WhatList>
-              </C.WhatContainer>
-              <C.WhatTitle>
-                Evolução de investimentos em precatórios{" "}
-                <span style={{ fontSize: "18px" }}>(2018 - 2022)</span>
-              </C.WhatTitle>
-
-              <Chart />
-            </C.ContainerChart>
+            <CtaButton>Quero vender meu precatório</CtaButton>
           </C.WhyToSellList>
+
+          <C.WhatContainer>
+            <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
+
+            <C.WhatList>
+              <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                modules={[Autoplay, A11y]}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+              >
+                {points.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <C.WhatItem>
+                      <SpeechBox text={item.message} />
+                      <C.WhatTexts>
+                        <Avatar src={item.avatar} size="large" />
+                        <C.WhatName>{item.name}</C.WhatName>
+                      </C.WhatTexts>
+                    </C.WhatItem>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </C.WhatList>
+          </C.WhatContainer>
+          
+          <C.ContainerChart>
+            <C.WhatTitle>
+              Evolução de investimentos em precatórios{" "}
+              <span style={{ fontSize: "18px" }}>(2018 - 2022)</span>
+            </C.WhatTitle>
+
+            <Chart />
+          </C.ContainerChart>
         </C.WhyToSellContent>
       </C.WhyToSellContainer>
 
@@ -497,7 +516,7 @@ const Precatory: React.FC = () => {
         </C.LeadContent>
       </C.LeadContainer>
     </>
-  );
-};
+  )
+}
 
-export default Precatory;
+export default Precatory

@@ -6,10 +6,7 @@ export const Container = styled.div`
   width: 100vw;
   background-color: #f8f8f8;
   margin-top: 120px;
-
-  @media (max-width: 768px) {
-    /* padding: 0 20px; */
-  }
+  margin-bottom: 60px;
 `
 
 export const Content = styled.div`
@@ -90,27 +87,6 @@ export const PrecatoryInfoItem = styled.li`
   }
 `
 
-export const CtaButton = styled.button`
-  font-weight: 700;
-  border-radius: 0.5rem;
-  border: 2px solid ${tokens.colors.brand.pure};
-  box-shadow: inset 0 0 0 0px ${tokens.colors.brand.pure};
-  transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
-  padding-inline: 1.5rem;
-  height: 4.5rem;
-  width: fit-content;
-  font-size: 1.5rem;
-  color: ${tokens.colors.brand.pure};
-  &:hover {
-    color: #e7e7e7;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 40px ${tokens.colors.brand.pure};
-    transition-delay: 0s, 0s, 0.2s;
-    border: 2px solid transparent;
-  }
-`
-
 export const CardContainer = styled.div`
   max-width: 100vw;
   width: 100%;
@@ -162,17 +138,26 @@ export const Card = styled.div`
   border-radius: 20px;
   position: relative;
   padding: 50px 20px;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  cursor: pointer;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   &:hover {
+    animation: fadein 1s;
     background-color: ${tokens.colors.brand.pure};
-    cursor: default;
     div {
       color: #fff;
     }
     svg {
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-        brightness(100%) contrast(100%);
+      filter: brightness(100%) contrast(100%);
     }
     h1 {
       color: #fff;
@@ -187,8 +172,8 @@ export const CardIcon = styled.div`
   width: 50px;
   height: 50px;
   svg {
-    /* filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg)
-      brightness(90%) contrast(94%); */
+    filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg)
+      brightness(90%) contrast(94%);
   }
 `
 
@@ -248,16 +233,6 @@ export const VideoTitle = styled.h1`
   text-align: center;
 
   margin-bottom: 20px;
-`
-
-export const VideoCta = styled.button`
-  font-weight: 700;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
-  border: 2px solid ${tokens.colors.brand.pure};
-  padding-inline: 1.5rem;
-  height: 4.5rem;
-  color: ${tokens.colors.brand.pure};
 `
 
 export const ChooseContainer = styled.div`
@@ -472,7 +447,7 @@ export const WhatTitle = styled.h1`
 
 export const WhatList = styled.ul`
   width: 100%;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 80px auto 0;
 `
 
@@ -669,28 +644,5 @@ export const BlogLink = styled.a`
   @media (max-width: 920px) {
     align-self: center;
     display: block;
-  }
-`
-
-export const BlogCta = styled.button`
-  margin-bottom: 60px;
-  width: 100%;
-  max-width: 300px;
-  height: 60px;
-  border-radius: 10px;
-  border: 2px solid ${tokens.colors.brand.pure};
-
-  color: ${tokens.colors.brand.pure};
-  font-family: ${tokens.font.family.interSemiBold};
-  font-size: ${tokens.font.sizes.xs};
-  font-weight: 700;
-  line-height: 22px;
-  text-transform: uppercase;
-
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: ${tokens.colors.brand.pure};
-    color: #fff;
   }
 `

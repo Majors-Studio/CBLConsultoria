@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import * as S from "./styles";
+import CtaButton from "../CtaButton";
 
 const PurposeForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +52,7 @@ const PurposeForm: React.FC = () => {
             name="message"
             onChange={handleInputChange}
           />
-          <S.Button type="submit">Enviar</S.Button>
+          <CtaButton type="submit">Enviar</CtaButton>
         </S.Form>
       </S.Container>
     </div>

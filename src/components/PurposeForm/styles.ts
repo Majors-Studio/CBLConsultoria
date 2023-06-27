@@ -79,23 +79,4 @@ export const TextArea = styled.textarea`
   }
 `;
 
-export const Button = styled.button`
-  font-weight: 700;
-  border-radius: 0.5rem;
-  border: 2px solid ${tokens.colors.brand.pure};
-  box-shadow: inset 0 0 0 0px ${tokens.colors.brand.pure};
-  transition: border-radius 0.3s, box-shadow 0.3s, color 0.3s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
-  padding-inline: 1.5rem;
-  height: 4.5rem;
-  width: 220px;
-  font-size: 1.5rem;
-  color: ${tokens.colors.brand.pure};
-  &:hover {
-    color: #e7e7e7;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 40px ${tokens.colors.brand.pure};
-    transition-delay: 0s, 0s, 0.2s;
-    border: 2px solid transparent;
-  }
-`;
+

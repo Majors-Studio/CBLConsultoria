@@ -3,6 +3,7 @@ import { tokens } from "@/utils/tokens";
 export const Container = styled.div`
   position: relative;
   width: 100%;
+  max-width: 800px;
 `;
 
 export const SpeechBox = styled.div`
