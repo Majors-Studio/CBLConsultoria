@@ -12,6 +12,7 @@ export const ContainerImg = styled.div`
   margin-top: 120px;
   margin-bottom: 30px;
 `;
+
 export const FlexCol = styled.div`
   display: flex;
   flex-direction: column;

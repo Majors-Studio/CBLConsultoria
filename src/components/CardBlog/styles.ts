@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { tokens } from "@/utils/tokens";
 export const CardContainer = styled.div`
   width: 100%;
   height: fit-content;
@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   gap: 10px;
 
-  border-bottom: 2px solid #7a4726;
+  border-bottom: 2px solid ${tokens.colors.brand.pure};
   transition: all 0.2s ease-in-out;
   &:hover {
     cursor: pointer;
