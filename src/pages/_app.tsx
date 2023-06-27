@@ -5,6 +5,8 @@ import Head from "next/head"
 import Layout from "@/layout"
 import { AppProvider } from "@/context/contextApi"
 import LoadingIcon from "@/assets/icons/LoadingIcon"
+import Logo from "@/components/Logo"
+import { tokens } from "@/utils/tokens"
 
 export default function App({ Component, pageProps }: AppProps) {
   const [timeoutId, setTimeoutId] = React.useState(true)
@@ -51,18 +53,32 @@ export default function App({ Component, pageProps }: AppProps) {
             }
           `}
         </style>
+        <div style={{
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          gap: "20px",
+          overflow: "hidden",
+          backgroundColor: tokens.colors.brand.dark
+        }}>
         <div
           style={{
             width: "45px",
             height: "45px",
-            position: "absolute",
-            top: "50%",
+            // top: "50%",
             left: "50%",
             transform: "rotate(0deg)",
-            animation: "rotate 0.8s infinite",
+              animation: "rotate 0.8s infinite",
+            color: tokens.colors.brand.light,
           }}
         >
           <LoadingIcon />
+        </div>
+        <Logo />
         </div>
       </>
     )
