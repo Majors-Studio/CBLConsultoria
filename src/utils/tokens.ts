@@ -31,7 +31,7 @@
 export const tokens = {
   colors: {
     brand: {
-      pure: "#4f665a",
+      pure: "#324f87",
       light: "#fff",
       dark: "#000",
     },
