@@ -35,7 +35,7 @@ z-index: 9999;
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-
+overflow: hidden;
 
 `
 
@@ -67,6 +67,8 @@ export const Navbar = styled.nav`
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+overflow: hidden;
+height:fit-content;
   }
 `
 
