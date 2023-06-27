@@ -4,7 +4,7 @@ const NewsIcon: React.FC = (props) => {
   return (
     <svg
       viewBox="0 0 512 512"
-      fill="#000"
+      fill="currentColor"
       height="100%"
       width="100%"
       {...props}
