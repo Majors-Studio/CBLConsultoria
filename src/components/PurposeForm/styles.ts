@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { tokens } from "../../utils/tokens"
+import styled from "styled-components";
+import { tokens } from "../../utils/tokens";
 
 export const Container = styled.div`
   /* width: 520px; */
@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 40px 20px 40px;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-
+  margin-top: 30px;
   @media (max-width: 1024px) {
     width: 100%;
   }

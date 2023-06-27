@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 interface IProps {
-  show: boolean
+  show: boolean;
 }
-
 
 export const Container = styled.header<IProps>`
   position: fixed;
@@ -15,8 +14,7 @@ export const Container = styled.header<IProps>`
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
-
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
 `;
