@@ -6,18 +6,11 @@ export interface iButton {
   bgColor?: string;
   color?: string;
   fontWeight?: string;
-  bgHover?: string;
   text?: string;
   padding?: string;
 }
 
-const Button: React.FC<iButton> = ({
-  text,
-  bgColor,
-  color,
-  fontWeight,
-  bgHover,
-}) => {
+const Button: React.FC<iButton> = ({ text, bgColor, color, fontWeight }) => {
   return (
     <C.Button
       style={{
@@ -25,7 +18,6 @@ const Button: React.FC<iButton> = ({
         color: color,
         fontWeight: fontWeight,
       }}
-      bgHover="#000"
     >
       {text}
     </C.Button>

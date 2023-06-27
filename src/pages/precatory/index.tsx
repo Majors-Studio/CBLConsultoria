@@ -13,6 +13,13 @@ import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons";
 import MagnifyingGlass from "@/assets/icons/MagnifyingIcon";
 import ContractIcon from "@/assets/icons/ContractIcon";
 import PurposeForm from "@/components/PurposeForm";
+// import Swiper from "swiper";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Autoplay, A11y } from "swiper";
+
+import SpeechBox from "@/components/SpeechBox";
+import Avatar from "@/components/Avatar";
+import Chart from "@/components/Chart";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -41,6 +48,44 @@ const Precatory: React.FC = () => {
       },
     ],
   } as ChartData<"doughnut", number[], string>;
+
+  const points = [
+    {
+      id: 0,
+      name: "João da Silva",
+      message:
+        "Potencial de retorno financeiro significativo, uma vez que os precatórios podem ser adquiridos com descontos substanciais.",
+      avatar: "https://i.pravatar.cc/300?img=1",
+    },
+    {
+      id: 1,
+      name: "Carlos Almeida",
+      message:
+        "Estabilidade e segurança jurídica, pois os precatórios são obrigações judiciais emitidas pelo governo, geralmente garantindo o pagamento futuro.",
+      avatar: "https://i.pravatar.cc/300?img=2",
+    },
+    {
+      id: 2,
+      name: "Joana Castro",
+      message:
+        "Diversificação de portfólio, permitindo aos investidores mitigar riscos e aproveitar oportunidades alternativas de investimento.",
+      avatar: "https://i.pravatar.cc/300?img=3",
+    },
+    {
+      id: 3,
+      name: "Maria dos Santos",
+      message:
+        "Possibilidade de utilização de precatórios para compensação de débitos fiscais, proporcionando benefícios fiscais adicionais.",
+      avatar: "https://i.pravatar.cc/300?img=4",
+    },
+    {
+      id: 4,
+      name: "Hildo Augusto",
+      message:
+        "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
+      avatar: "https://i.pravatar.cc/300?img=5",
+    },
+  ];
 
   const newsList = [
     {
@@ -365,6 +410,39 @@ const Precatory: React.FC = () => {
             ))}
 
             <C.WhyToSellCta>Quero vender meu precatório</C.WhyToSellCta>
+
+            <C.ContainerChart>
+              <C.WhatContainer>
+                <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
+
+                <C.WhatList>
+                  <Swiper
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    modules={[Autoplay, A11y]}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                  >
+                    {points.map((item, index) => (
+                      <SwiperSlide key={index}>
+                        <C.WhatItem>
+                          <SpeechBox text={item.message} />
+                          <C.WhatTexts>
+                            <Avatar src={item.avatar} size="large" />
+                            <C.WhatName>{item.name}</C.WhatName>
+                          </C.WhatTexts>
+                        </C.WhatItem>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </C.WhatList>
+              </C.WhatContainer>
+              <C.WhatTitle>
+                Evolução de investimentos em precatórios{" "}
+                <span style={{ fontSize: "18px" }}>(2018 - 2022)</span>
+              </C.WhatTitle>
+
+              <Chart />
+            </C.ContainerChart>
           </C.WhyToSellList>
         </C.WhyToSellContent>
       </C.WhyToSellContainer>

@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from "react"
-import * as C from "./styles"
-import { Button } from "@/components"
-import Logo from "../Logo"
-import { useDevice } from "@/hooks/useDevice"
+import React, { useEffect, useState } from "react";
+import * as C from "./styles";
+import { Button } from "@/components";
+import Logo from "../Logo";
+import { useDevice } from "@/hooks/useDevice";
 
-import { navitems } from "@/utils/navitems"
-import Link from "next/link"
-import Hamburguer from "../Hamburguer"
+import { navitems } from "@/utils/navitems";
+import Link from "next/link";
+import Hamburguer from "../Hamburguer";
 
 const Header: React.FC = () => {
-  const { isMobile, isTablet, isDesktop } = useDevice()
-  const [isOnTop, setIsOnTop] = useState(true)
-  const [menuOpened, setMenuOpened] = useState(false)
+  const { isMobile, isTablet, isDesktop } = useDevice();
+  const [isOnTop, setIsOnTop] = useState(true);
+  const [menuOpened, setMenuOpened] = useState(false);
 
   useEffect(() => {
-    let lastScrollTop = 0
+    let lastScrollTop = 0;
     const handleScroll = () => {
-      setMenuOpened(false)
-      const st = window.pageYOffset || document.documentElement.scrollTop
+      setMenuOpened(false);
+      const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        setIsOnTop(false)
+        setIsOnTop(false);
       } else {
-        setIsOnTop(true)
+        setIsOnTop(true);
       }
-      lastScrollTop = st <= 0 ? 0 : st
-    }
-    window.addEventListener("scroll", handleScroll)
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navBar = (
     <C.Navbar>
@@ -40,10 +40,10 @@ const Header: React.FC = () => {
           <C.NavbarItem key={index} onClick={() => setMenuOpened(false)}>
             <Link href={item.url}>{item.title}</Link>
           </C.NavbarItem>
-        )
+        );
       })}
     </C.Navbar>
-  )
+  );
 
   return (
     <>
@@ -60,14 +60,12 @@ const Header: React.FC = () => {
           )}
 
           {isDesktop && (
-            <Link href="#purposeForm">
-              <Button text="Fale Conosco" />
-            </Link>
+            <Button bgColor="#00246A" color="#fff" text="Fale Conosco" />
           )}
         </C.Content>
       </C.Container>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

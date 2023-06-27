@@ -10,7 +10,8 @@ export const Container = styled.header<IProps>`
   width: 100%;
   top: 0;
   z-index: 99999;
-  background-color: #000;
+  background-color: #00246a;
+  opacity: 0.8;
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -33,14 +34,13 @@ export const MenuMobile = styled.div<IPropsMenu>`
   background-color: #000;
   z-index: 9999;
 
-padding-top: 120px;
+  padding-top: 120px;
 
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-overflow: hidden;
-
-`
+  overflow: hidden;
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -70,8 +70,8 @@ export const Navbar = styled.nav`
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-overflow: hidden;
-height:fit-content;
+    overflow: hidden;
+    height: fit-content;
   }
 `;
 

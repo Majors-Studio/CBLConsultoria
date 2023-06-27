@@ -16,6 +16,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   color: ${tokens.colors.brand.pure};
+  color:rgba(0, 36, 106, 0.8);
   font-size: ${tokens.font.sizes.lg};
   font-weight: ${tokens.font.weight.bold};
   text-align: center;

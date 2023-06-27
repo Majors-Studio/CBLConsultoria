@@ -34,11 +34,6 @@ const Footer: React.FC = () => {
 
   const midiaItems = [
     {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/",
-      logo: "https://static.wixstatic.com/media/fea1c1_206abe71ae4d48bd9bfc43d780568750~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Linkedin.png",
-    },
-    {
       name: "Facebook",
       url: "https://www.facebook.com/",
       logo: "https://static.wixstatic.com/media/fea1c1_1dba9c8d59804f439b332177e81adde4~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Facebook.png",

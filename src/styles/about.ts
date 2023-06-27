@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { tokens } from "@/utils/tokens";
 export const Container = styled.div`
   width: 100%;
   max-width: 100vw;
@@ -53,16 +53,6 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const ContainerChart = styled.div`
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    padding: 0 20px;
-  }
-`;
-
 export const FormContainer = styled.div`
   max-width: 1200px;
   display: flex;
@@ -79,8 +69,6 @@ export const FormContainer = styled.div`
     box-shadow: none;
   }
 `;
-
-
 
 export const SwiperContainer = styled.div`
   max-width: 100vw;
@@ -102,11 +90,11 @@ export const VideoContainer = styled.div`
 `;
 
 export const AvatarName = styled.h3`
-  font-size: 24px;
-  font-weight: 700;
+  font-size: ${tokens.font.sizes.md};
+  font-weight: ${tokens.font.weight.bold};
   max-width: 120px;
   text-align: center;
-  color: #7a4726;
+  color: rgba(0, 36, 106, 0.8);
   margin-top: 20px;
 `;
 
@@ -140,40 +128,14 @@ export const Info = styled.div`
   align-items: center;
 `;
 
-export const WhatContainer = styled.div`
-  /* background-color: #e3dcd7; */
-
-  padding: 90px 0 60px;
-  width: 100%;
-`;
-
-export const WhatTitle = styled.h1`
-  color: #121212;
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center;
-`;
-export const WhatList = styled.ul`
-  width: 100%;
-  max-width: 800px;
-  margin: 80px auto 0;
-`;
-
-export const WhatItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
-export const WhatTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-export const WhatName = styled.h1`
-  margin-top: 12px;
-`;
-
 export const WhatPlace = styled.h1``;
+
+export const AboutText = styled.p`
+  font-size: ${tokens.font.sizes.sm};
+  font-weight: ${tokens.font.weight.regular};
+  color: ${tokens.colors.brand.dark};
+  text-align: justify;
+  font-family: ${tokens.font.family.interMedium};
+  margin: 50px auto;
+  max-width: 1280px;
+`;

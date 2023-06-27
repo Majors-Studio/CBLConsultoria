@@ -6,7 +6,7 @@ export const Button = styled.button<iButton>`
   border: 0;
   border-radius: 0.5rem;
   padding: ${(props) => props.padding || "10px 25px"};
-  background: ${(props) => props.bgColor || "#fff"};
+  background: ${(props) => props?.bgColor};
   color: ${(props) => props.color || "${tokens.colors.brand.pure}"};
   font-weight: ${(props) => props.fontWeight || "bold"};
   font-size: 1.2rem;

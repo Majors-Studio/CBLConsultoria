@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: #000;
+  background-color: #00246a;
+  opacity: 0.8;
   max-width: 100vw;
   width: 100%;
   height: fit-content;
@@ -64,7 +65,7 @@ export const Text = styled.h2`
 `;
 
 export const Desc = styled.p`
-  color: #666;
+  color: #ddd;
 `;
 
 export const AddressInfo = styled.div`
@@ -145,7 +146,8 @@ export const Rights = styled.div`
   padding: 16px 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #00246a;
+  opacity: 0.8;
   gap: 12px;
   font-size: 14px;
   color: #666;
@@ -170,11 +172,11 @@ export const Line = styled.div`
   width: 100%;
   max-width: 100vw;
   height: 2px;
-  background-color: #666;
+  background-color: #fff;
 `;
 
 export const Subtitle = styled.p`
-  color: #666;
+  color: #ccc;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

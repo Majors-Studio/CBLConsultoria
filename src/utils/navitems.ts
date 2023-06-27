@@ -6,16 +6,21 @@ export const navitems = [
   },
   {
     id: 2,
-    title: "Cenário dos Precatórios",
+    title: "Precatórios",
     url: "/precatory",
   },
   {
     id: 3,
-    title: "Sobre Nós",
+    title: "Quem somos",
     url: "/about",
   },
   {
     id: 4,
+    title: "Consultoria Jurídica",
+    url: "/consulting",
+  },
+  {
+    id: 5,
     title: "Notícias",
     url: "/news",
   },
