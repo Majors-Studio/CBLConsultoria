@@ -1,6 +1,5 @@
-import styled from "styled-components"
-import { tokens } from "../utils/tokens"
-
+import styled from "styled-components";
+import { tokens } from "../utils/tokens";
 
 export const Container = styled.div`
   height: fit-content;
@@ -58,12 +57,14 @@ export const Info = styled.div`
 `;
 
 export const InfoTitle = styled.h1`
-  font-size: 50px;
-  font-weight: 400;
+  font-size: ${tokens.font.sizes.xl};
+  font-weight: ${tokens.font.weight.medium};
   line-height: 1.2;
+  font-family: ${tokens.font.family.lastica};
   width: 100%;
   text-align: left;
   color: ${tokens.colors.brand.pure};
+  font-size: ${tokens.font.sizes.xl};
   strong {
     text-decoration: underline;
   }
@@ -83,8 +84,8 @@ export const PrecatoryInfoItem = styled.li`
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: ${tokens.font.sizes.sm};
+  color: ${tokens.colors.brand.pure};
   cursor: context-menu;
   &:hover {
     color: ${tokens.colors.brand.pure};
@@ -120,6 +121,7 @@ export const CardContainer = styled.div`
 
 export const WhatName = styled.h1`
   margin-top: 12px;
+  font-size: ${tokens.font.sizes.sm};
 `;
 
 export const CardTitle = styled.h1`
@@ -240,10 +242,10 @@ export const VideoWrapper = styled.div`
 `;
 
 export const VideoTitle = styled.h1`
-  color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
   font-size: 35px;
-  font-weight: 600;
+  font-weight: ${tokens.font.weight.bold};
   line-height: 50px;
   text-align: center;
 
@@ -258,7 +260,7 @@ export const VideoCta = styled.button`
   padding-inline: 1.5rem;
   height: 4.5rem;
   color: ${tokens.colors.brand.pure};
-`
+`;
 
 export const ChooseContainer = styled.div`
   display: flex;
@@ -270,9 +272,9 @@ export const ChooseContainer = styled.div`
 `;
 
 export const ChooseTitle = styled.h1`
-  color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
-  font-size: 35px;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
+  font-size: ${tokens.font.sizes.xl};
   font-weight: 600;
   line-height: 50px;
   text-align: center;
@@ -311,8 +313,8 @@ export const ChooseItem = styled.li`
 
 export const ChooseItemTitle = styled.h1`
   background-color: ${tokens.colors.brand.pure};
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
+  color: ${tokens.colors.brand.light};
+  font-family: ${tokens.font.family.lastica};
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
@@ -345,8 +347,8 @@ export const ChooseItemListItemStatus = styled.span`
 `;
 
 export const ChooseItemListItemText = styled.p`
-  color: #555555;
-  font-family: "Montserrat", sans-serif;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
   font-size: 1.3rem;
   font-weight: 400;
   position: relative;
@@ -379,9 +381,9 @@ export const WhyContainer = styled.div`
 `;
 
 export const WhyTitle = styled.h1`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  color: ${tokens.colors.brand.light};
+  font-family: ${tokens.font.family.lastica};
+  font-size: ${tokens.font.sizes.xl};
   font-weight: 600;
   line-height: 40px;
   text-align: center;
@@ -489,7 +491,11 @@ export const WhatTexts = styled.div`
   align-items: center;
 `;
 
-export const WhatPlace = styled.h1``;
+export const WhatPlace = styled.h1`
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
+  font-size: ${tokens.font.sizes.xxs};
+`;
 
 export const FaqContainer = styled.div`
   padding: 90px 20px 80px;
@@ -497,17 +503,17 @@ export const FaqContainer = styled.div`
 `;
 
 export const FaqTitle = styled.h1`
-  color: #121212;
-  font-family: "Montserrat", sans-serif;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
   font-size: 36px;
-  font-weight: 600;
+  font-weight: ${tokens.font.weight.bold};
   text-align: center;
 `;
 
 export const FaqDescription = styled.p`
-  color: #121212;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
+  font-size: ${tokens.font.sizes.sm};
   font-weight: 400;
   text-align: center;
 `;
@@ -531,7 +537,7 @@ export const FaqItem = styled.li`
   overflow: hidden;
 
   border-bottom: 3px solid ${tokens.colors.brand.pure};
-`
+`;
 
 export const FaqItemHeader = styled.div`
   height: 84px;
@@ -545,9 +551,9 @@ export const FaqItemHeader = styled.div`
 `;
 
 export const FaqItemTitle = styled.h1`
-  color: #0a0400;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  color: ${tokens.colors.brand.dark};
+  font-family: ${tokens.font.family.lastica};
+  font-size: ${tokens.font.sizes.sm};
   font-weight: 700;
   line-height: 20px;
 `;
@@ -677,8 +683,8 @@ export const BlogCta = styled.button`
   border: 2px solid ${tokens.colors.brand.pure};
 
   color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-family: ${tokens.font.family.interSemiBold};
+  font-size: ${tokens.font.sizes.xs};
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;

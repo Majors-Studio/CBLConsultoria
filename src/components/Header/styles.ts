@@ -1,7 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { tokens } from "@/utils/tokens";
 
 interface IProps {
-  show: boolean
+  show: boolean;
 }
 
 export const Container = styled.header<IProps>`
@@ -17,10 +18,10 @@ export const Container = styled.header<IProps>`
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-`
+`;
 
 interface IPropsMenu {
-  show: boolean
+  show: boolean;
 }
 
 export const MenuMobile = styled.div<IPropsMenu>`
@@ -30,14 +31,12 @@ export const MenuMobile = styled.div<IPropsMenu>`
   width: 100%;
   height: 100vh;
   background-color: #000;
-z-index: 9999;
+  z-index: 9999;
 
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-
-
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -46,7 +45,7 @@ export const Content = styled.div`
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-`
+`;
 
 export const Logo = styled.img`
   width: 200px;
@@ -57,7 +56,7 @@ export const Logo = styled.img`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`
+`;
 export const Navbar = styled.nav`
   display: flex;
   align-items: center;
@@ -68,17 +67,18 @@ export const Navbar = styled.nav`
     align-items: flex-start;
     gap: 20px;
   }
-`
+`;
 
 export const NavbarItem = styled.div`
   margin-left: 20px;
   color: #fff;
   position: relative;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: ${tokens.font.sizes.xs};
+  color: ${tokens.colors.brand.light};
 
   @media (min-width: 1200px) {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 
     &:after {
       content: "";
@@ -97,10 +97,10 @@ export const NavbarItem = styled.div`
       }
     }
   }
-`
+`;
 
 export const AccordionItem = styled.div`
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
-`
+`;

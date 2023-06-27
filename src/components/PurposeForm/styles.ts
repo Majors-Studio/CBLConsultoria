@@ -16,15 +16,15 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   color: ${tokens.colors.brand.pure};
-  font-size: 40px;
-  font-weight: 700;
+  font-size: ${tokens.font.sizes.lg};
+  font-weight: ${tokens.font.weight.bold};
   text-align: center;
   margin: 0 auto;
   line-height: 1;
   margin-bottom: 40px;
 
   @media (max-width: 1024px) {
-    font-size: 30px;
+    font-size: ${tokens.font.sizes.lg};
   }
 `;
 

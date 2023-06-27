@@ -1,4 +1,3 @@
-
 /*
  * 
   Exemplos:
@@ -29,13 +28,12 @@
       `
  */
 
-
 export const tokens = {
   colors: {
     brand: {
-      pure: '#4f665a',
-      light: '#fff',
-      dark: '#000',
+      pure: "#4f665a",
+      light: "#fff",
+      dark: "#000",
     },
     // highlight: {
     //   pure: '#FF8A00',
@@ -44,29 +42,29 @@ export const tokens = {
     //   dark: '#7A4200',
     // },
     neutral: {
-      lowPure: '#000000',
-      lowLight: '#A3A3A3',
-      lowMedium: '#666666',
-      lowDark: '#292929',
-      highPure: '#FFFFFF',
-      highLight: '#F5F5F5',
-      highMedium: '#E0E0E0',
-      highDark: '#CCCCCC',
+      lowPure: "#000000",
+      lowLight: "#A3A3A3",
+      lowMedium: "#666666",
+      lowDark: "#292929",
+      highPure: "#FFFFFF",
+      highLight: "#F5F5F5",
+      highMedium: "#E0E0E0",
+      highDark: "#CCCCCC",
     },
     feedback: {
-      errorPure: '#EA1F1F',
-      errorLight: '#FDC4C4',
-      errorMedium: '#F05656',
-      errorDark: '#710A0A',
-      successPure: '#3AA141',
-      successLight: '#D2EFD4',
-      successMedium: '#78CE7E',
-      successDark: '#205A24',
+      errorPure: "#EA1F1F",
+      errorLight: "#FDC4C4",
+      errorMedium: "#F05656",
+      errorDark: "#710A0A",
+      successPure: "#3AA141",
+      successLight: "#D2EFD4",
+      successMedium: "#78CE7E",
+      successDark: "#205A24",
     },
   },
   shadow: {
     shadowLevel1: {
-      shadowColor: '#707070',
+      shadowColor: "#707070",
       shadowOffset: {
         width: -2,
         height: 8,
@@ -76,7 +74,7 @@ export const tokens = {
       elevation: 1,
     },
     shadowLevel2: {
-      shadowColor: '#707070',
+      shadowColor: "#707070",
       shadowOffset: {
         width: 4,
         height: 12,
@@ -86,7 +84,7 @@ export const tokens = {
       elevation: 1,
     },
     shadowLevel3: {
-      shadowColor: '#707070',
+      shadowColor: "#707070",
       shadowOffset: {
         width: 0,
         height: 12,
@@ -98,10 +96,10 @@ export const tokens = {
   },
   font: {
     family: {
-      interRegular: 'Lastica',
-      interMedium: 'Inter_Medium',
-      interSemiBold: 'Inter_SemiBold',
-      interBold: 'Inter_Bold',
+      lastica: "Lastica",
+      interMedium: "Inter_Medium",
+      interSemiBold: "Inter_SemiBold",
+      interBold: "Inter_Bold",
     },
     weight: {
       regular: 400,
@@ -121,28 +119,28 @@ export const tokens = {
     //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 150 }),
     // },
     sizes: {
-      xxs: 14,
-      xs: 16,
-      sm: 20,
-      md: 24,
-      lg: 32,
-      xl: 48,
+      xxs: "14px",
+      xs: "16px",
+      sm: "20px",
+      md: "24px",
+      lg: "32px",
+      xl: "48px",
     },
   },
   space: {
-    sizeQuarck: '4px',
-    sizeNano: '8px',
-    sizeXxxs: '16px',
-    sizeXxs: '24px',
-    sizeXs: '32px',
-    sizeSm: '40px',
-    sizeMd: '48px',
-    sizeLg: '56px',
-    sizeXl: '64px',
-    sizeXxl: '80px',
-    sizeXxxl: '120px',
-    sizeHuge: '160px',
-    sizeGiant: '200px',
+    sizeQuarck: "4px",
+    sizeNano: "8px",
+    sizeXxxs: "16px",
+    sizeXxs: "24px",
+    sizeXs: "32px",
+    sizeSm: "40px",
+    sizeMd: "48px",
+    sizeLg: "56px",
+    sizeXl: "64px",
+    sizeXxl: "80px",
+    sizeXxxl: "120px",
+    sizeHuge: "160px",
+    sizeGiant: "200px",
   },
   spaceNumber: {
     sizeQuarck: 4,
@@ -161,7 +159,7 @@ export const tokens = {
   },
   extraSpace: {
     typeString: {
-      borderBottomTab: '2px',
+      borderBottomTab: "2px",
     },
     typeNumber: {
       borderBottomTab: 2,
@@ -193,14 +191,14 @@ export const tokens = {
   },
   opacityLevel: {
     semiopaque: 0.72,
-    semiopaqueHex: 'B8',
+    semiopaqueHex: "B8",
     intense: 0.64,
-    intenseHex: 'A3',
+    intenseHex: "A3",
     medium: 0.32,
-    mediumHex: '52',
+    mediumHex: "52",
     light: 0.16,
-    lightHex: '29',
+    lightHex: "29",
     semitransparent: 0.08,
-    semitransparentHex: '14',
+    semitransparentHex: "14",
   },
 };

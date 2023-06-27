@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { tokens } from "@/utils/tokens";
 export const Container = styled.div`
   position: relative;
   width: 100%;
@@ -12,8 +12,8 @@ export const SpeechBox = styled.div`
 `;
 
 export const SpeechBoxText = styled.p`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
+  color: ${tokens.colors.brand.light};
+  font-family: ${tokens.font.family.interMedium};
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
