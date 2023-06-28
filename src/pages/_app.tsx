@@ -11,7 +11,7 @@ import { HomeProvider } from "@/context/homeContext"
 import { AboutProvider } from "@/context/aboutContext"
 import { PrecatoryProvider } from "@/context/precatoryContext"
 
-import { Bebas_Neue } from "@next/font/google"
+import { Bebas_Neue,Montserrat,Poppins } from "@next/font/google"
 import localFont from "@next/font/local"
 
 export const bebasNeue = Bebas_Neue({
@@ -21,6 +21,16 @@ export const bebasNeue = Bebas_Neue({
 
 export const lastica = localFont({
   src: "../assets/fonts/Lastica.ttf",
+})
+
+export const montserrat = Montserrat({
+  weight: "400",
+  subsets: ["latin-ext"],
+})
+
+export const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin-ext"],
 })
 
 export default function App({ Component, pageProps }: AppProps) {

@@ -30,7 +30,7 @@
       `
  */
 
-import { bebasNeue, lastica } from "@/pages/_app";
+import { bebasNeue, lastica, montserrat, poppins } from "@/pages/_app";
 
 export const tokens = {
   breakpoints: {
@@ -107,26 +107,16 @@ export const tokens = {
   },
   font: {
     family: {
-      primary: lastica?.style.fontFamily,
-      secondary: bebasNeue?.style.fontFamily,
+      // primary: lastica?.style.fontFamily,
+      // secondary: bebasNeue?.style.fontFamily,
+      secondary: poppins.style.fontFamily,
+      primary: montserrat.style.fontFamily,
     },
     weight: {
       regular: 400,
       medium: 500,
       bold: 700,
     },
-    // lineHeight: {
-    //   lineHeightDefault: ({ fontSize }: LineHeightTokenProps) =>
-    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 100 }),
-    //   lineHeightXs: ({ fontSize }: LineHeightTokenProps) =>
-    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 116 }),
-    //   lineHeightSm: ({ fontSize }: LineHeightTokenProps) =>
-    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 124 }),
-    //   lineHeightMd: ({ fontSize }: LineHeightTokenProps) =>
-    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 133 }),
-    //   lineHeightLg: ({ fontSize }: LineHeightTokenProps) =>
-    //     getLineheightFromFontSize({ fontSize, percentageLineHeight: 150 }),
-    // },
     sizes: {
       xxs: "14px",
       xs: "16px",

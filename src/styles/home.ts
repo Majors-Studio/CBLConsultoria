@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: 100vw;
   background-color: #f8f8f8;
   margin-top: 120px;
-  margin-bottom: 60px;
 `
 
 export const Content = styled.div`
@@ -486,13 +485,21 @@ font-family: ${tokens.font.family.primary};
 `
 
 export const BlogContainer = styled.div`
+  background-color: #fff;
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};
-  margin: 0 auto;
 
-  padding-top: 40px;
   padding-bottom: 60px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+`
+
+export const BlogContent = styled.div`
+  max-width: ${tokens.breakpoints.desktopMd};
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -502,6 +509,9 @@ export const BlogContainer = styled.div`
     padding-top: 20px;
     padding-bottom: 40px;
   }
+
+
+
 `
 
 export const BlogItem = styled.div`

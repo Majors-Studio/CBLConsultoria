@@ -75,7 +75,7 @@ export default function Home() {
               antecipação de precatórios do Brasil
             </S.VideoTitle>
 
-            <Video  />
+            <Video />
 
             <CtaButton>Acesse nosso tour virtual!</CtaButton>
           </S.VideoContainer>
@@ -154,23 +154,21 @@ export default function Home() {
 
         <S.FollowTitle>Acompanhe as notícias sobre precatórios</S.FollowTitle>
         <S.BlogContainer>
-          {blogList.map((item) => (
-            <S.BlogItem key={item.id}>
-              <S.BlogImageContainer>
-                <S.BlogImage src={item.image} />
-              </S.BlogImageContainer>
-              <S.BlogTitle>{item.title}</S.BlogTitle>
-              <S.BlogLink>Consulte mais informações</S.BlogLink>
-            </S.BlogItem>
-          ))}
+          <S.BlogContent>
+            {blogList.map((item) => (
+              <S.BlogItem key={item.id}>
+                <S.BlogImageContainer>
+                  <S.BlogImage src={item.image} />
+                </S.BlogImageContainer>
+                <S.BlogTitle>{item.title}</S.BlogTitle>
+                <S.BlogLink>Consulte mais informações</S.BlogLink>
+              </S.BlogItem>
+            ))}
+          </S.BlogContent>
+          <CtaButton href="/news" style={{ padding: "0 20px", marginTop: '32px' }}>
+            Ver mais notícias
+          </CtaButton>
         </S.BlogContainer>
-        <S.Content>
-          <Link style={{ textDecoration: "none" }} href="/news">
-            <CtaButton style={{ padding: "0 20px" }}>
-              Ver mais notícias
-            </CtaButton>
-          </Link>
-        </S.Content>
       </S.Container>
     </div>
   )
