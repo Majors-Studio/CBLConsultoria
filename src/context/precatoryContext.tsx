@@ -72,7 +72,7 @@ export function PrecatoryProvider({ children }: any) {
   const stepsList = [
     {
       id: 0,
-      title: "1. Análise do seu precatório",
+      title: "Análise do seu precatório",
       text: (
         <>
           Nosso time jurídico faz uma análise criteriosa do processo judicial do
@@ -84,7 +84,7 @@ export function PrecatoryProvider({ children }: any) {
     },
     {
       id: 1,
-      title: "2. Proposta de Valor",
+      title: "Proposta de Valor",
       text: (
         <>Oferecemos o melhor valor do mercado com propostas éticas e justas.</>
       ),
@@ -92,7 +92,7 @@ export function PrecatoryProvider({ children }: any) {
     },
     {
       id: 2,
-      title: "3. Assinatura do Contrato",
+      title: "Assinatura do Contrato",
       text: (
         <>
           Após o aceite da proposta, <span>assinamos o contrato</span> de venda{" "}
@@ -104,7 +104,7 @@ export function PrecatoryProvider({ children }: any) {
     },
     {
       id: 3,
-      title: "4. Pagamento no ato da assinatura",
+      title: "Pagamento no ato da assinatura",
       text: (
         <>
           À vista e sem burocracia direto na sua conta.{" "}

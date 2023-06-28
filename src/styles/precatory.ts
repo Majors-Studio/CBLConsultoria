@@ -28,7 +28,6 @@ export const ContainerChart = styled.div`
 `;
 
 export const WhatContainer = styled.div`
-
   padding: 90px 0 60px;
   width: 100%;
 `;
@@ -63,7 +62,7 @@ export const ContainerText = styled.h1`
   font-weight: 700;
   text-transform: capitalize;
 
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
   text-align: left;
   width: 100%;
@@ -71,16 +70,30 @@ export const ContainerText = styled.h1`
 
 export const WhatIs = styled.div`
   background-color: #0a0e11;
+  max-width: 100vw;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const WhatIsContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
-  padding: 72px 0;
+  padding: 72px 20px;
 
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const WhatIsQuestion = styled.h1`
@@ -92,10 +105,29 @@ export const WhatIsQuestion = styled.h1`
   border-right: 1px solid #e2a141;
 
   padding-right: 32px;
+
+  @media (max-width: 920px) {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 768px) {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
 `;
 
 export const WhatIsAnswerContainer = styled.div`
   margin-left: 72px;
+
+  @media (max-width: 920px) {
+    margin-left: 0;
+  }
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 export const WhatIsAnswer = styled.p`
@@ -128,11 +160,14 @@ export const WhatIsCategoryTitle = styled.h1`
 export const CenaryContainer = styled.div`
   background-color: #1f2428;
   padding: 72px 0;
+
+  max-width: 100vw;
+  width: 100%;
 `;
 
 export const CenaryContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 `;
 
@@ -150,8 +185,10 @@ export const CenaryTitle = styled.h1`
 `;
 
 export const CenaryInfoContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 20px;
 `;
 
@@ -159,7 +196,19 @@ export const CenaryTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 72px;
+  width: 100%;
+
+  padding: 0 20px;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
+
+  & > *:nth-child(odd) {
+    align-self: flex-start;
+  }
+
+  & > *:nth-child(even) {
+    align-self: flex-end;
+  }
 `;
 
 export const CenaryText = styled.p`
@@ -202,40 +251,55 @@ export const SourceContainer = styled.div`
 export const SourceText = styled.p`
   text-align: left;
   width: 100%;
+
+  color: #fff;
 `;
 
 export const RankingContainer = styled.div`
   background-color: #282f35;
+  max-width: 100vw;
+  width: 100%;
+
   padding: 72px 0 120px;
 `;
 
 export const RankingContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   /* display: flex;
   flex-direction: row;
   justify-content: space-between; */
 
-display:grid;
-grid-template-columns: 1fr 1fr;
-gap: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-gap: 60px;
+    padding: 0 20px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-gap: 60px;
+  }
 `;
 
 export const RankingInfos = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-width: 100%;
-flex-shrink: 0;
+  width: 100%;
+  flex-shrink: 0;
 `;
 
 export const RankingChart = styled.div`
   width: 100%;
-flex-shrink: 0;
-display: flex;
+  flex-shrink: 0;
+  display: flex;
 `;
 
 export const RankingTitle = styled.h1`
@@ -253,6 +317,8 @@ export const RankingText = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  max-width: 100vw;
+  width: 100%;
 
   span {
     color: #e2a141;
@@ -266,7 +332,7 @@ export const NewsContainer = styled.div`
 
 export const NewsContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   display: grid;
@@ -365,7 +431,7 @@ export const WhyToSellList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 32px;
-max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 72px auto 0;
 `;
 
@@ -415,7 +481,7 @@ export const StepsContainer = styled.div`
 
 export const StepsContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 `;
 
@@ -451,6 +517,7 @@ export const StepsItem = styled.li``;
 export const StepsItemIcon = styled.div`
   width: 45px;
   height: 45px;
+  color: #ccc;
 `;
 
 export const StepsItemTitle = styled.h1`
@@ -499,7 +566,7 @@ export const LeadContainer = styled.div`
 
 export const LeadContent = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   display: grid;
@@ -518,7 +585,6 @@ export const LeadTitle = styled.h1`
   font-size: 39px;
   font-weight: 700;
 
-
   margin-bottom: 24px;
 `;
 
@@ -527,7 +593,6 @@ export const LeadText = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
-
 
   span {
     color: #e2a141;

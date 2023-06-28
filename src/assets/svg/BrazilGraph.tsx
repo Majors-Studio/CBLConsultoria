@@ -1,13 +1,14 @@
-import React from "react"
-
+import React from "react";
+import { useDevice } from "@/hooks/useDevice";
 const BrazilGraph: React.FC = () => {
+  const { isMobile } = useDevice();
   return (
     <svg
       viewBox="0.295 0.95 643.532 584.811"
       preserveAspectRatio="xMidYMid meet"
       data-bbox="0.295 0.95 643.532 584.811"
-      height="586"
-      width="644"
+      height={isMobile ? "80%" : "586"}
+      width={isMobile ? "80%" : "586"}
       data-type="color"
       role="presentation"
       aria-hidden="true"
@@ -361,7 +362,7 @@ const BrazilGraph: React.FC = () => {
         ></path>
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export default BrazilGraph
+export default BrazilGraph;
