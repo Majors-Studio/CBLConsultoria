@@ -110,14 +110,16 @@ export const AvatarName = styled.h3`
   max-width: 120px;
   text-align: center;
   color: rgba(0, 36, 106, 0.8);
-  margin-top: 20px;
+  margin-top: 8px;
+font-family: ${tokens.font.family.secondary};
 `
 
 export const AvatarCharge = styled.p`
   font-size: 18px;
   font-weight: 400;
   color: #000000;
-  margin-top: 5px;
+font-family: ${tokens.font.family.primary};
+margin-bottom: 20px;
 `
 
 export const AvatarsContainer = styled.div`

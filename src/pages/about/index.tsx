@@ -86,6 +86,7 @@ const About: React.FC = () => {
       />
         {avatarData.map((avatar, index) => (
           <C.Info key={index}>
+            <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
             <Image
               src={avatar.img}
               alt="avatar"
@@ -94,7 +95,6 @@ const About: React.FC = () => {
               height={60}
             />
             <C.AvatarName>{avatar.name}</C.AvatarName>
-            <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
           </C.Info>
         ))}
       </C.AvatarsContainer>
