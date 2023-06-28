@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <Image
           style={{
             position: "relative",
-            height: "200px",
+            height: "100%",
             objectFit: "cover",
             backgroundPosition: "center",
             backgroundSize: "cover",

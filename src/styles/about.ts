@@ -10,6 +10,8 @@ export const ContainerImg = styled.div`
   max-width: 100vw;
   position: relative;
   margin-top: 120px;
+  height: 340px;
+
   margin-bottom: 30px;
 `;
 

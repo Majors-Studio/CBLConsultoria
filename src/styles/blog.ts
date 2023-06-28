@@ -1,17 +1,18 @@
 import styled from "styled-components"
 
 export const BlogContainer = styled.div`
-  max-width: 1200px;
   width: 100%;
-  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin-bottom: 60px;
 
 `
 
 export const PostsContainer = styled.div`
   width: 100%;
+max-width: 1200px;
+margin: 0 auto;
   height: fit-content;
   gap: 45px;
 
@@ -27,7 +28,8 @@ export const PostsContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  max-height: 250px;
+  max-height: 340px;
+  margin-top: 120px;
 
   object-fit: cover;
   background-position: center;
