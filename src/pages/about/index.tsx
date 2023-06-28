@@ -2,41 +2,17 @@ import React from "react"
 import * as C from "@/styles/about"
 import Image from "next/image"
 import { Card, CustomQuality, Title } from "@/components"
-import governimg from "../../../public/assets/images/government.jpg"
 import PurposeForm from "@/components/PurposeForm"
 import { useAbout } from "@/context/aboutContext"
 import Video from "@/components/Video"
+import HeadBanner from "@/components/HeadBanner"
 
 const About: React.FC = () => {
   const { cardsList, avatarData,qualityList } = useAbout()
 
   return (
     <C.Container>
-      <C.ContainerImg>
-        <Image
-          style={{
-            position: "relative",
-            height: "100%",
-            objectFit: "cover",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          src={governimg}
-          alt="bg"
-        />
-        <C.Overlay />
-        <Title
-          color="#fff"
-          top="50%"
-          fontWeight="bold"
-          fontSize="40px"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          position="absolute"
-          text="Sobre nós"
-        />
-      </C.ContainerImg>
+      <HeadBanner title="Sobre Nós" />
 
       <C.SwiperContainer>
         <CustomQuality data={qualityList} />
@@ -54,12 +30,7 @@ const About: React.FC = () => {
 
       <C.VideoContainer>
         <Title
-          fontSize="32px"
-          fontWeight="500"
-          color="#000"
           text="Fique mais por dentro do nosso trabalho"
-          marginBottom="20px"
-          marginTop="20px"
         />
         <C.AboutText>
           {" "}

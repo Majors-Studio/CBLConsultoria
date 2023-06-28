@@ -17,6 +17,7 @@ import CtaButton from "@/components/CtaButton"
 import SpeechCarousel from "@/components/SpeechCarousel"
 import { useApp } from "@/context/appContext"
 import { usePrecatory } from "@/context/precatoryContext"
+import HeadBanner from "@/components/HeadBanner"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -51,10 +52,7 @@ const Precatory: React.FC = () => {
 
   return (
     <>
-      <C.ContainerImg>
-        <C.BannerImage src="https://source.unsplash.com/featured" alt="bg" />
-        <C.ContainerText>teste</C.ContainerText>
-      </C.ContainerImg>
+      <HeadBanner/>
 
       <C.WhatIs>
         <C.WhatIsContent>

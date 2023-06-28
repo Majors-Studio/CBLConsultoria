@@ -39,7 +39,7 @@ const CustomQuality: React.FC<CustomQualityProps> = ({data}) => {
         <SwiperSlide key={index}>
           <C.Container key={item.id}>
             <Image src={item.img} width={50} height={50} alt="img" />
-            <Title fontWeight="500" color="#000" text={item.title} />
+            <Title  text={item.title} />
             <Subtitle color="#333" text={item.subtitle} />
           </C.Container>
         </SwiperSlide>
