@@ -19,8 +19,9 @@ const About: React.FC = () => {
       </C.SwiperContainer>
 
       <C.CardsContainer>
-        {cardsList.map((card) => (
+        {cardsList.map((card,index) => (
           <Card
+            key={index}
             index={card.id}
             title={card.title}
             description={card.description}
@@ -33,7 +34,6 @@ const About: React.FC = () => {
           text="Fique mais por dentro do nosso trabalho"
         />
         <C.AboutText>
-          {" "}
           A CBL Consultoria possui vasta experiência no mercado e conta com
           profissionais capacitados para atender, de forma individualizada, a
           necessidade do cliente. O fato de não atuar com demandas de massa
@@ -42,7 +42,7 @@ const About: React.FC = () => {
           segurança e eficácia na proteção do seu patrimônio Nossa equipe é
           composta por profissionais graduados nas melhores universidades do
           Estado de São Paulo e atua tanto na área consultiva quanto
-          contenciosa."
+          contenciosa.
         </C.AboutText>
 
         <Video />
