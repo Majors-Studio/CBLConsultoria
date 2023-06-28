@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 /*
  * 
@@ -34,15 +34,16 @@ import { bebasNeue, lastica, montserrat, poppins } from "@/pages/_app";
 
 export const tokens = {
   breakpoints: {
-    mobile: '480px',
-    tablet: '768px',
-    desktop: '1024px',
-    desktopMd: '1280px',
-    desktopLg: '1440px',
+    mobile: "480px",
+    tablet: "768px",
+    desktop: "1024px",
+    desktopMd: "1280px",
+    desktopLg: "1440px",
   },
   colors: {
     brand: {
       pure: "#324f87",
+      cta: "#11294f",
       light: "#fff",
       dark: "#000",
     },

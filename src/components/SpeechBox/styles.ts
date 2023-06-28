@@ -15,7 +15,7 @@ export const SpeechBox = styled.div`
 export const SpeechBoxText = styled.p`
   color: ${tokens.colors.brand.light};
   font-family: ${tokens.font.family.secondary};
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5em;
   margin-bottom: 0;

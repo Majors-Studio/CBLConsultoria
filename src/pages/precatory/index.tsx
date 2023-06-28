@@ -52,7 +52,7 @@ const Precatory: React.FC = () => {
 
   return (
     <>
-      <HeadBanner title='Precatórios'/>
+      <HeadBanner title="Precatórios" />
 
       <C.WhatIs>
         <C.WhatIsContent>

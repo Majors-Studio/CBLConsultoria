@@ -42,6 +42,35 @@ const Chart: React.FC = () => {
         height={200}
         options={{
           maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          // legendas
+          plugins: {
+            title: {
+              display: true,
+              text: "Evolução dos precatórios em R$ (Bilhões)",
+              color: "#000",
+              font: {
+                size: 20,
+              },
+            },
+            legend: {
+              display: true,
+              position: "bottom",
+
+              labels: {
+                color: "#000",
+
+                font: {
+                  size: 16,
+                },
+              },
+            },
+            // tooltip
+          },
         }}
       />
     </C.ChartContainer>

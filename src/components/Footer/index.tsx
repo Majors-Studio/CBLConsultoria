@@ -8,6 +8,7 @@ import Logo from "../Logo";
 
 import Image from "next/image";
 import Link from "next/link";
+import CtaButton from "../CtaButton";
 
 const Footer: React.FC = () => {
   // google maps config
@@ -34,14 +35,46 @@ const Footer: React.FC = () => {
 
   const midiaItems = [
     {
-      name: "Facebook",
-      url: "https://www.facebook.com/",
-      logo: "https://static.wixstatic.com/media/fea1c1_1dba9c8d59804f439b332177e81adde4~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Facebook.png",
+      name: "Instagram",
+      url: "https://www.instagram.com/cbl_cj/",
+      logo: "https://static.wixstatic.com/media/fea1c1_02a47dd2d3a14f7a908448826a993500~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Instagram.png",
+    },
+  ];
+
+  const footerData = [
+    {
+      title: "Mapa do site",
+      subtitle: [
+        {
+          name: "Home",
+          url: "/",
+        },
+        {
+          name: "Quem somos",
+          url: "/about",
+        },
+        {
+          name: "Notícias",
+          url: "/news",
+        },
+      ],
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/",
-      logo: "https://static.wixstatic.com/media/fea1c1_02a47dd2d3a14f7a908448826a993500~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Instagram.png",
+      title: "Recursos",
+      subtitle: [
+        {
+          name: "Documentação",
+          url: "/",
+        },
+        {
+          name: "Conferências",
+          url: "/",
+        },
+        {
+          name: "Consultoria",
+          url: "/legal-advice",
+        },
+      ],
     },
   ];
 
@@ -60,27 +93,25 @@ const Footer: React.FC = () => {
                 We growing up your business with personal AI manager.
               </S.BiggerText>
               <S.Desc>caue@cblconsultoria.com.br</S.Desc>
+              <CtaButton
+                style={{
+                  border: "1px solid #fff",
+                  color: "#fff",
+                }}
+              />
             </S.MainText>
           </S.Midia>
           <S.ContainerInfo>
-            <S.Info>
-              <S.Title>Company</S.Title>
-              <S.Subtitle>Blog</S.Subtitle>
-              <S.Subtitle>Carreiras</S.Subtitle>
-              <S.Subtitle>Preços</S.Subtitle>
-            </S.Info>
-            <S.Info>
-              <S.Title>Resources</S.Title>
-              <S.Subtitle>Documentação</S.Subtitle>
-              <S.Subtitle>Papéis</S.Subtitle>
-              <S.Subtitle>Conferências</S.Subtitle>
-            </S.Info>
-            <S.Info>
-              <S.Title>Legal</S.Title>
-              <S.Subtitle>Termos de serviço</S.Subtitle>
-              <S.Subtitle>Política e Privacidade</S.Subtitle>
-              <S.Subtitle>Processamento de dados</S.Subtitle>
-            </S.Info>
+            {footerData.map((item, index) => (
+              <S.Info key={index}>
+                <S.Title>{item.title}</S.Title>
+                {item.subtitle.map((subitem, index) => (
+                  <Link href={subitem.url}>
+                    <S.Subtitle key={index}>{subitem.name}</S.Subtitle>
+                  </Link>
+                ))}
+              </S.Info>
+            ))}
           </S.ContainerInfo>
         </S.Content>
       </S.Container>

@@ -338,6 +338,18 @@ export const NewsContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 32px;
+
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-gap: 60px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-gap: 60px;
+  }
 `;
 
 export const NewsInfos = styled.div``;
