@@ -9,6 +9,7 @@ import { useDevice } from "@/hooks/useDevice"
 import { navitems } from "@/utils/navitems"
 import Link from "next/link"
 import Hamburguer from "../Hamburguer"
+import CtaButton from "../CtaButton"
 
 const Header: React.FC = () => {
   const { isMobile, isTablet, isDesktop } = useDevice()
@@ -56,13 +57,17 @@ const Header: React.FC = () => {
           {isMobile || isTablet ? (
             <Hamburguer isOpen={menuOpened} setIsOpen={setMenuOpened} />
           ) : (
-            navBar
-          )}
-
-          {isDesktop && (
-            <Link href="#purposeForm">
-              <Button bgColor="#00246A" color="#fff" text="Fale Conosco" />
-            </Link>
+            <>
+              {navBar}
+              <CtaButton
+                style={{
+                  border: "1px solid #fff",
+                  color: "#fff",
+                }}
+              >
+                Fale Conosco
+              </CtaButton>
+            </>
           )}
         </C.Content>
       </C.Container>
