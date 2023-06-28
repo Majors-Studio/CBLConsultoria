@@ -125,6 +125,7 @@ export const tokens = {
       md: "24px",
       lg: "32px",
       xl: "48px",
+      xxl: "55px",
     },
   },
   space: {

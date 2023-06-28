@@ -5,16 +5,18 @@ import Title from "../Title"
 
 interface HeadBannerProps {
   title?: string
+  source?: string
+  color?: string
 }
 
-const HeadBanner: React.FC<HeadBannerProps> = ({ title }) => {
+const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source ='https://source.unsplash.com/featured', color ='#000'}) => {
   return (
     <C.Container>
-      <C.Image src="https://source.unsplash.com/featured" alt="bg" />
+      <C.Image src={source} alt="bg" />
       <C.Overlay />
       <Title
         style={{
-          color: "#000",
+          color: color,
         }}
         text={title}
       />
