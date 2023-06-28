@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export interface iProps {
@@ -9,4 +10,5 @@ export const Subtitle = styled.p<iProps>`
   max-width: 650px;
   text-align: center;
   margin-bottom: 20px;
+font-family: ${tokens.font.family.secondary};
 `;

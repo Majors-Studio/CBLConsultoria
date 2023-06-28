@@ -79,11 +79,11 @@ const About: React.FC = () => {
         </C.AboutText>
       </C.VideoContainer>
 
+      <C.AvatarsContainer>
       <Title
         color="#000"
         text="Conheça os responsáveis pelos nossos negócios"
       />
-      <C.AvatarsContainer>
         {avatarData.map((avatar, index) => (
           <C.Info key={index}>
             <Image

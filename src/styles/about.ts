@@ -59,22 +59,10 @@ export const Overlay = styled.div`
 export const CardsContainer = styled.div`
   display: grid;
   padding: 0 50px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 32px;
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
-
-  @media (max-width: 920px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `
 
 export const FormContainer = styled.div`
@@ -112,6 +100,7 @@ export const VideoContainer = styled.div`
   margin: 0 auto;
   padding: 0 40px;
 
+  margin-top: 150px;
   margin-bottom: 50px;
 `
 
@@ -133,7 +122,7 @@ export const AvatarCharge = styled.p`
 
 export const AvatarsContainer = styled.div`
   display: flex;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
   width: 100%;
   padding: 0 80px;
@@ -161,7 +150,7 @@ export const AboutText = styled.p`
   font-weight: ${tokens.font.weight.regular};
   color: ${tokens.colors.brand.dark};
   text-align: justify;
-  font-family: ${tokens.font.family.interMedium};
+  font-family: ${tokens.font.family.secondary};
   margin: 50px auto;
   max-width: ${tokens.breakpoints.desktopMd};;
 `

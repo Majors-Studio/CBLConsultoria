@@ -5,6 +5,7 @@ export const Title = styled.h3`
   font-size: ${tokens.font.sizes.xl};
   font-weight: 700;
   color: ${tokens.colors.neutral.lowLight};
+  font-family: ${tokens.font.family.primary};
 
   text-align: center;
 `
