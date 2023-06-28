@@ -6,9 +6,9 @@ interface ContentBoxProps extends HtmlHTMLAttributes<HTMLDivElement>, S.IContain
   children: React.ReactNode
 }
 
-const ContentBox: React.FC<ContentBoxProps> = ({ children, bgColor,px,py,style }) => {
+const ContentBox: React.FC<ContentBoxProps> = ({ children, bgColor,py,style }) => {
   return (
-    <S.Container bgColor={bgColor} py={py} px={px} style={style}>
+    <S.Container bgColor={bgColor} py={py} style={style}>
       <S.Content>{children}</S.Content>
     </S.Container>
   )

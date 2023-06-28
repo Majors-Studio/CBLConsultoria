@@ -14,6 +14,7 @@ export const Head = styled.div`
   width: 100%;
 
   @media (max-width: 1024px) {
+  gap: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
 `
