@@ -60,8 +60,8 @@ export const CardsContainer = styled.div`
   display: grid;
   padding: 0 50px;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
+  gap: 32px;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   @media (max-width: 920px) {

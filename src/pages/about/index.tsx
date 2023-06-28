@@ -8,7 +8,7 @@ import { useAbout } from "@/context/aboutContext"
 import Video from "@/components/Video"
 
 const About: React.FC = () => {
-  const { cardsList, avatarData } = useAbout()
+  const { cardsList, avatarData,qualityList } = useAbout()
 
   return (
     <C.Container>
@@ -39,7 +39,7 @@ const About: React.FC = () => {
       </C.ContainerImg>
 
       <C.SwiperContainer>
-        <CustomQuality />
+        <CustomQuality data={qualityList} />
       </C.SwiperContainer>
 
       <C.CardsContainer>
