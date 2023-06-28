@@ -13,6 +13,7 @@ export const Button = styled.button`
   width: fit-content;
   font-size: 1.5rem;
   color: ${tokens.colors.brand.pure};
+font-family: ${tokens.font.family.primary};
   &:hover {
     color: #e7e7e7;
     /* border-radius: 50%; */

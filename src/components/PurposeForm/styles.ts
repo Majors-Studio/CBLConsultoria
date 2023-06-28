@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { tokens } from "../../utils/tokens";
+import styled from "styled-components"
+import { tokens } from "../../utils/tokens"
 
 export const Container = styled.div`
   /* width: 520px; */
@@ -12,26 +12,26 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`;
+`
 
 export const Title = styled.h1`
   color: ${tokens.colors.brand.pure};
-  color: rgba(0, 36, 106, 0.8);
   font-size: ${tokens.font.sizes.lg};
   font-weight: ${tokens.font.weight.bold};
   text-align: center;
   margin: 0 auto;
   line-height: 1;
   margin-bottom: 40px;
+  font-family: ${tokens.font.family.primary};
 
   @media (max-width: 1024px) {
     font-size: ${tokens.font.sizes.lg};
   }
-`;
+`
 
 export const Subtitle = styled.h2`
   color: #333;
-  /* font-family: "Montserrat", Sans-serif; */
+  font-family: ${tokens.font.family.secondary};
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.1em;
@@ -39,7 +39,7 @@ export const Subtitle = styled.h2`
   max-width: 440px;
   text-align: center;
   margin: 0 auto;
-`;
+`
 
 export const Form = styled.form`
   display: flex;
@@ -49,7 +49,7 @@ export const Form = styled.form`
   width: 100%;
   margin: 40px auto 0;
   align-items: center;
-`;
+`
 
 export const Input = styled.input`
   background-color: #f8f8f8;
@@ -63,8 +63,9 @@ export const Input = styled.input`
   }
   ::placeholder {
     color: #333;
+    font-family: ${tokens.font.family.secondary};
   }
-`;
+`
 
 export const TextArea = styled.textarea`
   background-color: #f8f8f8;
@@ -76,7 +77,6 @@ export const TextArea = styled.textarea`
   }
   ::placeholder {
     color: #333;
+    font-family: ${tokens.font.family.secondary};
   }
-`;
-
-
+`

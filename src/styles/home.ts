@@ -102,9 +102,12 @@ export const CardTitle = styled.h1`
   width: 100%;
   color: #333;
   text-align: center;
+font-family: ${tokens.font.family.primary};
 
   span {
     color: ${tokens.colors.brand.pure};
+font-family: ${tokens.font.family.primary};
+
   }
 `
 
@@ -177,7 +180,7 @@ export const CardInfo = styled.div``
 
 export const CardInfoTitle = styled.h1`
   color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 24px;
@@ -187,7 +190,7 @@ export const CardInfoTitle = styled.h1`
 
 export const CardInfoDescription = styled.p`
   color: #333;
-  font-family: "Montserrat", sans-serif;
+  font-family: ${tokens.font.family.secondary};
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2;
@@ -196,7 +199,7 @@ export const CardInfoDescription = styled.p`
 
 export const CardIndex = styled.div`
   color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 55px;
   font-weight: 600;
   line-height: 55px;
@@ -246,7 +249,8 @@ export const ChooseTitle = styled.h1`
 
 export const ChooseSubtitle = styled.h1`
   color: #121212;
-  font-family: "Montserrat", sans-serif;
+  font-family: ${tokens.font.family.secondary};
+
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
@@ -287,6 +291,7 @@ export const ChooseItemTitle = styled.h1`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-inline: 2rem;
+
 `
 
 export const ChooseItemList = styled.ul`
@@ -312,7 +317,7 @@ export const ChooseItemListItemStatus = styled.span`
 
 export const ChooseItemListItemText = styled.p`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
+  font-family: ${tokens.font.family.secondary};
   font-size: 1.3rem;
   font-weight: 400;
   position: relative;
@@ -399,13 +404,13 @@ export const WhyItemTexts = styled.div`
 
 export const WhyItemTitle = styled.h1`
   color: #121212;
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 20px;
   font-weight: 700;
 `
 
 export const WhyItemDescription = styled.p`
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.secondary};
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
@@ -432,7 +437,7 @@ export const WhatContainer = styled.div`
 
 export const WhatTitle = styled.h1`
   color: #121212;
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 40px;
   font-weight: 600;
   line-height: 40px;
@@ -464,7 +469,7 @@ export const FollowTitle = styled.h1`
   height: 220px;
   width: 100%;
   color: #000;
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 36px;
   font-weight: 600;
   line-height: 40px;
@@ -534,7 +539,7 @@ export const BlogImage = styled.img`
 export const BlogTitle = styled.h1`
   padding: 40px 30px;
   color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
+font-family: ${tokens.font.family.primary};
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
@@ -545,8 +550,8 @@ export const BlogLink = styled.a`
   align-self: flex-end;
 
   color: ${tokens.colors.brand.pure};
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+font-family: ${tokens.font.family.secondary};
+  font-size: 18px;
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;

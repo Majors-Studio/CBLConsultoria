@@ -25,10 +25,12 @@ export const WhatTexts = styled.div`
 
 export const WhatName = styled.h1`
   margin-top: 12px;
+  color: #121212;
+  font-family: ${tokens.font.family.primary};
 `;
 
-export const WhatPlace = styled.h1`
+export const WhatPlace = styled.h2`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
+  font-family: ${tokens.font.family.secondary};
   font-size: ${tokens.font.sizes.xxs};
 `
