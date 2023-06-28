@@ -35,7 +35,7 @@ export const Header = styled.div`
 
 export const Title = styled.h1`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: ${tokens.font.sizes.sm};
   font-weight: 700;
   line-height: 20px;

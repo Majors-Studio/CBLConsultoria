@@ -107,8 +107,8 @@ export const tokens = {
   },
   font: {
     family: {
-      lastica: lastica?.style.fontFamily,
-      bebas: bebasNeue?.style.fontFamily,
+      primary: lastica?.style.fontFamily,
+      secondary: bebasNeue?.style.fontFamily,
     },
     weight: {
       regular: 400,

@@ -29,6 +29,6 @@ export const WhatName = styled.h1`
 
 export const WhatPlace = styled.h1`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: ${tokens.font.sizes.xxs};
 `

@@ -54,14 +54,14 @@ export const InfoTitle = styled.h1`
   font-size: ${tokens.font.sizes.xl};
   font-weight: ${tokens.font.weight.medium};
   line-height: 1.2;
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   width: 100%;
   text-align: left;
   color: ${tokens.colors.brand.pure};
   font-size: ${tokens.font.sizes.xl};
   strong {
     /* text-decoration: underline; */
-    font-family: ${tokens.font.family.lastica};
+    font-family: ${tokens.font.family.primary};
   }
 `
 
@@ -85,7 +85,7 @@ export const PrecatoryInfoItem = styled.li`
     font-size: ${tokens.font.sizes.sm};
     color: ${tokens.colors.brand.pure};
 
-    font-family: ${tokens.font.family.bebas};
+    font-family: ${tokens.font.family.secondary};
   }
 `
 
@@ -218,7 +218,7 @@ export const VideoContainer = styled.div`
 
 export const VideoTitle = styled.h1`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: 35px;
   font-weight: ${tokens.font.weight.bold};
   line-height: 50px;
@@ -237,7 +237,7 @@ export const ChooseContainer = styled.div`
 
 export const ChooseTitle = styled.h1`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: ${tokens.font.sizes.xl};
   font-weight: 600;
   line-height: 50px;
@@ -278,7 +278,7 @@ export const ChooseItem = styled.li`
 export const ChooseItemTitle = styled.h1`
   background-color: ${tokens.colors.brand.pure};
   color: ${tokens.colors.brand.light};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
@@ -312,7 +312,7 @@ export const ChooseItemListItemStatus = styled.span`
 
 export const ChooseItemListItemText = styled.p`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: 1.3rem;
   font-weight: 400;
   position: relative;
@@ -346,7 +346,7 @@ export const WhyContainer = styled.div`
 
 export const WhyTitle = styled.h1`
   color: ${tokens.colors.brand.light};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: ${tokens.font.sizes.xl};
   font-weight: 600;
   line-height: 40px;
@@ -446,7 +446,7 @@ export const FaqContainer = styled.div`
 
 export const FaqTitle = styled.h1`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: 36px;
   font-weight: ${tokens.font.weight.bold};
   text-align: center;
@@ -454,7 +454,7 @@ export const FaqTitle = styled.h1`
 
 export const FaqDescription = styled.p`
   color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.lastica};
+  font-family: ${tokens.font.family.primary};
   font-size: ${tokens.font.sizes.sm};
   font-weight: 400;
   text-align: center;
