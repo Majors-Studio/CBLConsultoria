@@ -14,7 +14,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   @media (max-width: ${tokens.breakpoints.desktop}) {
@@ -60,7 +60,8 @@ export const InfoTitle = styled.h1`
   color: ${tokens.colors.brand.pure};
   font-size: ${tokens.font.sizes.xl};
   strong {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-family: ${tokens.font.family.lastica};
   }
 `
 
@@ -78,11 +79,13 @@ export const PrecatoryInfoItem = styled.li`
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  font-size: ${tokens.font.sizes.sm};
-  color: ${tokens.colors.brand.pure};
   cursor: context-menu;
-  &:hover {
+
+  span {
+    font-size: ${tokens.font.sizes.sm};
     color: ${tokens.colors.brand.pure};
+
+    font-family: ${tokens.font.family.bebas};
   }
 `
 
@@ -91,12 +94,11 @@ export const CardContainer = styled.div`
   width: 100%;
 `
 
-
 export const CardTitle = styled.h1`
   font-size: 40px;
   font-weight: 600;
   line-height: 38px;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   width: 100%;
   color: #333;
   text-align: center;
@@ -356,7 +358,7 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   width: 100%;
   margin: 70px auto 0;
 
@@ -416,9 +418,9 @@ export const WhatContainer = styled.div`
   padding: 90px 0 60px;
   width: 100%;
 
-display: flex;
-flex-direction: column;
-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   @media (max-width: 768px) {
     padding: 60px 0 40px;
@@ -480,7 +482,7 @@ export const FollowTitle = styled.h1`
 
 export const BlogContainer = styled.div`
   width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
   padding-top: 40px;

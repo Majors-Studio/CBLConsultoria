@@ -5,7 +5,6 @@ import PurposeForm from "@/components/PurposeForm"
 import { ConfirmIcon, DangerIcon, SuccessIcon } from "@/assets/icons"
 
 import Link from "next/link"
-import { useDevice } from "@/hooks/useDevice"
 import CtaButton from "@/components/CtaButton"
 import SpeechCarousel from "@/components/SpeechCarousel"
 import Accordion from "@/components/Accordion"
@@ -14,7 +13,6 @@ import { useApp } from "@/context/appContext"
 import Video from "@/components/Video"
 
 export default function Home() {
-  const { isMobile, isTablet } = useDevice()
   const { userList } = useApp()
 
   const { infoList, cardList, chooseList, whyList, faqList, blogList } =

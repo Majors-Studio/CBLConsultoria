@@ -1,6 +1,6 @@
 import "@/styles/global.css"
 import type { AppProps } from "next/app"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Head from "next/head"
 import Layout from "@/layout"
 import { AppProvider } from "@/context/appContext"
@@ -11,8 +11,20 @@ import { HomeProvider } from "@/context/homeContext"
 import { AboutProvider } from "@/context/aboutContext"
 import { PrecatoryProvider } from "@/context/precatoryContext"
 
+import { Bebas_Neue } from "@next/font/google"
+import localFont from "@next/font/local"
+
+export const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin-ext"],
+})
+
+export const lastica = localFont({
+  src: "../assets/fonts/Lastica.ttf",
+})
+
 export default function App({ Component, pageProps }: AppProps) {
-  const [timeoutId, setTimeoutId] = React.useState(true)
+  const [timeoutId, setTimeoutId] = useState(true)
 
   const head = (
     <Head>
@@ -108,9 +120,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <HomeProvider>
           <AboutProvider>
             <PrecatoryProvider>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
+              <main
+                style={bebasNeue.style}
+              >
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+              </main>
             </PrecatoryProvider>
           </AboutProvider>
         </HomeProvider>

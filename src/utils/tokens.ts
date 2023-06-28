@@ -1,3 +1,5 @@
+'use client'
+
 /*
  * 
   Exemplos:
@@ -27,6 +29,8 @@
         background-color: ${brandPure}
       `
  */
+
+import { bebasNeue, lastica } from "@/pages/_app";
 
 export const tokens = {
   breakpoints: {
@@ -103,10 +107,8 @@ export const tokens = {
   },
   font: {
     family: {
-      lastica: "Lastica",
-      interMedium: "Inter_Medium",
-      interSemiBold: "Inter_SemiBold",
-      interBold: "Inter_Bold",
+      lastica: lastica?.style.fontFamily,
+      bebas: bebasNeue?.style.fontFamily,
     },
     weight: {
       regular: 400,
