@@ -1,8 +1,7 @@
 import React from "react"
 
 import { useRouter } from "next/router"
-import { useApp } from "@/context/contextApi"
-import Image from "next/image"
+import { useApp } from "@/context/appContext"
 
 import * as S from "@/styles/news_slug"
 import Link from "next/link"

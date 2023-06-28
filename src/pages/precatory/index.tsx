@@ -9,23 +9,21 @@ import {
   ChartData,
 } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
-import { ListIcon, MoneyIcon, SuccessIcon } from "@/assets/icons"
-import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
-import ContractIcon from "@/assets/icons/ContractIcon"
+import { SuccessIcon } from "@/assets/icons"
 import PurposeForm from "@/components/PurposeForm"
-// import Swiper from "swiper";
-import { SwiperSlide, Swiper } from "swiper/react"
-import { Autoplay, A11y } from "swiper"
 
-import SpeechBox from "@/components/SpeechBox"
-import Avatar from "@/components/Avatar"
 import Chart from "@/components/Chart"
 import CtaButton from "@/components/CtaButton"
 import SpeechCarousel from "@/components/SpeechCarousel"
+import { useApp } from "@/context/appContext"
+import { usePrecatory } from "@/context/precatoryContext"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 const Precatory: React.FC = () => {
+  const { userList, newsList } = useApp()
+  const { stepsList, whyToSellList } = usePrecatory()
+
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
     datasets: [
@@ -50,165 +48,6 @@ const Precatory: React.FC = () => {
       },
     ],
   } as ChartData<"doughnut", number[], string>
-
-  const points = [
-    {
-      id: 0,
-      name: "João da Silva",
-      text:
-        "Potencial de retorno financeiro significativo, uma vez que os precatórios podem ser adquiridos com descontos substanciais.",
-      avatar: "https://i.pravatar.cc/300?img=1",
-    },
-    {
-      id: 1,
-      name: "Carlos Almeida",
-      text:
-        "Estabilidade e segurança jurídica, pois os precatórios são obrigações judiciais emitidas pelo governo, geralmente garantindo o pagamento futuro.",
-      avatar: "https://i.pravatar.cc/300?img=2",
-    },
-    {
-      id: 2,
-      name: "Joana Castro",
-      text:
-        "Diversificação de portfólio, permitindo aos investidores mitigar riscos e aproveitar oportunidades alternativas de investimento.",
-      avatar: "https://i.pravatar.cc/300?img=3",
-    },
-    {
-      id: 3,
-      name: "Maria dos Santos",
-      text:
-        "Possibilidade de utilização de precatórios para compensação de débitos fiscais, proporcionando benefícios fiscais adicionais.",
-      avatar: "https://i.pravatar.cc/300?img=4",
-    },
-    {
-      id: 4,
-      name: "Hildo Augusto",
-      text:
-        "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
-      avatar: "https://i.pravatar.cc/300?img=5",
-    },
-  ]
-
-  const newsList = [
-    {
-      id: 0,
-      title:
-        "Aliados de Lula analisam proposta para alongar precatórios de prefeituras até 2040.",
-      source: "Folha de São Paulo",
-      link: "https://www1.folha.uol.com.br/colunas/painel/2021/09/aliados-de-lula-analisam-proposta-para-alongar-precatorios-de-prefeituras-ate-2040.shtml",
-      date: "14/09/2021",
-    },
-    {
-      id: 1,
-      title: "Precatórios: o que são e como investir nesses títulos?",
-      source: "Valor Investe",
-      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
-      date: "14/09/2021",
-    },
-    {
-      id: 2,
-      title: "Precatórios: o que são e como investir nesses títulos?",
-      source: "Valor Investe",
-      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
-      date: "14/09/2021",
-    },
-    {
-      id: 3,
-      title: "Precatórios: o que são e como investir nesses títulos?",
-      source: "Valor Investe",
-      link: "https://valorinveste.globo.com/objetivo/educacao-financeira/noticia/2021/09/14/precatorios-o-que-sao-e-como-investir-nesses-titulos.ghtml",
-      date: "14/09/2021",
-    },
-  ]
-
-  const whyToSellList = [
-    {
-      id: 0,
-      text: (
-        <>
-          <span>
-            Os pagamentos não são realizados no prazo pelo poder público.
-          </span>{" "}
-          A data de pagamento muda o tempo todo, portanto a fila de credores só
-          aumenta.
-        </>
-      ),
-    },
-    {
-      id: 1,
-      text: (
-        <>
-          Liquidez: Receber rapidamente e à vista.{" "}
-          <span>Dinheiro na conta sem burocracia.</span>
-        </>
-      ),
-    },
-    {
-      id: 2,
-      text: (
-        <>
-          <span>Não faça dívidas com juros abusivos</span>, a venda do
-          precatório é a melhor opção para retomar sua saúde financeira.
-        </>
-      ),
-    },
-    {
-      id: 3,
-      text: (
-        <>
-          Acabe com a incerteza de recebimento,{" "}
-          <span>venda com segurança jurídica e financeira.</span>
-        </>
-      ),
-    },
-  ]
-
-  const stepsList = [
-    {
-      id: 0,
-      title: "1. Análise do seu precatório",
-      text: (
-        <>
-          Nosso time jurídico faz uma análise criteriosa do processo judicial do
-          seu precatório para garantir <span>segurança e transparência</span> em
-          todo o processo de compra.
-        </>
-      ),
-      icon: <MagnifyingGlass />,
-    },
-    {
-      id: 1,
-      title: "2. Proposta de Valor",
-      text: (
-        <>Oferecemos o melhor valor do mercado com propostas éticas e justas.</>
-      ),
-      icon: <ListIcon />,
-    },
-    {
-      id: 2,
-      title: "3. Assinatura do Contrato",
-      text: (
-        <>
-          Após o aceite da proposta, <span>assinamos o contrato</span> de venda{" "}
-          <span>no cartório</span>, seguindo todas as obrigações legais, de
-          forma <span>rápida e segura</span>.
-        </>
-      ),
-      icon: <ContractIcon />,
-    },
-    {
-      id: 3,
-      title: "4. Pagamento no ato da assinatura",
-      text: (
-        <>
-          À vista e sem burocracia direto na sua conta.{" "}
-          <span>O dinheiro é creditado em conta no momento da assinatura</span>{" "}
-          e o comprovante de transferência entregue ao credor.
-        </>
-      ),
-      icon: <MoneyIcon />,
-    },
-  ]
 
   return (
     <>
@@ -401,7 +240,7 @@ const Precatory: React.FC = () => {
               <C.NewsItem key={news.id}>
                 <C.NewsItemTop>
                   <C.NewsItemInfo>
-                    {news.source} | {news.date}
+                    {news.source} | {news.date.toString()}
                   </C.NewsItemInfo>
                   <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
                 </C.NewsItemTop>
@@ -435,10 +274,10 @@ const Precatory: React.FC = () => {
             <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
 
             <C.WhatList>
-              <SpeechCarousel data={points} />
+              <SpeechCarousel data={userList} />
             </C.WhatList>
           </C.WhatContainer>
-          
+
           <C.ContainerChart>
             <C.WhatTitle>
               Evolução de investimentos em precatórios{" "}

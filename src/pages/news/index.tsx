@@ -3,7 +3,7 @@ import * as C from "../../styles/blog"
 
 import CardBlog from "@/components/CardBlog"
 import Link from "next/link"
-import { useApp } from "@/context/contextApi"
+import { useApp } from "@/context/appContext"
 
 const News: React.FC = () => {
   const { newsList } = useApp()

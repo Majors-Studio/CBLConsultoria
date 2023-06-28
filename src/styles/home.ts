@@ -445,12 +445,6 @@ export const WhatTitle = styled.h1`
   text-align: center;
 `
 
-export const WhatList = styled.ul`
-  width: 100%;
-  /* max-width: 800px; */
-  margin: 80px auto 0;
-`
-
 export const FaqContainer = styled.div`
   padding: 90px 20px 80px;
   width: 100%;

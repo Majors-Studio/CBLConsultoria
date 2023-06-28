@@ -3,10 +3,13 @@ import type { AppProps } from "next/app"
 import React, { useEffect } from "react"
 import Head from "next/head"
 import Layout from "@/layout"
-import { AppProvider } from "@/context/contextApi"
+import { AppProvider } from "@/context/appContext"
 import LoadingIcon from "@/assets/icons/LoadingIcon"
 import Logo from "@/components/Logo"
 import { tokens } from "@/utils/tokens"
+import { HomeProvider } from "@/context/homeContext"
+import { AboutProvider } from "@/context/aboutContext"
+import { PrecatoryProvider } from "@/context/precatoryContext"
 
 export default function App({ Component, pageProps }: AppProps) {
   const [timeoutId, setTimeoutId] = React.useState(true)
@@ -102,9 +105,15 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {head}
       <AppProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <HomeProvider>
+          <AboutProvider>
+            <PrecatoryProvider>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </PrecatoryProvider>
+          </AboutProvider>
+        </HomeProvider>
       </AppProvider>
     </>
   )

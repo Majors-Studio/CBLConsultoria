@@ -1,13 +1,13 @@
-import React from "react";
-import * as C from "@/styles/about";
-import Image from "next/image";
-import { Card, CustomQuality, Subtitle, Title } from "@/components";
-import governimg from "../../../public/assets/images/government.jpg";
-import PurposeForm from "@/components/PurposeForm";
-import { useApp } from "@/context/contextApi";
+import React from "react"
+import * as C from "@/styles/about"
+import Image from "next/image"
+import { Card, CustomQuality, Title } from "@/components"
+import governimg from "../../../public/assets/images/government.jpg"
+import PurposeForm from "@/components/PurposeForm"
+import { useAbout } from "@/context/aboutContext"
 
 const About: React.FC = () => {
-  const { cardsList, avatarData } = useApp();
+  const { cardsList, avatarData } = useAbout()
 
   return (
     <C.Container>
@@ -136,7 +136,7 @@ const About: React.FC = () => {
         <PurposeForm />
       </C.FormContainer>
     </C.Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About
