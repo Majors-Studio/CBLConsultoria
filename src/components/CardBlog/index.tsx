@@ -8,10 +8,10 @@ interface CardBlogProps {
 
 const CardBlog: React.FC<CardBlogProps> = ({ text, src }) => {
   return (
-    <C.CardContainer>
+    <C.Container>
       <C.Image src={src} alt="blog_image" />
-      <C.AboutText>{text}</C.AboutText>
-    </C.CardContainer>
+      <C.Text>{text}</C.Text>
+    </C.Container>
   );
 };
 

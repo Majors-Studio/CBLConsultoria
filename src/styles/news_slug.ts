@@ -6,11 +6,11 @@ export const Container = styled.div`
   height: 100%;
   padding: 20px 0;
 
-margin-top: 120px;
+  margin-top: 120px;
 `
 
 export const Content = styled.div`
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
   padding: 0 20px;
 
@@ -49,7 +49,6 @@ export const Left = styled.div`
   justify-content: space-between;
 
   border: 1px solid ${tokens.colors.neutral.lowLight};
-
 `
 
 export const Right = styled.div``
@@ -70,10 +69,11 @@ export const Category = styled.div`
   padding: 12px 0 4px;
 
   color: ${tokens.colors.neutral.lowLight};
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  font-family: ${tokens.font.family.secondary};
 `
 
 export const Title = styled.h1`
@@ -81,6 +81,7 @@ export const Title = styled.h1`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 55px;
+  font-family: ${tokens.font.family.primary};
 `
 
 export const Description = styled.div`
@@ -89,8 +90,12 @@ export const Description = styled.div`
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 12px;
-letter-spacing: 1px;
+  letter-spacing: 1px;
+  font-family: ${tokens.font.family.secondary};
 
+  span {
+    font-family: ${tokens.font.family.secondary};
+  }
 `
 
 export const Text = styled.div`
@@ -99,5 +104,5 @@ export const Text = styled.div`
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 12px;
-
+  font-family: ${tokens.font.family.secondary};
 `

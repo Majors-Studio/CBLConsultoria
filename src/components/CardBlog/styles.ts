@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { tokens } from "@/utils/tokens";
-export const CardContainer = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: fit-content;
   display: flex;
@@ -15,11 +15,12 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const AboutText = styled.p`
+export const Text = styled.p`
   font-size: 1.2rem;
   font-weight: 400;
   color: #333;
   margin-bottom: 10px;
+font-family: ${tokens.font.family.secondary};
 `;
 
 export const Image = styled.img`
