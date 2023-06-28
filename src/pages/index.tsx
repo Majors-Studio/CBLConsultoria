@@ -27,9 +27,10 @@ import { useApp } from "@/context/contextApi"
 import Link from "next/link"
 import { useDevice } from "@/hooks/useDevice"
 import CtaButton from "@/components/CtaButton"
+import SpeechCarousel from "@/components/SpeechCarousel"
+import Accordion from "@/components/Accordion"
 
 export default function Home() {
-  const [faqOpened, setFaqOpened] = useState<number | null>(null)
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const { whatList } = useApp()
   const { isMobile, isTablet } = useDevice()
@@ -347,30 +348,7 @@ export default function Home() {
 
         <S.WhatContainer>
           <S.WhatTitle>O que os clientes dizem sobre a Harmony</S.WhatTitle>
-
-          <S.WhatList>
-            <Swiper
-              spaceBetween={50}
-              slidesPerView={1}
-              modules={[Autoplay, A11y]}
-              autoplay={{ delay: 5000, disableOnInteraction: false }}
-            >
-              {whatList.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <S.WhatItem>
-                    <SpeechBox text="TESTEEE!" />
-                    <S.WhatTexts>
-                      <Avatar src={item.avatar} size="large" />
-                      <S.WhatName>{item.name}</S.WhatName>
-                      <S.WhatPlace>
-                        {item.city}, {item.state} - {item.country}
-                      </S.WhatPlace>
-                    </S.WhatTexts>
-                  </S.WhatItem>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </S.WhatList>
+          <SpeechCarousel data={whatList} />
         </S.WhatContainer>
 
         <S.Content>
@@ -379,43 +357,8 @@ export default function Home() {
             <S.FaqDescription>
               Dúvidas? Estamos aqui para ajudar.
             </S.FaqDescription>
-
-            <S.FaqList>
-              {faqList.map((item, index) => (
-                <S.FaqItem
-                  key={item.id}
-                  onClick={() => {
-                    if (faqOpened === index) return setFaqOpened(null)
-
-                    setFaqOpened(index)
-                  }}
-                  ref={(el) => {
-                    if (el && faqOpened === index) {
-                      el.style.maxHeight = `${el.scrollHeight}px`
-                    } else if (el) {
-                      el.style.maxHeight = `84px`
-                    } else {
-                      return
-                    }
-                  }}
-                >
-                  <S.FaqItemHeader>
-                    <S.FaqItemTitle>{item.title}</S.FaqItemTitle>
-                    <S.FaqItemIcon
-                      style={{
-                        transform: faqOpened === index ? "rotate(180deg)" : "",
-                        transition: "transform 0.4s ease-in-out",
-                      }}
-                    >
-                      <TriangleDownIcon />
-                    </S.FaqItemIcon>
-                  </S.FaqItemHeader>
-                  <S.FaqItemDescription>
-                    {item.description}
-                  </S.FaqItemDescription>
-                </S.FaqItem>
-              ))}
-            </S.FaqList>
+            
+            <Accordion data={faqList} />
           </S.FaqContainer>
         </S.Content>
 

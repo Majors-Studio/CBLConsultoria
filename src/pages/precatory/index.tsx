@@ -21,6 +21,7 @@ import SpeechBox from "@/components/SpeechBox"
 import Avatar from "@/components/Avatar"
 import Chart from "@/components/Chart"
 import CtaButton from "@/components/CtaButton"
+import SpeechCarousel from "@/components/SpeechCarousel"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -54,35 +55,35 @@ const Precatory: React.FC = () => {
     {
       id: 0,
       name: "João da Silva",
-      message:
+      text:
         "Potencial de retorno financeiro significativo, uma vez que os precatórios podem ser adquiridos com descontos substanciais.",
       avatar: "https://i.pravatar.cc/300?img=1",
     },
     {
       id: 1,
       name: "Carlos Almeida",
-      message:
+      text:
         "Estabilidade e segurança jurídica, pois os precatórios são obrigações judiciais emitidas pelo governo, geralmente garantindo o pagamento futuro.",
       avatar: "https://i.pravatar.cc/300?img=2",
     },
     {
       id: 2,
       name: "Joana Castro",
-      message:
+      text:
         "Diversificação de portfólio, permitindo aos investidores mitigar riscos e aproveitar oportunidades alternativas de investimento.",
       avatar: "https://i.pravatar.cc/300?img=3",
     },
     {
       id: 3,
       name: "Maria dos Santos",
-      message:
+      text:
         "Possibilidade de utilização de precatórios para compensação de débitos fiscais, proporcionando benefícios fiscais adicionais.",
       avatar: "https://i.pravatar.cc/300?img=4",
     },
     {
       id: 4,
       name: "Hildo Augusto",
-      message:
+      text:
         "O cenário econômico atual e a expectativa de recuperação pós-pandemia tornam os precatórios uma opção atraente para investidores em busca de oportunidades lucrativas e seguras.",
       avatar: "https://i.pravatar.cc/300?img=5",
     },
@@ -434,24 +435,7 @@ const Precatory: React.FC = () => {
             <C.WhatTitle>Porquê investir em precatórios?</C.WhatTitle>
 
             <C.WhatList>
-              <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                modules={[Autoplay, A11y]}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-              >
-                {points.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <C.WhatItem>
-                      <SpeechBox text={item.message} />
-                      <C.WhatTexts>
-                        <Avatar src={item.avatar} size="large" />
-                        <C.WhatName>{item.name}</C.WhatName>
-                      </C.WhatTexts>
-                    </C.WhatItem>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              <SpeechCarousel data={points} />
             </C.WhatList>
           </C.WhatContainer>
           

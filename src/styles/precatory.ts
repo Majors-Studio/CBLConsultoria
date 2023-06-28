@@ -39,23 +39,6 @@ export const WhatList = styled.ul`
   margin: 80px auto 0;
 `;
 
-export const WhatTexts = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const WhatName = styled.h1`
-  margin-top: 12px;
-`;
-
-export const WhatItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
-
 export const WhatTitle = styled.h1`
   color: #121212;
   font-family: "Montserrat", sans-serif;
