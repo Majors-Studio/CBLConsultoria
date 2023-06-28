@@ -5,6 +5,7 @@ import { Card, CustomQuality, Title } from "@/components"
 import governimg from "../../../public/assets/images/government.jpg"
 import PurposeForm from "@/components/PurposeForm"
 import { useAbout } from "@/context/aboutContext"
+import Video from "@/components/Video"
 
 const About: React.FC = () => {
   const { cardsList, avatarData } = useAbout()
@@ -72,14 +73,9 @@ const About: React.FC = () => {
           Estado de São Paulo e atua tanto na área consultiva quanto
           contenciosa."
         </C.AboutText>
-        <iframe
-          style={{ marginBottom: "20px", marginTop: "20px" }}
-          allowFullScreen
-          uk-video="automute: true"
-          width="70%"
-          height="600px"
-          src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
-        ></iframe>
+
+        <Video />
+
         <C.AboutText>
           Sua busca por uma consultoria jurídica confiável e experiente em
           precatórios chegou ao fim. Apresentamos a CBL Consultoria, uma empresa

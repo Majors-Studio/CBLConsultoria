@@ -10,19 +10,15 @@ import CtaButton from "@/components/CtaButton"
 import SpeechCarousel from "@/components/SpeechCarousel"
 import Accordion from "@/components/Accordion"
 import { useHome } from "@/context/homeContext"
+import { useApp } from "@/context/appContext"
+import Video from "@/components/Video"
 
 export default function Home() {
   const { isMobile, isTablet } = useDevice()
+  const { userList } = useApp()
 
-  const {
-    infoList,
-    cardList,
-    chooseList,
-    whyList,
-    faqList,
-    blogList,
-    whatList,
-  } = useHome()
+  const { infoList, cardList, chooseList, whyList, faqList, blogList } =
+    useHome()
 
   return (
     <div>
@@ -81,16 +77,7 @@ export default function Home() {
               antecipação de precatórios do Brasil
             </S.VideoTitle>
 
-            <S.VideoWrapper>
-              <iframe
-                style={{ marginBottom: "20px", marginTop: "20px" }}
-                allowFullScreen
-                uk-video="automute: true"
-                width="100%"
-                height={isMobile ? "200px" : isTablet ? "400px" : "550px"}
-                src={`https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=0&controls=0&rel=1`}
-              ></iframe>
-            </S.VideoWrapper>
+            <Video  />
 
             <CtaButton>Acesse nosso tour virtual!</CtaButton>
           </S.VideoContainer>
@@ -153,7 +140,7 @@ export default function Home() {
 
         <S.WhatContainer>
           <S.WhatTitle>O que os clientes dizem sobre a Harmony</S.WhatTitle>
-          <SpeechCarousel data={whatList} />
+          <SpeechCarousel data={userList} />
         </S.WhatContainer>
 
         <S.Content>

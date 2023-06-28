@@ -1,13 +1,13 @@
 import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
-export const FaqList = styled.ul`
+export const List = styled.ul`
   margin-top: 60px;
 
   box-shadow: 0px 3px 10px 0px #00000029;
 `
 
-export const FaqItem = styled.li`
+export const Item = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -22,7 +22,7 @@ export const FaqItem = styled.li`
   border-bottom: 3px solid ${tokens.colors.brand.pure};
 `
 
-export const FaqItemHeader = styled.div`
+export const Header = styled.div`
   height: 84px;
   width: 100%;
   display: flex;
@@ -33,7 +33,7 @@ export const FaqItemHeader = styled.div`
   padding: 0 20px;
 `
 
-export const FaqItemTitle = styled.h1`
+export const Title = styled.h1`
   color: ${tokens.colors.brand.dark};
   font-family: ${tokens.font.family.lastica};
   font-size: ${tokens.font.sizes.sm};
@@ -41,12 +41,12 @@ export const FaqItemTitle = styled.h1`
   line-height: 20px;
 `
 
-export const FaqItemIcon = styled.div`
+export const Icon = styled.div`
   width: 20px;
   height: 20px;
 `
 
-export const FaqItemDescription = styled.p`
+export const Description = styled.p`
   padding: 0 20px 20px;
   height: fit-content;
   width: 100%;

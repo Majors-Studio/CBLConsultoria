@@ -46,7 +46,7 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: 1200px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 `;
 
@@ -65,7 +65,7 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${tokens.breakpoints.desktop};) {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -82,7 +82,7 @@ export const NavbarItem = styled.div`
   font-size: ${tokens.font.sizes.xs};
   color: ${tokens.colors.brand.light};
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${tokens.breakpoints.desktop};) {
     font-size: 1.2rem;
 
     &:after {

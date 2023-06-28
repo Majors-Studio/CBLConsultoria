@@ -43,15 +43,6 @@ interface HomeContextProps {
     title: string
     image: string
   }[]
-    whatList: {
-    id: number
-    name: string
-    city: string
-    state: string
-    country: string
-    text: string
-    avatar: string
-  }[]
 }
 
 const HomeContext = createContext<HomeContextProps>({} as any)
@@ -76,38 +67,6 @@ export function HomeProvider({ children }: any) {
     },
   ]
   
-    const whatList = [
-    {
-      id: 0,
-      name: "João da Silva",
-      city: "São Paulo",
-      state: "SP",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar:
-        "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
-    },
-    {
-      id: 1,
-      name: "João da Silva 2",
-      city: "Rio de Janeiro",
-      state: "RJ",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar:
-        "/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
-    },
-    {
-      id: 2,
-      name: "João da Silva 3",
-      city: "Belo horizonte",
-      state: "MG",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar:
-        "/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
-    },
-  ]
 
   const cardList = [
     {
@@ -260,21 +219,14 @@ export function HomeProvider({ children }: any) {
       image:
         "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
     },
-    {
-      id: 1,
-      title: "Como funciona a antecipação de precatórios?",
-      image:
-        "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    },
-    {
-      id: 2,
-      title: "Como funciona a antecipação de precatórios?",
-      image:
-        "https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
-    },
+    
   ]
+  
+  for (let i = 0;i < 5;i++) {
+    blogList.push(blogList[0])
+  }
 
-  const value = { infoList, cardList, chooseList, whyList, faqList, blogList,whatList }
+  const value = { infoList, cardList, chooseList, whyList, faqList, blogList }
 
   return <HomeContext.Provider value={value}>{children}</HomeContext.Provider>
 }

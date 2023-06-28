@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const Container = styled.footer`
@@ -20,7 +21,7 @@ export const Container = styled.footer`
 `;
 
 export const Content = styled.div`
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};
   width: 100%;
   margin: 0 auto;
   height: fit-content;

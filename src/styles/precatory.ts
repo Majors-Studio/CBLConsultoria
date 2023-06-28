@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -13,12 +14,11 @@ export const ContainerImg = styled.div`
   height: 340px;
 
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 `;
 
 export const ContainerChart = styled.div`
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};
   width: 100%;
   margin: 0 auto;
 
@@ -28,7 +28,6 @@ export const ContainerChart = styled.div`
 `;
 
 export const WhatContainer = styled.div`
-  /* background-color: #e3dcd7; */
 
   padding: 90px 0 60px;
   width: 100%;
@@ -64,7 +63,7 @@ export const ContainerText = styled.h1`
   font-weight: 700;
   text-transform: capitalize;
 
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
   text-align: left;
   width: 100%;
@@ -76,7 +75,7 @@ export const WhatIs = styled.div`
 
 export const WhatIsContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
   padding: 72px 0;
 
@@ -133,7 +132,7 @@ export const CenaryContainer = styled.div`
 
 export const CenaryContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 `;
 
@@ -212,7 +211,7 @@ export const RankingContainer = styled.div`
 
 export const RankingContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 
   /* display: flex;
@@ -267,7 +266,7 @@ export const NewsContainer = styled.div`
 
 export const NewsContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 
   display: grid;
@@ -366,7 +365,7 @@ export const WhyToSellList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 32px;
-max-width: 1280px;
+max-width: ${tokens.breakpoints.desktopMd};;
   margin: 72px auto 0;
 `;
 
@@ -416,7 +415,7 @@ export const StepsContainer = styled.div`
 
 export const StepsContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 `;
 
@@ -500,17 +499,17 @@ export const LeadContainer = styled.div`
 
 export const LeadContent = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   align-items: center;
 `;
 
 export const LeadInfo = styled.div`
-  margin-bottom: 64px;
+  margin-bottom: 380px;
 `;
 
 export const LeadTitle = styled.h1`
@@ -519,7 +518,6 @@ export const LeadTitle = styled.h1`
   font-size: 39px;
   font-weight: 700;
 
-  max-width: 350px;
 
   margin-bottom: 24px;
 `;
@@ -530,7 +528,6 @@ export const LeadText = styled.p`
   font-size: 18px;
   font-weight: 400;
 
-  max-width: 350px;
 
   span {
     color: #e2a141;

@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { tokens } from "@/utils/tokens";
+import styled from "styled-components"
+import { tokens } from "@/utils/tokens"
 export const Container = styled.div`
   width: 100%;
   max-width: 100vw;
-`;
+`
 
 export const ContainerImg = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const ContainerImg = styled.div`
   height: 340px;
 
   margin-bottom: 30px;
-`;
+`
 
 export const FlexCol = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const FlexCol = styled.div`
   @media (max-width: 768px) {
     padding: 0 20px;
   }
-`;
+`
 
 export const JustifyBetween = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ export const JustifyBetween = styled.div`
     justify-content: center;
     align-items: center;
   }
-`;
+`
 
 export const Overlay = styled.div`
   position: absolute;
@@ -54,7 +54,7 @@ export const Overlay = styled.div`
   max-width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-`;
+`
 
 export const CardsContainer = styled.div`
   display: grid;
@@ -75,10 +75,10 @@ export const CardsContainer = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
+`
 
 export const FormContainer = styled.div`
-  max-width: 1200px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   display: flex;
   align-items: center;
   margin: 80px auto;
@@ -92,7 +92,7 @@ export const FormContainer = styled.div`
     align-items: center;
     box-shadow: none;
   }
-`;
+`
 
 export const SwiperContainer = styled.div`
   max-width: 100vw;
@@ -100,7 +100,7 @@ export const SwiperContainer = styled.div`
   background-color: #ffffff;
 
   margin-bottom: 50px;
-`;
+`
 
 export const VideoContainer = styled.div`
   max-width: 100vw;
@@ -108,10 +108,12 @@ export const VideoContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: ${tokens.breakpoints.desktopMd};;
+  margin: 0 auto;
   padding: 0 40px;
 
   margin-bottom: 50px;
-`;
+`
 
 export const AvatarName = styled.h3`
   font-size: ${tokens.font.sizes.md};
@@ -120,18 +122,18 @@ export const AvatarName = styled.h3`
   text-align: center;
   color: rgba(0, 36, 106, 0.8);
   margin-top: 20px;
-`;
+`
 
 export const AvatarCharge = styled.p`
   font-size: 18px;
   font-weight: 400;
   color: #000000;
   margin-top: 5px;
-`;
+`
 
 export const AvatarsContainer = styled.div`
   display: flex;
-  max-width: 1200px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
   width: 100%;
   padding: 0 80px;
@@ -142,7 +144,7 @@ export const AvatarsContainer = styled.div`
 
   margin-top: 80px;
   margin-bottom: 120px;
-`;
+`
 
 export const Info = styled.div`
   display: flex;
@@ -150,9 +152,9 @@ export const Info = styled.div`
 
   justify-content: center;
   align-items: center;
-`;
+`
 
-export const WhatPlace = styled.h1``;
+export const WhatPlace = styled.h1``
 
 export const AboutText = styled.p`
   font-size: ${tokens.font.sizes.sm};
@@ -161,5 +163,5 @@ export const AboutText = styled.p`
   text-align: justify;
   font-family: ${tokens.font.family.interMedium};
   margin: 50px auto;
-  max-width: 1280px;
-`;
+  max-width: ${tokens.breakpoints.desktopMd};;
+`

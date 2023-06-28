@@ -11,7 +11,7 @@ export const Button = styled.button<iButton>`
   font-size: 1.1rem;
   transition: background 0.2s;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${tokens.breakpoints.desktop};) {
     display: none;
   }
 `;

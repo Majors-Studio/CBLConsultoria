@@ -1,7 +1,6 @@
 import { ListIcon, MoneyIcon } from "@/assets/icons"
 import ContractIcon from "@/assets/icons/ContractIcon"
 import MagnifyingGlass from "@/assets/icons/MagnifyingIcon"
-import { newsTextMock } from "@/utils/newsTextMock"
 import React, {
   createContext,
   useContext,

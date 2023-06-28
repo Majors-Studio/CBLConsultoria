@@ -18,7 +18,7 @@ interface AppContextProps {
     source: string
     link: string
   }[]
-      userList: {
+  userList: {
     id: number
     name: string
     city: string
@@ -32,7 +32,7 @@ interface AppContextProps {
 const AppContext = createContext<AppContextProps>({} as any)
 
 export function AppProvider({ children }: any) {
-      const userList = [
+  const userList = [
     {
       id: 0,
       name: "João da Silva",
@@ -43,28 +43,8 @@ export function AppProvider({ children }: any) {
       avatar:
         "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
     },
-    {
-      id: 1,
-      name: "João da Silva 2",
-      city: "Rio de Janeiro",
-      state: "RJ",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar:
-        "/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
-    },
-    {
-      id: 2,
-      name: "João da Silva 3",
-      city: "Belo horizonte",
-      state: "MG",
-      country: "Brasil",
-      text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-      avatar:
-        "/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
-    },
   ]
-  
+
   const newsList = [
     {
       id: 1,
@@ -79,9 +59,10 @@ export function AppProvider({ children }: any) {
       link: "https://www.google.com",
     },
   ]
-  
-  for (let i = 0;i < 5;i++) {
+
+  for (let i = 0; i < 5; i++) {
     newsList.push(newsList[0])
+    userList.push(userList[0])
   }
 
   const value = { newsList, userList }

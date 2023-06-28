@@ -11,7 +11,7 @@ export const BlogContainer = styled.div`
 
 export const PostsContainer = styled.div`
   width: 100%;
-max-width: 1200px;
+max-width: ${tokens.breakpoints.desktopMd};;
 margin: 0 auto;
   height: fit-content;
   gap: 45px;
@@ -20,7 +20,7 @@ margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-@media (max-width: 1200px) {
+@media (max-width: ${tokens.breakpoints.desktop};) {
   padding: 0 20px;
 }
 `

@@ -14,10 +14,10 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     padding: 0 20px;
   }
 
@@ -32,7 +32,6 @@ export const Head = styled.div`
   width: 100%;
   margin-top: 60px;
   margin-bottom: 120px;
-  padding: 0 20px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
@@ -90,7 +89,6 @@ export const PrecatoryInfoItem = styled.li`
 export const CardContainer = styled.div`
   max-width: 100vw;
   width: 100%;
-  padding: 0 20px;
 `
 
 
@@ -98,7 +96,7 @@ export const CardTitle = styled.h1`
   font-size: 40px;
   font-weight: 600;
   line-height: 38px;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   width: 100%;
   color: #333;
   text-align: center;
@@ -216,10 +214,6 @@ export const VideoContainer = styled.div`
   margin: 120px 0;
 `
 
-export const VideoWrapper = styled.div`
-  width: 100%;
-`
-
 export const VideoTitle = styled.h1`
   color: ${tokens.colors.brand.dark};
   font-family: ${tokens.font.family.lastica};
@@ -237,7 +231,6 @@ export const ChooseContainer = styled.div`
   align-items: center;
 
   margin-bottom: 120px;
-  padding: 0 20px;
 `
 
 export const ChooseTitle = styled.h1`
@@ -363,10 +356,9 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   width: 100%;
   margin: 70px auto 0;
-  padding: 0 20px;
 
   @media (max-width: 920px) {
     grid-gap: 10px;
@@ -446,7 +438,7 @@ export const WhatTitle = styled.h1`
 `
 
 export const FaqContainer = styled.div`
-  padding: 90px 20px 80px;
+  padding: 90px 0 80px;
   width: 100%;
 `
 
@@ -488,13 +480,11 @@ export const FollowTitle = styled.h1`
 
 export const BlogContainer = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
 
   padding-top: 40px;
   padding-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);

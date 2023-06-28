@@ -29,6 +29,13 @@
  */
 
 export const tokens = {
+  breakpoints: {
+    mobile: '480px',
+    tablet: '768px',
+    desktop: '1024px',
+    desktopMd: '1280px',
+    desktopLg: '1440px',
+  },
   colors: {
     brand: {
       pure: "#324f87",

@@ -15,9 +15,9 @@ const Accordion: React.FC<FaqItemProps> = ({ data }) => {
   const [faqOpened, setFaqOpened] = useState<number | null>(null)
 
   return (
-    <S.FaqList>
+    <S.List>
       {data.map((item, index) => (
-        <S.FaqItem
+        <S.Item
           key={item.id}
           onClick={() => {
             if (faqOpened === index) return setFaqOpened(null)
@@ -34,21 +34,21 @@ const Accordion: React.FC<FaqItemProps> = ({ data }) => {
             }
           }}
         >
-          <S.FaqItemHeader>
-            <S.FaqItemTitle>{item.title}</S.FaqItemTitle>
-            <S.FaqItemIcon
+          <S.Header>
+            <S.Title>{item.title}</S.Title>
+            <S.Icon
               style={{
                 transform: faqOpened === index ? "rotate(180deg)" : "",
                 transition: "transform 0.4s ease-in-out",
               }}
             >
               <TriangleDownIcon />
-            </S.FaqItemIcon>
-          </S.FaqItemHeader>
-          <S.FaqItemDescription>{item.description}</S.FaqItemDescription>
-        </S.FaqItem>
+            </S.Icon>
+          </S.Header>
+          <S.Description>{item.description}</S.Description>
+        </S.Item>
       ))}
-    </S.FaqList>
+    </S.List>
   )
 }
 

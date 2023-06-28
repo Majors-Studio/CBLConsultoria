@@ -10,7 +10,7 @@ margin-top: 120px;
 `
 
 export const Content = styled.div`
-  max-width: 1200px;
+  max-width: ${tokens.breakpoints.desktopMd};;
   margin: 0 auto;
   padding: 0 20px;
 
