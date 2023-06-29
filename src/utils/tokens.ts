@@ -45,6 +45,7 @@ export const tokens = {
       pure: "#324f87",
       cta: "#11294f",
       light: "#fff",
+      lightCream: "#F8F8F8",
       dark: "#000",
     },
     // highlight: {

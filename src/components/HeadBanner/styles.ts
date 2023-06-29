@@ -5,10 +5,14 @@ export const Container = styled.div`
   position: relative;
   margin-top: 120px;
   height: 340px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 export const Image = styled.img`
@@ -27,4 +31,7 @@ export const Overlay = styled.div`
   max-width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

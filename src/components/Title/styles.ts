@@ -6,6 +6,6 @@ export const Title = styled.h3`
   font-weight: 700;
   color: ${tokens.colors.neutral.lowLight};
   font-family: ${tokens.font.family.primary};
-
+  text-transform: uppercase;
   text-align: center;
 `

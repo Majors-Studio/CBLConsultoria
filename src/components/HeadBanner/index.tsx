@@ -1,25 +1,27 @@
 import React from "react"
-
+import Image from 'next/image';
 import * as C from "./styles"
 import Title from "../Title"
+import img1 from "../../assets/png/legal-advice.png"
 
 interface HeadBannerProps {
   title?: string
-  source?: string
+  source?: string 
   color?: string
 }
 
-const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source ='https://source.unsplash.com/featured', color ='#000'}) => {
+const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color ='#000'}) => {
   return (
     <C.Container>
-      <C.Image src={source} alt="bg" />
-      <C.Overlay />
+     <C.Overlay>
       <Title
         style={{
           color: color,
         }}
         text={title}
       />
+     </C.Overlay>
+      <Image  src={source || img1} alt="bg" />
     </C.Container>
   )
 }
