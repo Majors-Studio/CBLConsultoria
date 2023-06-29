@@ -10,7 +10,7 @@ interface HeadBannerProps {
   color?: string
 }
 
-const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color ='#000'}) => {
+const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color ='#fff'}) => {
   return (
     <C.Container>
      <C.Overlay>

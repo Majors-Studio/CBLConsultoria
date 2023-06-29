@@ -24,6 +24,7 @@ import { Subtitle, Title } from "@/components"
 import { tokens } from "@/utils/tokens"
 import Description from "@/components/Description"
 import ContentBox from "@/components/ContentBox"
+import Link from "next/link"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -338,18 +339,26 @@ const Precatory: React.FC = () => {
         </div>
 
         <C.NewsList>
-          {newsList.map((news) => (
-            <C.NewsItem key={news.id}>
-              <C.NewsItemTop>
-                <C.NewsItemInfo>
-                  {news.source} | {news.date.toString()}
-                </C.NewsItemInfo>
-                <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
-              </C.NewsItemTop>
-              <C.NewsItemLink href={news.link} target="_blank">
-                Leia mais
-              </C.NewsItemLink>
-            </C.NewsItem>
+          {newsList.map((news, newsIndex) => (
+            <Link
+              key={news.id}
+              href={{
+                pathname: "news/" + news.title,
+                query: { id: newsIndex },
+              }}
+            >
+              <C.NewsItem key={news.id}>
+                <C.NewsItemTop>
+                  <C.NewsItemInfo>
+                    {news.source} | {news.date.toString()}
+                  </C.NewsItemInfo>
+                  <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
+                </C.NewsItemTop>
+                <C.NewsItemLink href={news.link} target="_blank">
+                  Leia mais
+                </C.NewsItemLink>
+              </C.NewsItem>
+            </Link>
           ))}
         </C.NewsList>
       </ContentBox>
