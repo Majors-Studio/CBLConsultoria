@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                 {item.subpaths.map((subitem, subindex) => {
                   return (
                     <>
-                      <Link href={subitem.url} key={subindex}>
+                      <Link href={item.url+subitem.anchor} key={subindex}>
                         {subitem.title}
                       </Link>
                       {subindex === item.subpaths.length - 1 ? null : <hr />}
