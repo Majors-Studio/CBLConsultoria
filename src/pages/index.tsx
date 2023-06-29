@@ -39,8 +39,7 @@ export default function Home() {
           <S.Head>
             <S.Info>
               <Title variant="primary" style={{ textAlign: "left" }}>
-                Receba seu <strong>precatório</strong> com{" "}
-                <strong>agilidade</strong> e <strong>segurança!</strong>
+                Antecipe seu <strong>precatório</strong> com <strong>Segurança</strong> e <strong>Velocidade</strong>!
               </Title>
               <S.InfoList>
                 {infoList.map((item) => (
@@ -63,8 +62,7 @@ export default function Home() {
               color: tokens.colors.brand.light,
             }}
           >
-            Antecipar o <strong>recebimento</strong> do seu precatório é{" "}
-            <strong>simples</strong>
+            <span>Agora</span> se tornou mais <span>prático e seguro antecipar</span> seu precatório
           </Title>
 
           <S.Cards>

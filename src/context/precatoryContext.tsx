@@ -32,9 +32,9 @@ export function PrecatoryProvider({ children }: any) {
       id: 0,
       text: (
         <>
-          <span>
+          <strong>
             Os pagamentos não são realizados no prazo pelo poder público.
-          </span>{" "}
+          </strong>{" "}
           A data de pagamento muda o tempo todo, portanto a fila de credores só
           aumenta.
         </>
@@ -45,7 +45,7 @@ export function PrecatoryProvider({ children }: any) {
       text: (
         <>
           Liquidez: Receber rapidamente e à vista.{" "}
-          <span>Dinheiro na conta sem burocracia.</span>
+          <strong>Dinheiro na conta sem burocracia.</strong>
         </>
       ),
     },
@@ -53,7 +53,7 @@ export function PrecatoryProvider({ children }: any) {
       id: 2,
       text: (
         <>
-          <span>Não faça dívidas com juros abusivos</span>, a venda do
+          <strong>Não faça dívidas com juros abusivos</strong>, a venda do
           precatório é a melhor opção para retomar sua saúde financeira.
         </>
       ),
@@ -63,7 +63,7 @@ export function PrecatoryProvider({ children }: any) {
       text: (
         <>
           Acabe com a incerteza de recebimento,{" "}
-          <span>venda com segurança jurídica e financeira.</span>
+          <strong>venda com segurança jurídica e financeira.</strong>
         </>
       ),
     },
@@ -76,7 +76,7 @@ export function PrecatoryProvider({ children }: any) {
       text: (
         <>
           Nosso time jurídico faz uma análise criteriosa do processo judicial do
-          seu precatório para garantir <span>segurança e transparência</span> em
+          seu precatório para garantir <strong>segurança e transparência</strong> em
           todo o processo de compra.
         </>
       ),
@@ -95,9 +95,9 @@ export function PrecatoryProvider({ children }: any) {
       title: "Assinatura do Contrato",
       text: (
         <>
-          Após o aceite da proposta, <span>assinamos o contrato</span> de venda{" "}
-          <span>no cartório</span>, seguindo todas as obrigações legais, de
-          forma <span>rápida e segura</span>.
+          Após o aceite da proposta, <strong>assinamos o contrato</strong> de venda{" "}
+          <strong>no cartório</strong>, seguindo todas as obrigações legais, de
+          forma <strong>rápida e segura</strong>.
         </>
       ),
       icon: <ContractIcon />,
@@ -108,7 +108,7 @@ export function PrecatoryProvider({ children }: any) {
       text: (
         <>
           À vista e sem burocracia direto na sua conta.{" "}
-          <span>O dinheiro é creditado em conta no momento da assinatura</span>{" "}
+          <strong>O dinheiro é creditado em conta no momento da assinatura</strong>{" "}
           e o comprovante de transferência entregue ao credor.
         </>
       ),

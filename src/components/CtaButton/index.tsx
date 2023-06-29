@@ -12,7 +12,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const CtaButton: React.FC<Props> = ({
   text,
-  children = <>Eu quero!</>,
+  children = <>Quero antecipar agora!</>,
   style,
   href = "",
   ...props

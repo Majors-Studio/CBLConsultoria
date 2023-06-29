@@ -55,15 +55,15 @@ export function HomeProvider({ children }: any) {
     },
     {
       id: 1,
-      title: "+1 bilhão em precatórios negociados;",
+      title: "Agilidade na venda;",
     },
     {
       id: 2,
-      title: "+7.000 cessões realizadas em todo Brasil;",
+      title: "Segurança e Suporte 24hrs;",
     },
     {
       id: 3,
-      title: "+13 anos no mercado de precatórios.",
+      title: "Vasta experiência no mercado",
     },
   ]
   
@@ -73,28 +73,28 @@ export function HomeProvider({ children }: any) {
       id: 0,
       title: "Análise",
       description:
-        "Nossos advogados analisam detalhadamente o processo judicial do seu precatório de forma rápida e segura",
+        "Nossos advogados analisam detalhadamente o processo judicial do seu precatório de forma rápida e segura;",
       icon: <MagnifyingIcon />,
     },
     {
       id: 1,
       title: "Proposta",
       description:
-        "Enviamos a melhor proposta do mercado e esclarecemos todas as suas dúvidas com transparência e segurança",
+        "Enviamos a melhor proposta do mercado e esclarecemos todas as suas dúvidas com total transparência e segurança;",
       icon: <NewsIcon />,
     },
     {
       id: 2,
       title: "Formalização",
       description:
-        "Análise da documentação e agendamento da cessão no cartório mais próximo de você, te acompanharemos presencialmente",
+        "Análise da documentação e agendamento da sessão no cartório mais próximo de você, te acompanharemos presencialmente;",
       icon: <ListIcon />,
     },
     {
       id: 3,
       title: "Recebimento",
       description:
-        "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia",
+        "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia;",
       icon: <MoneyIcon />,
     },
   ]
