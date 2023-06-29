@@ -1,5 +1,5 @@
-import { tokens } from "@/utils/tokens";
-import styled from "styled-components";
+import { tokens } from "@/utils/tokens"
+import styled from "styled-components"
 
 export const List = styled.ul`
   margin-top: 60px;
@@ -11,6 +11,7 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  padding: 0 20px 20px;
 
   height: 100%;
 
@@ -29,31 +30,9 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-
-  padding: 0 20px;
-`
-
-export const Title = styled.h1`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: ${tokens.font.sizes.sm};
-  font-weight: 700;
-  line-height: 20px;
 `
 
 export const Icon = styled.div`
   width: 20px;
   height: 20px;
-`
-
-export const Description = styled.p`
-  padding: 0 20px 20px;
-  height: fit-content;
-  width: 100%;
-
-  color: #686868;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5em;
 `

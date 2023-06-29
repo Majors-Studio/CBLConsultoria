@@ -8,29 +8,11 @@ export const Container = styled.div`
   margin-top: 120px;
 `
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};
-  margin: 0 auto;
-
-  @media (max-width: ${tokens.breakpoints.desktop}) {
-    padding: 0 20px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 20px;
-  }
-`
-
 export const Head = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 120px;
+  gap: 20px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
@@ -42,25 +24,10 @@ export const Info = styled.div`
   flex-direction: column;
   gap: 40px;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
 
   @media (max-width: 1024px) {
     margin-top: 0;
-  }
-`
-
-export const InfoTitle = styled.h1`
-  font-size: ${tokens.font.sizes.xl};
-  font-weight: ${tokens.font.weight.medium};
-  line-height: 1.2;
-  font-family: ${tokens.font.family.primary};
-  width: 100%;
-  text-align: left;
-  color: ${tokens.colors.brand.pure};
-  font-size: ${tokens.font.sizes.xl};
-  strong {
-    /* text-decoration: underline; */
-    font-family: ${tokens.font.family.primary};
   }
 `
 
@@ -79,35 +46,6 @@ export const PrecatoryInfoItem = styled.li`
   align-items: center;
   gap: 10px;
   cursor: context-menu;
-
-  span {
-    font-size: ${tokens.font.sizes.sm};
-    color: ${tokens.colors.brand.pure};
-
-    font-family: ${tokens.font.family.secondary};
-  }
-`
-
-export const CardContainer = styled.div`
-  max-width: 100vw;
-  width: 100%;
-`
-
-export const CardTitle = styled.h1`
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 38px;
-  max-width: ${tokens.breakpoints.desktopMd};
-  width: 100%;
-  color: #333;
-  text-align: center;
-font-family: ${tokens.font.family.primary};
-
-  span {
-    color: ${tokens.colors.brand.pure};
-font-family: ${tokens.font.family.primary};
-
-  }
 `
 
 export const Cards = styled.div`
@@ -175,30 +113,9 @@ export const CardIcon = styled.div`
   }
 `
 
-export const CardInfo = styled.div``
-
-export const CardInfoTitle = styled.h1`
-  color: ${tokens.colors.brand.pure};
-font-family: ${tokens.font.family.primary};
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-  margin: 30px 0 36px;
-`
-
-export const CardInfoDescription = styled.p`
-  color: #333;
-  font-family: ${tokens.font.family.secondary};
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.2;
-  text-align: center;
-`
-
 export const CardIndex = styled.div`
   color: ${tokens.colors.brand.pure};
-font-family: ${tokens.font.family.primary};
+  font-family: ${tokens.font.family.primary};
   font-size: 55px;
   font-weight: 600;
   line-height: 55px;
@@ -209,60 +126,12 @@ font-family: ${tokens.font.family.primary};
   right: 32px;
 `
 
-export const VideoContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 120px 0;
-`
-
-export const VideoTitle = styled.h1`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: 35px;
-  font-weight: ${tokens.font.weight.bold};
-  line-height: 50px;
-  text-align: center;
-
-  margin-bottom: 20px;
-`
-
-export const ChooseContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin-bottom: 120px;
-`
-
-export const ChooseTitle = styled.h1`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: ${tokens.font.sizes.xl};
-  font-weight: 600;
-  line-height: 50px;
-  text-align: center;
-`
-
-export const ChooseSubtitle = styled.h1`
-  color: #121212;
-  font-family: ${tokens.font.family.secondary};
-
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-
-  margin-top: 20px;
-`
-
 export const ChooseList = styled.ul`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -290,7 +159,6 @@ export const ChooseItemTitle = styled.h1`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-inline: 2rem;
-
 `
 
 export const ChooseItemList = styled.ul`
@@ -314,57 +182,12 @@ export const ChooseItemListItemStatus = styled.span`
   height: 20px;
 `
 
-export const ChooseItemListItemText = styled.p`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.secondary};
-  font-size: 1.3rem;
-  font-weight: 400;
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 1px;
-    background-color: ${tokens.colors.brand.pure};
-    transition: all 0.3s ease-in-out;
-  }
-  &:hover {
-    :before {
-      width: 100%;
-    }
-  }
-`
-
-export const WhyContainer = styled.div`
-  background-color: #121212;
-  max-width: 100vw;
-  width: 100%;
-
-  padding: 70px 0;
-
-  @media (max-width: 920px) {
-  }
-`
-
-export const WhyTitle = styled.h1`
-  color: ${tokens.colors.brand.light};
-  font-family: ${tokens.font.family.primary};
-  font-size: ${tokens.font.sizes.xl};
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center;
-`
-
 export const WhyList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  max-width: ${tokens.breakpoints.desktopMd};
-  width: 100%;
-  margin: 70px auto 0;
+  margin-top: 70px;
 
   @media (max-width: 920px) {
     grid-gap: 10px;
@@ -401,15 +224,8 @@ export const WhyItemTexts = styled.div`
   gap: 12px;
 `
 
-export const WhyItemTitle = styled.h1`
-  color: #121212;
-font-family: ${tokens.font.family.primary};
-  font-size: 20px;
-  font-weight: 700;
-`
-
 export const WhyItemDescription = styled.p`
-font-family: ${tokens.font.family.secondary};
+  font-family: ${tokens.font.family.secondary};
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
@@ -419,7 +235,7 @@ font-family: ${tokens.font.family.secondary};
 export const WhatContainer = styled.div`
   background-color: #e3dcd7;
 
-  padding: 90px 0 60px;
+  padding: 60px 0;
   width: 100%;
 
   display: flex;
@@ -434,72 +250,11 @@ export const WhatContainer = styled.div`
   }
 `
 
-export const WhatTitle = styled.h1`
-  color: #121212;
-font-family: ${tokens.font.family.primary};
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center;
-`
-
-export const FaqContainer = styled.div`
-  padding: 90px 0 80px;
-  width: 100%;
-`
-
-export const FaqTitle = styled.h1`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: 36px;
-  font-weight: ${tokens.font.weight.bold};
-  text-align: center;
-`
-
-export const FaqDescription = styled.p`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: ${tokens.font.sizes.sm};
-  font-weight: 400;
-  text-align: center;
-`
-
-export const FollowTitle = styled.h1`
-  height: 220px;
-  width: 100%;
-  color: #000;
-font-family: ${tokens.font.family.primary};
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-
-  @media (max-width: 768px) {
-    text-align: center;
-    font-size: 24px;
-  }
-`
-
-export const BlogContainer = styled.div`
-  background-color: #fff;
-  width: 100%;
-
-  padding-bottom: 60px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-`
-
 export const BlogContent = styled.div`
   max-width: ${tokens.breakpoints.desktopMd};
   width: 100%;
   margin: 0 auto;
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -509,9 +264,6 @@ export const BlogContent = styled.div`
     padding-top: 20px;
     padding-bottom: 40px;
   }
-
-
-
 `
 
 export const BlogItem = styled.div`
@@ -549,25 +301,8 @@ export const BlogImage = styled.img`
 export const BlogTitle = styled.h1`
   padding: 40px 30px;
   color: ${tokens.colors.brand.pure};
-font-family: ${tokens.font.family.primary};
+  font-family: ${tokens.font.family.primary};
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
-`
-
-export const BlogLink = styled.a`
-  padding: 0 30px;
-  align-self: flex-end;
-
-  color: ${tokens.colors.brand.pure};
-font-family: ${tokens.font.family.secondary};
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  @media (max-width: 920px) {
-    align-self: center;
-    display: block;
-  }
 `

@@ -46,7 +46,7 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};;
+  max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 `;
 

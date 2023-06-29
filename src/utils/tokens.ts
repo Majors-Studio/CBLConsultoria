@@ -48,12 +48,12 @@ export const tokens = {
       lightCream: "#F8F8F8",
       dark: "#000",
     },
-    // highlight: {
-    //   pure: '#FF8A00',
-    //   light: '#FFE3C2',
-    //   medium: '#CC6E00',
-    //   dark: '#7A4200',
-    // },
+    highlight: {
+      dark: '#121212',
+      medium:  '#666666',
+      light: '#FFFFFF',
+      pure: '#F5F5F5',
+    },
     neutral: {
       lowPure: "#000000",
       lowLight: "#A3A3A3",
