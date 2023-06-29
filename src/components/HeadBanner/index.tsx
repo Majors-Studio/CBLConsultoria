@@ -14,12 +14,13 @@ const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color ='#000'}
   return (
     <C.Container>
      <C.Overlay>
-      <Title
+      <Title 
         style={{
           color: color,
-        }}
-        text={title}
-      />
+        }}>{title}
+        </Title>
+      </C.Overlay>
+      <Image  src={source || img1} alt="bg" />
     </C.Container>
   )
 }
