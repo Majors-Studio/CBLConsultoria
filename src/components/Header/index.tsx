@@ -12,9 +12,10 @@ import Hamburguer from "../Hamburguer"
 import CtaButton from "../CtaButton"
 
 const Header: React.FC = () => {
-  const { isMobile, isTablet, isDesktop } = useDevice()
+  const { isMobile, isTablet } = useDevice()
   const [isOnTop, setIsOnTop] = useState(true)
   const [menuOpened, setMenuOpened] = useState(false)
+  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
 
   useEffect(() => {
     let lastScrollTop = 0
@@ -38,8 +39,27 @@ const Header: React.FC = () => {
     <C.Navbar>
       {navitems.map((item, index) => {
         return (
-          <C.NavbarItem key={index} onClick={() => setMenuOpened(false)}>
+          <C.NavbarItem
+            onMouseEnter={() => setSubmenuOpened(index)}
+            onMouseLeave={() => setSubmenuOpened(null)}
+            key={index}
+            onClick={() => setMenuOpened(false)}
+          >
             <Link href={item.url}>{item.title}</Link>
+            {item.subpaths && (
+              <C.Submenu show={submenuOpened === index}>
+                {item.subpaths.map((subitem, subindex) => {
+                  return (
+                    <>
+                      <Link href={subitem.url} key={subindex}>
+                        {subitem.title}
+                      </Link>
+                      {subindex === item.subpaths.length - 1 ? null : <hr />}
+                    </>
+                  )
+                })}
+              </C.Submenu>
+            )}
           </C.NavbarItem>
         )
       })}

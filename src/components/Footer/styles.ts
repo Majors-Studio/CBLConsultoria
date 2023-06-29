@@ -61,10 +61,11 @@ export const BiggerText = styled.h1`
 
 export const Text = styled.h2`
   color: #fff;
-  font-size: 13px;
+  font-size: ${tokens.font.sizes.xxs};
 `;
 
 export const Desc = styled.p`
+  font-size: ${tokens.font.sizes.xs};
   color: #ddd;
 `;
 

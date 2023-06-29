@@ -105,9 +105,9 @@ const Footer: React.FC = () => {
             {footerData.map((item, index) => (
               <S.Info key={index}>
                 <S.Title>{item.title}</S.Title>
-                {item.subtitle.map((subitem, index) => (
-                  <Link href={subitem.url}>
-                    <S.Subtitle key={index}>{subitem.name}</S.Subtitle>
+                {item.subtitle.map((subitem, subindex) => (
+                  <Link href={subitem.url} key={subindex}>
+                    <S.Subtitle>{subitem.name}</S.Subtitle>
                   </Link>
                 ))}
               </S.Info>
