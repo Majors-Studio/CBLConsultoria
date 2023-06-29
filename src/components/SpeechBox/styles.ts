@@ -24,6 +24,10 @@ export const SpeechBoxText = styled.p`
   text-justify: inter-word;
   word-break: break-word;
   hyphens: auto;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const SpeechBoxArrow = styled.div`

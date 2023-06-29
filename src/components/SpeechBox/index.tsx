@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 
-import * as S from "./styles"
-import TriangleDownIcon from "@/assets/icons/TriangleDownIcon"
+import * as S from "./styles";
+import TriangleDownIcon from "@/assets/icons/TriangleDownIcon";
 
 interface SpeechBoxProps {
-  text: string
+  text: string;
 }
 
 const SpeechBox: React.FC<SpeechBoxProps> = ({ text }) => {
@@ -17,7 +17,7 @@ const SpeechBox: React.FC<SpeechBoxProps> = ({ text }) => {
         <TriangleDownIcon />
       </S.SpeechBoxArrow>
     </S.Container>
-  )
-}
+  );
+};
 
-export default SpeechBox
+export default SpeechBox;

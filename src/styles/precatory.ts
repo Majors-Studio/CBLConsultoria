@@ -44,6 +44,10 @@ export const WhatTitle = styled.h1`
   font-weight: 600;
   line-height: 40px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const BannerImage = styled.img`
@@ -182,6 +186,10 @@ export const CenaryTitle = styled.h1`
 
   padding-bottom: 32px;
   border-bottom: 1px solid #e2a141;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const CenaryInfoContainer = styled.div`
@@ -272,7 +280,7 @@ export const RankingContent = styled.div`
   flex-direction: row;
   justify-content: space-between; */
 
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 
@@ -294,12 +302,26 @@ export const RankingInfos = styled.div`
   gap: 32px;
   width: 100%;
   flex-shrink: 0;
+
+  @media (max-width: 920px) {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 20px;
+  }
 `;
 
 export const RankingChart = styled.div`
   width: 100%;
   flex-shrink: 0;
   display: flex;
+
+  @media (max-width: 920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const RankingTitle = styled.h1`
@@ -310,6 +332,10 @@ export const RankingTitle = styled.h1`
 
   padding-bottom: 12px;
   border-bottom: 1px solid #e2a141;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const RankingText = styled.p`
@@ -323,11 +349,15 @@ export const RankingText = styled.p`
   span {
     color: #e2a141;
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const NewsContainer = styled.div`
   background-color: #eeeeee;
-  padding: 72px 0;
+  padding: 72px 20px;
 `;
 
 export const NewsContent = styled.div`
@@ -384,6 +414,17 @@ export const NewsList = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-gap: 60px;
+    /* padding: 0 20px; */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const NewsItem = styled.div`
@@ -437,12 +478,16 @@ export const WhyToSellTitle = styled.h1`
   font-size: 39px;
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const WhyToSellList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 28px;
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 72px auto 0;
 `;
@@ -503,7 +548,7 @@ export const StepsTitle = styled.h1`
   font-size: 39px;
   font-weight: 700;
 
-  max-width: 650px;
+  /* max-width: 650px; */
 
   margin-bottom: 32px;
 `;
@@ -522,6 +567,18 @@ export const StepsList = styled.ul`
 
   padding-bottom: 32px;
   border-bottom: 1px solid #fff;
+
+  @media (max-width: 920px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    grid-gap: 60px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const StepsItem = styled.li``;
@@ -561,7 +618,7 @@ export const StepsInfo = styled.div`
   flex-direction: column;
   gap: 24px;
 
-  margin-top: 24px;
+  margin-top: 50px;
 `;
 
 export const StepsInfoText = styled.p`
@@ -585,10 +642,19 @@ export const LeadContent = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const LeadInfo = styled.div`
-  margin-bottom: 380px;
+  /* margin-bottom: 380px; */
+  height: 100%;
 `;
 
 export const LeadTitle = styled.h1`
@@ -598,6 +664,10 @@ export const LeadTitle = styled.h1`
   font-weight: 700;
 
   margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const LeadText = styled.p`

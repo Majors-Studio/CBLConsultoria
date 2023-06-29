@@ -19,9 +19,12 @@ import { useApp } from "@/context/appContext";
 import { usePrecatory } from "@/context/precatoryContext";
 import HeadBanner from "@/components/HeadBanner";
 
+import { useDevice } from "@/hooks/useDevice";
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Precatory: React.FC = () => {
+  const { isMobile } = useDevice();
   const { userList, newsList } = useApp();
   const { stepsList, whyToSellList } = usePrecatory();
 
@@ -176,6 +179,7 @@ const Precatory: React.FC = () => {
             <Doughnut
               data={chartData}
               width={320}
+              style={{ marginTop: "30px" }}
               height={320}
               options={{
                 responsive: true,
@@ -183,20 +187,13 @@ const Precatory: React.FC = () => {
                 plugins: {
                   legend: {
                     display: true,
+                    rtl: true,
                     fullSize: true,
-                    position: "right",
-                    title: {
-                      display: true,
-                      text: "Ranking Nacional",
-                      color: "#fff",
+                    position: "left",
+                    labels: {
+                      color: "#EEE",
                       font: {
                         size: 14,
-                      },
-                    },
-                    labels: {
-                      color: "#fff",
-                      font: {
-                        size: 16,
                       },
                     },
                   },

@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { tokens } from "../../utils/tokens"
+import styled from "styled-components";
+import { tokens } from "../../utils/tokens";
 
 export const Container = styled.div`
   height: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 
 export const Content = styled.div`
   max-width: 440px;
@@ -32,7 +32,11 @@ export const Title = styled.h1`
   @media (max-width: 1024px) {
     font-size: ${tokens.font.sizes.lg};
   }
-`
+
+  @media (max-width: 768px) {
+    font-size: ${tokens.font.sizes.md};
+  }
+`;
 
 export const Form = styled.form`
   display: flex;
@@ -42,7 +46,7 @@ export const Form = styled.form`
   width: 100%;
   margin: 40px auto 0;
   align-items: center;
-`
+`;
 
 export const Input = styled.input`
   background-color: #f8f8f8;
@@ -58,7 +62,7 @@ export const Input = styled.input`
     color: #333;
     font-family: ${tokens.font.family.secondary};
   }
-`
+`;
 
 export const TextArea = styled.textarea`
   background-color: #f8f8f8;
@@ -72,4 +76,4 @@ export const TextArea = styled.textarea`
     color: #333;
     font-family: ${tokens.font.family.secondary};
   }
-`
+`;
