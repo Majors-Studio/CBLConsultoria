@@ -248,6 +248,7 @@ const Precatory: React.FC = () => {
         </C.NewsContent>
       </C.NewsContainer>
 
+      <div id="benefits"/>
       <C.WhyToSellContainer>
         <C.WhyToSellContent>
           <C.WhyToSellTitle>Por que vender seus precatórios?</C.WhyToSellTitle>
