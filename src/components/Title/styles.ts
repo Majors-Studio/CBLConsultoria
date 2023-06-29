@@ -10,8 +10,17 @@ export const Title = styled.h3<TitleProps>`
   text-transform: uppercase;
   text-align: center;
 
+  color: ${({ variant }) =>
+    variant === "primary"
+      ? tokens.colors.brand.pure
+      : variant === "secondary"
+      ? tokens.colors.brand.light
+      : tokens.colors.brand.dark};
+
   strong {
     /* text-decoration: underline; */
     font-family: ${tokens.font.family.primary};
   }
+
+
 `
