@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import * as S from "./styles";
 import CtaButton from "../CtaButton";
+import Subtitle from "../Subtitle";
 
 const PurposeForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,11 +24,12 @@ const PurposeForm: React.FC = () => {
     <div>
       <div id="purposeForm" />
       <S.Container>
+        <S.Content>
         <S.Title>Receba uma Proposta</S.Title>
-        <S.Subtitle>
+        <Subtitle>
           Preencha o formulário abaixo e receba uma proposta detalhada e
           personalizada para você.
-        </S.Subtitle>
+        </Subtitle>
 
         <S.Form>
           <S.Input
@@ -53,7 +55,9 @@ const PurposeForm: React.FC = () => {
             onChange={handleInputChange}
           />
           <CtaButton type="submit">Enviar</CtaButton>
-        </S.Form>
+          </S.Form>
+        </S.Content>
+          
       </S.Container>
     </div>
   );

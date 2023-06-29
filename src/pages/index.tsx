@@ -12,7 +12,7 @@ import { useApp } from "@/context/appContext"
 import Video from "@/components/Video"
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
-import { Title } from "@/components"
+import { Subtitle, Title } from "@/components"
 
 export default function Home() {
   const { userList } = useApp()
@@ -98,10 +98,10 @@ export default function Home() {
             A Harmony é a melhor opção para você que deseja antecipar o seu
             precatório
           </Title>
-          <S.ChooseSubtitle>
+          <Subtitle>
             Se livre da longa fila de espera do Governo para pagamento de seu
             precatório.
-          </S.ChooseSubtitle>
+          </Subtitle>
 
           <S.ChooseList>
             {chooseList.map((item) => (
@@ -159,9 +159,9 @@ export default function Home() {
 
         <ContentBox py={"60px"}>
           <Title variant="primary">FAQ - Perguntas Frequentes</Title>
-          <S.FaqDescription>
+          <Subtitle>
             Dúvidas? Estamos aqui para ajudar.
-          </S.FaqDescription>
+          </Subtitle>
 
           <Accordion data={faqList} />
         </ContentBox>

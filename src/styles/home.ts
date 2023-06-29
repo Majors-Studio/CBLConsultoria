@@ -12,9 +12,9 @@ export const Head = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  gap: 20px;
 
   @media (max-width: 1024px) {
-    gap: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
 `
@@ -150,18 +150,6 @@ export const CardIndex = styled.div`
   position: absolute;
   bottom: 15px;
   right: 32px;
-`
-
-export const ChooseSubtitle = styled.h1`
-  color: #121212;
-  font-family: ${tokens.font.family.secondary};
-
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: center;
-
-  margin-top: 20px;
 `
 
 export const ChooseList = styled.ul`
@@ -316,14 +304,6 @@ export const WhatContainer = styled.div`
     width: 80%;
     margin: 0 auto;
   }
-`
-
-export const FaqDescription = styled.p`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.primary};
-  font-size: ${tokens.font.sizes.sm};
-  font-weight: 400;
-  text-align: center;
 `
 
 export const BlogContent = styled.div`

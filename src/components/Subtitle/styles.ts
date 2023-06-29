@@ -1,14 +1,16 @@
 import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
+import { SubtitleProps } from ".";
 
-export interface iProps {
-  fontSize?: string;
-}
 
-export const Subtitle = styled.p<iProps>`
-  font-size: ${(props) => props.fontSize || "22px"};
-  max-width: 650px;
+export const Subtitle = styled.p<SubtitleProps>`
+  color: #121212;
+  font-family: ${tokens.font.family.secondary};
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
   text-align: center;
-  margin-bottom: 20px;
-font-family: ${tokens.font.family.secondary};
+
+  margin-top: 20px;
 `;
