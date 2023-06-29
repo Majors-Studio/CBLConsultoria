@@ -184,6 +184,7 @@ export const ChooseList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
