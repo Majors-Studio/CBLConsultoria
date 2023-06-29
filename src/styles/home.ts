@@ -46,13 +46,6 @@ export const PrecatoryInfoItem = styled.li`
   align-items: center;
   gap: 10px;
   cursor: context-menu;
-
-  span {
-    font-size: ${tokens.font.sizes.sm};
-    color: ${tokens.colors.brand.pure};
-
-    font-family: ${tokens.font.family.secondary};
-  }
 `
 
 export const Cards = styled.div`
@@ -118,25 +111,6 @@ export const CardIcon = styled.div`
     filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg)
       brightness(90%) contrast(94%);
   }
-`
-
-export const CardInfoTitle = styled.h1`
-  color: ${tokens.colors.brand.pure};
-  font-family: ${tokens.font.family.primary};
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-  margin: 30px 0 36px;
-`
-
-export const CardInfoDescription = styled.p`
-  color: #333;
-  font-family: ${tokens.font.family.secondary};
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.2;
-  text-align: center;
 `
 
 export const CardIndex = styled.div`
@@ -208,29 +182,6 @@ export const ChooseItemListItemStatus = styled.span`
   height: 20px;
 `
 
-export const ChooseItemListItemText = styled.p`
-  color: ${tokens.colors.brand.dark};
-  font-family: ${tokens.font.family.secondary};
-  font-size: 1.3rem;
-  font-weight: 400;
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 1px;
-    background-color: ${tokens.colors.brand.pure};
-    transition: all 0.3s ease-in-out;
-  }
-  &:hover {
-    :before {
-      width: 100%;
-    }
-  }
-`
-
 export const WhyList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -271,13 +222,6 @@ export const WhyItemTexts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`
-
-export const WhyItemTitle = styled.h1`
-  color: #121212;
-  font-family: ${tokens.font.family.primary};
-  font-size: 20px;
-  font-weight: 700;
 `
 
 export const WhyItemDescription = styled.p`
@@ -361,21 +305,4 @@ export const BlogTitle = styled.h1`
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
-`
-
-export const BlogLink = styled.a`
-  padding: 0 30px;
-  align-self: flex-end;
-
-  color: ${tokens.colors.brand.pure};
-  font-family: ${tokens.font.family.secondary};
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  @media (max-width: 920px) {
-    align-self: center;
-    display: block;
-  }
 `

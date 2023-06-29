@@ -2,6 +2,8 @@ import TriangleDownIcon from "@/assets/icons/TriangleDownIcon"
 import React, { useState } from "react"
 
 import * as S from "./styles"
+import Subtitle from "../Subtitle"
+import Description from "../Description"
 
 interface FaqItemProps {
   data: {
@@ -35,7 +37,7 @@ const Accordion: React.FC<FaqItemProps> = ({ data }) => {
           }}
         >
           <S.Header>
-            <S.Title>{item.title}</S.Title>
+            <Subtitle>{item.title}</Subtitle>
             <S.Icon
               style={{
                 transform: faqOpened === index ? "rotate(180deg)" : "",
@@ -45,7 +47,7 @@ const Accordion: React.FC<FaqItemProps> = ({ data }) => {
               <TriangleDownIcon />
             </S.Icon>
           </S.Header>
-          <S.Description>{item.description}</S.Description>
+          <Description>{item.description}</Description>
         </S.Item>
       ))}
     </S.List>

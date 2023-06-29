@@ -11,6 +11,4 @@ export const Subtitle = styled.p<SubtitleProps>`
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-
-  margin-top: 20px;
 `;

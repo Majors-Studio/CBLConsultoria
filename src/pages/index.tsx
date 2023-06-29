@@ -13,6 +13,7 @@ import Video from "@/components/Video"
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
 import { Subtitle, Title } from "@/components"
+import Description from "@/components/Description"
 
 export default function Home() {
   const { userList } = useApp()
@@ -29,13 +30,15 @@ export default function Home() {
         {/* <link rel="manifest" href="site.webmanifest" /> */}
       </Head>
       <S.Container>
-        <ContentBox style={{
-          paddingTop: '80px',
-          paddingBottom: '100px',
-        }}>
+        <ContentBox
+          style={{
+            paddingTop: "80px",
+            paddingBottom: "100px",
+          }}
+        >
           <S.Head>
             <S.Info>
-              <Title variant='primary' style={{ textAlign: "left" }}>
+              <Title variant="primary" style={{ textAlign: "left" }}>
                 Receba seu <strong>precatório</strong> com{" "}
                 <strong>agilidade</strong> e <strong>segurança!</strong>
               </Title>
@@ -43,7 +46,7 @@ export default function Home() {
                 {infoList.map((item) => (
                   <S.PrecatoryInfoItem key={item.id}>
                     <ConfirmIcon />
-                    <span>{item.title}</span>
+                    <Subtitle>{item.title}</Subtitle>
                   </S.PrecatoryInfoItem>
                 ))}
               </S.InfoList>
@@ -69,10 +72,20 @@ export default function Home() {
               <S.Card key={item.id}>
                 <S.CardIcon>{item.icon}</S.CardIcon>
                 <div>
-                  <S.CardInfoTitle>{item.title}</S.CardInfoTitle>
-                  <S.CardInfoDescription>
+                  <Subtitle
+                    style={{
+                      margin: "36px 0 30px",
+                    }}
+                  >
+                    {item.title}
+                  </Subtitle>
+                  <Description
+                    style={{
+                      textAlign: "center",
+                    }}
+                  >
                     {item.description}
-                  </S.CardInfoDescription>
+                  </Description>
                   <S.CardIndex>{item.id + 1}</S.CardIndex>
                 </div>
               </S.Card>
@@ -81,9 +94,7 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox py={"60px"}>
-          <Title
-            variant="primary"
-          >
+          <Title variant="primary">
             Há mais de uma década no mercado, somos a maior empresa na
             antecipação de precatórios do Brasil
           </Title>
@@ -118,9 +129,7 @@ export default function Home() {
                         )}
                       </S.ChooseItemListItemStatus>
 
-                      <S.ChooseItemListItemText>
-                        {listItem.text}
-                      </S.ChooseItemListItemText>
+                      <Description>{listItem.text}</Description>
                     </S.ChooseItemListItem>
                   ))}
                 </S.ChooseItemList>
@@ -130,9 +139,7 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox bgColor={tokens.colors.highlight.dark} py={"60px"}>
-          <Title variant="secondary">
-            Porque escolher a Harmony?
-          </Title>
+          <Title variant="secondary">Porque escolher a Harmony?</Title>
 
           <S.WhyList>
             {whyList.map((item) => (
@@ -140,10 +147,14 @@ export default function Home() {
                 <S.WhyItemIcon>{item.icon}</S.WhyItemIcon>
 
                 <S.WhyItemTexts>
-                  <S.WhyItemTitle>{item.title}</S.WhyItemTitle>
-                  <S.WhyItemDescription>
-                    {item.description}
-                  </S.WhyItemDescription>
+                  <Subtitle
+                    style={{
+                      textAlign: "left",
+                    }}
+                  >
+                    {item.title}
+                  </Subtitle>
+                  <Description>{item.description}</Description>
                 </S.WhyItemTexts>
               </S.WhyItem>
             ))}
@@ -159,15 +170,15 @@ export default function Home() {
 
         <ContentBox py={"60px"}>
           <Title variant="primary">FAQ - Perguntas Frequentes</Title>
-          <Subtitle>
-            Dúvidas? Estamos aqui para ajudar.
-          </Subtitle>
+          <Subtitle>Dúvidas? Estamos aqui para ajudar.</Subtitle>
 
           <Accordion data={faqList} />
         </ContentBox>
 
         <ContentBox bgColor="#fff" py={"60px"}>
-          <Title variant="primary">Acompanhe as notícias sobre precatórios</Title>
+          <Title variant="primary">
+            Acompanhe as notícias sobre precatórios
+          </Title>
           <S.BlogContent>
             {blogList.map((item) => (
               <S.BlogItem key={item.id}>
@@ -175,7 +186,13 @@ export default function Home() {
                   <S.BlogImage src={item.image} />
                 </S.BlogImageContainer>
                 <S.BlogTitle>{item.title}</S.BlogTitle>
-                <S.BlogLink>Consulte mais informações</S.BlogLink>
+                <Description
+                  style={{
+                    margin: "0 30px",
+                  }}
+                >
+                  Consulte mais informações
+                </Description>
               </S.BlogItem>
             ))}
           </S.BlogContent>
