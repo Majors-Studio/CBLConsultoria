@@ -48,7 +48,7 @@ const CustomQuality: React.FC<CustomQualityProps> = ({ data }) => {
               height={75}
               alt="img"
             />
-            <Title text={item.title} />
+            <Title>{item.title}</Title>
             <Subtitle color="#333" text={item.subtitle} />
           </C.Item>
         </SwiperSlide>
@@ -73,8 +73,9 @@ const CustomQuality: React.FC<CustomQualityProps> = ({ data }) => {
               style={{
                 fontSize: "1.5rem",
               }}
-              text={item.title}
-            />
+            >
+              {item.title}
+            </Title>
             <Subtitle color="#333" text={item.subtitle} />
           </C.Item>
         ))}

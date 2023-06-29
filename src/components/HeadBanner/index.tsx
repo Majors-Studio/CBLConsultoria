@@ -18,8 +18,7 @@ const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source ='https://sourc
         style={{
           color: color,
         }}
-        text={title}
-      />
+      >{title}</Title>
     </C.Container>
   )
 }

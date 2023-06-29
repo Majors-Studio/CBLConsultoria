@@ -4,7 +4,6 @@ import * as S from "@/styles/home"
 import PurposeForm from "@/components/PurposeForm"
 import { ConfirmIcon, DangerIcon, SuccessIcon } from "@/assets/icons"
 
-import Link from "next/link"
 import CtaButton from "@/components/CtaButton"
 import SpeechCarousel from "@/components/SpeechCarousel"
 import Accordion from "@/components/Accordion"
@@ -13,6 +12,7 @@ import { useApp } from "@/context/appContext"
 import Video from "@/components/Video"
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
+import { Title } from "@/components"
 
 export default function Home() {
   const { userList } = useApp()
@@ -35,10 +35,10 @@ export default function Home() {
         }}>
           <S.Head>
             <S.Info>
-              <S.Title style={{ textAlign: "left" }}>
+              <Title variant='primary' style={{ textAlign: "left" }}>
                 Receba seu <strong>precatório</strong> com{" "}
                 <strong>agilidade</strong> e <strong>segurança!</strong>
-              </S.Title>
+              </Title>
               <S.InfoList>
                 {infoList.map((item) => (
                   <S.PrecatoryInfoItem key={item.id}>
@@ -54,14 +54,15 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox py={"60px"} bgColor={tokens.colors.highlight.dark}>
-          <S.Title
+          <Title
+            variant="secondary"
             style={{
               color: tokens.colors.brand.light,
             }}
           >
             Antecipar o <strong>recebimento</strong> do seu precatório é{" "}
             <strong>simples</strong>
-          </S.Title>
+          </Title>
 
           <S.Cards>
             {cardList.map((item) => (
@@ -80,10 +81,12 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox py={"60px"}>
-          <S.Title>
+          <Title
+            variant="primary"
+          >
             Há mais de uma década no mercado, somos a maior empresa na
             antecipação de precatórios do Brasil
-          </S.Title>
+          </Title>
 
           <Video />
 
@@ -91,10 +94,10 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox py={"60px"}>
-          <S.Title>
+          <Title variant="primary">
             A Harmony é a melhor opção para você que deseja antecipar o seu
             precatório
-          </S.Title>
+          </Title>
           <S.ChooseSubtitle>
             Se livre da longa fila de espera do Governo para pagamento de seu
             precatório.
@@ -127,13 +130,9 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox bgColor={tokens.colors.highlight.dark} py={"60px"}>
-          <S.Title
-            style={{
-              color: tokens.colors.brand.light,
-            }}
-          >
+          <Title variant="secondary">
             Porque escolher a Harmony?
-          </S.Title>
+          </Title>
 
           <S.WhyList>
             {whyList.map((item) => (
@@ -152,14 +151,14 @@ export default function Home() {
         </ContentBox>
 
         <S.WhatContainer>
-          <S.Title style={{ color: tokens.colors.brand.dark }}>
+          <Title variant="tertiary">
             O que os clientes dizem sobre a Harmony
-          </S.Title>
+          </Title>
           <SpeechCarousel data={userList} />
         </S.WhatContainer>
 
         <ContentBox py={"60px"}>
-          <S.Title>FAQ - Perguntas Frequentes</S.Title>
+          <Title variant="primary">FAQ - Perguntas Frequentes</Title>
           <S.FaqDescription>
             Dúvidas? Estamos aqui para ajudar.
           </S.FaqDescription>
@@ -168,7 +167,7 @@ export default function Home() {
         </ContentBox>
 
         <ContentBox bgColor="#fff" py={"60px"}>
-          <S.Title>Acompanhe as notícias sobre precatórios</S.Title>
+          <Title variant="primary">Acompanhe as notícias sobre precatórios</Title>
           <S.BlogContent>
             {blogList.map((item) => (
               <S.BlogItem key={item.id}>

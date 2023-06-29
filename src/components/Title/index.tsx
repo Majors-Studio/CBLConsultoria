@@ -2,12 +2,12 @@ import React from "react"
 import * as C from "./styles"
 
 export interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  text?: string
   variant?: 'primary' | 'secondary' | 'tertiary'
+  children: React.ReactNode
 }
 
-const Title: React.FC<TitleProps> = ({ text, style,variant = 'primary' }) => {
-  return <C.Title variant={variant} style={style}>{text}</C.Title>
+const Title: React.FC<TitleProps> = ({ children, style,variant = 'primary' }) => {
+  return <C.Title variant={variant} style={style}>{children}</C.Title>
 }
 
 export default Title

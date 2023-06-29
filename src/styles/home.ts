@@ -14,7 +14,7 @@ export const Head = styled.div`
   width: 100%;
 
   @media (max-width: 1024px) {
-  gap: 20px;
+    gap: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
 `
@@ -28,21 +28,6 @@ export const Info = styled.div`
 
   @media (max-width: 1024px) {
     margin-top: 0;
-  }
-`
-
-export const Title = styled.h1`
-  font-size: ${tokens.font.sizes.xl};
-  font-weight: ${tokens.font.weight.medium};
-  line-height: 1.2;
-  font-family: ${tokens.font.family.primary};
-  width: 100%;
-  text-align: center;
-  color: ${tokens.colors.brand.pure};
-  font-size: ${tokens.font.sizes.xl};
-  strong {
-    /* text-decoration: underline; */
-    font-family: ${tokens.font.family.primary};
   }
 `
 

@@ -8,7 +8,7 @@ import Video from "@/components/Video"
 import HeadBanner from "@/components/HeadBanner"
 
 const About: React.FC = () => {
-  const { cardsList, avatarData,qualityList } = useAbout()
+  const { cardsList, avatarData, qualityList } = useAbout()
 
   return (
     <C.Container>
@@ -19,7 +19,7 @@ const About: React.FC = () => {
       </C.SwiperContainer>
 
       <C.CardsContainer>
-        {cardsList.map((card,index) => (
+        {cardsList.map((card, index) => (
           <Card
             key={index}
             index={card.id}
@@ -30,9 +30,7 @@ const About: React.FC = () => {
       </C.CardsContainer>
 
       <C.VideoContainer>
-        <Title
-          text="Fique mais por dentro do nosso trabalho"
-        />
+        <Title>Fique mais por dentro do nosso trabalho</Title>
         <C.AboutText>
           A CBL Consultoria possui vasta experiência no mercado e conta com
           profissionais capacitados para atender, de forma individualizada, a
@@ -80,10 +78,9 @@ const About: React.FC = () => {
       </C.VideoContainer>
 
       <C.AvatarsContainer>
-      <Title
-        color="#000"
-        text="Conheça os responsáveis pelos nossos negócios"
-      />
+        <Title
+          variant="tertiary"
+        >Conheça os responsáveis pelos nossos negócios</Title>
         {avatarData.map((avatar, index) => (
           <C.Info key={index}>
             <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
