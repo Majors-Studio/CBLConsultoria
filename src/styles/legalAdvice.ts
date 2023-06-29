@@ -36,10 +36,11 @@ export const Title = styled.h1<IProps>`
   max-width: 400px;
   line-height: ${tokens.font.sizes.xxl};
   font-weight: 600;
+  text-transform: uppercase;
 `
-export const Text = styled.p`
+export const Text = styled.p<IProps>`
 font-size: ${tokens.font.sizes.sm};
-color: ${tokens.colors.brand.light};
+color: ${(props) => props.textColor};
 line-height: ${tokens.font.sizes.md};
 `
 export const BoxImage = styled.div`
