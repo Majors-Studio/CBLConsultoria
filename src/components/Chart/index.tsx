@@ -47,20 +47,36 @@ const Chart: React.FC = () => {
               beginAtZero: true,
             },
           },
+          datasets: {
+            bar: {
+              borderWidth: 1,
+              borderColor: "rgba(0,0,0,0.2)",
+              hoverBorderColor: "rgba(0,0,0,0.5)",
+              hoverBorderWidth: 2,
+              borderSkipped: "bottom",
+            },
+          },
+          elements: {
+            bar: {
+              borderWidth: 1,
+              borderColor: "rgba(0,0,0,0.2)",
+              hoverBorderColor: "rgba(0,0,0,0.5)",
+              hoverBorderWidth: 2,
+              borderSkipped: "bottom",
+            },
+          },
+          resizeDelay: 50,
+          devicePixelRatio: 2,
+          skipNull: true,
+
+          locale: "pt-BR",
+          normalized: true,
+          responsive: true,
           // legendas
           plugins: {
-            title: {
-              display: true,
-              text: "Evolução dos precatórios em R$ (Bilhões)",
-              color: "#000",
-              font: {
-                size: 20,
-              },
-            },
             legend: {
               display: true,
               position: "bottom",
-
               labels: {
                 color: "#000",
 
@@ -69,6 +85,7 @@ const Chart: React.FC = () => {
                 },
               },
             },
+
             // tooltip
           },
         }}
