@@ -1,39 +1,39 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from "react"
-import * as C from "./styles"
-import { Button } from "@/components"
-import Logo from "../Logo"
-import { useDevice } from "@/hooks/useDevice"
+import React, { useEffect, useState } from "react";
+import * as C from "./styles";
+import { Button } from "@/components";
+import Logo from "../Logo";
+import { useDevice } from "@/hooks/useDevice";
 
-import { navitems } from "@/utils/navitems"
-import Link from "next/link"
-import Hamburguer from "../Hamburguer"
-import CtaButton from "../CtaButton"
+import { navitems } from "@/utils/navitems";
+import Link from "next/link";
+import Hamburguer from "../Hamburguer";
+import CtaButton from "../CtaButton";
 
 const Header: React.FC = () => {
-  const { isMobile, isTablet } = useDevice()
-  const [isOnTop, setIsOnTop] = useState(true)
-  const [menuOpened, setMenuOpened] = useState(false)
-  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
+  const { isMobile, isTablet } = useDevice();
+  const [isOnTop, setIsOnTop] = useState(true);
+  const [menuOpened, setMenuOpened] = useState(false);
+  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null);
 
   useEffect(() => {
-    let lastScrollTop = 0
+    let lastScrollTop = 0;
     const handleScroll = () => {
-      setMenuOpened(false)
-      const st = window.pageYOffset || document.documentElement.scrollTop
+      setMenuOpened(false);
+      const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        setIsOnTop(st < 250)
+        setIsOnTop(st < 250);
       } else {
-        setIsOnTop(true)
+        setIsOnTop(true);
       }
-      lastScrollTop = st <= 0 ? 0 : st
-    }
-    window.addEventListener("scroll", handleScroll)
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navBar = (
     <C.Navbar>
@@ -51,20 +51,20 @@ const Header: React.FC = () => {
                 {item.subpaths.map((subitem, subindex) => {
                   return (
                     <>
-                      <Link href={item.url+subitem.anchor} key={subindex}>
+                      <Link href={item.url + subitem.anchor} key={subindex}>
                         {subitem.title}
                       </Link>
                       {subindex === item.subpaths.length - 1 ? null : <hr />}
                     </>
-                  )
+                  );
                 })}
               </C.Submenu>
             )}
           </C.NavbarItem>
-        )
+        );
       })}
     </C.Navbar>
-  )
+  );
 
   return (
     <>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
         </C.Content>
       </C.Container>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
