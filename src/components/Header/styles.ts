@@ -30,7 +30,7 @@ export const MenuMobile = styled.div<IPropsMenu>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: ${tokens.colors.brand.pure};
   z-index: 9999;
 
   padding-top: 120px;
@@ -68,7 +68,7 @@ export const Navbar = styled.nav`
   @media (max-width: ${tokens.breakpoints.desktop}) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 32px;
     overflow: hidden;
     height: fit-content;
   }
@@ -79,7 +79,7 @@ export const NavbarItem = styled.div`
   color: #fff;
   position: relative;
   cursor: pointer;
-  font-size: ${tokens.font.sizes.xs};
+  font-size: ${tokens.font.sizes.sm};
   color: ${tokens.colors.brand.light};
   position: relative;
 
@@ -88,7 +88,6 @@ export const NavbarItem = styled.div`
 
     &:after {
       content: "";
-      position: absolute;
       left: 0;
       bottom: -5px;
       width: 0;
@@ -141,7 +140,27 @@ export const Submenu = styled.div<SubmenuProps>`
     padding: 0;
     font-size: ${tokens.font.sizes.xs};
     color: ${tokens.colors.brand.light};
-    position: relative;
     font-family: ${tokens.font.family.secondary};
+  }
+
+  @media (max-width: ${tokens.breakpoints.desktop}) {
+    width: 100%;
+    background-color: transparent;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 0 0 0 35px;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+
+    margin: 20px 0 20px 35px;
+border-left: 1px solid ${tokens.colors.brand.light};
+
+    a {
+      font-size: 0.9rem;
+    }
   }
 `

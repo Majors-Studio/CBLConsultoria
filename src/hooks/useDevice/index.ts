@@ -37,8 +37,8 @@ export function useDevice() {
 
   const device = {
     isMobile: setWindowWidth(width, 0, 768),
-    isTablet: setWindowWidth(width, 769, 1200),
-    isDesktop: setWindowWidth(width, 1201, 0),
+    isTablet: setWindowWidth(width, 769, 1024),
+    isDesktop: setWindowWidth(width, 1025, 0),
   };
 
   return { isMobile: device.isMobile, isTablet: device.isTablet, isDesktop: device.isDesktop };
