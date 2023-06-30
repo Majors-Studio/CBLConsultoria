@@ -11,6 +11,8 @@ export const Container = styled.header<IProps>`
   top: 0;
   z-index: 99999;
   background-color: ${tokens.colors.brand.pure};
+border-bottom: 1px solid ${tokens.colors.brand.cta};
+
   height: 120px;
   padding: 0 20px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
