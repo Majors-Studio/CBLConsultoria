@@ -4,11 +4,7 @@ import * as Section from "@/sections"
 import { Title } from "@/components"
 
 const PlaygroundSection: React.FC = () => {
-  
-  if (window.location.hostname.includes('localhost' || '0.0.0.0')) {
-
-  
-  
+  if (window.location.hostname.includes("localhost" || "0.0.0.0")) {
     const Sections = {
       ...Section,
     }
@@ -22,7 +18,6 @@ const PlaygroundSection: React.FC = () => {
                 marginTop: index === 0 ? "10rem" : "4rem",
                 marginBottom: "1rem",
                 textTransform: "none",
-              
               }}
             >
               {Section.name}
