@@ -4,6 +4,12 @@ import * as Component from "@/components"
 import { Title } from "@/components"
 
 const PlaygroundComponents: React.FC = () => {
+  
+  if (typeof window !== "undefined" && window.location.hostname.includes('localhost' || '0.0.0.0')) {
+    window.location.href = "/"
+  }
+  
+  
   const Components = {
     ...Component,
   } 

@@ -4,6 +4,12 @@ import * as Section from "@/sections"
 import { Title } from "@/components"
 
 const PlaygroundSection: React.FC = () => {
+  
+    if (typeof window !== "undefined" && window.location.hostname.includes('localhost' || '0.0.0.0')) {
+    window.location.href = "/"
+  }
+  
+  
   const Sections = {
     ...Section,
   }
