@@ -48,4 +48,4 @@ export const navitems = [
     title: "Notícias",
     url: "/news",
   },
-]
+];

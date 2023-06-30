@@ -174,6 +174,7 @@ const Precatory: React.FC = () => {
         </div>
       </ContentBox>
 
+      <div id="data" />
       <ContentBox bgColor="#1f2428" py={"60px"}>
         <Title variant="secondary">
           Cenário da Dívida Nacional em Precatórios

@@ -6,10 +6,10 @@ import PurposeForm from "@/components/PurposeForm";
 import { useAbout } from "@/context/aboutContext";
 import Video from "@/components/Video";
 import HeadBanner from "@/components/HeadBanner";
-import Description from "@/components/Description";
 
 const About: React.FC = () => {
   const { cardsList, avatarData, qualityList } = useAbout();
+  const [showMore, setShowMore] = React.useState<boolean>(false);
 
   return (
     <C.Container>
@@ -59,23 +59,67 @@ const About: React.FC = () => {
           específica. Seja você um indivíduo, empresa ou instituição, temos a
           expertise necessária para lidar com todas as complexidades legais
           envolvidas. Já auxiliamos inúmeras pessoas e empresas a venderem seus
-          precatórios com sucesso, obtendo o retorno financeiro esperado. Se
+          precatórios com sucesso, obtendo o retoConsutrno financeiro esperado. Se
           você enfrenta dificuldades na venda de precatórios e busca uma
           consultoria jurídica confiável, segura e comprovada, não hesite em
-          contar com a CBL Consultoria. Estamos aqui para proporcionar
-          tranquilidade e garantir o sucesso em suas negociações. Nossa
-          reputação é construída sobre resultados consistentes e clientes
-          satisfeitos. São dezenas de imóveis regularizados pelo país, inúmeros
-          clientes indenizados por erro médico e demais ações de ressarcimento,
-          bem como uma consultoria jurídica consistente e coesa, buscando o
-          melhor resultado para o cliente. Ao escolher a CBL Consultoria, você
-          terá um serviço personalizado, voltado às suas necessidades. Nosso
-          compromisso é ouvir suas preocupações e metas, para assim desenvolver
-          estratégias eficazes e garantir o melhor resultado possível. CBL
-          Consultoria - A sua segurança e qualidade na venda de precatórios!
-          Deixe-nos ajudá-lo(a) a superar os desafios e alcançar o sucesso
-          desejado. Juntos, iremos além!
+          contar com a CBL Consultoria.
         </Subtitle>
+        {showMore && (
+          <Subtitle style={{ textAlign: "justify", marginTop: "20px" }}>
+            Estamos aqui para proporcionar tranquilidade e garantir o sucesso em
+            suas negociações. Nossa reputação é construída sobre resultados
+            consistentes e clientes satisfeitos. São dezenas de imóveis
+            regularizados pelo país, inúmeros clientes indenizados por erro
+            médico e demais ações de ressarcimento, bem como uma consultoria
+            jurídica consistente e coesa, buscando o melhor resultado para o
+            cliente. Ao escolher a CBL Consultoria, você terá um serviço
+            personalizado, voltado às suas necessidades. Nosso compromisso é
+            ouvir suas preocupações e metas, para assim desenvolver estratégias
+            eficazes e garantir o melhor resultado possível. CBL Consultoria - A
+            sua segurança e qualidade na venda de precatórios! Deixe-nos
+            ajudá-lo(a) a superar os desafios e alcançar o sucesso desejado.
+            Juntos, iremos além!
+          </Subtitle>
+        )}
+        <C.ShowMoreButton onClick={() => setShowMore(!showMore)}>
+          {showMore ? (
+            <>
+              Mostrar menos{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18"
+                />
+              </svg>
+            </>
+          ) : (
+            <>
+              Mostrar mais{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3"
+                />
+              </svg>
+            </>
+          )}
+        </C.ShowMoreButton>
       </C.VideoContainer>
 
       <C.AvatarsContainer>

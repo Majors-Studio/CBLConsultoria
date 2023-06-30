@@ -20,6 +20,7 @@ const LegalAdvice: React.FC = () => {
             {/* <C.Title textColor={`${tokens.colors.brand.light}`}>
               REGULARIZAÇÃO DE IMÓVEIS
             </C.Title> */}
+            <div id="real-estate" />
             <Title style={{ fontWeight: "bold" }} variant="secondary">
               REGULARIZAÇÃO DE IMÓVEIS
             </Title>
@@ -47,6 +48,7 @@ const LegalAdvice: React.FC = () => {
             <Image src={img3} alt="regularizacao" priority />
           </C.BoxImage>
           <C.BoxText>
+            <div id="medical-error" />
             <Title style={{ fontWeight: "bold", textAlign: "right" }}>
               Erro médico
             </Title>
@@ -92,6 +94,8 @@ const LegalAdvice: React.FC = () => {
       <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
         <C.Container>
           <C.BoxText>
+            <div id="civil-causes" />
+
             <Title variant="secondary" style={{ textAlign: "left" }}>
               Por que contratar uma consultoria Jurídica?
             </Title>
