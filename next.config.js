@@ -13,6 +13,9 @@ const nextConfig = {
   },
   env: {
     PHONE_NUMBER: "5511973664376",
+    SERVICE_ID: "service_32jf0yc",
+    TEMPLATE_ID: "template_qzhmxhn",
+    PUBLIC_KEY: "WRzY65xBH3hhgKsK5"
   },
 };
 

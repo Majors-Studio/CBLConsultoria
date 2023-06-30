@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@next/font": "^13.4.7",
     "@react-google-maps/api": "^2.18.1",
     "@types/node": "20.2.5",

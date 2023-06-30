@@ -16,8 +16,7 @@ export const Content = styled.div`
   max-width: 440px;
   width: 100%;
   margin: 0 auto;
-
-`
+`;
 
 export const Title = styled.h1`
   color: ${tokens.colors.brand.pure};
@@ -38,7 +37,11 @@ export const Title = styled.h1`
   }
 `;
 
-export const Form = styled.form`
+interface iForm {
+  ref: any;
+}
+
+export const Form = styled.form<iForm>`
   display: flex;
   flex-direction: column;
   gap: 20px;
