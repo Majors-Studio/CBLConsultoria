@@ -1,51 +1,51 @@
-import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons"
+import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
 import React, {
   createContext,
   useContext,
   useEffect,
   useState,
   useRef,
-} from "react"
+} from "react";
 
 interface HomeContextProps {
   infoList: {
-    id: number
-    title: string
-  }[]
+    id: number;
+    title: string;
+  }[];
   cardList: {
-    id: number
-    title: string
-    description: string
-    icon: React.ReactNode
-  }[]
+    id: number;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+  }[];
   chooseList: {
-    id: number
-    title: string
+    id: number;
+    title: string;
     list: {
-      id: number
-      text: string
-      status: string
-    }[]
-  }[]
+      id: number;
+      text: string;
+      status: string;
+    }[];
+  }[];
   whyList: {
-    id: number
-    title: string
-    description: string
-    icon: React.ReactNode
-  }[]
+    id: number;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+  }[];
   faqList: {
-    id: number
-    title: string
-    description: string
-  }[]
+    id: number;
+    title: string;
+    description: string;
+  }[];
   blogList: {
-    id: number
-    title: string
-    image: string
-  }[]
+    id: number;
+    title: string;
+    image: string;
+  }[];
 }
 
-const HomeContext = createContext<HomeContextProps>({} as any)
+const HomeContext = createContext<HomeContextProps>({} as any);
 
 export function HomeProvider({ children }: any) {
   const infoList = [
@@ -65,8 +65,7 @@ export function HomeProvider({ children }: any) {
       id: 3,
       title: "Vasta experiência no mercado",
     },
-  ]
-  
+  ];
 
   const cardList = [
     {
@@ -97,7 +96,7 @@ export function HomeProvider({ children }: any) {
         "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia;",
       icon: <MoneyIcon />,
     },
-  ]
+  ];
 
   const chooseList = [
     {
@@ -152,7 +151,7 @@ export function HomeProvider({ children }: any) {
         },
       ],
     },
-  ]
+  ];
 
   const whyList = [
     {
@@ -183,7 +182,7 @@ export function HomeProvider({ children }: any) {
         "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
       icon: <></>,
     },
-  ]
+  ];
 
   const faqList = [
     {
@@ -210,27 +209,77 @@ export function HomeProvider({ children }: any) {
       description:
         "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
     },
-  ]
+  ];
 
   const blogList = [
     {
-      id: 0,
+      id: 1,
       title: "Como funciona a antecipação de precatórios?",
       image:
         "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
     },
-    
-  ]
-  
-  for (let i = 0;i < 5;i++) {
-    blogList.push(blogList[0])
-  }
+    {
+      id: 2,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 3,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 4,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 5,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 6,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 6,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 6,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+    {
+      id: 6,
+      title: "Como funciona a antecipação de precatórios?",
+      image:
+        "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    },
+  ];
 
-  const value = { infoList, cardList, chooseList, whyList, faqList, blogList }
+  const value = {
+    infoList,
+    cardList,
+    chooseList,
+    whyList,
+    faqList,
+    blogList,
+  };
 
-  return <HomeContext.Provider value={value}>{children}</HomeContext.Provider>
+  return <HomeContext.Provider value={value}>{children}</HomeContext.Provider>;
 }
 
 export function useHome() {
-  return useContext(HomeContext)
+  return useContext(HomeContext);
 }

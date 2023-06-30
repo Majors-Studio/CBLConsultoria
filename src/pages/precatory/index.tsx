@@ -1,37 +1,37 @@
-import React from "react"
-import * as C from "@/styles/precatory"
-import BrazilGraph from "@/assets/svg/BrazilGraph"
+import React from "react";
+import * as C from "@/styles/precatory";
+import BrazilGraph from "@/assets/svg/BrazilGraph";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
   Legend,
   ChartData,
-} from "chart.js"
-import { Doughnut } from "react-chartjs-2"
-import { SuccessIcon } from "@/assets/icons"
-import PurposeForm from "@/components/PurposeForm"
+} from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import { SuccessIcon } from "@/assets/icons";
+import PurposeForm from "@/components/PurposeForm";
 
-import Chart from "@/components/Chart"
-import CtaButton from "@/components/CtaButton"
-import SpeechCarousel from "@/components/SpeechCarousel"
-import { useApp } from "@/context/appContext"
-import { usePrecatory } from "@/context/precatoryContext"
-import HeadBanner from "@/components/HeadBanner"
+import Chart from "@/components/Chart";
+import CtaButton from "@/components/CtaButton";
+import SpeechCarousel from "@/components/SpeechCarousel";
+import { useApp } from "@/context/appContext";
+import { usePrecatory } from "@/context/precatoryContext";
+import HeadBanner from "@/components/HeadBanner";
 
-import { useDevice } from "@/hooks/useDevice"
-import { Subtitle, Title } from "@/components"
-import { tokens } from "@/utils/tokens"
-import Description from "@/components/Description"
-import ContentBox from "@/components/ContentBox"
-import Link from "next/link"
+import { useDevice } from "@/hooks/useDevice";
+import { Subtitle, Title } from "@/components";
+import { tokens } from "@/utils/tokens";
+import Description from "@/components/Description";
+import ContentBox from "@/components/ContentBox";
+import Link from "next/link";
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Precatory: React.FC = () => {
-  const { isMobile, isTablet } = useDevice()
-  const { userList, newsList } = useApp()
-  const { stepsList, whyToSellList } = usePrecatory()
+  const { isMobile, isTablet } = useDevice();
+  const { userList, newsList } = useApp();
+  const { stepsList, whyToSellList } = usePrecatory();
 
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
@@ -56,7 +56,7 @@ const Precatory: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"doughnut", number[], string>
+  } as ChartData<"doughnut", number[], string>;
 
   return (
     <>
@@ -501,7 +501,7 @@ const Precatory: React.FC = () => {
         <PurposeForm />
       </ContentBox>
     </>
-  )
-}
+  );
+};
 
-export default Precatory
+export default Precatory;

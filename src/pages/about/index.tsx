@@ -1,14 +1,15 @@
-import React from "react"
-import * as C from "@/styles/about"
-import Image from "next/image"
-import { Card, CustomQuality, Title } from "@/components"
-import PurposeForm from "@/components/PurposeForm"
-import { useAbout } from "@/context/aboutContext"
-import Video from "@/components/Video"
-import HeadBanner from "@/components/HeadBanner"
+import React from "react";
+import * as C from "@/styles/about";
+import Image from "next/image";
+import { Card, CustomQuality, Subtitle, Title } from "@/components";
+import PurposeForm from "@/components/PurposeForm";
+import { useAbout } from "@/context/aboutContext";
+import Video from "@/components/Video";
+import HeadBanner from "@/components/HeadBanner";
+import Description from "@/components/Description";
 
 const About: React.FC = () => {
-  const { cardsList, avatarData, qualityList } = useAbout()
+  const { cardsList, avatarData, qualityList } = useAbout();
 
   return (
     <C.Container>
@@ -31,7 +32,7 @@ const About: React.FC = () => {
 
       <C.VideoContainer>
         <Title>Fique mais por dentro do nosso trabalho</Title>
-        <C.AboutText>
+        <Subtitle style={{ textAlign: "justify", marginTop: "20px" }}>
           A CBL Consultoria possui vasta experiência no mercado e conta com
           profissionais capacitados para atender, de forma individualizada, a
           necessidade do cliente. O fato de não atuar com demandas de massa
@@ -41,11 +42,11 @@ const About: React.FC = () => {
           composta por profissionais graduados nas melhores universidades do
           Estado de São Paulo e atua tanto na área consultiva quanto
           contenciosa.
-        </C.AboutText>
+        </Subtitle>
 
         <Video />
 
-        <C.AboutText>
+        <Subtitle style={{ textAlign: "justify", marginTop: "20px" }}>
           Sua busca por uma consultoria jurídica confiável e experiente em
           precatórios chegou ao fim. Apresentamos a CBL Consultoria, uma empresa
           especializada no mercado, com vasta experiência. Fundada justamente
@@ -74,13 +75,13 @@ const About: React.FC = () => {
           Consultoria - A sua segurança e qualidade na venda de precatórios!
           Deixe-nos ajudá-lo(a) a superar os desafios e alcançar o sucesso
           desejado. Juntos, iremos além!
-        </C.AboutText>
+        </Subtitle>
       </C.VideoContainer>
 
       <C.AvatarsContainer>
-        <Title
-          variant="tertiary"
-        >Conheça os responsáveis pelos nossos negócios</Title>
+        <Title variant="tertiary">
+          Conheça os responsáveis pelos nossos negócios
+        </Title>
         {avatarData.map((avatar, index) => (
           <C.Info key={index}>
             <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
@@ -100,7 +101,7 @@ const About: React.FC = () => {
         <PurposeForm />
       </C.FormContainer>
     </C.Container>
-  )
-}
+  );
+};
 
-export default About
+export default About;

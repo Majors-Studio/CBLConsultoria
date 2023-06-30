@@ -1,12 +1,16 @@
-import styled from "styled-components"
-import { tokens } from "../utils/tokens"
+import styled from "styled-components";
+import { tokens } from "../utils/tokens";
+
+interface showMoreProps {
+  onClick: () => void;
+}
 
 export const Container = styled.div`
   height: fit-content;
   width: 100vw;
   background-color: #f8f8f8;
   margin-top: 120px;
-`
+`;
 
 export const Head = styled.div`
   display: grid;
@@ -17,7 +21,7 @@ export const Head = styled.div`
   @media (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`
+`;
 
 export const Info = styled.div`
   display: flex;
@@ -29,7 +33,7 @@ export const Info = styled.div`
   @media (max-width: 1024px) {
     margin-top: 0;
   }
-`
+`;
 
 export const InfoList = styled.ul`
   display: flex;
@@ -38,7 +42,7 @@ export const InfoList = styled.ul`
 
   @media (max-width: 768px) {
   }
-`
+`;
 
 export const PrecatoryInfoItem = styled.li`
   display: flex;
@@ -46,7 +50,7 @@ export const PrecatoryInfoItem = styled.li`
   align-items: center;
   gap: 10px;
   cursor: context-menu;
-`
+`;
 
 export const Cards = styled.div`
   margin: 60px 0;
@@ -61,14 +65,14 @@ export const Cards = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`
+`;
 
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 415px;
+  height: 380px;
   background: #ffffff;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   border-radius: 20px;
@@ -102,7 +106,7 @@ export const Card = styled.div`
       color: #fff;
     }
   }
-`
+`;
 
 export const CardIcon = styled.div`
   width: 50px;
@@ -111,20 +115,42 @@ export const CardIcon = styled.div`
     filter: invert(40%) sepia(10%) saturate(654%) hue-rotate(96deg)
       brightness(90%) contrast(94%);
   }
-`
+`;
+
+export const ShowMoreButton = styled.button`
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  background-color: ${tokens.colors.brand.pure};
+  color: ${tokens.colors.brand.light};
+  font-family: ${tokens.font.family.primary};
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: ${tokens.colors.brand.light};
+    color: ${tokens.colors.brand.pure};
+  }
+`;
 
 export const CardIndex = styled.div`
   color: ${tokens.colors.brand.pure};
   font-family: ${tokens.font.family.primary};
-  font-size: 55px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 55px;
   text-align: right;
 
   position: absolute;
-  bottom: 15px;
-  right: 32px;
-`
+  bottom: 10px;
+  right: 20px;
+`;
 
 export const ChooseList = styled.ul`
   margin-top: 30px;
@@ -138,14 +164,14 @@ export const ChooseList = styled.ul`
     align-items: center;
     gap: 20px;
   }
-`
+`;
 
 export const ChooseItem = styled.li`
   background-color: #fff;
 
   border-radius: 20px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-`
+`;
 
 export const ChooseItemTitle = styled.h1`
   background-color: ${tokens.colors.brand.pure};
@@ -159,7 +185,7 @@ export const ChooseItemTitle = styled.h1`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-inline: 2rem;
-`
+`;
 
 export const ChooseItemList = styled.ul`
   display: flex;
@@ -167,20 +193,20 @@ export const ChooseItemList = styled.ul`
   gap: 10px;
   margin-top: 10px;
   padding: 40px 35px;
-`
+`;
 
 export const ChooseItemListItem = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-`
+`;
 
 export const ChooseItemListItemStatus = styled.span`
   display: inline-block;
   width: 20px;
   height: 20px;
-`
+`;
 
 export const WhyList = styled.ul`
   display: grid;
@@ -196,7 +222,7 @@ export const WhyList = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`
+`;
 
 export const WhyItem = styled.li`
   display: flex;
@@ -206,7 +232,7 @@ export const WhyItem = styled.li`
   background-color: #fff;
   padding: 26px 20px 40px;
   border-radius: 10px;
-`
+`;
 
 export const WhyItemIcon = styled.div`
   background-color: #f2eae6;
@@ -216,13 +242,13 @@ export const WhyItemIcon = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-`
+`;
 
 export const WhyItemTexts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`
+`;
 
 export const WhyItemDescription = styled.p`
   font-family: ${tokens.font.family.secondary};
@@ -230,7 +256,7 @@ export const WhyItemDescription = styled.p`
   font-weight: 400;
   line-height: 1.5em;
   color: #121212;
-`
+`;
 
 export const WhatContainer = styled.div`
   background-color: #e3dcd7;
@@ -248,7 +274,7 @@ export const WhatContainer = styled.div`
     width: 80%;
     margin: 0 auto;
   }
-`
+`;
 
 export const BlogContent = styled.div`
   max-width: ${tokens.breakpoints.desktopMd};
@@ -264,7 +290,7 @@ export const BlogContent = styled.div`
     padding-top: 20px;
     padding-bottom: 40px;
   }
-`
+`;
 
 export const BlogItem = styled.div`
   height: 440px;
@@ -285,18 +311,18 @@ export const BlogItem = styled.div`
     width: 75%;
     margin: 0 auto;
   }
-`
+`;
 
 export const BlogImageContainer = styled.div`
   width: 100%;
   height: 236px;
-`
+`;
 
 export const BlogImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`
+`;
 
 export const BlogTitle = styled.h1`
   padding: 40px 30px;
@@ -305,4 +331,4 @@ export const BlogTitle = styled.h1`
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
-`
+`;

@@ -14,7 +14,7 @@ const CtaButton: React.FC<Props> = ({
   text,
   children = <>Quero antecipar agora!</>,
   style,
-  href = "",
+  href = "/",
   ...props
 }) => {
   return !!href ? (

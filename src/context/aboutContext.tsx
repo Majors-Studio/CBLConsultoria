@@ -1,33 +1,33 @@
-import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons"
+import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
 import React, {
   createContext,
   useContext,
   useEffect,
   useState,
   useRef,
-} from "react"
+} from "react";
 
 interface AboutContextProps {
   cardsList: {
-    id: number
-    title: string
-    description: string
-  }[]
+    id: number;
+    title: string;
+    description: string;
+  }[];
   avatarData: {
-    img: string
-    name: string
-    charge: string
-  }[]
-  
+    img: string;
+    name: string;
+    charge: string;
+  }[];
+
   qualityList: {
-    id: number
-    img: string
-    title: string
-    subtitle: string
-  }[]
+    id: number;
+    img: string;
+    title: string;
+    subtitle: string;
+  }[];
 }
 
-const AboutContext = createContext<AboutContextProps>({} as any)
+const AboutContext = createContext<AboutContextProps>({} as any);
 
 export function AboutProvider({ children }: any) {
   const cardsList = [
@@ -49,7 +49,7 @@ export function AboutProvider({ children }: any) {
       description:
         "Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes.",
     },
-  ]
+  ];
 
   const avatarData = [
     {
@@ -57,8 +57,8 @@ export function AboutProvider({ children }: any) {
       name: "Natália de Andrade",
       charge: "CEO",
     },
-  ]
-  
+  ];
+
   const qualityList = [
     {
       id: 1,
@@ -82,16 +82,18 @@ export function AboutProvider({ children }: any) {
         "Somos a maior empresa especializada na antecipação de precatórios em todo o Brasil, já negociamos mais de R$ 1 bilhão em precatórios para mais de 7 mil clientes",
     },
   ];
-  
-  for (let i = 0;i < 5;i++) {
-    avatarData.push(avatarData[0])
+
+  for (let i = 0; i < 4; i++) {
+    avatarData.push(avatarData[0]);
   }
 
-  const value = { cardsList, avatarData,qualityList }
+  const value = { cardsList, avatarData, qualityList };
 
-  return <AboutContext.Provider value={value}>{children}</AboutContext.Provider>
+  return (
+    <AboutContext.Provider value={value}>{children}</AboutContext.Provider>
+  );
 }
 
 export function useAbout() {
-  return useContext(AboutContext)
+  return useContext(AboutContext);
 }

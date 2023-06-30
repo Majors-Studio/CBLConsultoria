@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import { tokens } from "@/utils/tokens"
-import { TitleProps } from "."
+import styled from "styled-components";
+import { tokens } from "@/utils/tokens";
+import { TitleProps } from ".";
 
 export const Title = styled.h3<TitleProps>`
-  font-size: ${tokens.font.sizes.xl};
+  font-size: ${tokens.font.sizes.lg};
   font-weight: ${tokens.font.weight.medium};
   line-height: 1.2;
   font-family: ${tokens.font.family.primary};
@@ -22,5 +22,11 @@ export const Title = styled.h3<TitleProps>`
     font-family: ${tokens.font.family.primary};
   }
 
+  @media (max-width: 920px) {
+    font-size: ${tokens.font.sizes.lg};
+  }
 
-`
+  @media (max-width: 768px) {
+    font-size: ${tokens.font.sizes.md};
+  }
+`;

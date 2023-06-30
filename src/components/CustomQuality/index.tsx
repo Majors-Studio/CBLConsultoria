@@ -1,30 +1,30 @@
-import React from "react"
-import * as C from "./styles"
+import React from "react";
+import * as C from "./styles";
 
-import Image from "next/image"
-import { Title, Subtitle } from "@/components"
+import Image from "next/image";
+import { Title, Subtitle } from "@/components";
 
 // Swiper configs
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay, Pagination } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay, Pagination } from "swiper";
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import { useDevice } from "@/hooks/useDevice"
+import { useDevice } from "@/hooks/useDevice";
 
 interface CustomQualityProps {
   data: {
-    id: number
-    img: string
-    title: string
-    subtitle: string
-  }[]
+    id: number;
+    img: string;
+    title: string;
+    subtitle: string;
+  }[];
 }
 
 const CustomQuality: React.FC<CustomQualityProps> = ({ data }) => {
-  const { isMobile } = useDevice()
+  const { isMobile } = useDevice();
 
   return isMobile ? (
     <Swiper
@@ -81,7 +81,7 @@ const CustomQuality: React.FC<CustomQualityProps> = ({ data }) => {
         ))}
       </C.Content>
     </C.Container>
-  )
-}
+  );
+};
 
-export default CustomQuality
+export default CustomQuality;

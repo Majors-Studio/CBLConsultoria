@@ -9,9 +9,9 @@ export const Button = styled.button`
   transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
-  height: 3.5rem;
+  height: 50px;
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: ${tokens.font.sizes.sm};
   color: ${tokens.colors.brand.cta};
   font-family: ${tokens.font.family.primary};
   &:hover {
