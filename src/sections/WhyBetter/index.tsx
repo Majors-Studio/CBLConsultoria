@@ -6,12 +6,13 @@ import { DangerIcon, SuccessIcon } from "@/assets/icons"
 import { useHome } from "@/context/homeContext"
 
 import * as S from "./styles"
+import { tokens } from "@/utils/tokens"
 
 const WhyBetter: React.FC = () => {
   const { chooseList } = useHome()
 
   return (
-    <ContentBox py={"60px"}>
+    <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="primary">
         A Harmony é a melhor opção para você que deseja antecipar o seu
         precatório

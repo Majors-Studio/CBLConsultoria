@@ -7,17 +7,18 @@ import { useHome } from "@/context/homeContext"
 import React from "react"
 
 import * as S from "./styles"
-
+import { tokens } from "@/utils/tokens"
 
 const PurposeHome: React.FC = () => {
-    const { infoList    } =
-    useHome();
+  const { infoList } = useHome()
   return (
     <ContentBox
       style={{
         paddingTop: "80px",
         paddingBottom: "100px",
+        marginTop: 120,
       }}
+      bgColor={tokens.colors.brand.lightCream}
     >
       <S.Head>
         <S.Info>

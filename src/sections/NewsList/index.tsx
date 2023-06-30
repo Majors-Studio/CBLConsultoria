@@ -3,13 +3,24 @@ import { useApp } from "@/context/appContext"
 import Link from "next/link"
 import React from "react"
 
-import * as C from "./styles"
+import ContentBox from "@/components/ContentBox"
+import { tokens } from "@/utils/tokens"
 
 const NewsList: React.FC = () => {
   const { newsList } = useApp()
 
   return (
-    <C.PostsContainer>
+    <ContentBox
+      bgColor={tokens.colors.brand.lightCream}
+      style={{
+        padding: "60px 20px",
+      }}
+      contentStyle={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gap: "20px",
+      }}
+    >
       {newsList.map((post, postIndex) => (
         <Link
           key={post.id}
@@ -21,7 +32,7 @@ const NewsList: React.FC = () => {
           <CardBlog text={post.title} src={post.image} />
         </Link>
       ))}
-    </C.PostsContainer>
+    </ContentBox>
   )
 }
 

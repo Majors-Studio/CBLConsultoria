@@ -20,7 +20,7 @@ export default function Home() {
         {/* <meta property="og:image" content="/images/og/harmony.png" /> */}
         {/* <link rel="manifest" href="site.webmanifest" /> */}
       </Head>
-      <S.Container>
+      <>
         <PurposeHome />
 
         <CardSteps />
@@ -36,7 +36,7 @@ export default function Home() {
         <Faq />
 
         <MainNews />
-      </S.Container>
+      </>
     </div>
   )
 }
