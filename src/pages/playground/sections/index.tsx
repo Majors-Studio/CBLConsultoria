@@ -5,34 +5,37 @@ import { Title } from "@/components"
 
 const PlaygroundSection: React.FC = () => {
   
-    if (typeof window !== "undefined" && window.location.hostname.includes('localhost' || '0.0.0.0')) {
-    window.location.href = "/"
-  }
+  if (window.location.hostname.includes('localhost' || '0.0.0.0')) {
+
   
   
-  const Sections = {
-    ...Section,
-  }
-  return (
-    <>
-      {Object.values(Sections).map((Section, index) => (
-        <React.Fragment key={index}>
-          <Title
-            variant="secondary"
-            style={{
-              marginTop: index === 0 ? "10rem" : "4rem",
-              marginBottom: "1rem",
-              textTransform: "none",
+    const Sections = {
+      ...Section,
+    }
+    return (
+      <>
+        {Object.values(Sections).map((Section, index) => (
+          <React.Fragment key={index}>
+            <Title
+              variant="secondary"
+              style={{
+                marginTop: index === 0 ? "10rem" : "4rem",
+                marginBottom: "1rem",
+                textTransform: "none",
               
-            }}
-          >
-            {Section.name}
-          </Title>
-          <Section />
-        </React.Fragment>
-      ))}
-    </>
-  )
+              }}
+            >
+              {Section.name}
+            </Title>
+            <Section />
+          </React.Fragment>
+        ))}
+      </>
+    )
+  } else {
+    window.location.href = "/"
+    return <></>
+  }
 }
 
 export default PlaygroundSection
