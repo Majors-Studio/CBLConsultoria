@@ -10,7 +10,7 @@ const Purpose: React.FC = () => {
   return (
     <ContentBox
       py={"60px"}
-      bgColor="#323a40"
+      bgColor={tokens.colors.brand.lightCream}
       contentStyle={{
         display: "grid",
         gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
@@ -19,7 +19,6 @@ const Purpose: React.FC = () => {
     >
       <div>
         <Title
-          variant="secondary"
           style={{
             textAlign: "left",
             marginBottom: 32,
