@@ -159,28 +159,50 @@ export function HomeProvider({ children }: any) {
       title: "Atendimento Personalizado",
       description:
         "Nós cuidamos para que o processo de negociação seja 100% seguro e transparente, desde a análise até o recebimento do seu precatório.",
-      icon: <></>,
+      icon: (
+        <>
+          <img src="https://cdn-icons-png.flaticon.com/512/0/769.png" />
+        </>
+      ),
     },
     {
       id: 1,
       title: "1 bilhão em precatórios negociados",
       description:
         "Ao longo da nossa história, foram mais de 7 mil credores satisfeitos com a antecipação de seus precatórios",
-      icon: <></>,
+      icon: (
+        <>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4947/4947118.png"
+            alt="money"
+          />
+        </>
+      ),
     },
     {
       id: 2,
       title: "Total segurança na negociação",
       description:
         "Empresa consolidada, com mais de uma década no mercado de precatórios.",
-      icon: <></>,
+      icon: (
+        <>
+          <img src="https://cdn-icons-png.flaticon.com/512/159/159448.png" />
+        </>
+      ),
     },
     {
       id: 3,
       title: "Pagamento à vista",
       description:
         "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
-      icon: <></>,
+      icon: (
+        <>
+          <img
+            src="https://cdn.icon-icons.com/icons2/37/PNG/512/cardpayment_tarjet_3771.png"
+            alt="pgto. a vista"
+          />
+        </>
+      ),
     },
   ];
 

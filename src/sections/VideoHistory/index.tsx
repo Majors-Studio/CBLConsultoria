@@ -1,13 +1,13 @@
-import React from "react"
-import ContentBox from "@/components/ContentBox"
-import Video from "@/components/Video"
-import { Subtitle, Title } from "@/components"
-import { tokens } from "@/utils/tokens"
+import React from "react";
+import ContentBox from "@/components/ContentBox";
+import Video from "@/components/Video";
+import { Subtitle, Title } from "@/components";
+import { tokens } from "@/utils/tokens";
 
-import * as C from "./styles"
+import * as C from "./styles";
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = React.useState<boolean>(false)
+  const [showMore, setShowMore] = React.useState<boolean>(false);
 
   return (
     <ContentBox
@@ -93,7 +93,7 @@ const VideoHistory: React.FC = () => {
           className="w-6 h-6"
           style={{
             marginLeft: "10px",
-            transform: showMore ? "rotate(180deg)" : "rotate(0deg)",
+            transform: showMore ? "rotate(0deg)" : "rotate(180deg)",
             transition: "all 0.3s ease-in-out",
           }}
         >
@@ -105,7 +105,7 @@ const VideoHistory: React.FC = () => {
         </svg>
       </C.ShowMoreButton>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default VideoHistory
+export default VideoHistory;
