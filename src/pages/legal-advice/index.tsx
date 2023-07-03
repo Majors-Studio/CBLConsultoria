@@ -8,6 +8,7 @@ import img3 from "../../assets/png/medic.png";
 import img4 from "../../assets/png/reunion.png";
 import { tokens } from "@/utils/tokens";
 import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
 
 const LegalAdvice: React.FC = () => {
   return (
@@ -66,7 +67,7 @@ const LegalAdvice: React.FC = () => {
         </C.Container>
       </C.ContainerFluid>
 
-      <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
+      <ContentBox bgColor={`${tokens.colors.brand.pure}`}>
         <C.Container>
           <C.BoxText>
             <Title
@@ -90,7 +91,7 @@ const LegalAdvice: React.FC = () => {
             <Image src={img4} alt="regularizacao" priority />
           </C.BoxImage>
         </C.Container>
-      </C.ContainerFluid>
+      </ContentBox>
       <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
         <C.Container>
           <C.BoxText>

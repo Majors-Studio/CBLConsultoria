@@ -27,6 +27,8 @@ export const Title = styled.h3<TitleProps>`
   }
 
   @media (max-width: 768px) {
-    font-size: ${tokens.font.sizes.md};
+    font-size: ${tokens.font.sizes.sm};
+    margin-top: 10px;
+    text-align: left;
   }
 `;
