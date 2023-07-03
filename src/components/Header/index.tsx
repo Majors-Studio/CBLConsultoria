@@ -1,5 +1,8 @@
 "use client";
 
+import '../../animations/main'
+import { GlobalStyle } from '@/styles/global-styles'
+
 import React, { useEffect, useState } from "react";
 import * as C from "./styles";
 import { Button } from "@/components";

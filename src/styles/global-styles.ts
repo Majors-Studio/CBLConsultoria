@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import {createGlobalStyle, css} from 'styled-components'
+import { lenisScroll } from '@/animations/style/scroll'
+// Style Lib
+
+export const GlobalStyle = createGlobalStyle`
 
 * {
   margin: 0;
@@ -8,8 +10,6 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
-
 body {
   overflow-x: hidden;
   width: 100vw;
@@ -17,3 +17,6 @@ body {
   background-color: #324f87;
   position: relative;
 }
+
+    ${lenisScroll}
+`
