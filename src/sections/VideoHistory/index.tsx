@@ -17,8 +17,7 @@ const VideoHistory: React.FC = () => {
         height: showMore ? "auto" : "950px",
       }}
     >
-      <Title>Fique mais por dentro do nosso trabalho</Title>
-      <Subtitle style={{ textAlign: "justify", marginTop: "20px" }}>
+      <Subtitle style={{ textAlign: "justify" }}>
         A CBL Consultoria possui vasta experiência no mercado e conta com
         profissionais capacitados para atender, de forma individualizada, a
         necessidade do cliente. O fato de não atuar com demandas de massa

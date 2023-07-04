@@ -5,7 +5,6 @@ import { SubtitleProps } from ".";
 export const Subtitle = styled.p<SubtitleProps>`
   color: #121212;
   font-family: ${tokens.font.family.secondary};
-  margin-bottom: 20px;
   font-size: ${tokens.font.sizes.sm};
   font-weight: 400;
   line-height: 20px;

@@ -21,20 +21,16 @@ export default function Home() {
         {/* <link rel="manifest" href="site.webmanifest" /> */}
       </Head>
       <>
-        <PurposeHome />
-
-        <CardSteps />
-
+        {/* TODO: 
+          add banner
+          remove all precatory stuff
+        */}
+        {/* <CardSteps /> */}
         <VideoShowcase />
-
-        <WhyBetter />
-
-        <WhyToChoose />
-
-        <ClientFeedback />
-
-        <Faq />
-
+        <WhyBetter /> {/* Adicionar na pagina de precatorio*/}
+        <WhyToChoose /> {/* Adaptar com o texto que o caue mandar */}
+        {/* <Faq /> */} {/* Alterar o conteudo */}
+        <PurposeHome />
         <MainNews />
       </>
     </div>

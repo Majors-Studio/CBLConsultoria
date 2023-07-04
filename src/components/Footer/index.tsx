@@ -1,14 +1,14 @@
-import React from "react";
+import React from "react"
 
 // google maps api
-import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api";
-import { useMemo } from "react";
-import * as S from "./styles";
-import Logo from "../Logo";
+import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api"
+import { useMemo } from "react"
+import * as S from "./styles"
+import Logo from "../Logo"
 
-import Image from "next/image";
-import Link from "next/link";
-import CtaButton from "../CtaButton";
+import Image from "next/image"
+import Link from "next/link"
+import CtaButton from "../CtaButton"
 
 const Footer: React.FC = () => {
   // google maps config
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
       url: "https://www.instagram.com/cbl_cj/",
       logo: "https://static.wixstatic.com/media/fea1c1_02a47dd2d3a14f7a908448826a993500~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Instagram.png",
     },
-  ];
+  ]
 
   const footerData = [
     {
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
         },
       ],
     },
-  ];
+  ]
 
   // if (!isLoaded) {
   //   return <p>Loading...</p>;
@@ -94,11 +94,14 @@ const Footer: React.FC = () => {
               </S.BiggerText>
               <S.Desc>caue@cblconsultoria.com.br</S.Desc>
               <CtaButton
+                href="#purposeForm"
                 style={{
                   border: "1px solid #fff",
                   color: "#fff",
                 }}
-              />
+              >
+                Entre em contato
+              </CtaButton>
             </S.MainText>
           </S.Midia>
           <S.ContainerInfo>
@@ -129,7 +132,7 @@ const Footer: React.FC = () => {
         </S.Content>
       </S.Rights>
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

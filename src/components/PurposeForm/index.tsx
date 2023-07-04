@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import * as S from "./styles";
 import CtaButton from "../CtaButton";
-import Subtitle from "../Subtitle";
 
 const PurposeForm: React.FC = () => {
   const form = useRef();
@@ -43,12 +42,7 @@ const PurposeForm: React.FC = () => {
       <div id="purposeForm" />
       <S.Container>
         <S.Content>
-          <S.Title>Receba uma Proposta</S.Title>
-          <Subtitle>
-            Preencha o formulário abaixo e receba uma proposta detalhada e
-            personalizada para você.
-          </Subtitle>
-
+          <S.Title>Entre em contato</S.Title>
           <S.Form onSubmit={sendEmail} ref={form}>
             <S.Input
               placeholder="Nome"

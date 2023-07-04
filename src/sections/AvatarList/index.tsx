@@ -13,7 +13,7 @@ const AvatarList: React.FC = () => {
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="tertiary">
-        Conheça os responsáveis pelos nossos negócios
+        Conheça nosso coordenador
       </Title>
 
       <C.List>

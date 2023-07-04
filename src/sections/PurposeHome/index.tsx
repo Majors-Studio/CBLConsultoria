@@ -16,7 +16,6 @@ const PurposeHome: React.FC = () => {
       style={{
         paddingTop: "80px",
         paddingBottom: "100px",
-        marginTop: 120,
       }}
       bgColor={tokens.colors.brand.lightCream}
     >

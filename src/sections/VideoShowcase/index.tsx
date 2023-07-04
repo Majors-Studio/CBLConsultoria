@@ -7,7 +7,13 @@ import React from "react"
 
 const VideoShowcase: React.FC = () => {
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>
+    <ContentBox
+      py={"60px"}
+      style={{
+        marginTop: 120,
+      }}
+      bgColor={tokens.colors.brand.light}
+    >
       <Title variant="primary">
         Há mais de uma década no mercado, somos a maior empresa na antecipação
         de precatórios do Brasil

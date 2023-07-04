@@ -13,13 +13,13 @@ const About: React.FC = () => {
 
       <CustomQuality />
 
-      <SlabList />
+      {/* <SlabList /> */}
 
       <VideoHistory />
 
       <AvatarList />
 
-      <Purpose />
+      <Purpose /> {/* Alterar o conteudo dos textos */}
     </>
   );
 };

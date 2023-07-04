@@ -4,8 +4,14 @@ export const navitems = [
     title: "Início",
     url: "/",
   },
+
   {
     id: 2,
+    title: "Quem somos",
+    url: "/about",
+  },
+  {
+    id: 3,
     title: "Precatórios",
     url: "/precatory",
     subpaths: [
@@ -18,11 +24,6 @@ export const navitems = [
         anchor: "#data",
       },
     ],
-  },
-  {
-    id: 3,
-    title: "Quem somos",
-    url: "/about",
   },
   {
     id: 4,
@@ -45,7 +46,7 @@ export const navitems = [
   },
   {
     id: 5,
-    title: "Notícias",
+    title: "Notícias & Artigos",
     url: "/news",
   },
 ];
