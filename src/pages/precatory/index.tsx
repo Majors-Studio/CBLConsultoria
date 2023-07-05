@@ -1,15 +1,16 @@
-import React from "react"
+import React from "react";
 
-import HeadBanner from "@/components/HeadBanner"
-import DebitCenary from "@/sections/DebitCenary"
-import NationalRanking from "@/sections/NationalRanking"
-import MainNews from "@/sections/MainNews"
-import WhyToSell from "@/sections/WhyToSell"
-import WhatIsPrecatory from "@/sections/WhatIsPrecatory"
-import WhyToInvest from "@/sections/WhyToInvest"
-import SellSteps from "@/sections/SellSteps"
-import Purpose from "@/sections/Purpose"
-import EvoluctionChart from "@/sections/EvoluctionChart"
+import HeadBanner from "@/components/HeadBanner";
+import DebitCenary from "@/sections/DebitCenary";
+import NationalRanking from "@/sections/NationalRanking";
+import MainNews from "@/sections/MainNews";
+import WhyToSell from "@/sections/WhyToSell";
+import WhatIsPrecatory from "@/sections/WhatIsPrecatory";
+import WhyToInvest from "@/sections/WhyToInvest";
+import SellSteps from "@/sections/SellSteps";
+import Purpose from "@/sections/Purpose";
+import EvoluctionChart from "@/sections/EvoluctionChart";
+import { WhyBetter } from "@/sections";
 
 const Precatory: React.FC = () => {
   return (
@@ -20,6 +21,8 @@ const Precatory: React.FC = () => {
 
       <div id="data" />
       <DebitCenary />
+
+      <WhyBetter />
 
       <NationalRanking />
 
@@ -36,7 +39,7 @@ const Precatory: React.FC = () => {
 
       <Purpose />
     </>
-  )
-}
+  );
+};
 
-export default Precatory
+export default Precatory;
