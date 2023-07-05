@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import * as S from "./styles";
 import CtaButton from "../CtaButton";
+import Toast from "@/components/Toast";
+import { useApp } from "@/context/appContext";
+import { TIMEOUT } from "dns";
 
 const PurposeForm: React.FC = () => {
   const form = useRef();
@@ -12,6 +15,7 @@ const PurposeForm: React.FC = () => {
     cpf: "",
     message: "",
   });
+  const { setShowToast, setToastMessage, setType }: any = useApp();
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,11 +34,29 @@ const PurposeForm: React.FC = () => {
         e.target as HTMLFormElement,
         process.env.PUBLIC_KEY
       )
-      .then((result) => {
-        console.log(result.text);
-        alert("Mensagem enviada com sucesso!");
+      .then(() => {
+        setShowToast(true);
+        setToastMessage("Proposta enviada com sucesso!");
+        setType("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          cpf: "",
+          message: "",
+        });
+        setTimeout(() => {
+          setShowToast(false);
+        }, 3000);
       })
-      .catch((err) => console.log(err));
+      .catch(() => {
+        setShowToast(true);
+        setToastMessage("Erro no envio da proposta!");
+        setType("error");
+        setTimeout(() => {
+          setShowToast(false);
+        }, 3000);
+      });
   };
 
   return (
@@ -43,32 +65,37 @@ const PurposeForm: React.FC = () => {
       <S.Container>
         <S.Content>
           <S.Title>Entre em contato</S.Title>
-          <S.Form onSubmit={sendEmail} ref={form}>
+          <S.Form action="#" onSubmit={sendEmail} ref={form}>
             <S.Input
               placeholder="Nome"
               name="name"
               onChange={handleInputChange}
+              required
             />
             <S.Input
               placeholder="Email"
               name="email"
               onChange={handleInputChange}
+              required
             />
             <S.Input
               placeholder="Telefone"
               name="phone"
               onChange={handleInputChange}
+              required
             />
             <S.Input
               placeholder="CPF"
               name="cpf"
               onChange={handleInputChange}
+              required
             />
 
             <S.TextArea
               placeholder="Mensagem"
               name="message"
               onChange={handleInputChange}
+              required
             />
             <CtaButton type="submit">Enviar</CtaButton>
           </S.Form>

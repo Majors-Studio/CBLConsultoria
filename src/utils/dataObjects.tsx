@@ -4,13 +4,13 @@ import { newsTextMock } from "./newsTextMock";
 import ContractIcon from "@/assets/icons/ContractIcon";
 
 export const feedbackList: {
-  id: number
-  name: string
-  city: string
-  state: string
-  country: string
-  text: string
-  avatar: string
+  id: number;
+  name: string;
+  city: string;
+  state: string;
+  country: string;
+  text: string;
+  avatar: string;
 }[] = [
   {
     id: 0,
@@ -495,4 +495,4 @@ export const faqList: {
     description:
       "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
   },
-]
+];
