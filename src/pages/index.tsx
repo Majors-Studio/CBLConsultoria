@@ -6,11 +6,10 @@ import WhyToChoose from "@/sections/WhyToChoose";
 import Faq from "@/sections/Faq";
 import MainNews from "@/sections/MainNews";
 import VideoShowcase from "@/sections/VideoShowcase";
-import { useHome } from "@/context/homeContext";
 import Banner from "@/components/Banner";
+import { bannerList } from "@/utils/dataObjects";
 
 export default function Home() {
-  const { bannerList } = useHome();
   return (
     <div>
       <Head>

@@ -51,7 +51,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
               width={screenSizeW}
               height={screenSizeH - 120}
               alt="img"
-              loading="lazy"
+              loading="eager"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",

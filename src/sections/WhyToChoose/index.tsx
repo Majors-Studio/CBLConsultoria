@@ -1,14 +1,13 @@
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
 import Description from "@/components/Description";
-import { useHome } from "@/context/homeContext";
 import { tokens } from "@/utils/tokens";
 import React from "react";
 
 import * as S from "./styles";
+import { whyList } from "@/utils/dataObjects";
 
 const WhyToChoose: React.FC = () => {
-  const { whyList } = useHome();
 
   return (
     <ContentBox bgColor={tokens.colors.highlight.dark} py={"60px"}>

@@ -3,14 +3,13 @@ import { Subtitle, Title } from "@/components"
 import ContentBox from "@/components/ContentBox"
 import CtaButton from "@/components/CtaButton"
 import PurposeForm from "@/components/PurposeForm"
-import { useHome } from "@/context/homeContext"
 import React from "react"
 
 import * as S from "./styles"
 import { tokens } from "@/utils/tokens"
+import { infoList } from "@/utils/dataObjects"
 
 const PurposeHome: React.FC = () => {
-  const { infoList } = useHome()
   return (
     <ContentBox
       style={{

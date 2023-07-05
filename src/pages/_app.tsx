@@ -7,7 +7,6 @@ import { AppProvider } from "@/context/appContext"
 import LoadingIcon from "@/assets/icons/LoadingIcon"
 import Logo from "@/components/Logo"
 import { tokens } from "@/utils/tokens"
-import { HomeProvider } from "@/context/homeContext"
 
 import { Bebas_Neue, Montserrat, Poppins } from "@next/font/google"
 import localFont from "@next/font/local"
@@ -125,13 +124,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {head}
       <AppProvider>
-        <HomeProvider>
           <main style={bebasNeue.style}>
             <Layout>
               <Component {...pageProps} />
             </Layout>
           </main>
-        </HomeProvider>
       </AppProvider>
     </>
   )

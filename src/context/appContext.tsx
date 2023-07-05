@@ -28,8 +28,15 @@ export function AppProvider({ children }: any) {
   const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
 
   useEffect(() => {
-    setScreenSizeW(window.innerWidth)
-    setScreenSizeH(window.innerHeight)
+    const handleResize = () => {
+      setScreenSizeW(window.innerWidth)
+      setScreenSizeH(window.innerHeight)
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
 
   useEffect(() => {
