@@ -12,7 +12,7 @@ const WhyBetter: React.FC = () => {
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="primary">
-        A Harmony é a melhor opção para você que deseja antecipar o seu
+        A CBL Consultoria é a melhor opção para você que deseja antecipar o seu
         precatório
       </Title>
       <Subtitle style={{ marginTop: "20px" }}>
