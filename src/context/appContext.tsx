@@ -30,18 +30,44 @@ interface AppContextProps {
   isTop: boolean
   screenSizeW: number
   screenSizeH: number
+  isScrollingTop: boolean
+  menuOpened: boolean
+  setMenuOpened: (value: boolean) => void
+  submenuOpened: number | null
+  setSubmenuOpened: (index: number | null) => void
 }
 
 const AppContext = createContext<AppContextProps>({} as any)
 
 export function AppProvider({ children }: any) {
   const [isTop, setIsTop] = React.useState<boolean>(true)
+  const [isScrollingTop, setIsScrollingTop] = React.useState<boolean>(true)
   const [screenSizeW, setScreenSizeW] = useState(0)
   const [screenSizeH, setScreenSizeH] = useState(0)
+  const [menuOpened, setMenuOpened] = useState(false)
+  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
 
   useEffect(() => {
     setScreenSizeW(window.innerWidth)
     setScreenSizeH(window.innerHeight)
+  }, [])
+
+  useEffect(() => {
+    let lastScrollTop = 0
+    const handleScroll = () => {
+      setMenuOpened(false)
+      const st = window.pageYOffset || document.documentElement.scrollTop
+      if (st > lastScrollTop) {
+        setIsScrollingTop(st < 250)
+      } else {
+        setIsScrollingTop(true)
+      }
+      lastScrollTop = st <= 0 ? 0 : st
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -86,7 +112,18 @@ export function AppProvider({ children }: any) {
     userList.push(userList[0])
   }
 
-  const value = { newsList, userList, isTop, screenSizeH, screenSizeW }
+  const value = {
+    newsList,
+    userList,
+    isTop,
+    screenSizeH,
+    screenSizeW,
+    isScrollingTop,
+    menuOpened,
+    submenuOpened,
+    setSubmenuOpened,
+    setMenuOpened,
+  }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
