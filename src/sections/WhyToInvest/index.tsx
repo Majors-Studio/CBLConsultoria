@@ -3,7 +3,7 @@ import SpeechCarousel from "@/components/SpeechCarousel"
 import React from "react"
 
 import * as C from "./styles"
-import { userList } from "@/utils/dataObjects"
+import { feedbackList } from "@/utils/dataObjects"
 
 const WhyToInvest: React.FC = () => {
     
@@ -18,7 +18,7 @@ const WhyToInvest: React.FC = () => {
         Porquê investir em precatórios?
       </Title>
 
-      <SpeechCarousel data={userList} />
+      <SpeechCarousel data={feedbackList} />
     </C.WhatContainer>
   )
 }

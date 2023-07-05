@@ -4,7 +4,7 @@ import * as S from "./styles";
 import { Title } from "@/components";
 import SpeechCarousel from "@/components/SpeechCarousel";
 import { useDevice } from "@/hooks/useDevice";
-import { userList } from "@/utils/dataObjects";
+import { feedbackList } from "@/utils/dataObjects";
 
 const ClientFeedback: React.FC = () => {
   const { isDesktop } = useDevice();
@@ -14,7 +14,7 @@ const ClientFeedback: React.FC = () => {
       <Title variant={isDesktop ? "tertiary" : "secondary"}>
         O que os clientes dizem sobre a Harmony
       </Title>
-      <SpeechCarousel data={userList} />
+      <SpeechCarousel data={feedbackList} />
     </S.WhatContainer>
   );
 };
