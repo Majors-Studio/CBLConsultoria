@@ -3,14 +3,14 @@ import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
 import { newsTextMock } from "./newsTextMock";
 import ContractIcon from "@/assets/icons/ContractIcon";
 
-export const userList: {
-  id: number;
-  name: string;
-  city: string;
-  state: string;
-  country: string;
-  text: string;
-  avatar: string;
+export const feedbackList: {
+  id: number
+  name: string
+  city: string
+  state: string
+  country: string
+  text: string
+  avatar: string
 }[] = [
   {
     id: 0,
@@ -35,7 +35,7 @@ export const newsList: {
   link: string;
 }[] = [
   {
-    id: 1,
+    id: 0,
     image:
       "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
     title:
@@ -495,65 +495,4 @@ export const faqList: {
     description:
       "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
   },
-];
-
-export const blogList: {
-  id: number;
-  title: string;
-  image: string;
-}[] = [
-  {
-    id: 1,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 2,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 3,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 4,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 5,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 6,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 6,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 6,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    id: 6,
-    title: "Como funciona a antecipação de precatórios?",
-    image:
-      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-  },
-];
+]
