@@ -1,17 +1,17 @@
-import { Subtitle, Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import { useDevice } from "@/hooks/useDevice";
-import { tokens } from "@/utils/tokens";
-import Link from "next/link";
-import React,{useState} from "react";
+import { Subtitle, Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import { useDevice } from "@/hooks/useDevice"
+import { tokens } from "@/utils/tokens"
+import Link from "next/link"
+import React, { useState } from "react"
 
-import * as C from "./styles";
+import * as C from "./styles"
 import { newsList } from "@/utils/dataObjects"
 
 const MainNews: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isMobile } = useDevice()
 
-  const [maxMobileItems] = useState(2);
+  const [maxMobileItems] = useState(2)
 
   return (
     <ContentBox
@@ -59,61 +59,43 @@ const MainNews: React.FC = () => {
       </div>
 
       <C.NewsList>
-        {!isMobile ? (
-          <>
-            {newsList.map((news, newsIndex) => (
-              <Link
-                key={news.id}
-                href={{
-                  pathname: "news/" + news.title,
-                  query: { id: newsIndex },
-                }}
-              >
-                <C.NewsItem key={news.id}>
-                  <C.NewsItemTop>
-                    <C.NewsItemInfo>
-                      {news.source} | {news.date.toString()}
-                    </C.NewsItemInfo>
-                    <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
-                  </C.NewsItemTop>
-                  <C.NewsItemLink href={news.link} target="_blank">
-                    Leia mais
-                  </C.NewsItemLink>
-                </C.NewsItem>
-              </Link>
-            ))}
-          </>
-        ) : (
-          <>
-            {newsList.slice(0, maxMobileItems).map((news, newsIndex) => (
-              <Link
-                key={news.id}
-                href={{
-                  pathname: "news/" + news.title,
-                  query: { id: newsIndex },
-                }}
-              >
-                <C.NewsItem key={news.id}>
-                  <C.NewsItemTop>
-                    <C.NewsItemInfo>
-                      {news.source} | {news.date.toString()}
-                    </C.NewsItemInfo>
-                    <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
-                  </C.NewsItemTop>
-                  <C.NewsItemLink href={news.link} target="_blank">
-                    Leia mais
-                  </C.NewsItemLink>
-                </C.NewsItem>
-              </Link>
-            ))}
-            <C.NewsItemLink style={{ margin: "0 auto" }}>
-              <Link href="/news">Ler mais</Link>
-            </C.NewsItemLink>
-          </>
+        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => (
+          <C.NewsItem key={newsIndex}>
+            <C.NewsItemTop>
+              <C.NewsItemInfo>
+                {news.source} | {news.date.toString()}
+              </C.NewsItemInfo>
+              <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
+            </C.NewsItemTop>
+            <Link
+              href={{
+                pathname: "news/" + news.title,
+                query: { id: newsIndex },
+              }}
+              style={{
+                color: "#e2a141",
+              }}
+            >
+              Leia mais
+            </Link>
+          </C.NewsItem>
+        ))}
+        {isMobile && (
+          <Link
+            href={{
+              pathname: "news/",
+            }}
+            style={{
+              color: "#e2a141",
+              margin: '0 auto'
+            }}
+          >
+            Ver todas as notícias
+          </Link>
         )}
       </C.NewsList>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default MainNews;
+export default MainNews

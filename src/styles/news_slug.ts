@@ -7,6 +7,7 @@ export const Container = styled.div`
   padding: 20px 0;
 
   margin-top: 120px;
+background-color: ${tokens.colors.brand.lightCream};
 `
 
 export const Content = styled.div`

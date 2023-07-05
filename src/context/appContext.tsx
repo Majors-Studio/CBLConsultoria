@@ -20,10 +20,10 @@ interface AppContextProps {
 const AppContext = createContext<AppContextProps>({} as any)
 
 export function AppProvider({ children }: any) {
-  const [isTop, setIsTop] = React.useState<boolean>(true)
-  const [isScrollingTop, setIsScrollingTop] = React.useState<boolean>(true)
-  const [screenSizeW, setScreenSizeW] = useState(0)
-  const [screenSizeH, setScreenSizeH] = useState(0)
+  const [isTop, setIsTop] = useState<boolean>(true)
+  const [isScrollingTop, setIsScrollingTop] = useState<boolean>(true)
+  const [screenSizeW, setScreenSizeW] = useState(window.innerWidth)
+  const [screenSizeH, setScreenSizeH] = useState(window.innerHeight)
   const [menuOpened, setMenuOpened] = useState(false)
   const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
 
@@ -32,7 +32,6 @@ export function AppProvider({ children }: any) {
       setScreenSizeW(window.innerWidth)
       setScreenSizeH(window.innerHeight)
     }
-    handleResize()
     window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener("resize", handleResize)

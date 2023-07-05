@@ -14,7 +14,12 @@ const Page: React.FC = () => {
     query: { slug, id },
   } = router
 
-  if (!id) return <p>Notícia não encontrada!</p>
+  if (!id)
+    return (
+      <S.Container>
+        <S.Content>Notícia não encontrada!</S.Content>
+      </S.Container>
+    )
 
   const post = newsList[+id]
 
@@ -45,10 +50,11 @@ const Page: React.FC = () => {
             <S.Category>Notícia</S.Category>
             <S.Title>{post.title}</S.Title>
             <S.Description>
-              Por <span>{post.author}</span>{" | "}
+              Por <span>{post.author}</span>
+              {" | "}
               <span>{post.date.toLocaleDateString()}</span>
             </S.Description>
-            <S.Text dangerouslySetInnerHTML={{__html: post.text}} />
+            <S.Text dangerouslySetInnerHTML={{ __html: post.text }} />
           </S.Right>
         </S.Grid>
       </S.Content>

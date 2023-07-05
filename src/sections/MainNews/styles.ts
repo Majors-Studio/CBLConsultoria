@@ -48,7 +48,3 @@ export const NewsItemTitle = styled.h1`
   font-size: 18px;
   font-weight: 500;
 `
-
-export const NewsItemLink = styled.a`
-  color: #e2a141;
-`
