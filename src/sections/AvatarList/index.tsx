@@ -3,13 +3,11 @@ import Image from "next/image"
 
 import * as C from "./styles"
 import { Title } from "@/components"
-import { useAbout } from "@/context/aboutContext"
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
+import { avatarData } from "@/utils/dataObjects"
 
 const AvatarList: React.FC = () => {
-  const { avatarData } = useAbout()
-
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="tertiary">

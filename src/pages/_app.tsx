@@ -8,10 +8,8 @@ import LoadingIcon from "@/assets/icons/LoadingIcon"
 import Logo from "@/components/Logo"
 import { tokens } from "@/utils/tokens"
 import { HomeProvider } from "@/context/homeContext"
-import { AboutProvider } from "@/context/aboutContext"
-import { PrecatoryProvider } from "@/context/precatoryContext"
 
-import { Bebas_Neue,Montserrat,Poppins } from "@next/font/google"
+import { Bebas_Neue, Montserrat, Poppins } from "@next/font/google"
 import localFont from "@next/font/local"
 
 export const bebasNeue = Bebas_Neue({
@@ -128,17 +126,11 @@ export default function App({ Component, pageProps }: AppProps) {
       {head}
       <AppProvider>
         <HomeProvider>
-          <AboutProvider>
-            <PrecatoryProvider>
-              <main
-                style={bebasNeue.style}
-              >
-                <Layout>
-                  <Component {...pageProps} />
-                </Layout>
-              </main>
-            </PrecatoryProvider>
-          </AboutProvider>
+          <main style={bebasNeue.style}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </main>
         </HomeProvider>
       </AppProvider>
     </>

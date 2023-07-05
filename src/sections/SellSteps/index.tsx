@@ -5,11 +5,9 @@ import { tokens } from "@/utils/tokens"
 import React from "react"
 
 import * as C from "./styles"
-import { usePrecatory } from "@/context/precatoryContext"
+import { stepsList } from "@/utils/dataObjects"
 
 const SellSteps: React.FC = () => {
-  const { stepsList } = usePrecatory()
-
   return (
     <ContentBox bgColor="#282f35" py={"60px"}>
       <Title variant="secondary">

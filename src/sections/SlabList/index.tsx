@@ -1,11 +1,11 @@
 import { Card } from "@/components"
 import ContentBox from "@/components/ContentBox"
 import { useAbout } from "@/context/aboutContext"
+import { cardsList } from "@/utils/dataObjects"
 import { tokens } from "@/utils/tokens"
 import React from "react"
 
 const SlabList: React.FC = () => {
-  const { cardsList } = useAbout()
 
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>

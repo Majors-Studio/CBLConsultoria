@@ -1,18 +1,17 @@
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
-import { useApp } from "@/context/appContext";
 import { useDevice } from "@/hooks/useDevice";
 import { tokens } from "@/utils/tokens";
 import Link from "next/link";
-import React from "react";
+import React,{useState} from "react";
 
 import * as C from "./styles";
+import { newsList } from "@/utils/dataObjects"
 
 const MainNews: React.FC = () => {
   const { isMobile } = useDevice();
-  const { newsList } = useApp();
 
-  const [maxMobileItems, setMaxMobileItems] = React.useState(2);
+  const [maxMobileItems] = useState(2);
 
   return (
     <ContentBox

@@ -1,15 +1,14 @@
 import React from "react"
 
 import { useRouter } from "next/router"
-import { useApp } from "@/context/appContext"
 
 import * as S from "@/styles/news_slug"
 import Link from "next/link"
 import { useDevice } from "@/hooks/useDevice"
+import { newsList } from "@/utils/dataObjects"
 
 const Page: React.FC = () => {
   const { isMobile } = useDevice()
-  const { newsList } = useApp()
   const router = useRouter()
   const {
     query: { slug, id },

@@ -5,9 +5,9 @@ import React from "react"
 
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
+import { newsList } from "@/utils/dataObjects"
 
 const NewsList: React.FC = () => {
-  const { newsList } = useApp()
 
   return (
     <ContentBox

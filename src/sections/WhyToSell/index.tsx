@@ -6,11 +6,9 @@ import React from "react"
 
 import * as C from "./styles"
 import { SuccessIcon } from "@/assets/icons"
-import { usePrecatory } from "@/context/precatoryContext"
+import { whyToSellList } from "@/utils/dataObjects"
 
 const WhyToSell: React.FC = () => {
-  const { whyToSellList } = usePrecatory()
-
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="primary">Por que vender seus precatórios?</Title>

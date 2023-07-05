@@ -4,7 +4,6 @@ import * as C from "./styles"
 import Image from "next/image"
 import { Title, Subtitle } from "@/components"
 
-// Swiper configs
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
@@ -15,14 +14,11 @@ import "swiper/css/pagination"
 import { useDevice } from "@/hooks/useDevice"
 import ContentBox from "../ContentBox"
 import { tokens } from "@/utils/tokens"
-import { useAbout } from "@/context/aboutContext"
+import { qualityList } from "@/utils/dataObjects"
 
 
 const CustomQuality: React.FC = ( ) => {
   const { isMobile } = useDevice()
-  const { qualityList } = useAbout()
-  
-
   return (
     <ContentBox bgColor={tokens.colors.brand.lightCream} py={"60px"}>
       {isMobile ? (
