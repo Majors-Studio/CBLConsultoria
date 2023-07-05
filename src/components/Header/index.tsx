@@ -13,30 +13,18 @@ import { navitems } from "@/utils/navitems"
 import Link from "next/link"
 import Hamburguer from "../Hamburguer"
 import CtaButton from "../CtaButton"
+import { useApp } from "@/context/appContext"
 
 const Header: React.FC = () => {
-  const { isMobile, isTablet } = useDevice()
-  const [isOnTop, setIsOnTop] = useState(true)
-  const [menuOpened, setMenuOpened] = useState(false)
-  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
+  const { isMobile, isTablet, isDesktop } = useDevice()
 
-  useEffect(() => {
-    let lastScrollTop = 0
-    const handleScroll = () => {
-      setMenuOpened(false)
-      const st = window.pageYOffset || document.documentElement.scrollTop
-      if (st > lastScrollTop) {
-        setIsOnTop(st < 250)
-      } else {
-        setIsOnTop(true)
-      }
-      lastScrollTop = st <= 0 ? 0 : st
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  const {
+    isScrollingTop,
+    menuOpened,
+    submenuOpened,
+    setSubmenuOpened,
+    setMenuOpened,
+  } = useApp()
 
   const navBar = (
     <C.Navbar>
@@ -48,7 +36,20 @@ const Header: React.FC = () => {
             key={index}
             onClick={() => setMenuOpened(false)}
           >
-            <Link href={item.url}>{item.title}</Link>
+            <Link
+              href={item.url}
+              style={
+                isDesktop
+                  ? {
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }
+                  : undefined
+              }
+            >
+              {item.title}
+            </Link>
             {item.subpaths && (
               <C.Submenu show={submenuOpened === index}>
                 {item.subpaths.map((subitem, subindex) => {
@@ -87,7 +88,7 @@ const Header: React.FC = () => {
       {(isMobile || isTablet) && (
         <C.MenuMobile show={menuOpened}>{navBar}</C.MenuMobile>
       )}
-      <C.Container show={isOnTop}>
+      <C.Container show={isScrollingTop}>
         <C.Content>
           <Logo />
           {isMobile || isTablet ? (
