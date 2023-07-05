@@ -27,11 +27,32 @@ interface AppContextProps {
     text: string
     avatar: string
   }[]
+  isTop: boolean
+  screenSizeW: number
+  screenSizeH: number
 }
 
 const AppContext = createContext<AppContextProps>({} as any)
 
 export function AppProvider({ children }: any) {
+  const [isTop, setIsTop] = React.useState<boolean>(true)
+  const [screenSizeW, setScreenSizeW] = useState(0)
+  const [screenSizeH, setScreenSizeH] = useState(0)
+
+  useEffect(() => {
+    setScreenSizeW(window.innerWidth)
+    setScreenSizeH(window.innerHeight)
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const top = window.scrollY < 100
+      if (top !== isTop) {
+        setIsTop(top)
+      }
+    })
+  }, [isTop])
+
   const userList = [
     {
       id: 0,
@@ -65,7 +86,7 @@ export function AppProvider({ children }: any) {
     userList.push(userList[0])
   }
 
-  const value = { newsList, userList }
+  const value = { newsList, userList, isTop, screenSizeH, screenSizeW }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }

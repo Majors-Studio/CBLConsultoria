@@ -9,9 +9,7 @@ const VideoShowcase: React.FC = () => {
   return (
     <ContentBox
       py={"60px"}
-      style={{
-        marginTop: 120,
-      }}
+
       bgColor={tokens.colors.brand.light}
     >
       <Title variant="primary">

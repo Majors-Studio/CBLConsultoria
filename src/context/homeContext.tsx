@@ -43,11 +43,27 @@ interface HomeContextProps {
     title: string;
     image: string;
   }[];
+  bannerList: {
+    img: string;
+  }[];
 }
 
 const HomeContext = createContext<HomeContextProps>({} as any);
 
 export function HomeProvider({ children }: any) {
+  const bannerList = [
+    {
+      img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    }
+  ]
+
+
   const infoList = [
     {
       id: 0,
@@ -297,6 +313,7 @@ export function HomeProvider({ children }: any) {
     whyList,
     faqList,
     blogList,
+    bannerList
   };
 
   return <HomeContext.Provider value={value}>{children}</HomeContext.Provider>;

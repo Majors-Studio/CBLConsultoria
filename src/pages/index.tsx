@@ -1,19 +1,16 @@
 import React from "react";
 import Head from "next/head";
-import * as S from "@/styles/home";
 
 import PurposeHome from "@/sections/PurposeHome";
-import CardSteps from "@/sections/CardSteps";
 import WhyToChoose from "@/sections/WhyToChoose";
 import Faq from "@/sections/Faq";
 import MainNews from "@/sections/MainNews";
-import ClientFeedback from "@/sections/ClientFeedback";
 import VideoShowcase from "@/sections/VideoShowcase";
-import WhyBetter from "@/sections/WhyBetter";
-import Description from "@/components/Description";
-import { Title } from "chart.js";
+import { useHome } from "@/context/homeContext";
+import Banner from "@/components/Banner";
 
 export default function Home() {
+  const { bannerList } = useHome();
   return (
     <div>
       <Head>
@@ -29,10 +26,11 @@ export default function Home() {
         */}
         {/* Gerando Autoridade */}
         {/* <CardSteps /> */}
+        <Banner data={bannerList} />
+        <div id='videoshowcase'/>
         <VideoShowcase />
-        {/* Adicionar na pagina de precatorio*/}
         <WhyToChoose /> {/* Adaptar com o texto que o caue mandar */}
-        {/* <Faq /> */} {/* Alterar o conteudo */}
+        <Faq /> {/* Alterar o conteudo */}
         <PurposeHome />
         <MainNews />
       </>
