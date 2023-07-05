@@ -35,7 +35,7 @@ export const newsList: {
   link: string
 }[] = [
   {
-    id: 1,
+    id: 0,
     image:
       "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
     title:
@@ -46,6 +46,43 @@ export const newsList: {
     source: "Google",
     link: "https://www.google.com",
   },
+  {
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+    },
+    {
+    id: 2,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+    },
+      {
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+    },
+      
 ]
 
 export const avatarData: {
