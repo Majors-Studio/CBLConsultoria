@@ -1,16 +1,19 @@
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 
-import * as C from "./styles"
-import { Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import { tokens } from "@/utils/tokens"
-import { avatarData } from "@/utils/dataObjects"
+import * as C from "./styles";
+import { Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import { tokens } from "@/utils/tokens";
+import { avatarData } from "@/utils/dataObjects";
 
 const AvatarList: React.FC = () => {
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
-      <Title variant="tertiary">
+      <Title
+        style={{ marginTop: "50px", textAlign: "center" }}
+        variant="tertiary"
+      >
         Conheça nosso coordenador
       </Title>
 
@@ -30,7 +33,7 @@ const AvatarList: React.FC = () => {
         ))}
       </C.List>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default AvatarList
+export default AvatarList;

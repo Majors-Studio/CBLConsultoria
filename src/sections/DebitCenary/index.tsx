@@ -1,15 +1,15 @@
-import BrazilGraph from "@/assets/svg/BrazilGraph"
-import { Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import { tokens } from "@/utils/tokens"
-import React from "react"
+import BrazilGraph from "@/assets/svg/BrazilGraph";
+import { Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import { tokens } from "@/utils/tokens";
+import React from "react";
 
-import * as C from "./styles"
+import * as C from "./styles";
 
 const DebitCenary: React.FC = () => {
   return (
     <ContentBox bgColor={tokens.colors.brand.dark} py={"60px"}>
-      <Title variant="secondary">
+      <Title style={{ marginBottom: "50px" }} variant="secondary">
         Cenário da Dívida Nacional em Precatórios
       </Title>
 
@@ -63,7 +63,7 @@ const DebitCenary: React.FC = () => {
         </C.SourceContainer>
       </C.CenaryInfoContainer>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default DebitCenary
+export default DebitCenary;

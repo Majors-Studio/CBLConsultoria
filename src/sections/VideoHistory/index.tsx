@@ -3,11 +3,13 @@ import ContentBox from "@/components/ContentBox";
 import Video from "@/components/Video";
 import { Subtitle, Title } from "@/components";
 import { tokens } from "@/utils/tokens";
+import { useDevice } from "@/hooks/useDevice";
 
 import * as C from "./styles";
 
 const VideoHistory: React.FC = () => {
   const [showMore, setShowMore] = React.useState<boolean>(false);
+  const { isMobile } = useDevice();
 
   return (
     <ContentBox

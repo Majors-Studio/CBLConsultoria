@@ -124,7 +124,7 @@ const LegalAdvice: React.FC = () => {
               resolver questões agora.
             </Subtitle>
           </C.BoxText>
-          <PurposeForm />
+          <PurposeForm/>
         </C.Container>
       </C.ContainerFluid>
     </>

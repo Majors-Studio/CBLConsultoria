@@ -1,16 +1,16 @@
-"use client"
-import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons"
-import { newsTextMock } from "./newsTextMock"
-import ContractIcon from "@/assets/icons/ContractIcon"
+"use client";
+import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
+import { newsTextMock } from "./newsTextMock";
+import ContractIcon from "@/assets/icons/ContractIcon";
 
 export const userList: {
-  id: number
-  name: string
-  city: string
-  state: string
-  country: string
-  text: string
-  avatar: string
+  id: number;
+  name: string;
+  city: string;
+  state: string;
+  country: string;
+  text: string;
+  avatar: string;
 }[] = [
   {
     id: 0,
@@ -22,17 +22,17 @@ export const userList: {
     avatar:
       "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
   },
-]
+];
 
 export const newsList: {
-  id: number
-  image: string
-  title: string
-  date: Date
-  author: string
-  text: string
-  source: string
-  link: string
+  id: number;
+  image: string;
+  title: string;
+  date: Date;
+  author: string;
+  text: string;
+  source: string;
+  link: string;
 }[] = [
   {
     id: 1,
@@ -46,25 +46,85 @@ export const newsList: {
     source: "Google",
     link: "https://www.google.com",
   },
-]
+  {
+    id: 2,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+  },
+  {
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+  },
+  {
+    id: 5,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+  },
+  {
+    id: 6,
+    image:
+      "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJsb2d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+    title:
+      "Precatórios Sob a Perspectiva dos Grandres Mestres: Aprendendo com Graham, Fisher e Lynch",
+    date: new Date(),
+    author: "João da Silva",
+    text: newsTextMock,
+    source: "Google",
+    link: "https://www.google.com",
+  },
+];
 
 export const avatarData: {
-  img: string
-  name: string
-  charge: string
+  img: string;
+  name: string;
+  charge: string;
 }[] = [
   {
     img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-    name: "Natália de Andrade",
-    charge: "CEO",
+    name: "Caue Queiroz",
+    charge: "Coordinator",
   },
-]
+];
 
 export const qualityList: {
-  id: number
-  img: string
-  title: string
-  subtitle: string
+  id: number;
+  img: string;
+  title: string;
+  subtitle: string;
 }[] = [
   {
     id: 1,
@@ -87,12 +147,12 @@ export const qualityList: {
     subtitle:
       "Somos a maior empresa especializada na antecipação de precatórios em todo o Brasil, já negociamos mais de R$ 1 bilhão em precatórios para mais de 7 mil clientes",
   },
-]
+];
 
 export const cardsList: {
-  id: number
-  title: string
-  description: string
+  id: number;
+  title: string;
+  description: string;
 }[] = [
   {
     id: 0,
@@ -112,11 +172,11 @@ export const cardsList: {
     description:
       "Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes.",
   },
-]
+];
 
 export const whyToSellList: {
-  id: number
-  text: React.ReactNode
+  id: number;
+  text: React.ReactNode;
 }[] = [
   {
     id: 0,
@@ -157,13 +217,13 @@ export const whyToSellList: {
       </>
     ),
   },
-]
+];
 
 export const stepsList: {
-  id: number
-  title: string
-  text: React.ReactNode
-  icon: React.ReactNode
+  id: number;
+  title: string;
+  text: React.ReactNode;
+  icon: React.ReactNode;
 }[] = [
   {
     id: 0,
@@ -211,10 +271,10 @@ export const stepsList: {
     ),
     icon: <MoneyIcon />,
   },
-]
+];
 
 export const bannerList: {
-  img: string
+  img: string;
 }[] = [
   {
     img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
@@ -225,11 +285,11 @@ export const bannerList: {
   {
     img: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
   },
-]
+];
 
 export const infoList: {
-  id: number
-  title: string
+  id: number;
+  title: string;
 }[] = [
   {
     id: 0,
@@ -247,13 +307,13 @@ export const infoList: {
     id: 3,
     title: "Vasta experiência no mercado",
   },
-]
+];
 
 export const cardList: {
-  id: number
-  title: string
-  description: string
-  icon: React.ReactNode
+  id: number;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
 }[] = [
   {
     id: 0,
@@ -283,16 +343,16 @@ export const cardList: {
       "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia;",
     icon: <MoneyIcon />,
   },
-]
+];
 
 export const chooseList: {
-  id: number
-  title: string
+  id: number;
+  title: string;
   list: {
-    id: number
-    text: string
-    status: string
-  }[]
+    id: number;
+    text: string;
+    status: string;
+  }[];
 }[] = [
   {
     id: 0,
@@ -346,13 +406,13 @@ export const chooseList: {
       },
     ],
   },
-]
+];
 
 export const whyList: {
-  id: number
-  title: string
-  description: string
-  icon: React.ReactNode
+  id: number;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
 }[] = [
   {
     id: 0,
@@ -404,12 +464,12 @@ export const whyList: {
       </>
     ),
   },
-]
+];
 
 export const faqList: {
-  id: number
-  title: string
-  description: string
+  id: number;
+  title: string;
+  description: string;
 }[] = [
   {
     id: 0,
@@ -435,12 +495,12 @@ export const faqList: {
     description:
       "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
   },
-]
+];
 
 export const blogList: {
-  id: number
-  title: string
-  image: string
+  id: number;
+  title: string;
+  image: string;
 }[] = [
   {
     id: 1,
@@ -496,4 +556,4 @@ export const blogList: {
     image:
       "https://images.unsplash.com/photo-1549923746-c502d488b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
   },
-]
+];

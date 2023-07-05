@@ -1,23 +1,26 @@
-import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
-import "swiper/css"
-import ArrowDownIcon from "@/assets/icons/ArrowDownIcon"
+import "swiper/css";
+import "swiper/css/autoplay";
 
-import * as S from "./styles"
-import { useApp } from "@/context/appContext"
+import ArrowDownIcon from "@/assets/icons/ArrowDownIcon";
+
+import * as S from "./styles";
+import { useApp } from "@/context/appContext";
+import { Autoplay } from "swiper";
 
 interface BannerProps {
   data: {
-    img: string
-  }[]
+    img: string;
+  }[];
 }
 
 const Banner: React.FC<BannerProps> = ({ data }) => {
-  const { isTop, screenSizeH, screenSizeW } = useApp()
-  
-  console.log(screenSizeH, screenSizeW)
+  const { isTop, screenSizeH, screenSizeW } = useApp();
+
+  console.log(screenSizeH, screenSizeW);
 
   return (
     <div
@@ -27,14 +30,16 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
+        marginTop: "120px",
       }}
     >
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
+        modules={[Autoplay]}
+        loop={true}
         autoplay={{ delay: 3000 }}
         style={{
-          marginTop: "120px",
           maxHeight: screenSizeH - 120,
           overflow: "hidden",
         }}
@@ -69,7 +74,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
         </S.ArrowDown>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
