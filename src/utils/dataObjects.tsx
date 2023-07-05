@@ -18,7 +18,7 @@ export const feedbackList: {
     city: "São Paulo",
     state: "SP",
     country: "Brasil",
-    text: "“A Harmony me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
+    text: "“A CBL Consultoria me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
     avatar:
       "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
   },
@@ -475,7 +475,7 @@ export const faqList: {
     id: 0,
     title: "Como funciona a antecipação de precatórios?",
     description:
-      "A antecipação de precatórios é uma operação financeira que consiste na compra de precatórios federais, estaduais e municipais. A Harmony realiza a compra do seu precatório e você recebe o valor à vista, sem burocracia e sem esperar anos para receber do Governo.",
+      "A antecipação de precatórios é uma operação financeira que consiste na compra de precatórios federais, estaduais e municipais. A CBL Consultoria realiza a compra do seu precatório e você recebe o valor à vista, sem burocracia e sem esperar anos para receber do Governo.",
   },
   {
     id: 1,
