@@ -54,10 +54,9 @@ const Header: React.FC = () => {
               <C.Submenu show={submenuOpened === index}>
                 {item.subpaths.map((subitem, subindex) => {
                   return (
-                    <>
+                    <React.Fragment key={subindex}>
                       <Link
                         href={item.url + subitem.anchor}
-                        key={subindex}
                         style={
                           isMobile
                             ? {
@@ -72,7 +71,7 @@ const Header: React.FC = () => {
                         {subitem.title}
                       </Link>
                       {subindex === item.subpaths.length - 1 ? null : <hr />}
-                    </>
+                    </React.Fragment>
                   )
                 })}
               </C.Submenu>

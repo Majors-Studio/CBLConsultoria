@@ -32,7 +32,7 @@ export function AppProvider({ children }: any) {
       setScreenSizeW(window.innerWidth)
       setScreenSizeH(window.innerHeight)
     }
-
+    handleResize()
     window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener("resize", handleResize)

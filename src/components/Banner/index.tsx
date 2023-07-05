@@ -16,12 +16,14 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ data }) => {
   const { isTop, screenSizeH, screenSizeW } = useApp()
+  
+  console.log(screenSizeH, screenSizeW)
 
   return (
     <div
       style={{
         position: "relative",
-        height: "fit-content",
+        height: screenSizeH - 120,
         width: "100%",
         display: "flex",
         justifyContent: "center",
