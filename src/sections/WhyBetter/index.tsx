@@ -3,14 +3,12 @@ import ContentBox from "@/components/ContentBox"
 import { Subtitle, Title } from "@/components"
 import Description from "@/components/Description"
 import { DangerIcon, SuccessIcon } from "@/assets/icons"
-import { useHome } from "@/context/homeContext"
 
 import * as S from "./styles"
 import { tokens } from "@/utils/tokens"
+import { chooseList } from "@/utils/dataObjects"
 
 const WhyBetter: React.FC = () => {
-  const { chooseList } = useHome()
-
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Title variant="primary">

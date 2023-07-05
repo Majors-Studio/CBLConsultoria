@@ -6,14 +6,13 @@ import { useDevice } from "@/hooks/useDevice"
 import { tokens } from "@/utils/tokens"
 import ContentBox from "@/components/ContentBox"
 import { Subtitle, Title } from "@/components"
-import { useHome } from "@/context/homeContext"
 import Description from "@/components/Description"
 
 import * as S from "./styles"
+import { cardList } from "@/utils/dataObjects"
 
 const CardSteps: React.FC = () => {
   const { isMobile } = useDevice()
-  const { cardList } = useHome()
 
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.highlight.dark}>
