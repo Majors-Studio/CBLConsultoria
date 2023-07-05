@@ -57,12 +57,16 @@ const Header: React.FC = () => {
                       <Link
                         href={item.url + subitem.anchor}
                         key={subindex}
-                        style={{
-                          whiteSpace: "nowrap",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          width: "70vw",
-                        }}
+                        style={
+                          isMobile
+                            ? {
+                                whiteSpace: "nowrap",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                width: "70vw",
+                              }
+                            : undefined
+                        }
                       >
                         {subitem.title}
                       </Link>

@@ -37,7 +37,7 @@ export const MenuMobile = styled.div<IPropsMenu>`
   background-color: ${tokens.colors.brand.pure};
   z-index: 9999;
 
-  padding-top: 120px;
+  padding-top: 180px;
 
   transition: all 0.4s ease-in-out;
 
