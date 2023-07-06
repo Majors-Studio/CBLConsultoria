@@ -2,10 +2,12 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import * as S from "./styles";
 import CtaButton from "../CtaButton";
-import Toast from "@/components/Toast";
+// import Toast from "@/components/Toast";
 import { useApp } from "@/context/appContext";
-import { TIMEOUT } from "dns";
 
+import InputMask from "react-input-mask";
+import { MaskedInput } from "@/components";
+// import { TIMEOUT } from "dns";
 const PurposeForm: React.FC = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -15,6 +17,7 @@ const PurposeForm: React.FC = () => {
     cpf: "",
     message: "",
   });
+
   const { setShowToast, setToastMessage, setType }: any = useApp();
 
   const handleInputChange = (
@@ -75,18 +78,21 @@ const PurposeForm: React.FC = () => {
             <S.Input
               placeholder="Email"
               name="email"
+              type="email"
               onChange={handleInputChange}
               required
             />
-            <S.Input
-              placeholder="Telefone"
+            <MaskedInput
               name="phone"
+              mask="(99) 99999-9999"
+              placeholder="Telefone"
               onChange={handleInputChange}
               required
             />
-            <S.Input
-              placeholder="CPF"
+            <MaskedInput
               name="cpf"
+              mask="999.999.999-99"
+              placeholder="CPF"
               onChange={handleInputChange}
               required
             />
@@ -95,7 +101,6 @@ const PurposeForm: React.FC = () => {
               placeholder="Mensagem"
               name="message"
               onChange={handleInputChange}
-              required
             />
             <CtaButton type="submit">Enviar</CtaButton>
           </S.Form>

@@ -58,11 +58,8 @@ export const Input = styled.input`
   height: 50px;
   color: #333;
   width: 100%;
-  &:focus-visible {
-    outline: 1px solid ${tokens.colors.brand.pure};
-  }
+  outline: none;
   ::placeholder {
-    color: #333;
     font-family: ${tokens.font.family.secondary};
   }
 `;
@@ -72,11 +69,8 @@ export const TextArea = styled.textarea`
   padding: 5px 14px;
   border-radius: 15px;
   width: 100%;
-  &:focus-visible {
-    outline: 1px solid ${tokens.colors.brand.pure};
-  }
+  outline: none;
   ::placeholder {
-    color: #333;
     font-family: ${tokens.font.family.secondary};
   }
 `;
