@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import styled from "styled-components"
-import { tokens } from "@/utils/tokens"
+import styled from "styled-components";
+import { tokens } from "@/utils/tokens";
 
 interface IProps {
-  show: boolean
+  show: boolean;
 }
 
 export const Container = styled.header<IProps>`
@@ -13,7 +13,7 @@ export const Container = styled.header<IProps>`
   top: 0;
   z-index: 99999;
   background-color: ${tokens.colors.brand.pure};
-border-bottom: 1px solid ${tokens.colors.brand.cta};
+  /* border-bottom: 1px solid ${tokens.colors.brand.cta}; */
 
   height: 120px;
   padding: 0 20px;
@@ -22,10 +22,10 @@ border-bottom: 1px solid ${tokens.colors.brand.cta};
   transition: all 0.4s ease-in-out;
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-`
+`;
 
 interface IPropsMenu {
-  show: boolean
+  show: boolean;
 }
 
 export const MenuMobile = styled.div<IPropsMenu>`
@@ -43,7 +43,7 @@ export const MenuMobile = styled.div<IPropsMenu>`
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
   overflow: hidden;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ export const Content = styled.div`
   height: 100%;
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
-`
+`;
 
 export const Logo = styled.img`
   width: 200px;
@@ -63,7 +63,7 @@ export const Logo = styled.img`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`
+`;
 export const Navbar = styled.nav`
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ export const Navbar = styled.nav`
     overflow: hidden;
     height: fit-content;
   }
-`
+`;
 
 export const NavbarItem = styled.div`
   margin-left: 20px;
@@ -106,16 +106,16 @@ export const NavbarItem = styled.div`
       }
     }
   }
-`
+`;
 
 export const AccordionItem = styled.div`
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
-`
+`;
 
 interface SubmenuProps {
-  show: boolean
+  show: boolean;
 }
 
 export const Submenu = styled.div<SubmenuProps>`
@@ -161,10 +161,10 @@ export const Submenu = styled.div<SubmenuProps>`
     visibility: visible;
 
     margin: 20px 0 20px 35px;
-border-left: 1px solid ${tokens.colors.brand.light};
+    border-left: 1px solid ${tokens.colors.brand.light};
 
     a {
       font-size: 0.9rem;
     }
   }
-`
+`;

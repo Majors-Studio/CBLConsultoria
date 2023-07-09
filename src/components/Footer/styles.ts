@@ -2,7 +2,7 @@ import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: #324f87;
+  background-color: ${tokens.colors.brand.pure};
   max-width: 100vw;
   width: 100%;
   height: fit-content;
@@ -147,7 +147,7 @@ export const Rights = styled.div`
   padding: 16px 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: #00246a;
+  background-color: ${tokens.colors.brand.pure};
   opacity: 0.8;
   gap: 12px;
   font-size: 14px;
@@ -169,15 +169,8 @@ export const Title = styled.h3`
   }
 `;
 
-export const Line = styled.div`
-  width: 100%;
-  max-width: 100vw;
-  height: 2px;
-  background-color: #fff;
-`;
-
 export const Subtitle = styled.p`
-  color: #ccc;
+  color: #fff;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

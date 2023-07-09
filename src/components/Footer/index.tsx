@@ -1,45 +1,20 @@
-import React from "react"
+import React from "react";
 
-// google maps api
-import { useLoadScript, GoogleMap, MarkerF } from "@react-google-maps/api"
-import { useMemo } from "react"
-import * as S from "./styles"
-import Logo from "../Logo"
+import * as S from "./styles";
+import Logo from "../Logo";
 
-import Image from "next/image"
-import Link from "next/link"
-import CtaButton from "../CtaButton"
+import Image from "next/image";
+import Link from "next/link";
+import CtaButton from "../CtaButton";
 
 const Footer: React.FC = () => {
-  // google maps config
-  // const libraries = useMemo(() => ["places"], []);
-  // const { isLoaded } = useLoadScript({
-  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY as string,
-  //   libraries: libraries as any,
-  // });
-
-  // const mapOptions = useMemo<google.maps.MapOptions>(
-  //   () => ({
-  //     disableDefaultUI: true,
-  //     clickableIcons: true,
-  //     scrollwheel: false,
-  //   }),
-  //   []
-  // );
-
-  // // map position
-  // const mapCenter = useMemo(
-  //   () => ({ lat: 27.672932021393862, lng: 85.31184012689732 }),
-  //   []
-  // );
-
   const midiaItems = [
     {
       name: "Instagram",
       url: "https://www.instagram.com/cbl_cj/",
       logo: "https://static.wixstatic.com/media/fea1c1_02a47dd2d3a14f7a908448826a993500~mv2.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%C3%8Dcone%20Instagram.png",
     },
-  ]
+  ];
 
   const footerData = [
     {
@@ -76,11 +51,7 @@ const Footer: React.FC = () => {
         },
       ],
     },
-  ]
-
-  // if (!isLoaded) {
-  //   return <p>Loading...</p>;
-  // }
+  ];
 
   return (
     <>
@@ -118,7 +89,6 @@ const Footer: React.FC = () => {
           </S.ContainerInfo>
         </S.Content>
       </S.Container>
-      <S.Line />
       <S.Rights>
         <S.Content>
           <S.Text>© 2023 CBLCONSULTORIA. All rights reserved.</S.Text>
@@ -132,7 +102,7 @@ const Footer: React.FC = () => {
         </S.Content>
       </S.Rights>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,7 +1,7 @@
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
 import Description from "@/components/Description";
-// import { tokens } from "@/utils/tokens";
+import { tokens } from "@/utils/tokens";
 import React from "react";
 
 import * as S from "./styles";
@@ -9,7 +9,7 @@ import { whyList } from "@/utils/dataObjects";
 
 const WhyToChoose: React.FC = () => {
   return (
-    <ContentBox bgColor="#8080cbc" py={"60px"}>
+    <ContentBox bgColor={tokens.colors.brand.pure} py={"60px"}>
       <Title variant="secondary">Porque escolher a Harmony?</Title>
       <Description
         style={{ color: "#FFF", marginTop: "40px", fontSize: "17px" }}
