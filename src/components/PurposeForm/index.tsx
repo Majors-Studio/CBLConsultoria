@@ -5,7 +5,6 @@ import CtaButton from "../CtaButton";
 // import Toast from "@/components/Toast";
 import { useApp } from "@/context/appContext";
 
-import InputMask from "react-input-mask";
 import { MaskedInput } from "@/components";
 // import { TIMEOUT } from "dns";
 const PurposeForm: React.FC = () => {
@@ -18,7 +17,8 @@ const PurposeForm: React.FC = () => {
     message: "",
   });
 
-  const { setShowToast, setToastMessage, setType }: any = useApp();
+  const { setShowToast, setToastMessage, setType, showToast }: any = useApp();
+  const [sending, setSending] = useState<boolean>(false);
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,6 +29,7 @@ const PurposeForm: React.FC = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true);
 
     emailjs
       .sendForm(
@@ -51,6 +52,7 @@ const PurposeForm: React.FC = () => {
         setTimeout(() => {
           setShowToast(false);
         }, 3000);
+        setSending(false);
       })
       .catch(() => {
         setShowToast(true);
@@ -102,7 +104,9 @@ const PurposeForm: React.FC = () => {
               name="message"
               onChange={handleInputChange}
             />
-            <CtaButton type="submit">Enviar</CtaButton>
+            <CtaButton disabled={sending ? true : false} type="submit">
+              Enviar
+            </CtaButton>
           </S.Form>
         </S.Content>
       </S.Container>

@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 
 import * as C from "./styles";
 
-import { Chart as ChartJS, registerables } from "chart.js/auto";
+import { ChartData, Chart as ChartJS, registerables } from "chart.js/auto";
 
 const Chart: React.FC = () => {
   ChartJS.register(...registerables);
@@ -12,7 +12,7 @@ const Chart: React.FC = () => {
     labels: ["2018", "2019", "2020", "2021", "2022"],
     datasets: [
       {
-        label: "Evolução dos precatórios em R$ (Bilhões)",
+        // label: "Evolução dos precatórios em R$ (Bilhões)",
         data: [36.6, 41.3, 51.9, 54.7, 89.1],
         backgroundColor: [
           "rgba(75, 192, 192, 0.2)",
@@ -31,7 +31,7 @@ const Chart: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  };
+  } as ChartData<"bar", number[], string>;
 
   return (
     // criar um gráfico da evolução dos precatórios nos últimos anos
@@ -41,6 +41,7 @@ const Chart: React.FC = () => {
         width={400}
         height={200}
         options={{
+          indexAxis: "y",
           maintainAspectRatio: false,
           scales: {
             y: {
@@ -52,7 +53,7 @@ const Chart: React.FC = () => {
               borderWidth: 1,
               borderColor: "rgba(0,0,0,0.2)",
               hoverBorderColor: "rgba(0,0,0,0.5)",
-              hoverBorderWidth: 2,
+              hoverBorderWidth: 1,
               borderSkipped: "bottom",
             },
           },
@@ -68,20 +69,21 @@ const Chart: React.FC = () => {
           resizeDelay: 50,
           devicePixelRatio: 2,
           skipNull: true,
-
           locale: "pt-BR",
           normalized: true,
           responsive: true,
           // legendas
           plugins: {
             legend: {
-              display: true,
+              fullSize: true,
+              rtl: true,
+              display: false,
+
               position: "bottom",
               labels: {
                 color: "#000",
-
                 font: {
-                  size: 16,
+                  size: 14,
                 },
               },
             },

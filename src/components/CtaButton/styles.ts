@@ -10,6 +10,7 @@ export const Button = styled.button`
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
   height: 50px;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   width: fit-content;
   font-size: ${tokens.font.sizes.sm};
   color: ${tokens.colors.brand.cta};

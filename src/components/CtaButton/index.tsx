@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useApp } from "@/context/appContext";
 import * as S from "./styles";
 import Link from "next/link";
 
