@@ -6,6 +6,7 @@ import HeadBanner from "@/components/HeadBanner";
 import img2 from "../../assets/png/chaves.png";
 import img3 from "../../assets/png/medic.png";
 import img4 from "../../assets/png/reunion.png";
+import img5 from "../../assets/png/consult.jpg";
 import { tokens } from "@/utils/tokens";
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
@@ -92,15 +93,18 @@ const LegalAdvice: React.FC = () => {
           </C.BoxImage>
         </C.Container>
       </ContentBox>
-      <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
+      <C.ContainerFluid bgColor={`${tokens.colors.brand.lightCream}`}>
         <C.Container>
+          <C.BoxImage>
+            <Image src={img5} alt="regularizacao" priority />
+          </C.BoxImage>
           <C.BoxText>
             <div id="civil-causes" />
 
-            <Title variant="secondary" style={{ textAlign: "left" }}>
+            <Title variant="primary" style={{ textAlign: "left" }}>
               Por que contratar uma consultoria Jurídica?
             </Title>
-            <Subtitle style={{ color: "#fff", textAlign: "left" }}>
+            <Subtitle style={{ color: "#324f87", textAlign: "left" }}>
               Contar com um apoio legal preventivo é o primeiro passo para
               evitar complicações relacionadas ao futuro da sua empresa. Todo
               empreendimento enfrenta questões legais ligadas a contratos,
@@ -124,9 +128,11 @@ const LegalAdvice: React.FC = () => {
               resolver questões agora.
             </Subtitle>
           </C.BoxText>
-          <PurposeForm/>
         </C.Container>
       </C.ContainerFluid>
+      <C.Bg>
+          <PurposeForm/>
+      </C.Bg>
     </>
   );
 };
