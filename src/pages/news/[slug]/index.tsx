@@ -22,7 +22,6 @@ interface Props {
 }
 const Page: React.FC<Props> = ({ paths }) => {
   const { isMobile } = useDevice()
-  const { newsList } = useApp()
   const router = useRouter()
   const {
     query: { id },
@@ -86,6 +85,8 @@ export default Page
 
 export async function getStaticPaths() {
   const data = await getNewsList()
+  
+  if (!data) return { paths: [], fallback: true }
 
   return {
     paths: data.posts.nodes.map((post: any) => ({
