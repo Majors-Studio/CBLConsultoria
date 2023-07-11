@@ -8,7 +8,7 @@ import { tokens } from "@/utils/tokens"
 import { newsList } from "@/utils/dataObjects"
 
 interface Props {
-  list: {
+  list?: {
     id: number
     featuredImage: {
       node: {

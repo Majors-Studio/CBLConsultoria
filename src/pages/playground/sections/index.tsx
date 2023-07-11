@@ -10,7 +10,7 @@ const PlaygroundSection: React.FC = () => {
     }
     return (
       <>
-        {Object.values(Sections).map((Section, index) => (
+        {Object.values(Sections).map((Item, index) => (
           <React.Fragment key={index}>
             <Title
               variant="secondary"
@@ -20,9 +20,9 @@ const PlaygroundSection: React.FC = () => {
                 textTransform: "none",
               }}
             >
-              {Section.name}
+              {Item.name}
             </Title>
-            <Section />
+            <Item />
           </React.Fragment>
         ))}
       </>

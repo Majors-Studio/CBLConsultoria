@@ -88,7 +88,7 @@ export async function getStaticPaths() {
   const data = await getNewsList()
 
   return {
-    paths: data.posts.nodes.map((post) => ({
+    paths: data.posts.nodes.map((post:any) => ({
       params: { slug: post.title } as any,
     })),
     fallback: true,
