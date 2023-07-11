@@ -26,7 +26,7 @@ const News: React.FC<Props> = ({ data }) => {
       {!data ? (
           <ContentBox bgColor="#fff">Carregando...</ContentBox>
       ): (
-        <NewsList list={data?.posts.nodes} />
+        <NewsList list={data.posts.nodes} />
       )}
     </C.BlogContainer>
   )

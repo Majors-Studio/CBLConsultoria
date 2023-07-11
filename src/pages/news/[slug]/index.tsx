@@ -30,14 +30,14 @@ const Page: React.FC<Props> = ({ paths }) => {
 
   const posts = paths.posts.nodes
 
-  const post = posts.find((post: any) => post.id === id)
-
-  if (!id || !post)
+  if (!id || !posts)
     return (
       <S.Container>
         <S.Content>Notícia não encontrada!</S.Content>
       </S.Container>
     )
+
+  const post = posts.find((post: any) => post.id === id)
 
   const { title, date, author, excerpt, slug, featuredImage } = post
 
@@ -88,7 +88,7 @@ export async function getStaticPaths() {
   const data = await getNewsList()
 
   return {
-    paths: data.posts.nodes.map((post:any) => ({
+    paths: data.posts.nodes.map((post: any) => ({
       params: { slug: post.title } as any,
     })),
     fallback: true,
