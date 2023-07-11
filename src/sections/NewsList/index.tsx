@@ -7,8 +7,24 @@ import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
 import { newsList } from "@/utils/dataObjects"
 
-const NewsList: React.FC = () => {
+interface Props {
+  list: {
+    id: number
+    featuredImage: {
+      node: {
+        sourceUrl: string
+      }
+    }
+    title: string
+    date: Date
+    author: string
+    text: string
+    source: string
+    link: string
+  }[]
+}
 
+const NewsList: React.FC<Props> = ({ list }) => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
@@ -21,17 +37,22 @@ const NewsList: React.FC = () => {
         gap: "20px",
       }}
     >
-      {newsList.map((post, postIndex) => (
-        <Link
-          key={post.id}
-          href={{
-            pathname: "news/" + post.title,
-            query: { id: postIndex },
-          }}
-        >
-          <CardBlog text={post.title} src={post.image} />
-        </Link>
-      ))}
+      {list?.map((post) => {
+        return (
+          <Link
+            key={post.id}
+            href={{
+              pathname: "news/" + post.title,
+              query: { id: post.id },
+            }}
+          >
+            <CardBlog
+              text={post.title}
+              src={post.featuredImage?.node.sourceUrl}
+            />
+          </Link>
+        )
+      })}
     </ContentBox>
   )
 }

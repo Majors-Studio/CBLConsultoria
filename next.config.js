@@ -15,8 +15,9 @@ const nextConfig = {
     PHONE_NUMBER: "5511973664376",
     SERVICE_ID: "service_32jf0yc",
     TEMPLATE_ID: "template_qzhmxhn",
-    PUBLIC_KEY: "WRzY65xBH3hhgKsK5"
+    PUBLIC_KEY: "WRzY65xBH3hhgKsK5",
+    WORDPRESS_API_URL: "http://cblconsultoria.local/graphql",
   },
-};
+}
 
 module.exports = nextConfig;

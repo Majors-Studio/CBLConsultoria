@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.17",
     "@emailjs/browser": "^3.11.0",
     "@next/font": "^13.4.7",
     "@react-google-maps/api": "^2.18.1",
@@ -22,6 +23,7 @@
     "chartjs-chart-geo": "^4.2.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "graphql": "^16.7.1",
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",

@@ -8,6 +8,7 @@ import HeadBanner from "@/components/HeadBanner";
 import img2 from "../../assets/png/chaves.png";
 import img3 from "../../assets/png/medic.png";
 import img4 from "../../assets/png/reunion.png";
+import img5 from "../../assets/png/consult.jpg";
 import { tokens } from "@/utils/tokens";
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
@@ -95,8 +96,11 @@ const LegalAdvice: React.FC = () => {
           </C.BoxImage>
         </C.Container>
       </ContentBox>
-      <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
+      <C.ContainerFluid bgColor={`${tokens.colors.brand.lightCream}`}>
         <C.Container>
+          <C.BoxImage>
+            <Image src={img5} alt="regularizacao" priority />
+          </C.BoxImage>
           <C.BoxText>
             <div id="civil-causes" />
             <Title variant="secondary" style={{ textAlign: "left" }}>
@@ -122,6 +126,9 @@ const LegalAdvice: React.FC = () => {
         </C.Container>
         <PurposeForm />
       </C.ContainerFluid>
+      <C.Bg>
+          <PurposeForm/>
+      </C.Bg>
     </>
   );
 };

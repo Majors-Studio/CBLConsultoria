@@ -21,6 +21,8 @@ interface AppContextProps {
   setShowToast: (value: boolean) => void;
   type: string;
   setType: (value: string) => void;
+  setNewsList: (value: any[]) => void;
+  newsList: any[];
 }
 
 const AppContext = createContext<AppContextProps>({} as any);
@@ -35,6 +37,8 @@ export function AppProvider({ children }: any) {
   const [toastMessage, setToastMessage] = useState<null | string>(null);
   const [showToast, setShowToast] = useState<boolean>(false);
   const [type, setType] = useState<string>("");
+  
+  const [newsList, setNewsList] = useState<any[]>([])
 
   useEffect(() => {
     const handleResize = () => {
@@ -89,6 +93,8 @@ export function AppProvider({ children }: any) {
     setShowToast,
     type,
     setType,
+    newsList,
+    setNewsList
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding: 20px 0;
 
   margin-top: 120px;
-background-color: ${tokens.colors.brand.lightCream};
+  background-color: ${tokens.colors.brand.lightCream};
 `
 
 export const Content = styled.div`
@@ -32,9 +32,10 @@ export const Tab = styled.div`
 export const Grid = styled.div`
   margin-top: 20px;
 
+  width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-gap: 20px;
 
   @media (max-width: 768px) {
@@ -44,6 +45,7 @@ export const Grid = styled.div`
 
 export const Left = styled.div`
   width: 100%;
+  max-width: 200px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -52,7 +54,12 @@ export const Left = styled.div`
   border: 1px solid ${tokens.colors.neutral.lowLight};
 `
 
-export const Right = styled.div``
+export const Right = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`
 
 export const Image = styled.img`
   width: 100%;
@@ -62,6 +69,19 @@ export const Image = styled.img`
 
   object-fit: cover;
   object-position: center;
+`
+
+export const NoImage = styled.div`
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  min-height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${tokens.colors.neutral.lowLight};
 `
 
 export const Category = styled.div`
@@ -106,4 +126,13 @@ export const Text = styled.div`
   line-height: 30px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.secondary};
+
+  p {
+    font-size: 18px;
+    color: ${tokens.colors.neutral.lowDark};
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 12px;
+    font-family: ${tokens.font.family.secondary};
+  }
 `

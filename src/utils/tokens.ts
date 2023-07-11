@@ -42,7 +42,7 @@ export const tokens = {
   },
   colors: {
     brand: {
-      pure: "#324f87",
+      pure: "#253861",
       medium: "#1D3A6E",
       cta: "#11294f",
       // pure: "#8c9cb9",
