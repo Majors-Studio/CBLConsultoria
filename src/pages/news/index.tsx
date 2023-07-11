@@ -5,6 +5,7 @@ import HeadBanner from "@/components/HeadBanner"
 import NewsList from "@/sections/NewsList"
 import { useApp } from "@/context/appContext"
 import { getNewsList } from "@/utils/getNews"
+import ContentBox from "@/components/ContentBox"
 
 interface Props {
   data: any
@@ -15,13 +16,18 @@ const News: React.FC<Props> = ({ data }) => {
   const { setNewsList } = useApp()
   
   useEffect(() => {
+    if(!data) return
     setNewsList(data.posts.nodes)
   }, [data])
   
   return (
     <C.BlogContainer>
       <HeadBanner title="Notícias" />
-      <NewsList list={data?.posts.nodes} />
+      {!data ? (
+          <ContentBox bgColor="#fff">Carregando...</ContentBox>
+      ): (
+        <NewsList list={data?.posts.nodes} />
+      )}
     </C.BlogContainer>
   )
 }
