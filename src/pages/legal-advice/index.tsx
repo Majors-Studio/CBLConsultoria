@@ -103,7 +103,10 @@ const LegalAdvice: React.FC = () => {
           </C.BoxImage>
           <C.BoxText>
             <div id="civil-causes" />
-            <Title variant="secondary" style={{ textAlign: "left" }}>
+            <Title
+              variant="secondary"
+              style={{ textAlign: "left", color: "#000" }}
+            >
               Por que contratar uma consultoria Jurídica?
             </Title>
             <Subtitle style={{ color: "#000", textAlign: "left" }}>
@@ -117,17 +120,17 @@ const LegalAdvice: React.FC = () => {
                 {civelList.map((item) => (
                   <C.CivelListInfoItem key={item.id}>
                     <ConfirmIcon />
-                    <Subtitle style={{ color: "#fff" }}>{item.title}</Subtitle>
+                    <Subtitle style={{ color: "#000" }}>{item.title}</Subtitle>
                   </C.CivelListInfoItem>
                 ))}
               </div>
             </Subtitle>
           </C.BoxText>
         </C.Container>
-        <PurposeForm />
+        {/* <PurposeForm /> */}
       </C.ContainerFluid>
       <C.Bg>
-          <PurposeForm/>
+        <PurposeForm />
       </C.Bg>
     </>
   );
