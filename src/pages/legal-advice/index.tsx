@@ -1,4 +1,6 @@
 import React from "react";
+import { ConfirmIcon } from "@/assets/icons";
+
 import * as C from "@/styles/legalAdvice";
 import Image from "next/image";
 import PurposeForm from "@/components/PurposeForm";
@@ -9,6 +11,7 @@ import img4 from "../../assets/png/reunion.png";
 import { tokens } from "@/utils/tokens";
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
+import { civelList } from "@/utils/dataObjects";
 
 const LegalAdvice: React.FC = () => {
   return (
@@ -96,35 +99,27 @@ const LegalAdvice: React.FC = () => {
         <C.Container>
           <C.BoxText>
             <div id="civil-causes" />
-
             <Title variant="secondary" style={{ textAlign: "left" }}>
               Por que contratar uma consultoria Jurídica?
             </Title>
-            <Subtitle style={{ color: "#fff", textAlign: "left" }}>
-              Contar com um apoio legal preventivo é o primeiro passo para
-              evitar complicações relacionadas ao futuro da sua empresa. Todo
-              empreendimento enfrenta questões legais ligadas a contratos,
-              assuntos trabalhistas, questões societárias, tributárias e outras.
-              A violação ou mesmo a falta de conhecimento das leis pode resultar
-              em litígios judiciais, além de multas e penalidades impostas por
-              órgãos de fiscalização.
-              <br />
-              <br />
-              Portanto, é fundamental ter o respaldo de um suporte jurídico
-              especializado em Direito Empresarial, capaz de oferecer
-              orientações sobre as melhores práticas para o seu negócio,
-              prevenindo litígios e futuros desgastes.
-              <br />
-              <br />
-              Muitos empreendedores, especialmente proprietários de pequenas
-              empresas e startups, podem ter dúvidas ao contratar esse tipo de
-              serviço. Considerando que pequenos negócios geralmente têm
-              orçamentos limitados, alguns podem acreditar que vale mais a pena
-              correr o risco de enfrentar problemas no futuro do que pagar para
-              resolver questões agora.
+            <Subtitle style={{ color: "#000", textAlign: "left" }}>
+              Em casos cíveis, é de extrema importância buscar o aconselhamento
+              jurídico especializado para alcançar uma resolução justa e
+              eficiente. Aqui na CBL Consultoria, compreendemos a complexidade
+              do sistema legal e o impacto significativo que uma representação
+              adqueada pode ter em seu caso. Veja por que é fundamental contar
+              com um advogado especializado
+              <div style={{ marginTop: "20px" }}>
+                {civelList.map((item) => (
+                  <C.CivelListInfoItem key={item.id}>
+                    <ConfirmIcon />
+                    <Subtitle style={{ color: "#fff" }}>{item.title}</Subtitle>
+                  </C.CivelListInfoItem>
+                ))}
+              </div>
             </Subtitle>
           </C.BoxText>
-          <PurposeForm/>
+          <PurposeForm />
         </C.Container>
       </C.ContainerFluid>
     </>

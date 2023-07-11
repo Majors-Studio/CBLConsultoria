@@ -74,9 +74,7 @@ const VideoHistory: React.FC = () => {
         escolher a CBL Consultoria, você terá um serviço personalizado, voltado
         às suas necessidades. Nosso compromisso é ouvir suas preocupações e
         metas, para assim desenvolver estratégias eficazes e garantir o melhor
-        resultado possível. CBL Consultoria - A sua segurança e qualidade na
-        venda de precatórios! Deixe-nos ajudá-lo(a) a superar os desafios e
-        alcançar o sucesso desejado. Juntos, iremos além!
+        resultado possível.
       </Subtitle>
       <C.ShowMoreButton
         style={{

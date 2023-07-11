@@ -50,6 +50,14 @@ export const BoxText = styled.div`
   }
 `;
 
+export const CivelListInfoItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: context-menu;
+`;
+
 export const Title = styled.h1<IProps>`
   font-size: ${tokens.font.sizes.xl};
   color: ${(props) => props.textColor};

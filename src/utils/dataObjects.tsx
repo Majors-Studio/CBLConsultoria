@@ -287,6 +287,28 @@ export const bannerList: {
   },
 ];
 
+export const civelList: {
+  id: number;
+  title: string;
+}[] = [
+  {
+    id: 0,
+    title: "Conhecimento Especializado",
+  },
+  {
+    id: 1,
+    title: "Análise do caso",
+  },
+  {
+    id: 2,
+    title: "Representação Efetiva",
+  },
+  {
+    id: 3,
+    title: "Estratégias personalizadas",
+  },
+];
+
 export const infoList: {
   id: number;
   title: string;
