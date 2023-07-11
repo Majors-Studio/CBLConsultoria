@@ -5,23 +5,41 @@ import { useRouter } from "next/router"
 import * as S from "@/styles/news_slug"
 import Link from "next/link"
 import { useDevice } from "@/hooks/useDevice"
-import { newsList } from "@/utils/dataObjects"
 
-const Page: React.FC = () => {
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql,
+} from "@apollo/client"
+import { useApp } from "@/context/appContext"
+import { getNewsList } from "@/utils/getNews"
+import { getDate } from "@/utils/getDate"
+
+interface Props {
+  paths: any
+}
+const Page: React.FC<Props> = ({ paths }) => {
   const { isMobile } = useDevice()
+  const { newsList } = useApp()
   const router = useRouter()
   const {
-    query: { slug, id },
+    query: { id },
   } = router
 
-  if (!id)
+  const posts = paths.posts.nodes
+
+  const post = posts.find((post: any) => post.id === id)
+
+  if (!id || !post)
     return (
       <S.Container>
         <S.Content>Notícia não encontrada!</S.Content>
       </S.Container>
     )
 
-  const post = newsList[+id]
+  const { title, date, author, excerpt, slug, featuredImage } = post
 
   return (
     <S.Container>
@@ -31,10 +49,8 @@ const Page: React.FC = () => {
           {">"}
           <Link href="/news">News</Link>
           {">"}
-          <Link href={"/news/" + post.title}>
-            {post.title.length > 30
-              ? post.title.slice(0, 30) + "..."
-              : post.title}
+          <Link href={"/news/" + slug}>
+            {slug.length > 30 ? slug.slice(0, 30) + "..." : slug}
           </Link>
         </S.Tab>
       </S.Content>
@@ -46,15 +62,19 @@ const Page: React.FC = () => {
         <S.Grid>
           {isMobile || <S.Left></S.Left>}
           <S.Right>
-            <S.Image src={post.image} alt={post.title} />
+            {featuredImage ? (
+              <S.Image src={featuredImage?.node.sourceUrl} alt={slug} />
+            ) : (
+              <S.NoImage>Imagem não encontrada</S.NoImage>
+            )}
             <S.Category>Notícia</S.Category>
-            <S.Title>{post.title}</S.Title>
+            <S.Title>{title}</S.Title>
             <S.Description>
-              Por <span>{post.author}</span>
+              Por <span>{author ? author : "Desconhecido"}</span>
               {" | "}
-              <span>{post.date.toLocaleDateString()}</span>
+              <span>{getDate(date)}</span>
             </S.Description>
-            <S.Text dangerouslySetInnerHTML={{ __html: post.text }} />
+            <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
           </S.Right>
         </S.Grid>
       </S.Content>
@@ -63,3 +83,24 @@ const Page: React.FC = () => {
 }
 
 export default Page
+
+export async function getStaticPaths() {
+  const data = await getNewsList()
+
+  return {
+    paths: data.posts.nodes.map((post) => ({
+      params: { slug: post.title } as any,
+    })),
+    fallback: true,
+  }
+}
+
+export async function getStaticProps() {
+  const paths = await getNewsList()
+  return {
+    props: {
+      paths,
+    },
+    revalidate: 60,
+  }
+}

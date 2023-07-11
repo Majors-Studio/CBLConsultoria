@@ -1,8 +1,5 @@
 "use client";
 
-import "../../animations/main";
-import { GlobalStyle } from "@/styles/global-styles";
-
 import React, { useEffect, useState } from "react";
 import * as C from "./styles";
 import { Button } from "@/components";
@@ -63,7 +60,7 @@ const Header: React.FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     className="w-6 h-6"
                   >

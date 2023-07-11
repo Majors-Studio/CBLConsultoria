@@ -7,7 +7,7 @@ export const lenisScroll = css`
   }
 
   .lenis.lenis-smooth {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
 
   .lenis.lenis-smooth [data-lenis-prevent] {

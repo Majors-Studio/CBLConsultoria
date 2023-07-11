@@ -1,4 +1,4 @@
-import "@/styles/global.css"
+import "@/theme/global-styles"
 import type { AppProps } from "next/app"
 import React, { useEffect, useState } from "react"
 import Head from "next/head"
@@ -7,6 +7,8 @@ import { AppProvider } from "@/context/appContext"
 import LoadingIcon from "@/assets/icons/LoadingIcon"
 import Logo from "@/components/Logo"
 import { tokens } from "@/utils/tokens"
+import { GlobalStyle } from '@/theme/global-styles';
+import '@/styles/global.css'
 
 import { Bebas_Neue, Montserrat, Poppins } from "@next/font/google"
 import localFont from "@next/font/local"
@@ -119,9 +121,10 @@ export default function App({ Component, pageProps }: AppProps) {
         </div>
       </>
     )
-
+  
   return (
     <>
+      <GlobalStyle/>
       {head}
       <AppProvider>
           <main style={bebasNeue.style}>
@@ -133,3 +136,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+
