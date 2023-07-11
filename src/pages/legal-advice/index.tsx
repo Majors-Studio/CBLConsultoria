@@ -119,8 +119,8 @@ const LegalAdvice: React.FC = () => {
               </div>
             </Subtitle>
           </C.BoxText>
-          <PurposeForm />
         </C.Container>
+        <PurposeForm />
       </C.ContainerFluid>
     </>
   );

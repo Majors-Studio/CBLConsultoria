@@ -20,8 +20,8 @@ const VideoHistory: React.FC = () => {
       }}
     >
       <Subtitle style={{ textAlign: "justify" }}>
-        A CBL Consultoria possui vasta experiência no mercado e conta com
-        profissionais capacitados para atender, de forma individualizada, a
+        <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com
+        <b>profissionais capacitados</b> para atender, de forma individualizada, a
         necessidade do cliente. O fato de não atuar com demandas de massa
         permite a CBL Consultoria desempenhar sempre o melhor atendimento ao
         cliente, de forma personalizada e eficaz, priorizando a agilidade,

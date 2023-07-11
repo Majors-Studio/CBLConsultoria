@@ -35,11 +35,15 @@ export const navitems = [
         anchor: "#real-estate",
       },
       {
+        title: "Quais causas defendemos?",
+        anchor: "#causes",
+      },
+      {
         title: "Erro Médico",
         anchor: "#medical-error",
       },
       {
-        title: "Causas Cíveis em Geral",
+        title: "Causas Cíveis no Geral",
         anchor: "#civil-causes",
       },
     ],

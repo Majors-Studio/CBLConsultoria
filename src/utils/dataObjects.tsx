@@ -115,7 +115,7 @@ export const avatarData: {
 }[] = [
   {
     img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-    name: "Caue Queiroz",
+    name: "Caue Blasiolli",
     charge: "Coordinator",
   },
 ];
@@ -140,12 +140,19 @@ export const qualityList: {
     subtitle:
       "Nossa equipe está pronta para oferecer suporte especializado em todas as etapas da negociação do seu precatório.",
   },
+  // {
+  //   id: 3,
+  //   img: "https://svgsilh.com/svg_v2/1414791.svg",
+  //   title: "Credibilidade",
+  //   subtitle:
+  //     "Somos a maior empresa especializada na antecipação de precatórios em todo o Brasil, já negociamos mais de R$ 1 bilhão em precatórios para mais de 7 mil clientes",
+  // },
   {
     id: 3,
     img: "https://svgsilh.com/svg_v2/1414791.svg",
-    title: "Credibilidade",
+    title: "Agilidade e eficiência na negociação",
     subtitle:
-      "Somos a maior empresa especializada na antecipação de precatórios em todo o Brasil, já negociamos mais de R$ 1 bilhão em precatórios para mais de 7 mil clientes",
+      "Nossa equipe altamente qualificada está preparada para agir rapidamente, utilizando metodologias eficientes e tecnologias avançadas.",
   },
 ];
 
