@@ -1,28 +1,41 @@
-import React from "react";
-import ContentBox from "@/components/ContentBox";
-import Video from "@/components/Video";
-import { Subtitle, Title } from "@/components";
-import { tokens } from "@/utils/tokens";
-import { useDevice } from "@/hooks/useDevice";
+import React from "react"
+import ContentBox from "@/components/ContentBox"
+import Video from "@/components/Video"
+import { Subtitle } from "@/components"
+import { tokens } from "@/utils/tokens"
 
-import * as C from "./styles";
+import * as C from "./styles"
+import gsap from "gsap"
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = React.useState<boolean>(false);
-  const { isMobile } = useDevice();
+  const [showMore, setShowMore] = React.useState<boolean>(false)
+
+  const showMoreRef = React.useRef<HTMLParagraphElement>(null)
+
+  React.useEffect(() => {
+    if (showMoreRef.current) {
+      if (showMore) {
+        gsap.to(showMoreRef.current, {
+          height: "auto",
+          duration: 0.3,
+          ease: "power2.inOut",
+        })
+      } else {
+        gsap.to(showMoreRef.current, {
+          height: "0px",
+          duration: 0.3,
+          ease: "power2.inOut",
+        })
+      }
+    }
+  }, [showMore])
 
   return (
-    <ContentBox
-      py={"60px"}
-      bgColor={tokens.colors.brand.light}
-      style={{
-        height: showMore ? "auto" : "950px",
-      }}
-    >
+    <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>
       <Subtitle style={{ textAlign: "justify" }}>
         <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com
-        <b>profissionais capacitados</b> para atender, de forma individualizada, a
-        necessidade do cliente. O fato de não atuar com demandas de massa
+        <b>profissionais capacitados</b> para atender, de forma individualizada,
+        a necessidade do cliente. O fato de não atuar com demandas de massa
         permite a CBL Consultoria desempenhar sempre o melhor atendimento ao
         cliente, de forma personalizada e eficaz, priorizando a agilidade,
         segurança e eficácia na proteção do seu patrimônio Nossa equipe é
@@ -56,33 +69,30 @@ const VideoHistory: React.FC = () => {
         consultoria jurídica confiável, segura e comprovada, não hesite em
         contar com a CBL Consultoria.
       </Subtitle>
-      <Subtitle
+      <div
+        ref={showMoreRef}
         style={{
-          textAlign: "justify",
-          transition: "opacity 0.3s, visibility 0.2s",
-          overflow: "hidden",
-          opacity: showMore ? "1" : "0",
-          visibility: showMore ? "visible" : "hidden",
-        }}
+        
+        overflow: "hidden",}}
       >
-        Estamos aqui para proporcionar tranquilidade e garantir o sucesso em
-        suas negociações. Nossa reputação é construída sobre resultados
-        consistentes e clientes satisfeitos. São dezenas de imóveis
-        regularizados pelo país, inúmeros clientes indenizados por erro médico e
-        demais ações de ressarcimento, bem como uma consultoria jurídica
-        consistente e coesa, buscando o melhor resultado para o cliente. Ao
-        escolher a CBL Consultoria, você terá um serviço personalizado, voltado
-        às suas necessidades. Nosso compromisso é ouvir suas preocupações e
-        metas, para assim desenvolver estratégias eficazes e garantir o melhor
-        resultado possível.
-      </Subtitle>
-      <C.ShowMoreButton
-        style={{
-          transition: " transform 0.6s",
-          transform: showMore ? "translateY(0)" : "translateY(-180px)",
-        }}
-        onClick={() => setShowMore(!showMore)}
-      >
+        <Subtitle
+          style={{
+            textAlign: "justify",
+          }}
+        >
+          Estamos aqui para proporcionar tranquilidade e garantir o sucesso em
+          suas negociações. Nossa reputação é construída sobre resultados
+          consistentes e clientes satisfeitos. São dezenas de imóveis
+          regularizados pelo país, inúmeros clientes indenizados por erro médico
+          e demais ações de ressarcimento, bem como uma consultoria jurídica
+          consistente e coesa, buscando o melhor resultado para o cliente. Ao
+          escolher a CBL Consultoria, você terá um serviço personalizado,
+          voltado às suas necessidades. Nosso compromisso é ouvir suas
+          preocupações e metas, para assim desenvolver estratégias eficazes e
+          garantir o melhor resultado possível.
+        </Subtitle>
+      </div>
+      <C.ShowMoreButton onClick={() => setShowMore(!showMore)}>
         Mostrar {showMore ? "menos" : "mais"}
         <svg
           fill="none"
@@ -104,7 +114,7 @@ const VideoHistory: React.FC = () => {
         </svg>
       </C.ShowMoreButton>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default VideoHistory;
+export default VideoHistory
