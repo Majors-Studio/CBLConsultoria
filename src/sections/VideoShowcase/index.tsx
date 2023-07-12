@@ -9,8 +9,13 @@ const VideoShowcase: React.FC = () => {
   return (
     <ContentBox
       py={"60px"}
-
       bgColor={tokens.colors.brand.light}
+      contentStyle={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      
+      }}
     >
       <Title variant="primary">
         Há mais de uma década no mercado, somos a maior empresa na antecipação
@@ -19,7 +24,7 @@ const VideoShowcase: React.FC = () => {
 
       <Video />
 
-      <CtaButton>Acesse nosso tour virtual!</CtaButton>
+      <CtaButton>Acesso nosso catálogo</CtaButton>
     </ContentBox>
   )
 }

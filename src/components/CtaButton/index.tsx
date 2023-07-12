@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { useApp } from "@/context/appContext";
-import * as S from "./styles";
-import Link from "next/link";
+import React, { useState } from "react"
+import { useApp } from "@/context/appContext"
+import * as S from "./styles"
+import Link from "next/link"
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  href?: string;
+  text?: string
+  children?: React.ReactNode
+  style?: React.CSSProperties
+  href?: string
 }
 
 const CtaButton: React.FC<Props> = ({
@@ -17,15 +17,17 @@ const CtaButton: React.FC<Props> = ({
   href = "",
   ...props
 }) => {
-  return !!href ? (
+  return (
     <S.Button style={style} {...props}>
-      <Link href={href}>{text ? text : children}</Link>
+      {!!href ? (
+        <Link href={href}>{text ? text : children}</Link>
+      ) : text ? (
+        text
+      ) : (
+        children
+      )}
     </S.Button>
-  ) : (
-    <S.Button style={style} {...props}>
-      {text ? text : children}
-    </S.Button>
-  );
-};
+  )
+}
 
-export default CtaButton;
+export default CtaButton
