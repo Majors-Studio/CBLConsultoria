@@ -28,12 +28,8 @@ export const WhyItem = styled.li`
 `;
 
 export const WhyItemIcon = styled.div`
-  /* background-color: #f2eae6; */
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 55px;
+  height: 55px;
   flex-shrink: 0;
 `;
 
