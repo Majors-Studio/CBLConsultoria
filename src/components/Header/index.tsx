@@ -41,7 +41,7 @@ const Header: React.FC = () => {
                 textOverflow: "ellipsis",
                 display: "flex",
                 alignContent: "center",
-                gap: "12px",
+                gap: "6px",
               }}
             >
               <div>{item.title} </div>
@@ -118,7 +118,6 @@ const Header: React.FC = () => {
                 style={{
                   border: "1px solid #fff",
                     color: "#fff",
-                  marginLeft: "12px",
                 }}
               >
                 Fale Conosco

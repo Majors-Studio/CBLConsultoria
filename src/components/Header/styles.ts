@@ -68,27 +68,27 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 18px;
 
   @media (max-width: ${tokens.breakpoints.desktop}) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
     overflow: hidden;
     height: fit-content;
   }
 `;
 
 export const NavbarItem = styled.div`
-  margin-left: 20px;
   color: #fff;
   position: relative;
   cursor: pointer;
   font-size: ${tokens.font.sizes.sm};
   color: ${tokens.colors.brand.light};
   position: relative;
+  text-align: center;
 
   @media (min-width: ${tokens.breakpoints.desktop}) {
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     &:after {
       content: "";
