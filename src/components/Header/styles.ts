@@ -12,7 +12,7 @@ export const Container = styled.header<IProps>`
   width: 100%;
   top: 0;
   z-index: 99999;
-  background-color: ${tokens.colors.brand.pure};
+  background-color: ${tokens.colors.brand.cta};
   /* border-bottom: 1px solid ${tokens.colors.brand.cta}; */
 
   height: 120px;
@@ -128,7 +128,7 @@ export const Submenu = styled.div<SubmenuProps>`
   top: 100%;
   left: 0;
   width: fit-content;
-  background-color: ${tokens.colors.brand.pure};
+  background-color: ${tokens.colors.brand.cta};
 
   ${({ show }) => (show ? `opacity: 1;` : `opacity: 0;`)}
   ${({ show }) => (show ? `visibility: visible;` : `visibility: hidden;`)}

@@ -322,15 +322,15 @@ export const infoList: {
 }[] = [
   {
     id: 0,
-    title: "Recebimento à vista;",
+    title: "Foco em resutados",
   },
   {
     id: 1,
-    title: "Agilidade na venda;",
+    title: "Atendimento Personalizado",
   },
   {
     id: 2,
-    title: "Segurança e Suporte 24hrs;",
+    title: "Segurança e Suporte 24hrs",
   },
   {
     id: 3,

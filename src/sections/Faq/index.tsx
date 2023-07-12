@@ -12,7 +12,7 @@ const Faq: React.FC = () => {
         style={{ textAlign: "center", marginBottom: "20px" }}
         variant="primary"
       >
-        FAQ - Perguntas Frequentes
+        <b>FAQ - Perguntas Frequentes</b>
       </Title>
       <Subtitle>Dúvidas? Estamos aqui para ajudar.</Subtitle>
 

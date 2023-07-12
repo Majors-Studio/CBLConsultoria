@@ -1,13 +1,13 @@
-import { ConfirmIcon } from "@/assets/icons"
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import CtaButton from "@/components/CtaButton"
-import PurposeForm from "@/components/PurposeForm"
-import React from "react"
+import { ConfirmIcon } from "@/assets/icons";
+import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import CtaButton from "@/components/CtaButton";
+import PurposeForm from "@/components/PurposeForm";
+import React from "react";
 
-import * as S from "./styles"
-import { tokens } from "@/utils/tokens"
-import { infoList } from "@/utils/dataObjects"
+import * as S from "./styles";
+import { tokens } from "@/utils/tokens";
+import { infoList } from "@/utils/dataObjects";
 
 const PurposeHome: React.FC = () => {
   return (
@@ -21,8 +21,8 @@ const PurposeHome: React.FC = () => {
       <S.Head>
         <S.Info>
           <Title variant="primary" style={{ textAlign: "left" }}>
-            Antecipe seu <strong>precatório</strong> com{" "}
-            <strong>Segurança</strong> e <strong>Velocidade</strong>!
+            <b>Conte</b> com <b>nossos especialistas</b> para uma consultoria
+            jurídica de <b>excelência</b>!
           </Title>
           <S.InfoList>
             {infoList.map((item) => (
@@ -32,12 +32,12 @@ const PurposeHome: React.FC = () => {
               </S.PrecatoryInfoItem>
             ))}
           </S.InfoList>
-          <CtaButton />
+          {/* <CtaButton /> */}
         </S.Info>
         <PurposeForm />
       </S.Head>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default PurposeHome
+export default PurposeHome;

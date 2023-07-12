@@ -19,7 +19,7 @@ const LegalAdvice: React.FC = () => {
     <>
       <HeadBanner title="Consultoria juridica" color="#fff" />
 
-      <C.ContainerFluid bgColor={`${tokens.colors.brand.pure}`}>
+      <C.ContainerFluid bgColor={`${tokens.colors.brand.cta}`}>
         <C.Container>
           <C.BoxText>
             {/* <C.Title textColor={`${tokens.colors.brand.light}`}>
@@ -71,7 +71,7 @@ const LegalAdvice: React.FC = () => {
         </C.Container>
       </C.ContainerFluid>
 
-      <ContentBox bgColor={`${tokens.colors.brand.pure}`}>
+      <ContentBox bgColor={`${tokens.colors.brand.cta}`}>
         <C.Container>
           <C.BoxText>
             <Title
@@ -129,9 +129,9 @@ const LegalAdvice: React.FC = () => {
         </C.Container>
         {/* <PurposeForm /> */}
       </C.ContainerFluid>
-      <C.Bg>
-        <PurposeForm />
-      </C.Bg>
+      {/* <C.Bg> */}
+      <PurposeForm />
+      {/* </C.Bg> */}
     </>
   );
 };

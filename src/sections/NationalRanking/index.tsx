@@ -1,21 +1,21 @@
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import { useDevice } from "@/hooks/useDevice"
-import { tokens } from "@/utils/tokens"
-import React from "react"
+import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import { useDevice } from "@/hooks/useDevice";
+import { tokens } from "@/utils/tokens";
+import React from "react";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
   Legend,
   ChartData,
-} from "chart.js"
-import { Doughnut } from "react-chartjs-2"
-import * as C from "./styles"
-ChartJS.register(ArcElement, Tooltip, Legend)
+} from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import * as C from "./styles";
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const NationalRanking: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isMobile } = useDevice();
 
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
@@ -40,7 +40,7 @@ const NationalRanking: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"doughnut", number[], string>
+  } as ChartData<"doughnut", number[], string>;
 
   return (
     <ContentBox
@@ -108,7 +108,7 @@ const NationalRanking: React.FC = () => {
         />
       </C.RankingChart>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default NationalRanking
+export default NationalRanking;

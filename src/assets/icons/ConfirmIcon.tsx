@@ -1,10 +1,11 @@
 import React from "react";
+import { tokens } from "@/utils/tokens";
 
 const ConfirmIcon: React.FC = (props) => {
   return (
     <svg
       viewBox="0 0 665.8 1000"
-      fill="currentColor"
+      fill={tokens.colors.brand.cta}
       height="24"
       width="24"
       {...props}

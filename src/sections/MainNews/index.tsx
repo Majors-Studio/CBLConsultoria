@@ -1,17 +1,17 @@
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import { useDevice } from "@/hooks/useDevice"
-import { tokens } from "@/utils/tokens"
-import Link from "next/link"
-import React, { useState } from "react"
+import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import { useDevice } from "@/hooks/useDevice";
+import { tokens } from "@/utils/tokens";
+import Link from "next/link";
+import React, { useState } from "react";
 
-import * as C from "./styles"
-import { newsList } from "@/utils/dataObjects"
+import * as C from "./styles";
+import { newsList } from "@/utils/dataObjects";
 
 const MainNews: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isMobile } = useDevice();
 
-  const [maxMobileItems] = useState(2)
+  const [maxMobileItems] = useState(2);
 
   return (
     <ContentBox
@@ -25,7 +25,7 @@ const MainNews: React.FC = () => {
     >
       <div>
         <Title
-          variant="tertiary"
+          variant="primary"
           style={{
             textAlign: "left",
             marginBottom: 32,
@@ -38,6 +38,7 @@ const MainNews: React.FC = () => {
           style={{
             textAlign: "left",
             lineHeight: "32px",
+            color: tokens.colors.brand.cta,
           }}
         >
           Veja a seguir as notícias nos principais veículos da mídia (Folha de
@@ -87,7 +88,7 @@ const MainNews: React.FC = () => {
             }}
             style={{
               color: "#e2a141",
-              margin: '0 auto'
+              margin: "0 auto",
             }}
           >
             Ver todas as notícias
@@ -95,7 +96,7 @@ const MainNews: React.FC = () => {
         )}
       </C.NewsList>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default MainNews
+export default MainNews;

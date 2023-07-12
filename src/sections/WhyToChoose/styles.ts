@@ -1,7 +1,6 @@
 import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
-
 export const WhyList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -16,7 +15,7 @@ export const WhyList = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`
+`;
 
 export const WhyItem = styled.li`
   display: flex;
@@ -26,7 +25,7 @@ export const WhyItem = styled.li`
   background-color: #fff;
   padding: 26px 20px 40px;
   border-radius: 10px;
-`
+`;
 
 export const WhyItemIcon = styled.div`
   background-color: #f2eae6;
@@ -36,13 +35,13 @@ export const WhyItemIcon = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-`
+`;
 
 export const WhyItemTexts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`
+`;
 
 export const WhyItemDescription = styled.p`
   font-family: ${tokens.font.family.secondary};
@@ -50,4 +49,4 @@ export const WhyItemDescription = styled.p`
   font-weight: 400;
   line-height: 1.5em;
   color: #121212;
-`
+`;

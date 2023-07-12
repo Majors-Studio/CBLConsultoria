@@ -13,9 +13,9 @@ const nextConfig = {
   },
   env: {
     PHONE_NUMBER: "5511973664376",
-    SERVICE_ID: "service_32jf0yc",
-    TEMPLATE_ID: "template_qzhmxhn",
-    PUBLIC_KEY: "WRzY65xBH3hhgKsK5",
+    SERVICE_ID: "service_57x8ngt",
+    TEMPLATE_ID: "template_hg8njfj",
+    PUBLIC_KEY: "n4kNGxJoxsUwbYu2k",
     WORDPRESS_API_URL: "http://cblconsultoria.local/graphql",
   },
 }

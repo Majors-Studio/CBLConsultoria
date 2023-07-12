@@ -26,7 +26,7 @@ const Precatory: React.FC = () => {
 
       <NationalRanking />
 
-      <MainNews />
+      {/* <MainNews /> */}
 
       <div id="benefits" />
       <WhyToSell />

@@ -37,17 +37,17 @@ export const Container = styled.div`
   }
 `;
 export const Bg = styled.div`
-    width: 600px;
-    margin: 0 auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    @media (max-width: 768px) {
-      width: 100%;
-      padding-inline: 20px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-`
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-inline: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+`;
 export const BoxText = styled.div`
   display: flex;
   flex-direction: colums;

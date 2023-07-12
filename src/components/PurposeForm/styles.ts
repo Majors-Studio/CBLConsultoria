@@ -20,7 +20,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: ${tokens.colors.brand.pure};
+  color: ${tokens.colors.brand.cta};
   font-size: ${tokens.font.sizes.lg};
   font-weight: ${tokens.font.weight.bold};
   text-align: center;

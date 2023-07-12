@@ -12,7 +12,7 @@ export const Title = styled.h3<TitleProps>`
 
   color: ${({ variant }) =>
     variant === "primary"
-      ? tokens.colors.brand.pure
+      ? tokens.colors.brand.cta
       : variant === "secondary"
       ? tokens.colors.brand.light
       : tokens.colors.brand.dark};

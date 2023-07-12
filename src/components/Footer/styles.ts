@@ -2,7 +2,7 @@ import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: ${tokens.colors.brand.pure};
+  background-color: ${tokens.colors.brand.cta};
   max-width: 100vw;
   width: 100%;
   height: fit-content;
@@ -147,7 +147,7 @@ export const Rights = styled.div`
   padding: 16px 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: ${tokens.colors.brand.pure};
+  background-color: ${tokens.colors.brand.cta};
   opacity: 0.8;
   gap: 12px;
   font-size: 14px;

@@ -9,7 +9,7 @@ import { whyList } from "@/utils/dataObjects";
 
 const WhyToChoose: React.FC = () => {
   return (
-    <ContentBox bgColor={tokens.colors.brand.pure} py={"60px"}>
+    <ContentBox bgColor={tokens.colors.brand.cta} py={"60px"}>
       <Title variant="secondary">Porque escolher a Harmony?</Title>
       <Description
         style={{ color: "#FFF", marginTop: "40px", fontSize: "17px" }}

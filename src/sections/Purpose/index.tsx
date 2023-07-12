@@ -1,12 +1,12 @@
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import PurposeForm from "@/components/PurposeForm"
-import { useDevice } from "@/hooks/useDevice"
-import { tokens } from "@/utils/tokens"
-import React from "react"
+import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import PurposeForm from "@/components/PurposeForm";
+import { useDevice } from "@/hooks/useDevice";
+import { tokens } from "@/utils/tokens";
+import React from "react";
 
 const Purpose: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isMobile } = useDevice();
   return (
     <ContentBox
       py={"60px"}
@@ -24,7 +24,7 @@ const Purpose: React.FC = () => {
             marginBottom: 32,
           }}
         >
-          Somos especialistas em precatórios
+          Somos <b>especialistas</b> em <b>precatórios</b>
         </Title>
         <Subtitle
           style={{
@@ -40,7 +40,7 @@ const Purpose: React.FC = () => {
       </div>
       <PurposeForm />
     </ContentBox>
-  )
-}
+  );
+};
 
-export default Purpose
+export default Purpose;
