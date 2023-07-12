@@ -66,14 +66,14 @@ const MainNews: React.FC = () => {
           <C.NewsItem key={newsIndex}>
             <C.NewsItemTop>
               <C.NewsItemInfo>
-                {news.source && news.source + ' | '}{getDate(news.date)}
+                {news.fields.sourceAuthor && news.fields.sourceAuthor + ' | '}{getDate(news.fields.publishedDate)}
               </C.NewsItemInfo>
-              <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
+              <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
             </C.NewsItemTop>
             <Link
               href={{
-                pathname: "news/" + news.title,
-                query: { id: news.id },
+                pathname: "news/" + news.fields.title,
+                query: { id: news.sys.id },
               }}
               style={{
                 color: "#e2a141",

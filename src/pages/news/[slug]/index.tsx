@@ -1,18 +1,13 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import { useRouter } from "next/router"
 
 import * as S from "@/styles/news_slug"
 import Link from "next/link"
-import { useDevice } from "@/hooks/useDevice"
 import { getDate } from "@/utils/getDate"
 import { createClient } from "contentful"
-import { InferGetStaticPropsType } from "next"
 
-const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
-  news,
-}) => {
-  const { isMobile } = useDevice()
+const Page: React.FC<any> = ({ news }) => {
   const router = useRouter()
   const {
     query: { id },
@@ -29,12 +24,22 @@ const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   console.log(post)
 
-  const { title, publishedDate, featuredImage,content,author } = post.fields
+  const { title, publishedDate, featuredImage, content, author } = post.fields
 
-  
-  // find param "value" in content object
-  const excerpt = content?.content.find((item: any) => item.nodeType === "paragraph")?.content[0].value
-  
+  const {
+    fields: {
+      title: featuredTitle,
+      file: { url: featuredUrl },
+    },
+  } = featuredImage
+
+  const titleText = title?.toString() || ""
+
+  const cont = content?.content as any[]
+
+  const excerpt = cont.find((item: any) => item.nodeType === "paragraph")
+    ?.content[0].value
+
   return (
     <S.Container>
       <S.Content>
@@ -43,32 +48,28 @@ const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
           {">"}
           <Link href="/news">Notícias</Link>
           {"> "}
-          {title.length > 30 ? title.slice(0, 30) + "..." : title}
+          {titleText.length > 30 ? titleText.slice(0, 30) + "..." : titleText}
         </S.Tab>
       </S.Content>
       <S.Content
         style={{
-          flexDirection: "row",
+          flexDirection: "column",
+          marginTop: 24,
         }}
       >
-        <S.Grid>
-          {isMobile || <S.Left></S.Left>}
-          <S.Right>
-            {featuredImage ? (
-              <S.Image src={featuredImage?.fields.file.url} alt={title?.toString()} />
-            ) : (
-              <S.NoImage>Imagem não encontrada</S.NoImage>
-            )}
-            <S.Category>Notícia</S.Category>
-            <S.Title>{title?.toString()}</S.Title>
-            <S.Description>
-              Por <span>{!!author ? author.toString() : "Desconhecido"}</span>
-              {" | "}
-              <span>{getDate(publishedDate?.toString() || '')}</span>
-            </S.Description>
-            <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
-          </S.Right>
-        </S.Grid>
+        {featuredImage ? (
+          <S.Image src={featuredUrl} alt={featuredTitle?.toString()} />
+        ) : (
+          <S.NoImage>Imagem não encontrada</S.NoImage>
+        )}
+        <S.Category>Notícia</S.Category>
+        <S.Title>{title?.toString()}</S.Title>
+        <S.Description>
+          Por <span>{!!author ? author.toString() : "Desconhecido"}</span>
+          {" | "}
+          <span>{getDate(publishedDate?.toString() || "")}</span>
+        </S.Description>
+        <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
       </S.Content>
     </S.Container>
   )

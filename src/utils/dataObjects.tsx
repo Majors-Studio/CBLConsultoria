@@ -7,6 +7,7 @@ import bannerImg2 from "@/assets/png/banner-2.png";
 import bannerImg3 from "@/assets/png/banner-3.png";
 import bannerImg4 from "@/assets/png/banner-4.png";
 import bannerImg5 from "@/assets/png/banner-5.png";
+import Image from "next/image";
 
 export const feedbackList: {
   id: number;
@@ -461,7 +462,7 @@ export const whyList: {
       "Nós cuidamos para que o processo de negociação seja 100% seguro e transparente, desde a análise até o recebimento do seu precatório.",
     icon: (
       <>
-        <img src="https://cdn-icons-png.flaticon.com/512/0/769.png" />
+        <Image width={55} height={55} alt='atendimento' src="https://cdn-icons-png.flaticon.com/512/0/769.png" />
       </>
     ),
   },
@@ -472,7 +473,8 @@ export const whyList: {
       "Ao longo da nossa história, foram mais de 7 mil credores satisfeitos com a antecipação de seus precatórios",
     icon: (
       <>
-        <img
+        <Image
+          width={55} height={55}
           src="https://cdn-icons-png.flaticon.com/512/4947/4947118.png"
           alt="money"
         />
@@ -486,7 +488,7 @@ export const whyList: {
       "Empresa consolidada, com mais de uma década no mercado de precatórios.",
     icon: (
       <>
-        <img src="https://cdn-icons-png.flaticon.com/512/159/159448.png" />
+        <Image width={55} height={55} alt='seguranca' src="https://cdn-icons-png.flaticon.com/512/159/159448.png" />
       </>
     ),
   },
@@ -497,7 +499,8 @@ export const whyList: {
       "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
     icon: (
       <>
-        <img
+        <Image
+          width={55} height={55}
           src="https://cdn.icon-icons.com/icons2/37/PNG/512/cardpayment_tarjet_3771.png"
           alt="pgto. a vista"
         />

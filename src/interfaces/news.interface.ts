@@ -34,6 +34,8 @@ export interface newsInterface {
   fields: {
     title: string
     publishedDate: string
+    sourceAuthor: string
+    source: string
     content: {
       data: any
       content: {

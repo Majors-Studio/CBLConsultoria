@@ -25,6 +25,7 @@ export const NewsItem = styled.div`
   padding: 24px;
   background-color: #fff;
   height: 100%;
+max-height: 250px;
   box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.17);
 `
 

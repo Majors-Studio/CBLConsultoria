@@ -6,6 +6,8 @@ const nextConfig = {
       "static.wixstatic.com",
       "images.unsplash.com",
       "source.unsplash.com",
+      "cdn-icons-png.flaticon.com",
+      "cdn.icon-icons.com",
     ],
   },
   compiler: {
