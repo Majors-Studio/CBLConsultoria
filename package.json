@@ -21,6 +21,7 @@
     "autoprefixer": "10.4.14",
     "chart.js": "^4.3.0",
     "chartjs-chart-geo": "^4.2.0",
+    "contentful": "^10.3.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "graphql": "^16.7.1",

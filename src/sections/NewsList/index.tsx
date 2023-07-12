@@ -10,18 +10,73 @@ import { useDevice } from "@/hooks/useDevice"
 
 interface Props {
   list?: {
-    id: number
-    featuredImage: {
-      node: {
-        sourceUrl: string
+    metadata: {
+      tags: any[]
+    }
+    sys: {
+      space: {
+        sys: {
+          type: string
+          linkType: string
+          id: string
+        }
+      }
+      id: string
+      type: string
+      createdAt: string
+      updatedAt: string
+      environment: {
+        sys: {
+          id: string
+          type: string
+          linkType: string
+        }
+      }
+      revision: number
+      contentType: {
+        sys: {
+          type: string
+          linkType: string
+          id: string
+        }
+      }
+      locale: string
+    }
+    fields: {
+      title: string
+      publishedDate: string
+      content: {
+        data: any
+        content: {
+          data: any
+          content: {
+            data: any
+            marks: any[]
+            value: string
+            nodeType: string
+          }[]
+          nodeType: string
+        }[]
+        nodeType: string
+      }
+      featuredImage: {
+        fields: {
+          title: string
+          description: string
+          file: {
+            url: string
+            details: {
+              size: number
+              image: {
+                width: number
+                height: number
+              }
+            }
+            fileName: string
+          }
+        }
       }
     }
-    title: string
-    date: Date
-    author: string
-    text: string
-    source: string
-    link: string
   }[]
 }
 
@@ -48,15 +103,15 @@ const NewsList: React.FC<Props> = ({ list }) => {
       {list?.map((post) => {
         return (
           <Link
-            key={post.id}
+            key={post.sys.id}
             href={{
-              pathname: "news/" + post.title,
-              query: { id: post.id },
+              pathname: "news/" + post.fields.title,
+              query: { id: post.sys.id },
             }}
           >
             <CardBlog
-              text={post.title}
-              src={post.featuredImage?.node.sourceUrl}
+              text={post.fields.title}
+              src={post.fields.featuredImage.fields.file.url}
             />
           </Link>
         )

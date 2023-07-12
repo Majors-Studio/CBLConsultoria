@@ -7,23 +7,24 @@ import { useApp } from "@/context/appContext"
 import { getNewsList } from "@/utils/getNews"
 import ContentBox from "@/components/ContentBox"
 import Link from "next/link"
+import { createClient } from "contentful"
 
 interface Props {
-  data: any
+  news: any
 }
 
-const News: React.FC<Props> = ({ data }) => {
+const News: React.FC<Props> = ({ news }) => {
   const { setNewsList } = useApp()
-
+  
   useEffect(() => {
-    if (!data) return
-    setNewsList(data.posts.nodes)
-  }, [data])
+    if (!news) return
+    setNewsList(news)
+  }, [news])
 
   return (
     <C.BlogContainer>
       <HeadBanner title="Notícias" />
-      {!data ? (
+      {!news ? (
         <>
           <ContentBox
             bgColor="#fff"
@@ -45,7 +46,7 @@ const News: React.FC<Props> = ({ data }) => {
           </ContentBox>
         </>
       ) : (
-        <NewsList list={data.posts.nodes} />
+        <NewsList list={news} />
       )}
     </C.BlogContainer>
   )
@@ -54,9 +55,15 @@ const News: React.FC<Props> = ({ data }) => {
 export default News
 
 export async function getStaticProps() {
-  const data = await getNewsList()
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
+  });
+  
+  const res = await client.getEntries({ content_type: "newsArticle" });
+  
 
   return {
-    props: { data, fallback: true },
+    props: { fallback: true, news: res.items },
   }
 }

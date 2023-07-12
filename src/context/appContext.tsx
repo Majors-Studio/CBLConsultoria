@@ -1,3 +1,4 @@
+import { newsInterface } from "@/interfaces/news.interface";
 import React, {
   createContext,
   useContext,
@@ -22,7 +23,7 @@ interface AppContextProps {
   type: string;
   setType: (value: string) => void;
   setNewsList: (value: any[]) => void;
-  newsList: any[];
+  newsList: newsInterface[];
 }
 
 const AppContext = createContext<AppContextProps>({} as any);
@@ -38,7 +39,7 @@ export function AppProvider({ children }: any) {
   const [showToast, setShowToast] = useState<boolean>(false);
   const [type, setType] = useState<string>("");
   
-  const [newsList, setNewsList] = useState<any[]>([])
+  const [newsList, setNewsList] = useState<newsInterface[]>([])
 
   useEffect(() => {
     const handleResize = () => {

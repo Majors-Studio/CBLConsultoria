@@ -11,18 +11,19 @@ import { bannerList } from "@/utils/dataObjects";
 import { getNewsList } from "@/utils/getNews";
 import { useApp } from "@/context/appContext";
 import Anchor from "@/components/Anchor";
+import { createClient } from "contentful";
 
 interface Props {
-  data: any
+  news: any
 }
 
-export default function Home({ data }: Props) {
-    const { setNewsList } = useApp()
-
+export default function Home({ news }: Props) {
+  const { setNewsList } = useApp()
+  
   useEffect(() => {
-    if (!data) return
-    setNewsList(data.posts.nodes)
-  }, [data])
+    if (!news) return
+    setNewsList(news)
+  }, [news])
   
   return (
     <div>
@@ -45,9 +46,15 @@ export default function Home({ data }: Props) {
 }
 
 export async function getStaticProps() {
-  const data = await getNewsList()
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
+  });
+  
+  const res = await client.getEntries({ content_type: "newsArticle" });
+  
 
   return {
-    props: { data, fallback: true },
+    props: { fallback: true, news: res.items },
   }
 }

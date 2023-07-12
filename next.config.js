@@ -17,6 +17,8 @@ const nextConfig = {
     TEMPLATE_ID: "template_hg8njfj",
     PUBLIC_KEY: "n4kNGxJoxsUwbYu2k",
     WORDPRESS_API_URL: "http://cblconsultoria.local/graphql",
+    CONTENTFUL_SPACE_ID: "xllzfatgqvcu",
+    CONTENTFUL_ACCESS_TOKEN: "1eaHiuJMJqaihTs9ACRBiyZSRERVzx-SF-hr-oSTmMs",
   },
 }
 

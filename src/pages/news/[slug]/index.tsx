@@ -1,52 +1,40 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { useRouter } from "next/router"
 
 import * as S from "@/styles/news_slug"
 import Link from "next/link"
 import { useDevice } from "@/hooks/useDevice"
-
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client"
-import { useApp } from "@/context/appContext"
-import { getNewsList } from "@/utils/getNews"
 import { getDate } from "@/utils/getDate"
+import { createClient } from "contentful"
+import { InferGetStaticPropsType } from "next"
 
-interface Props {
-  paths: any
-}
-const Page: React.FC<Props> = ({ paths }) => {
+const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  news,
+}) => {
   const { isMobile } = useDevice()
   const router = useRouter()
   const {
     query: { id },
   } = router
 
-  const posts = paths.posts.nodes
+  const post = news.find((post: any) => post.sys.id === id)
 
-  if (!id || !posts)
+  if (!id || !post)
     return (
       <S.Container>
         <S.Content>Notícia não encontrada!</S.Content>
       </S.Container>
     )
 
-  const post = posts.find((post: any) => post.id === id)
+  console.log(post)
+
+  const { title, publishedDate, featuredImage,content,author } = post.fields
+
   
-  if (!post)
-    return (
-      <S.Container>
-        <S.Content>Notícia não encontrada!</S.Content>
-      </S.Container>
-    )
-
-  const { title, date, author, excerpt, slug, featuredImage } = post
-
+  // find param "value" in content object
+  const excerpt = content?.content.find((item: any) => item.nodeType === "paragraph")?.content[0].value
+  
   return (
     <S.Container>
       <S.Content>
@@ -67,16 +55,16 @@ const Page: React.FC<Props> = ({ paths }) => {
           {isMobile || <S.Left></S.Left>}
           <S.Right>
             {featuredImage ? (
-              <S.Image src={featuredImage?.node.sourceUrl} alt={slug} />
+              <S.Image src={featuredImage?.fields.file.url} alt={title?.toString()} />
             ) : (
               <S.NoImage>Imagem não encontrada</S.NoImage>
             )}
             <S.Category>Notícia</S.Category>
-            <S.Title>{title}</S.Title>
+            <S.Title>{title?.toString()}</S.Title>
             <S.Description>
-              Por <span>{author ? author : "Desconhecido"}</span>
+              Por <span>{!!author ? author.toString() : "Desconhecido"}</span>
               {" | "}
-              <span>{getDate(date)}</span>
+              <span>{getDate(publishedDate?.toString() || '')}</span>
             </S.Description>
             <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
           </S.Right>
@@ -88,25 +76,30 @@ const Page: React.FC<Props> = ({ paths }) => {
 
 export default Page
 
-export async function getStaticPaths() {
-  const data = await getNewsList()
-  
-  if (!data) return { paths: [], fallback: true }
+export const getStaticPaths = async () => {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
+  })
 
-  return {
-    paths: data.posts.nodes.map((post: any) => ({
-      params: { slug: post.title } as any,
-    })),
-    fallback: true,
-  }
+  const res = await client.getEntries({ content_type: "newsArticle" })
+
+  const paths = res.items.map((item) => ({
+    params: { slug: item.fields.title, props: { news: res.items } },
+  }))
+
+  return { paths, fallback: false }
 }
 
-export async function getStaticProps() {
-  const paths = await getNewsList()
+export const getStaticProps = async () => {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
+  })
+
+  const res = await client.getEntries({ content_type: "newsArticle" })
+
   return {
-    props: {
-      paths,
-    },
-    revalidate: 60,
+    props: { news: res.items },
   }
 }
