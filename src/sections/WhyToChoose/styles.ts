@@ -28,7 +28,7 @@ export const WhyItem = styled.li`
 `;
 
 export const WhyItemIcon = styled.div`
-  background-color: #f2eae6;
+  /* background-color: #f2eae6; */
   width: 72px;
   height: 72px;
   display: flex;
