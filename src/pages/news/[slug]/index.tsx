@@ -37,6 +37,13 @@ const Page: React.FC<Props> = ({ paths }) => {
     )
 
   const post = posts.find((post: any) => post.id === id)
+  
+  if (!post)
+    return (
+      <S.Container>
+        <S.Content>Notícia não encontrada!</S.Content>
+      </S.Container>
+    )
 
   const { title, date, author, excerpt, slug, featuredImage } = post
 

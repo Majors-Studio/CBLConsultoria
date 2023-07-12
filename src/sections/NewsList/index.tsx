@@ -6,6 +6,7 @@ import React from "react"
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
 import { newsList } from "@/utils/dataObjects"
+import { useDevice } from "@/hooks/useDevice"
 
 interface Props {
   list?: {
@@ -25,15 +26,22 @@ interface Props {
 }
 
 const NewsList: React.FC<Props> = ({ list }) => {
+  const { isMobile, isTablet } = useDevice()
+
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
       style={{
-        padding: "60px 20px",
+        padding: "4rem 1rem",
+        width: "100%",
       }}
       contentStyle={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        gridTemplateColumns: isMobile
+          ? "1fr"
+          : isTablet
+          ? "1fr 1fr"
+          : "1fr 1fr 1fr",
         gap: "20px",
       }}
     >

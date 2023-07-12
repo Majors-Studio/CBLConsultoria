@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 
 import PurposeHome from "@/sections/PurposeHome";
@@ -8,8 +8,21 @@ import MainNews from "@/sections/MainNews";
 import VideoShowcase from "@/sections/VideoShowcase";
 import Banner from "@/components/Banner";
 import { bannerList } from "@/utils/dataObjects";
+import { getNewsList } from "@/utils/getNews";
+import { useApp } from "@/context/appContext";
 
-export default function Home() {
+interface Props {
+  data: any
+}
+
+export default function Home({ data }: Props) {
+    const { setNewsList } = useApp()
+
+  useEffect(() => {
+    if (!data) return
+    setNewsList(data.posts.nodes)
+  }, [data])
+  
   return (
     <div>
       <Head>
@@ -35,4 +48,12 @@ export default function Home() {
       </>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const data = await getNewsList()
+
+  return {
+    props: { data, fallback: true },
+  }
 }

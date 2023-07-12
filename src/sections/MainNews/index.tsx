@@ -3,16 +3,16 @@ import ContentBox from "@/components/ContentBox";
 import { useDevice } from "@/hooks/useDevice";
 import { tokens } from "@/utils/tokens";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 import * as C from "./styles";
-import { newsList } from "@/utils/dataObjects";
+import { useApp } from "@/context/appContext";
+import { getDate } from "@/utils/getDate";
 
 const MainNews: React.FC = () => {
   const { isMobile } = useDevice();
-
-  const [maxMobileItems] = useState(2);
-
+  const { newsList } = useApp()
+  
   return (
     <ContentBox
       py={"60px"}
@@ -46,32 +46,34 @@ const MainNews: React.FC = () => {
           dos maiores escritórios de advocacia.
           <br />
           <br />
-          Os <strong>pagamentos</strong> que inicialmente deveriam ser
-          realizados <strong>em SP até 2020</strong>, foram postergados para{" "}
-          <strong>2024</strong> e novamente prorrogados para
-          <strong>2029</strong>.
+          Os <b>pagamentos</b> que inicialmente deveriam ser
+          realizados <b>em SP até 2020</b>, foram postergados para{" "}
+          <b>2024</b> e novamente prorrogados para
+          <b>2029</b>.
           <br />
           <br />
           As notícias abordam justamente os atrasos, a mudança constante na data
-          limite de pagamento e a <strong>incerteza</strong> no{" "}
-          <strong>recebimento</strong> dos precatórios, que vem{" "}
-          <strong>prejudicando milhares de credores</strong>.
+          limite de pagamento e a <b>incerteza</b> no{" "}
+          <b>recebimento</b> dos precatórios, que vem{" "}
+          <b>prejudicando milhares de credores</b>.
         </Subtitle>
       </div>
 
       <C.NewsList>
-        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => (
+        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) =>
+        {
+          return (
           <C.NewsItem key={newsIndex}>
             <C.NewsItemTop>
               <C.NewsItemInfo>
-                {news.source} | {news.date.toString()}
+                {news.source && news.source + ' | '}{getDate(news.date)}
               </C.NewsItemInfo>
               <C.NewsItemTitle>{news.title}</C.NewsItemTitle>
             </C.NewsItemTop>
             <Link
               href={{
                 pathname: "news/" + news.title,
-                query: { id: newsIndex },
+                query: { id: news.id },
               }}
               style={{
                 color: "#e2a141",
@@ -80,7 +82,7 @@ const MainNews: React.FC = () => {
               Leia mais
             </Link>
           </C.NewsItem>
-        ))}
+        )})}
         {isMobile && (
           <Link
             href={{

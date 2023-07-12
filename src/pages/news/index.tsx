@@ -6,7 +6,6 @@ import NewsList from "@/sections/NewsList"
 import { useApp } from "@/context/appContext"
 import { getNewsList } from "@/utils/getNews"
 import ContentBox from "@/components/ContentBox"
-import { ClientFeedback, PurposeHome, WhyToChoose } from "@/sections"
 import Link from "next/link"
 
 interface Props {
