@@ -111,7 +111,7 @@ const NewsList: React.FC<Props> = ({ list }) => {
           >
             <CardBlog
               text={post.fields.title}
-              src={post.fields.featuredImage.fields.file.url}
+              src={post.fields.featuredImage?.fields.file.url}
             />
           </Link>
         )
