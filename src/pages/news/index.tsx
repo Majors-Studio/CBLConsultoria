@@ -65,5 +65,6 @@ export async function getStaticProps() {
 
   return {
     props: { fallback: true, news: res.items },
+    revalidate: 10,
   }
 }
