@@ -28,8 +28,10 @@ export const WhyItem = styled.li`
 `;
 
 export const WhyItemIcon = styled.div`
-  width: 55px;
-  height: 55px;
+  width: auto;
+  height: auto;
+
+  max-width: 55px;
   flex-shrink: 0;
 `;
 

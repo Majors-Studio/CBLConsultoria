@@ -34,10 +34,10 @@ export const MenuMobile = styled.div<IPropsMenu>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${tokens.colors.brand.pure};
+  background-color: ${tokens.colors.brand.cta};
   z-index: 9999;
 
-  padding-top: 180px;
+  padding-top: 120px;
 
   transition: all 0.4s ease-in-out;
 
@@ -72,7 +72,7 @@ export const Navbar = styled.nav`
   @media (max-width: ${tokens.breakpoints.desktop}) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 18px;
     overflow: hidden;
     height: fit-content;
   }

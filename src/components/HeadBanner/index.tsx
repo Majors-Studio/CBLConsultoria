@@ -20,7 +20,7 @@ const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color ='#fff'}
         }}>{title}
         </Title>
       </C.Overlay>
-      <Image  src={source || img1} alt="bg" />
+      <Image  src={source || img1} alt="bg" priority />
     </C.Container>
   )
 }

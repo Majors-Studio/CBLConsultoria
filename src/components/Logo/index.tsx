@@ -15,6 +15,7 @@ const Logo: React.FC = () => {
           height={62}
           src={logo}
           alt="logo"
+          priority
           style={{
             objectFit: "cover",
           }}
