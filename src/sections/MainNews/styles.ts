@@ -10,7 +10,7 @@ export const NewsList = styled.div`
     grid-template-columns: 1fr;
     gap: 0;
     grid-gap: 60px;
-    /* padding: 0 20px; */
+    /* padding: 0 24px; */
   }
 
   @media (max-width: 768px) {

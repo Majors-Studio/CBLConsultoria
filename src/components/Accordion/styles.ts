@@ -11,7 +11,7 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding: 0 20px 20px;
+  padding: 0 24px 20px;
 
   height: 100%;
 

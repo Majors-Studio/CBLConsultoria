@@ -16,7 +16,7 @@ export const Container = styled.header<IProps>`
   /* border-bottom: 1px solid ${tokens.colors.brand.cta}; */
 
   height: 120px;
-  padding: 0 20px;
+  padding: 0 24px;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
   transition: all 0.4s ease-in-out;
@@ -50,7 +50,7 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: ${tokens.breakpoints.desktopMd};
+  max-width: ${tokens.breakpoints.desktop};
   margin: 0 auto;
 `;
 

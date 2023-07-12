@@ -117,7 +117,8 @@ const Header: React.FC = () => {
               <CtaButton
                 style={{
                   border: "1px solid #fff",
-                  color: "#fff",
+                    color: "#fff",
+                  marginLeft: "12px",
                 }}
               >
                 Fale Conosco

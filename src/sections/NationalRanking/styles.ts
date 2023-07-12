@@ -10,7 +10,7 @@ export const RankingInfos = styled.div`
   @media (max-width: 920px) {
     width: 100%;
     max-width: 100vw;
-    padding: 0 20px;
+    padding: 0 24px;
   }
 `
 

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 interface ContainerProps {
-  active?: boolean;
+  active?: boolean
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -13,11 +13,8 @@ export const Container = styled.div<ContainerProps>`
   ${({ active }) =>
     active &&
     `
-        background-color: blue;
+    background-color: blue;
+  `}
+`
 
-
-
-`}
-`;
-
-export const Title = styled.h1;
+export const Title = styled.h1

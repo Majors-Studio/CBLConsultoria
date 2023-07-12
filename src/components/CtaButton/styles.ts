@@ -9,12 +9,15 @@ export const Button = styled.button`
   transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   padding-inline: 1.5rem;
-  height: 50px;
+  height: 45px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   width: fit-content;
   font-size: ${tokens.font.sizes.sm};
   color: ${tokens.colors.brand.cta};
   font-family: ${tokens.font.family.primary};
+
+  white-space: nowrap;
+
   &:hover {
     color: #e7e7e7;
     /* border-radius: 50%; */
@@ -23,7 +26,7 @@ export const Button = styled.button`
     border: 2px solid transparent;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     margin: 0 auto;
     font-size: ${tokens.font.sizes.xs};
   }

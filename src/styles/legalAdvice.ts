@@ -12,28 +12,25 @@ export const ContainerFluid = styled.div<IProps>`
   position: relative;
   background-color: ${(props) => props.bgColor};
 
-  @media (max-width: 768px) {
-    padding: 0 20px;
+  @media (max-width: ${tokens.breakpoints.tablet}) {
+    padding: 0 24px;
   }
 `;
 export const Container = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: ${tokens.breakpoints.desktop};
   margin: 0 auto;
   position: relative;
-  padding: 95px 20px;
+  padding: 95px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+gap: 24px;
 
-  @media (max-width: 1280px) {
-    flex-direction: column;
-    gap: 30px;
-  }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px 24px;
   }
 `;
 export const Bg = styled.div`
@@ -41,7 +38,8 @@ export const Bg = styled.div`
   margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 100px;
-  @media (max-width: 768px) {
+
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     width: 100%;
     padding-inline: 20px;
     padding-top: 50px;
@@ -50,12 +48,11 @@ export const Bg = styled.div`
 `;
 export const BoxText = styled.div`
   display: flex;
-  flex-direction: colums;
   max-width: 500px;
   flex-direction: column;
   gap: 65px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     max-width: 100%;
     gap: 20px;
   }
@@ -83,7 +80,7 @@ export const Text = styled.p<IProps>`
   line-height: ${tokens.font.sizes.md};
   max-width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     font-size: ${tokens.font.sizes.xs};
   }
 `;
@@ -91,7 +88,7 @@ export const BoxImage = styled.div`
   width: 500px;
   height: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     width: 100%;
     margin-top: 20px;
   }

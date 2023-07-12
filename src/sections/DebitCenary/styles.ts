@@ -15,7 +15,7 @@ export const CenaryTextContainer = styled.div`
   gap: 72px;
   width: 100%;
 
-  padding: 0 20px;
+  padding: 0 24px;
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 `

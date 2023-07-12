@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 4fr;
   grid-gap: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
 `
