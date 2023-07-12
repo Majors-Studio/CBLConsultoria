@@ -2,6 +2,11 @@
 import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
 import { newsTextMock } from "./newsTextMock";
 import ContractIcon from "@/assets/icons/ContractIcon";
+import bannerImg1 from "@/assets/png/banner-1.png";  
+import bannerImg2 from "@/assets/png/banner-2.png";
+import bannerImg3 from "@/assets/png/banner-3.png";
+import bannerImg4 from "@/assets/png/banner-4.png";
+import bannerImg5 from "@/assets/png/banner-5.png";
 
 export const feedbackList: {
   id: number;
@@ -281,16 +286,22 @@ export const stepsList: {
 ];
 
 export const bannerList: {
-  img: string;
+  img: any ;
 }[] = [
   {
-    img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    img: bannerImg1,
   },
   {
-    img: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+    img: bannerImg2,
   },
   {
-    img: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    img: bannerImg3,
+  },
+  {
+    img: bannerImg4,
+  },
+  {
+    img: bannerImg5,
   },
 ];
 
