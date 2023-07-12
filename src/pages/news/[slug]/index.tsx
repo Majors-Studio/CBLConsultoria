@@ -31,7 +31,7 @@ const Page: React.FC<any> = ({ news }) => {
       title: featuredTitle,
       file: { url: featuredUrl },
     },
-  } = featuredImage
+  } = featuredImage || { fields: { title: "", file: { url: "" } } }
 
   const titleText = title?.toString() || ""
 
