@@ -7,77 +7,10 @@ import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
 import { newsList } from "@/utils/dataObjects"
 import { useDevice } from "@/hooks/useDevice"
+import { newsInterface } from "@/interfaces/news.interface"
 
 interface Props {
-  list?: {
-    metadata: {
-      tags: any[]
-    }
-    sys: {
-      space: {
-        sys: {
-          type: string
-          linkType: string
-          id: string
-        }
-      }
-      id: string
-      type: string
-      createdAt: string
-      updatedAt: string
-      environment: {
-        sys: {
-          id: string
-          type: string
-          linkType: string
-        }
-      }
-      revision: number
-      contentType: {
-        sys: {
-          type: string
-          linkType: string
-          id: string
-        }
-      }
-      locale: string
-    }
-    fields: {
-      title: string
-      publishedDate: string
-      content: {
-        data: any
-        content: {
-          data: any
-          content: {
-            data: any
-            marks: any[]
-            value: string
-            nodeType: string
-          }[]
-          nodeType: string
-        }[]
-        nodeType: string
-      }
-      featuredImage: {
-        fields: {
-          title: string
-          description: string
-          file: {
-            url: string
-            details: {
-              size: number
-              image: {
-                width: number
-                height: number
-              }
-            }
-            fileName: string
-          }
-        }
-      }
-    }
-  }[]
+  list?: newsInterface[]
 }
 
 const NewsList: React.FC<Props> = ({ list }) => {
@@ -105,7 +38,7 @@ const NewsList: React.FC<Props> = ({ list }) => {
           <Link
             key={post.sys.id}
             href={{
-              pathname: "news/" + post.fields.title,
+              pathname: "news/post/",
               query: { id: post.sys.id },
             }}
           >

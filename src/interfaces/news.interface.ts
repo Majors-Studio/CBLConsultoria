@@ -36,13 +36,12 @@ export interface newsInterface {
     publishedDate: string
     sourceAuthor: string
     source: string
+    author: string
     content: {
       data: any
       content: {
         data: any
         content: {
-          data: any
-          marks: any[]
           value: string
           nodeType: string
         }[]
@@ -57,7 +56,6 @@ export interface newsInterface {
         file: {
           url: string
           details: {
-            size: number
             image: {
               width: number
               height: number

@@ -119,20 +119,11 @@ export const Description = styled.div`
   }
 `
 
-export const Text = styled.div`
+export const Text = styled.p`
   font-size: 18px;
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.secondary};
-
-  p {
-    font-size: 18px;
-    color: ${tokens.colors.neutral.lowDark};
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 12px;
-    font-family: ${tokens.font.family.secondary};
-  }
 `
