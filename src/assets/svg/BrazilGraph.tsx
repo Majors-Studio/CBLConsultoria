@@ -254,8 +254,8 @@ const BrazilGraph: React.FC = () => {
         <path
           fill="#e2a141"
           d="M594.573 216.409a.457.457 0 0 1-.464.449l-27.475-.465a.458.458 0 0 1 .015-.914l27.475.465a.457.457 0 0 1 .449.465z"
-          clip-rule="evenodd"
-          fill-rule="evenodd"
+          clipRule="evenodd"
+          fillRule="evenodd"
           data-color="1"
         ></path>
         <path
@@ -276,8 +276,8 @@ const BrazilGraph: React.FC = () => {
         <path
           fill="#e2a141"
           d="M598.816 183.824a.457.457 0 0 1-.269.587l-29.779 11.06a.457.457 0 0 1-.318-.857l29.779-11.059a.456.456 0 0 1 .587.269z"
-          clip-rule="evenodd"
-          fill-rule="evenodd"
+          clipRule="evenodd"
+          fillRule="evenodd"
           data-color="1"
         ></path>
         <path

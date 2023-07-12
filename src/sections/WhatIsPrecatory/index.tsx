@@ -30,7 +30,7 @@ const WhatIsPrecatory: React.FC = () => {
       </Title>
       <div
         style={{
-          marginLeft: isMobile || isTablet ? 0 : 72,
+          marginLeft: isMobile ? 0 : 72,
         }}
       >
         <Subtitle

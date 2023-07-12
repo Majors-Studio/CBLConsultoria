@@ -6,6 +6,12 @@ export const WhatItem = styled.li`
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+@media (max-width: ${tokens.breakpoints.desktopMd}) {
+  margin: 0 20px;
+
+
+}
 `;
 
 export const WhatTitle = styled.h1`
