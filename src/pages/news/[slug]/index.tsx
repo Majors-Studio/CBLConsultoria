@@ -102,6 +102,6 @@ export const getStaticProps = async () => {
 
   return {
     props: { news: res.items },
-    revalidate: 10,
+    revalidate: 1,
   }
 }
