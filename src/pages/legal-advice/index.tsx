@@ -13,6 +13,7 @@ import { tokens } from "@/utils/tokens";
 import { Subtitle, Title } from "@/components";
 import ContentBox from "@/components/ContentBox";
 import { civelList } from "@/utils/dataObjects";
+import Anchor from "@/components/Anchor";
 
 const LegalAdvice: React.FC = () => {
   return (
@@ -22,10 +23,7 @@ const LegalAdvice: React.FC = () => {
       <C.ContainerFluid bgColor={`${tokens.colors.brand.cta}`}>
         <C.Container>
           <C.BoxText>
-            {/* <C.Title textColor={`${tokens.colors.brand.light}`}>
-              REGULARIZAÇÃO DE IMÓVEIS
-            </C.Title> */}
-            <div id="real-estate" />
+            <Anchor id="real-estate" />
             <Title style={{ fontWeight: "bold" }} variant="secondary">
               REGULARIZAÇÃO DE IMÓVEIS
             </Title>
@@ -53,7 +51,7 @@ const LegalAdvice: React.FC = () => {
             <Image src={img3} alt="regularizacao" priority />
           </C.BoxImage>
           <C.BoxText>
-            <div id="medical-error" />
+            <Anchor id="medical-error" />
             <Title style={{ fontWeight: "bold", textAlign: "right" }}>
               Erro médico
             </Title>
@@ -102,7 +100,7 @@ const LegalAdvice: React.FC = () => {
             <Image src={img5} alt="regularizacao" priority />
           </C.BoxImage>
           <C.BoxText>
-            <div id="civil-causes" />
+            <Anchor id="civil-causes" />
             <Title
               variant="secondary"
               style={{ textAlign: "left", color: "#000" }}

@@ -14,7 +14,6 @@ const BrazilGraph: React.FC = () => {
       aria-hidden="true"
       aria-labelledby="svgcid--y17ys2-qomkne"
     >
-      <title id="svgcid--y17ys2-qomkne"></title>
       <g>
         <path
           fill="#e2a141"

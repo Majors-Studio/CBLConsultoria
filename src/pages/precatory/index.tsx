@@ -10,6 +10,7 @@ import SellSteps from "@/sections/SellSteps";
 import Purpose from "@/sections/Purpose";
 import EvoluctionChart from "@/sections/EvoluctionChart";
 import { WhyBetter } from "@/sections";
+import Anchor from "@/components/Anchor";
 
 const Precatory: React.FC = () => {
   return (
@@ -18,14 +19,13 @@ const Precatory: React.FC = () => {
 
       <WhatIsPrecatory />
 
-      <div id="data" />
       <DebitCenary />
 
       <WhyBetter />
 
       <NationalRanking />
 
-      <div id="benefits" />
+      
       <WhyToSell />
 
       <WhyToInvest />

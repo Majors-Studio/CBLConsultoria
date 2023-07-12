@@ -5,10 +5,12 @@ import { tokens } from "@/utils/tokens";
 import React from "react";
 
 import * as C from "./styles";
+import Anchor from "@/components/Anchor";
 
 const DebitCenary: React.FC = () => {
   return (
     <ContentBox bgColor={tokens.colors.brand.dark} py={"60px"}>
+      <Anchor id="data" />
       <Title style={{ marginBottom: "50px" }} variant="secondary">
         Cenário da Dívida Nacional em Precatórios
       </Title>

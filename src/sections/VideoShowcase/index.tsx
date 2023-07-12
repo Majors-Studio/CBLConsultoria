@@ -1,4 +1,5 @@
 import { Title } from "@/components"
+import Anchor from "@/components/Anchor"
 import ContentBox from "@/components/ContentBox"
 import CtaButton from "@/components/CtaButton"
 import Video from "@/components/Video"
@@ -17,6 +18,7 @@ const VideoShowcase: React.FC = () => {
       
       }}
     >
+      <Anchor id='videoshowcase'/>
       <Title variant="primary">
         Há mais de uma década no mercado, somos a maior empresa na antecipação
         de precatórios do Brasil

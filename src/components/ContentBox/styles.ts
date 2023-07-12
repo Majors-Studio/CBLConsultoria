@@ -7,6 +7,7 @@ export interface IContainerProps {
 }
 
 export const Container = styled.div<IContainerProps>`
+position: relative;
   background-color: ${(props) =>
     props.bgColor ? props.bgColor : "transparent"};
   padding-top: ${(props) => (props.py ? props.py : 0)};

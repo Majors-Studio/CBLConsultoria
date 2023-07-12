@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { tokens } from "../../utils/tokens";
 
 export const Container = styled.div`
+position: relative;
   height: 100%;
   background-color: #fff;
   padding: 40px 20px 40px;

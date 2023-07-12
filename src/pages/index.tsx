@@ -10,6 +10,7 @@ import Banner from "@/components/Banner";
 import { bannerList } from "@/utils/dataObjects";
 import { getNewsList } from "@/utils/getNews";
 import { useApp } from "@/context/appContext";
+import Anchor from "@/components/Anchor";
 
 interface Props {
   data: any
@@ -32,17 +33,10 @@ export default function Home({ data }: Props) {
         {/* <link rel="manifest" href="site.webmanifest" /> */}
       </Head>
       <>
-        {/* TODO: 
-          add banner
-          remove all precatory stuff
-        */}
-        {/* Gerando Autoridade */}
-        {/* <CardSteps /> */}
         <Banner data={bannerList} />
-        <div id='videoshowcase'/>
         <VideoShowcase />
-        <WhyToChoose /> {/* Adaptar com o texto que o caue mandar */}
-        <Faq /> {/* Alterar o conteudo */}
+        <WhyToChoose /> 
+        <Faq /> 
         <PurposeHome />
         <MainNews />
       </>

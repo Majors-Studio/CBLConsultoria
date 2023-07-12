@@ -53,11 +53,9 @@ const Page: React.FC<Props> = ({ paths }) => {
         <S.Tab>
           <Link href="/">Home</Link>
           {">"}
-          <Link href="/news">News</Link>
-          {">"}
-          <Link href={"/news/" + slug}>
-            {slug.length > 30 ? slug.slice(0, 30) + "..." : slug}
-          </Link>
+          <Link href="/news">Notícias</Link>
+          {"> "}
+          {title.length > 30 ? title.slice(0, 30) + "..." : title}
         </S.Tab>
       </S.Content>
       <S.Content
