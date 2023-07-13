@@ -38,18 +38,10 @@ const Page: React.FC<any> = () => {
 
   const { title, publishedDate, featuredImage, content, author } = news.fields
 
-  const {
-    
-    fields: {
-      title: featuredTitle,
-      file: { url: featuredUrl },
-    },
-  } = featuredImage || { fields: { title: "", file: { url: "" } } }
-
   const titleText = title?.toString() || ""
 
   const cont = content?.content as any[]
-
+  
   const excerpt = cont
     .map((item: any) => getMarkdown(item.content, item.nodeType))
     .join(" ")
@@ -72,7 +64,7 @@ const Page: React.FC<any> = () => {
         }}
       >
         {featuredImage ? (
-          <S.Image src={featuredUrl} alt={featuredTitle?.toString()} />
+          <S.Image src={featuredImage?.fields.file.url} alt={featuredImage.fields.title?.toString()} />
         ) : (
           <S.NoImage>Imagem não encontrada</S.NoImage>
         )}

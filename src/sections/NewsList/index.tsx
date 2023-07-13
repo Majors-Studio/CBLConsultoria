@@ -5,16 +5,11 @@ import React from "react"
 
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
-import { newsList } from "@/utils/dataObjects"
 import { useDevice } from "@/hooks/useDevice"
-import { newsInterface } from "@/interfaces/news.interface"
 
-interface Props {
-  list?: newsInterface[]
-}
-
-const NewsList: React.FC<Props> = ({ list }) => {
+const NewsList: React.FC = () => {
   const { isMobile, isTablet } = useDevice()
+  const { newsList } = useApp()
 
   return (
     <ContentBox
@@ -33,7 +28,7 @@ const NewsList: React.FC<Props> = ({ list }) => {
         gap: "20px",
       }}
     >
-      {list?.map((post) => {
+      {newsList?.map((post) => {
         return (
           <Link
             key={post.sys.id}
@@ -43,7 +38,7 @@ const NewsList: React.FC<Props> = ({ list }) => {
             }}
           >
             <CardBlog
-              text={post.fields.title}
+              text={post.fields.title as string}
               src={post.fields.featuredImage?.fields.file.url}
             />
           </Link>

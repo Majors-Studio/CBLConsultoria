@@ -4,7 +4,6 @@ import * as C from "../../styles/news"
 import HeadBanner from "@/components/HeadBanner"
 import NewsList from "@/sections/NewsList"
 import { useApp } from "@/context/appContext"
-import { getNewsList } from "@/utils/getNews"
 import ContentBox from "@/components/ContentBox"
 import Link from "next/link"
 import { createClient } from "contentful"
@@ -19,6 +18,7 @@ const News: React.FC<Props> = ({ news }) => {
   useEffect(() => {
     if (!news) return
     setNewsList(news)
+    console.log(news)
   }, [news])
 
   return (
@@ -46,7 +46,7 @@ const News: React.FC<Props> = ({ news }) => {
           </ContentBox>
         </>
       ) : (
-        <NewsList list={news} />
+        <NewsList />
       )}
     </C.BlogContainer>
   )

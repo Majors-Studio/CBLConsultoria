@@ -24,7 +24,7 @@ interface AppContextProps {
   type: string
   setType: (value: string) => void
   setNewsList: (value: any[]) => void
-  newsList: Entry<EntrySkeletonType, undefined, string>[]
+  newsList: any[]
   getNewsList: () => void
 }
 
@@ -41,7 +41,7 @@ export function AppProvider({ children }: any) {
   const [showToast, setShowToast] = useState<boolean>(false)
   const [type, setType] = useState<string>("")
 
-  const [newsList, setNewsList] = useState<Entry<EntrySkeletonType, undefined, string>[]>([])
+  const [newsList, setNewsList] = useState<any[]>([])
 
   useEffect(() => {
     const handleResize = () => {

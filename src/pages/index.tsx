@@ -8,9 +8,7 @@ import MainNews from "@/sections/MainNews";
 import VideoShowcase from "@/sections/VideoShowcase";
 import Banner from "@/components/Banner";
 import { bannerList } from "@/utils/dataObjects";
-import { getNewsList } from "@/utils/getNews";
 import { useApp } from "@/context/appContext";
-import Anchor from "@/components/Anchor";
 import { createClient } from "contentful";
 
 interface Props {
