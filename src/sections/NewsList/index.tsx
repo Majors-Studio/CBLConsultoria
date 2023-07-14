@@ -105,7 +105,7 @@ const NewsList: React.FC<Props> = ({ list }) => {
           <Link
             key={post.sys.id}
             href={{
-              pathname: "news/" + post.fields.title,
+              pathname: "noticias/" + post.fields.title,
               query: { id: post.sys.id },
             }}
           >

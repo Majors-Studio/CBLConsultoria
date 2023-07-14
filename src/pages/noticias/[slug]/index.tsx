@@ -1,44 +1,44 @@
-import React from "react"
+import React from "react";
 
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
-import * as S from "@/styles/news_slug"
-import Link from "next/link"
-import { getDate } from "@/utils/getDate"
-import { createClient } from "contentful"
+import * as S from "@/styles/news_slug";
+import Link from "next/link";
+import { getDate } from "@/utils/getDate";
+import { createClient } from "contentful";
 
 const Page: React.FC<any> = ({ news }) => {
-  const router = useRouter()
+  const router = useRouter();
   const {
     query: { id },
-  } = router
+  } = router;
 
-  const post = news.find((post: any) => post.sys.id === id)
+  const post = news.find((post: any) => post.sys.id === id);
 
   if (!id || !post)
     return (
       <S.Container>
         <S.Content>Notícia não encontrada!</S.Content>
       </S.Container>
-    )
+    );
 
-  console.log(post)
+  console.log(post);
 
-  const { title, publishedDate, featuredImage, content, author } = post.fields
+  const { title, publishedDate, featuredImage, content, author } = post.fields;
 
   const {
     fields: {
       title: featuredTitle,
       file: { url: featuredUrl },
     },
-  } = featuredImage || { fields: { title: "", file: { url: "" } } }
+  } = featuredImage || { fields: { title: "", file: { url: "" } } };
 
-  const titleText = title?.toString() || ""
+  const titleText = title?.toString() || "";
 
-  const cont = content?.content as any[]
+  const cont = content?.content as any[];
 
   const excerpt = cont.find((item: any) => item.nodeType === "paragraph")
-    ?.content[0].value
+    ?.content[0].value;
 
   return (
     <S.Container>
@@ -46,7 +46,7 @@ const Page: React.FC<any> = ({ news }) => {
         <S.Tab>
           <Link href="/">Home</Link>
           {">"}
-          <Link href="/news">Notícias</Link>
+          <Link href="/noticias">Notícias</Link>
           {"> "}
           {titleText.length > 30 ? titleText.slice(0, 30) + "..." : titleText}
         </S.Tab>
@@ -72,36 +72,36 @@ const Page: React.FC<any> = ({ news }) => {
         <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
       </S.Content>
     </S.Container>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
 
 export const getStaticPaths = async () => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID || "",
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
-  })
+  });
 
-  const res = await client.getEntries({ content_type: "newsArticle" })
+  const res = await client.getEntries({ content_type: "newsArticle" });
 
   const paths = res.items.map((item) => ({
     params: { slug: item.fields.title, props: { news: res.items } },
-  }))
+  }));
 
-  return { paths, fallback: false }
-}
+  return { paths, fallback: false };
+};
 
 export const getStaticProps = async () => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID || "",
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
-  })
+  });
 
-  const res = await client.getEntries({ content_type: "newsArticle" })
+  const res = await client.getEntries({ content_type: "newsArticle" });
 
   return {
     props: { news: res.items },
     revalidate: 1,
-  }
-}
+  };
+};

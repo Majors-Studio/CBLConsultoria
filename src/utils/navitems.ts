@@ -8,12 +8,12 @@ export const navitems = [
   {
     id: 2,
     title: "Quem somos",
-    url: "/about",
+    url: "/sobre",
   },
   {
     id: 3,
     title: "Precatórios",
-    url: "/precatory",
+    url: "/precatorios",
     subpaths: [
       {
         title: "Benefícios de venda com a CBL Consultoria",
@@ -28,7 +28,7 @@ export const navitems = [
   {
     id: 4,
     title: "Consultoria Jurídica",
-    url: "/legal-advice",
+    url: "/consultoria-juridica",
     subpaths: [
       {
         title: "Regularização de Imóveis",
@@ -51,6 +51,6 @@ export const navitems = [
   {
     id: 5,
     title: "Notícias & Artigos",
-    url: "/news",
+    url: "/noticias",
   },
 ];

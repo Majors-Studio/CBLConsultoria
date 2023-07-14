@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from "react"
-import * as C from "./styles"
-import { Button } from "@/components"
-import Logo from "../Logo"
-import { useDevice } from "@/hooks/useDevice"
+import React, { useEffect, useState } from "react";
+import * as C from "./styles";
+import { Button } from "@/components";
+import Logo from "../Logo";
+import { useDevice } from "@/hooks/useDevice";
 
-import { navitems } from "@/utils/navitems"
-import Link from "next/link"
-import Hamburguer from "../Hamburguer"
-import CtaButton from "../CtaButton"
-import { useApp } from "@/context/appContext"
+import { navitems } from "@/utils/navitems";
+import Link from "next/link";
+import Hamburguer from "../Hamburguer";
+import CtaButton from "../CtaButton";
+import { useApp } from "@/context/appContext";
 
 const Header: React.FC = () => {
-  const { isMobile, isTablet, isDesktop } = useDevice()
+  const { isMobile, isTablet, isDesktop } = useDevice();
 
   const {
     isScrollingTop,
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     submenuOpened,
     setSubmenuOpened,
     setMenuOpened,
-  } = useApp()
+  } = useApp();
 
   const navBar = (
     <C.Navbar>
@@ -87,19 +87,19 @@ const Header: React.FC = () => {
                             : undefined
                         }
                       >
-                        {subitem.title}
+                        <p style={{ width: "180px" }}>{subitem.title}</p>
                       </Link>
                       {subindex === item.subpaths.length - 1 ? null : <hr />}
                     </React.Fragment>
-                  )
+                  );
                 })}
               </C.Submenu>
             )}
           </C.NavbarItem>
-        )
+        );
       })}
     </C.Navbar>
-  )
+  );
 
   return (
     <>
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
               <CtaButton
                 style={{
                   border: "1px solid #fff",
-                    color: "#fff",
+                  color: "#fff",
                 }}
               >
                 Fale Conosco
@@ -127,7 +127,7 @@ const Header: React.FC = () => {
         </C.Content>
       </C.Container>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

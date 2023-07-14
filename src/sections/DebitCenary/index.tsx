@@ -21,15 +21,16 @@ const DebitCenary: React.FC = () => {
         <C.CenaryTextContainer>
           <C.CenaryText>
             A <strong>dívida total Brasileira</strong> é de{" "}
-            <span style={{ fontSize: 27 }}>R$</span>{" "}
-            <span style={{ fontSize: 53 }}>273,1</span>
+            <span style={{ fontSize: 32 }}>
+              R$<span style={{ fontSize: 53, marginLeft: "10px" }}>273,1</span>
+            </span>{" "}
             <br />
             Bilhões em precatórios
           </C.CenaryText>
 
           <C.CenaryText>
-            Atualmente a <strong>espera</strong> é de até{" "}
-            <span style={{ fontSize: 53 }}>20</span>{" "}
+            Atualmente a <strong>espera</strong> é de até
+            <br /> <span style={{ fontSize: 53 }}>20</span>{" "}
             <span style={{ fontSize: 27 }}>anos</span>
           </C.CenaryText>
 
@@ -52,7 +53,12 @@ const DebitCenary: React.FC = () => {
         <C.SourceContainer>
           <C.SourceText>
             Fonte:{" "}
-            <a href="https://www.cnj.jus.br/pagamento-de-precatorios/">CNJ</a>
+            <a
+              href="https://www.cnj.jus.br/pagamento-de-precatorios/"
+              style={{ fontWeight: "bold" }}
+            >
+              CNJ
+            </a>
           </C.SourceText>
 
           <C.SourceText>

@@ -72,7 +72,7 @@ const MainNews: React.FC = () => {
             </C.NewsItemTop>
             <Link
               href={{
-                pathname: "news/" + news.fields.title,
+                pathname: "noticias/" + news.fields.title,
                 query: { id: news.sys.id },
               }}
               style={{
@@ -86,7 +86,7 @@ const MainNews: React.FC = () => {
         {isMobile && (
           <Link
             href={{
-              pathname: "news/",
+              pathname: "noticias/",
             }}
             style={{
               color: "#e2a141",
