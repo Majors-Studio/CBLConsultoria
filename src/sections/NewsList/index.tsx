@@ -1,15 +1,15 @@
-import CardBlog from "@/components/CardBlog"
-import { useApp } from "@/context/appContext"
-import Link from "next/link"
-import React from "react"
+import CardBlog from "@/components/CardBlog";
+import { useApp } from "@/context/appContext";
+import Link from "next/link";
+import React from "react";
 
-import ContentBox from "@/components/ContentBox"
-import { tokens } from "@/utils/tokens"
-import { useDevice } from "@/hooks/useDevice"
+import ContentBox from "@/components/ContentBox";
+import { tokens } from "@/utils/tokens";
+import { useDevice } from "@/hooks/useDevice";
 
 const NewsList: React.FC = () => {
-  const { isMobile, isTablet } = useDevice()
-  const { newsList } = useApp()
+  const { isMobile, isTablet } = useDevice();
+  const { newsList } = useApp();
 
   return (
     <ContentBox
@@ -33,11 +33,7 @@ const NewsList: React.FC = () => {
           <Link
             key={post.sys.id}
             href={{
-<<<<<<< HEAD
-              pathname: "noticias/" + post.fields.title,
-=======
-              pathname: "news/post/",
->>>>>>> develop
+              pathname: "noticias/post/",
               query: { id: post.sys.id },
             }}
           >
@@ -46,10 +42,10 @@ const NewsList: React.FC = () => {
               src={post.fields.featuredImage?.fields.file.url}
             />
           </Link>
-        )
+        );
       })}
     </ContentBox>
-  )
-}
+  );
+};
 
-export default NewsList
+export default NewsList;
