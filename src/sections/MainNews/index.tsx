@@ -72,7 +72,7 @@ const MainNews: React.FC = () => {
             </C.NewsItemTop>
             <Link
               href={{
-                pathname: "noticias/" + news.fields.title,
+                pathname: "noticias/post/",
                 query: { id: news.sys.id },
               }}
               style={{

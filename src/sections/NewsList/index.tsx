@@ -5,83 +5,11 @@ import React from "react"
 
 import ContentBox from "@/components/ContentBox"
 import { tokens } from "@/utils/tokens"
-import { newsList } from "@/utils/dataObjects"
 import { useDevice } from "@/hooks/useDevice"
 
-interface Props {
-  list?: {
-    metadata: {
-      tags: any[]
-    }
-    sys: {
-      space: {
-        sys: {
-          type: string
-          linkType: string
-          id: string
-        }
-      }
-      id: string
-      type: string
-      createdAt: string
-      updatedAt: string
-      environment: {
-        sys: {
-          id: string
-          type: string
-          linkType: string
-        }
-      }
-      revision: number
-      contentType: {
-        sys: {
-          type: string
-          linkType: string
-          id: string
-        }
-      }
-      locale: string
-    }
-    fields: {
-      title: string
-      publishedDate: string
-      content: {
-        data: any
-        content: {
-          data: any
-          content: {
-            data: any
-            marks: any[]
-            value: string
-            nodeType: string
-          }[]
-          nodeType: string
-        }[]
-        nodeType: string
-      }
-      featuredImage: {
-        fields: {
-          title: string
-          description: string
-          file: {
-            url: string
-            details: {
-              size: number
-              image: {
-                width: number
-                height: number
-              }
-            }
-            fileName: string
-          }
-        }
-      }
-    }
-  }[]
-}
-
-const NewsList: React.FC<Props> = ({ list }) => {
+const NewsList: React.FC = () => {
   const { isMobile, isTablet } = useDevice()
+  const { newsList } = useApp()
 
   return (
     <ContentBox
@@ -100,17 +28,21 @@ const NewsList: React.FC<Props> = ({ list }) => {
         gap: "20px",
       }}
     >
-      {list?.map((post) => {
+      {newsList?.map((post) => {
         return (
           <Link
             key={post.sys.id}
             href={{
+<<<<<<< HEAD
               pathname: "noticias/" + post.fields.title,
+=======
+              pathname: "news/post/",
+>>>>>>> develop
               query: { id: post.sys.id },
             }}
           >
             <CardBlog
-              text={post.fields.title}
+              text={post.fields.title as string}
               src={post.fields.featuredImage?.fields.file.url}
             />
           </Link>

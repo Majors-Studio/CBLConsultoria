@@ -1,44 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react"
 
 import { useRouter } from "next/router";
 
-import * as S from "@/styles/news_slug";
-import Link from "next/link";
-import { getDate } from "@/utils/getDate";
-import { createClient } from "contentful";
+import * as S from "@/styles/news_slug"
+import Link from "next/link"
+import { getDate } from "@/utils/getDate"
+import { useApp } from "@/context/appContext"
+import { getMarkdown } from "@/utils/getMarkdown"
 
-const Page: React.FC<any> = ({ news }) => {
-  const router = useRouter();
+const Page: React.FC<any> = () => {
+  const { newsList, getNewsList } = useApp()
+  const router = useRouter()
   const {
     query: { id },
   } = router;
 
-  const post = news.find((post: any) => post.sys.id === id);
+  useEffect(() => {
+    if (newsList.length > 0) return
+    getNewsList()
+  }, [])
 
-  if (!id || !post)
+  if (!newsList.length)
+    return (
+      <S.Container>
+        <S.Content>Carregando...</S.Content>
+      </S.Container>
+    )
+
+  const news = newsList.find((item: any) => item.sys.id === id)
+
+  if (!id || !news)
     return (
       <S.Container>
         <S.Content>Notícia não encontrada!</S.Content>
       </S.Container>
     );
 
-  console.log(post);
-
-  const { title, publishedDate, featuredImage, content, author } = post.fields;
-
-  const {
-    fields: {
-      title: featuredTitle,
-      file: { url: featuredUrl },
-    },
-  } = featuredImage || { fields: { title: "", file: { url: "" } } };
+  const { title, publishedDate, featuredImage, content, author } = news.fields
 
   const titleText = title?.toString() || "";
 
-  const cont = content?.content as any[];
-
-  const excerpt = cont.find((item: any) => item.nodeType === "paragraph")
-    ?.content[0].value;
+  const cont = content?.content as any[]
+  
+  const excerpt = cont
+    .map((item: any) => getMarkdown(item.content, item.nodeType))
+    .join(" ")
 
   return (
     <S.Container>
@@ -58,7 +64,7 @@ const Page: React.FC<any> = ({ news }) => {
         }}
       >
         {featuredImage ? (
-          <S.Image src={featuredUrl} alt={featuredTitle?.toString()} />
+          <S.Image src={featuredImage?.fields.file.url} alt={featuredImage.fields.title?.toString()} />
         ) : (
           <S.NoImage>Imagem não encontrada</S.NoImage>
         )}
@@ -69,39 +75,13 @@ const Page: React.FC<any> = ({ news }) => {
           {" | "}
           <span>{getDate(publishedDate?.toString() || "")}</span>
         </S.Description>
-        <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} />
+        <S.Text dangerouslySetInnerHTML={{ __html: excerpt }} style={{
+          
+        
+        }} />
       </S.Content>
     </S.Container>
   );
 };
 
-export default Page;
-
-export const getStaticPaths = async () => {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID || "",
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
-  });
-
-  const res = await client.getEntries({ content_type: "newsArticle" });
-
-  const paths = res.items.map((item) => ({
-    params: { slug: item.fields.title, props: { news: res.items } },
-  }));
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async () => {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID || "",
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
-  });
-
-  const res = await client.getEntries({ content_type: "newsArticle" });
-
-  return {
-    props: { news: res.items },
-    revalidate: 1,
-  };
-};
+export default Page
