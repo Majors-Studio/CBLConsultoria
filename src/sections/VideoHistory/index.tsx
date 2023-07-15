@@ -1,16 +1,16 @@
-import React from "react"
-import ContentBox from "@/components/ContentBox"
-import Video from "@/components/Video"
-import { Subtitle } from "@/components"
-import { tokens } from "@/utils/tokens"
+import React from "react";
+import ContentBox from "@/components/ContentBox";
+import Video from "@/components/Video";
+import { Subtitle } from "@/components";
+import { tokens } from "@/utils/tokens";
 
-import * as C from "./styles"
-import gsap from "gsap"
+import * as C from "./styles";
+import gsap from "gsap";
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = React.useState<boolean>(false)
+  const [showMore, setShowMore] = React.useState<boolean>(false);
 
-  const showMoreRef = React.useRef<HTMLParagraphElement>(null)
+  const showMoreRef = React.useRef<HTMLParagraphElement>(null);
 
   React.useEffect(() => {
     if (showMoreRef.current) {
@@ -19,16 +19,16 @@ const VideoHistory: React.FC = () => {
           height: "auto",
           duration: 0.3,
           ease: "power2.inOut",
-        })
+        });
       } else {
         gsap.to(showMoreRef.current, {
           height: "0px",
           duration: 0.3,
           ease: "power2.inOut",
-        })
+        });
       }
     }
-  }, [showMore])
+  }, [showMore]);
 
   return (
     <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>
@@ -72,8 +72,8 @@ const VideoHistory: React.FC = () => {
       <div
         ref={showMoreRef}
         style={{
-        
-        overflow: "hidden",}}
+          overflow: "hidden",
+        }}
       >
         <Subtitle
           style={{
@@ -114,7 +114,7 @@ const VideoHistory: React.FC = () => {
         </svg>
       </C.ShowMoreButton>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default VideoHistory
+export default VideoHistory;

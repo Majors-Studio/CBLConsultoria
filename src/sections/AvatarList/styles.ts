@@ -6,10 +6,10 @@ export const AvatarName = styled.h3`
   font-weight: ${tokens.font.weight.bold};
   max-width: 120px;
   text-align: center;
-  color: ${tokens.colors.brand.pure};
+  color: ${tokens.colors.brand.cta};
   margin-top: 8px;
   font-family: ${tokens.font.family.secondary};
-`
+`;
 
 export const AvatarCharge = styled.p`
   font-size: 18px;
@@ -17,7 +17,7 @@ export const AvatarCharge = styled.p`
   color: #000000;
   font-family: ${tokens.font.family.primary};
   margin-bottom: 20px;
-`
+`;
 
 export const Item = styled.div`
   display: flex;
@@ -25,15 +25,12 @@ export const Item = styled.div`
 
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const List = styled.div`
-    display: flex;
-    flex-direction: row;
-justify-content:center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-margin-top: 20px;
-
-
-
-`
+  margin-top: 20px;
+`;

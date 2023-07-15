@@ -7,6 +7,8 @@ import React from "react";
 import * as C from "./styles";
 import Anchor from "@/components/Anchor";
 
+import { Balancer } from "react-wrap-balancer";
+
 const DebitCenary: React.FC = () => {
   return (
     <ContentBox bgColor={tokens.colors.brand.dark} py={"60px"}>
@@ -22,7 +24,8 @@ const DebitCenary: React.FC = () => {
           <C.CenaryText>
             A <strong>dívida total Brasileira</strong> é de{" "}
             <span style={{ fontSize: 32 }}>
-              R$<span style={{ fontSize: 53, marginLeft: "10px" }}>273,1</span>
+              R$
+              <span style={{ fontSize: 53, marginLeft: "10px" }}>273,1</span>
             </span>{" "}
             <br />
             Bilhões em precatórios

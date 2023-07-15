@@ -1,20 +1,20 @@
-import React, { useState } from "react"
-import { useApp } from "@/context/appContext"
-import * as S from "./styles"
-import Link from "next/link"
+import React, { useState } from "react";
+import { useApp } from "@/context/appContext";
+import * as S from "./styles";
+import Link from "next/link";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string
-  children?: React.ReactNode
-  style?: React.CSSProperties
-  href?: string
+  text?: string;
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+  href?: string;
 }
 
 const CtaButton: React.FC<Props> = ({
   text,
   children = <>Fale Conosco!</>,
   style,
-  href = "#purposeForm",
+  href = "",
   ...props
 }) => {
   return (
@@ -27,7 +27,7 @@ const CtaButton: React.FC<Props> = ({
         children
       )}
     </S.Button>
-  )
-}
+  );
+};
 
-export default CtaButton
+export default CtaButton;

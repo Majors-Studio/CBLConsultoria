@@ -7,6 +7,8 @@ import React from "react";
 import * as C from "./styles";
 import { stepsList } from "@/utils/dataObjects";
 
+import { Balancer } from "react-wrap-balancer";
+
 const SellSteps: React.FC = () => {
   return (
     <ContentBox bgColor={tokens.colors.brand.cta} py={"60px"}>
@@ -47,7 +49,7 @@ const SellSteps: React.FC = () => {
                 lineHeight: "22px",
               }}
             >
-              {step.text}
+              <Balancer>{step.text}</Balancer>
             </Description>
           </li>
         ))}
@@ -56,6 +58,7 @@ const SellSteps: React.FC = () => {
       <Description
         style={{
           color: tokens.colors.highlight.light,
+          padding: "24px",
         }}
       >
         A venda do precatório é realizada com muita segurança e agilidade, todo

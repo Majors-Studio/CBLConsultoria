@@ -2,7 +2,7 @@ import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const ShowMoreButton = styled.button`
-  color: ${tokens.colors.brand.pure};
+  color: ${tokens.colors.brand.cta};
   font-size: ${tokens.font.sizes.xs};
   font-weight: ${tokens.font.weight.bold};
   border: none;
@@ -17,4 +17,4 @@ export const ShowMoreButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;

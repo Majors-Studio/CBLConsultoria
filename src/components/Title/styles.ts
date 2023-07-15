@@ -9,6 +9,7 @@ export const Title = styled.h3<TitleProps>`
   font-family: ${tokens.font.family.primary};
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: -0.75px;
 
   color: ${({ variant }) =>
     variant === "primary"
