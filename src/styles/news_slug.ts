@@ -119,6 +119,8 @@ export const Description = styled.div`
   }
 `
 
+export const ContentText = styled.div``
+
 export const Text = styled.p`
   font-size: 18px;
   color: ${tokens.colors.neutral.lowDark};

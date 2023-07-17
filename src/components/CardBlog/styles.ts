@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { tokens } from "@/utils/tokens"
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
