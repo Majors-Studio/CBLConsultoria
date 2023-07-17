@@ -10,6 +10,7 @@ import { Toast } from "@/components"
 import { SuccessIcon } from "@/assets/icons"
 import Head from "next/head"
 import Loading from "@/components/Loading"
+import { navitems } from "@/utils/navitems"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { isTop, toastMessage, showToast, type } = useApp()
@@ -35,13 +36,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* <meta name="robots" content="index, follow" /> */}
       {/* <meta property="og:image" content="/images/og/harmony.png" /> */}
       {/* <link rel="manifest" href="site.webmanifest" /> */}
+      <title>
+        {typeof window === "undefined"
+          ? "CBL Consultoria"
+          : navitems.find((item) => item.url == window.location.pathname)
+              ?.title}
+      </title>
     </Head>
   )
 
   return (
     <>
       {head}
-
       {timeoutId || typeof window === "undefined" ? (
         <Loading />
       ) : (
