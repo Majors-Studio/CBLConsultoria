@@ -105,7 +105,9 @@ const Page: React.FC<any> = () => {
           <span>{getDate(publishedDate?.toString() || "")}</span>
         </S.Description>
         <S.ContentText>
+          <div>
           {documentToReactComponents(content, options)}
+          </div>
         </S.ContentText>
       </S.Content>
     </S.Container>
