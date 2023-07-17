@@ -1,33 +1,66 @@
-import { Header, Footer } from "@/components";
-import React from "react";
+import { Header, Footer } from "@/components"
+import React, { useEffect, useState } from "react"
 
-import * as C from "./styles";
-import Whatsapp from "@/components/Whatsapp";
-import { useApp } from "@/context/appContext";
+import Whatsapp from "@/components/Whatsapp"
+import { AppProvider, useApp } from "@/context/appContext"
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
-import { Toast } from "@/components";
-import { SuccessIcon } from "@/assets/icons";
+import { Toast } from "@/components"
+import { SuccessIcon } from "@/assets/icons"
+import Head from "next/head"
+import Loading from "@/components/Loading"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { isTop, toastMessage, showToast, type } = useApp();
+  const { isTop, toastMessage, showToast, type } = useApp()
+  const [timeoutId, setTimeoutId] = useState(true)
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setTimeoutId(false)
+    }, 2000)
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId)
+    }
+  }, [])
+
+  const head = (
+    <Head>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      {/* <meta name="robots" content="index, follow" /> */}
+      {/* <meta property="og:image" content="/images/og/harmony.png" /> */}
+      {/* <link rel="manifest" href="site.webmanifest" /> */}
+    </Head>
+  )
 
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
-      {isTop ? null : <Whatsapp />}
-      {showToast && (
-        <Toast
-          type={type}
-          icon={type == "success" ? <SuccessIcon /> : null}
-          message={toastMessage as string}
-        />
+      {head}
+
+      {timeoutId || typeof window === "undefined" ? (
+        <Loading />
+      ) : (
+        <AppProvider>
+          <Header />
+          {children}
+          <Footer />
+          {isTop ? null : <Whatsapp />}
+          {showToast && (
+            <Toast
+              type={type}
+              icon={type == "success" ? <SuccessIcon /> : null}
+              message={toastMessage as string}
+            />
+          )}
+        </AppProvider>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

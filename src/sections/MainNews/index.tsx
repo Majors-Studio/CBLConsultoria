@@ -1,18 +1,24 @@
-import { Subtitle, Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import { useDevice } from "@/hooks/useDevice";
-import { tokens } from "@/utils/tokens";
-import Link from "next/link";
-import React from "react";
+import { Subtitle, Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import { useDevice } from "@/hooks/useDevice"
+import { tokens } from "@/utils/tokens"
+import Link from "next/link"
+import React, { useEffect } from "react"
 
-import * as C from "./styles";
-import { useApp } from "@/context/appContext";
-import { getDate } from "@/utils/getDate";
+import * as C from "./styles"
+import { useApp } from "@/context/appContext"
+import { getDate } from "@/utils/getDate"
 
 const MainNews: React.FC = () => {
-  const { isMobile } = useDevice();
-  const { newsList } = useApp()
-  
+  const { isMobile } = useDevice()
+  const { newsList, getNewsList } = useApp()
+
+  useEffect(() => {
+    if (!newsList.length) {
+      getNewsList()
+    }
+  }, [])
+
   return (
     <ContentBox
       py={"60px"}
@@ -46,43 +52,43 @@ const MainNews: React.FC = () => {
           dos maiores escritórios de advocacia.
           <br />
           <br />
-          Os <b>pagamentos</b> que inicialmente deveriam ser
-          realizados <b>em SP até 2020</b>, foram postergados para{" "}
-          <b>2024</b> e novamente prorrogados para
+          Os <b>pagamentos</b> que inicialmente deveriam ser realizados{" "}
+          <b>em SP até 2020</b>, foram postergados para <b>2024</b> e novamente
+          prorrogados para
           <b>2029</b>.
           <br />
           <br />
           As notícias abordam justamente os atrasos, a mudança constante na data
-          limite de pagamento e a <b>incerteza</b> no{" "}
-          <b>recebimento</b> dos precatórios, que vem{" "}
-          <b>prejudicando milhares de credores</b>.
+          limite de pagamento e a <b>incerteza</b> no <b>recebimento</b> dos
+          precatórios, que vem <b>prejudicando milhares de credores</b>.
         </Subtitle>
       </div>
 
       <C.NewsList>
-        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) =>
-        {
+        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
           return (
-          <C.NewsItem key={newsIndex}>
-            <C.NewsItemTop>
-              <C.NewsItemInfo>
-                {news.fields.sourceAuthor && news.fields.sourceAuthor + ' | '}{getDate(news.fields.publishedDate)}
-              </C.NewsItemInfo>
-              <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
-            </C.NewsItemTop>
-            <Link
-              href={{
-                pathname: "noticias/post/",
-                query: { id: news.sys.id },
-              }}
-              style={{
-                color: "#e2a141",
-              }}
-            >
-              Leia mais
-            </Link>
-          </C.NewsItem>
-        )})}
+            <C.NewsItem key={newsIndex}>
+              <C.NewsItemTop>
+                <C.NewsItemInfo>
+                  {news.fields.sourceAuthor && news.fields.sourceAuthor + " | "}
+                  {getDate(news.fields.publishedDate)}
+                </C.NewsItemInfo>
+                <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
+              </C.NewsItemTop>
+              <Link
+                href={{
+                  pathname: "noticias/post/",
+                  query: { id: news.sys.id },
+                }}
+                style={{
+                  color: "#e2a141",
+                }}
+              >
+                Leia mais
+              </Link>
+            </C.NewsItem>
+          )
+        })}
         {isMobile && (
           <Link
             href={{
@@ -98,7 +104,7 @@ const MainNews: React.FC = () => {
         )}
       </C.NewsList>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default MainNews;
+export default MainNews
