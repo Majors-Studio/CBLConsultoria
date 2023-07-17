@@ -10,14 +10,10 @@ import ArrowDownIcon from "@/assets/icons/ArrowDownIcon";
 import * as S from "./styles";
 import { useApp } from "@/context/appContext";
 import { Autoplay } from "swiper";
+import { bannerList } from "@/utils/dataObjects"
 
-interface BannerProps {
-  data: {
-    img: string;
-  }[];
-}
 
-const Banner: React.FC<BannerProps> = ({ data }) => {
+const Banner: React.FC = () => {
   const { isTop, screenSizeH, screenSizeW } = useApp();
 
   return (
@@ -42,7 +38,7 @@ const Banner: React.FC<BannerProps> = ({ data }) => {
           overflow: "hidden",
         }}
       >
-        {data.map((item, index) => (
+        {bannerList.map((item, index) => (
           <SwiperSlide
             key={index}
             style={{

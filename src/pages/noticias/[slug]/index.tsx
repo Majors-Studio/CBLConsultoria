@@ -39,7 +39,11 @@ const Page: React.FC<any> = () => {
 
   const { title, publishedDate, featuredImage, content, author } = news.fields
 
-  const titleText = title?.toString() || "Título não encontrado"
+  const titleText = title
+    ? title.length > 30
+      ? title.slice(0, isMobile ? 15 : 30) + "..."
+      : title?.toString()
+    : "Título não encontrado"
   const dateText = getDate(publishedDate?.toString() || "")
   const authorText = author?.toString() || "Desconhecido"
 
@@ -51,7 +55,7 @@ const Page: React.FC<any> = () => {
           <ArrowRight style={{ width: "22px", height: "12px" }} />
           <Link href="/noticias">Notícias</Link>
           <ArrowRight style={{ width: "22px", height: "12px" }} />
-          {titleText.length > 30 ? titleText.slice(0, isMobile ? 15 : 30) + "..." : titleText}
+          {titleText}
         </S.Tab>
       </S.Content>
       <S.Content
@@ -71,9 +75,8 @@ const Page: React.FC<any> = () => {
         <S.Category>Notícia</S.Category>
         <S.Title>{titleText}</S.Title>
         <S.Description>
-          Por <span>{authorText}</span>
-          {" | "}
-          <span>{dateText}</span>
+          Por {authorText}
+          {dateText ? " | " + dateText : ""}
         </S.Description>
         {documentToReactComponents(content, markdownOptions)}
       </S.Content>

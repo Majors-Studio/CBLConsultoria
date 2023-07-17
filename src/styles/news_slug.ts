@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   margin-top: 120px;
   background-color: ${tokens.colors.brand.lightCream};
+  overflow-x: hidden;
 `
 
 export const Content = styled.div`
