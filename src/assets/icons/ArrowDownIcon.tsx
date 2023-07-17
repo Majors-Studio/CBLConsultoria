@@ -1,17 +1,12 @@
 import React from "react";
 
-interface ArrowDownIconProps {
-  style?: React.CSSProperties;
-}
-
-const ArrowDownIcon: React.FC<ArrowDownIconProps> = ({style}) => {
+const ArrowDownIcon: React.FC = () => {
   return (
     <svg
       width='100%'
       height="100%"
       viewBox="0 0 59 59"
       fill="none"
-      style={style}
     >
       <circle
         cx="29.5891"

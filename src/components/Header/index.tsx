@@ -44,9 +44,7 @@ const Header: React.FC = () => {
                 gap: "6px",
               }}
             >
-              <div style={{
-                marginLeft: isMobile ? "24px" : "0",
-              }}>{item.title} </div>
+              <div>{item.title} </div>
               {item.subpaths && isDesktop && (
                 <div
                   style={{
