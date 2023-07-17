@@ -6,6 +6,7 @@ export const Heading1 = styled.h1`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 40px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
@@ -15,6 +16,7 @@ export const Heading2 = styled.h2`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 35px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
@@ -24,6 +26,7 @@ export const Heading3 = styled.h3`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 30px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
@@ -33,6 +36,7 @@ export const Heading4 = styled.h4`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 30px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
@@ -42,6 +46,7 @@ export const Heading5 = styled.h5`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 30px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
@@ -51,6 +56,7 @@ export const Heading6 = styled.h6`
   color: ${tokens.colors.neutral.lowDark};
   font-weight: 400;
   line-height: 30px;
+  margin-top: 20px;
   margin-bottom: 12px;
   font-family: ${tokens.font.family.primary};
 `
