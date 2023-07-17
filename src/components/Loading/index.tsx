@@ -65,7 +65,7 @@ const Loading: React.FC<Props> = ({ hasLogo = true, variant = 'dark' }) => {
             left: "50%",
             transform: "rotate(0deg)",
             animation: "rotate 0.8s infinite",
-            color: tokens.colors.brand.light,
+            color: variant === 'dark' ? tokens.colors.brand.light : tokens.colors.brand.dark,
           }}
         >
           <LoadingIcon />
