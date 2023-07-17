@@ -5,9 +5,10 @@ import Logo from "../Logo"
 
 interface Props {
   hasLogo?: boolean
+  variant?: "light" | "dark"
 }
 
-const Loading: React.FC<Props> = ({ hasLogo = true }) => {
+const Loading: React.FC<Props> = ({ hasLogo = true, variant = 'dark' }) => {
   return (
     <>
       <style>
@@ -52,7 +53,7 @@ const Loading: React.FC<Props> = ({ hasLogo = true }) => {
           position: "relative",
           gap: "20px",
           overflow: "hidden",
-          backgroundColor: tokens.colors.brand.dark,
+          backgroundColor: variant === 'dark' ? tokens.colors.brand.dark : tokens.colors.brand.light,
           animation: "fadeout 2s linear forwards",
         }}
       >

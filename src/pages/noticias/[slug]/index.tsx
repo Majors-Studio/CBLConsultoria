@@ -41,7 +41,7 @@ const Page: React.FC<any> = () => {
     }
   }, [id, newsList, getNewsList])
 
-  if (loading) return <Loading />
+  if (loading) return <Loading variant="light" />
 
   if (!news)
     return (
