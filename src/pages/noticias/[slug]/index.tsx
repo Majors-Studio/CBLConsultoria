@@ -19,16 +19,29 @@ const Page: React.FC<any> = () => {
   const {
     query: { id },
   } = router
-
-  if (!id) router.push("/")
+  const [loading, setLoading] = React.useState(true)
+  const [news, setNews] = React.useState<any>(null)
 
   useEffect(() => {
-    getNewsList()
-  }, [])
+    if (!id) {
+      router.push("/noticias")
+    } else {
+      if (!newsList.length) {
+        setLoading(true)
+        getNewsList()
+      } else {
+        const news = newsList.find((item: any) => item.sys.id === id)
+        if (!news) {
+          getNewsList()
+        } else {
+          setLoading(false)
+          setNews(news)
+        }
+      }
+    }
+  }, [id, newsList, getNewsList])
 
-  if (!newsList.length) return <Loading />
-
-  const news = newsList.find((item: any) => item.sys.id === id)
+  if (loading) return <Loading />
 
   if (!news)
     return (
@@ -39,11 +52,13 @@ const Page: React.FC<any> = () => {
 
   const { title, publishedDate, featuredImage, content, author } = news.fields
 
-  const titleText = title
+  const newsPath = title
     ? title.length > 30
       ? title.slice(0, isMobile ? 15 : 30) + "..."
       : title?.toString()
-    : "Título não encontrado"
+    : "Notícia"
+
+  const titleText = title ? title?.toString() : "Título não encontrado"
   const dateText = getDate(publishedDate?.toString() || "")
   const authorText = author?.toString() || "Desconhecido"
 
@@ -55,7 +70,7 @@ const Page: React.FC<any> = () => {
           <ArrowRight style={{ width: "22px", height: "12px" }} />
           <Link href="/noticias">Notícias</Link>
           <ArrowRight style={{ width: "22px", height: "12px" }} />
-          {titleText}
+          {newsPath}
         </S.Tab>
       </S.Content>
       <S.Content
