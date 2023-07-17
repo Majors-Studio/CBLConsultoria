@@ -4,12 +4,9 @@ import React, { useEffect, useState } from "react"
 import Head from "next/head"
 import Layout from "@/layout"
 import { AppProvider } from "@/context/appContext"
-import LoadingIcon from "@/assets/icons/LoadingIcon"
-import Logo from "@/components/Logo"
-import { tokens } from "@/utils/tokens"
 import { GlobalStyle } from "@/theme/global-styles"
 import "@/styles/global.css"
-
+import { Analytics } from '@vercel/analytics/react';
 import { Bebas_Neue, Montserrat, Poppins } from "@next/font/google"
 import localFont from "@next/font/local"
 import Loading from "@/components/Loading"
@@ -65,6 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Analytics/>
       <GlobalStyle />
       {head}
       <AppProvider>
