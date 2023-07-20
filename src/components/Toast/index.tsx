@@ -11,8 +11,13 @@ export default function Toast() {
       className="flex items-center justify-between w-full max-w-xs p-4 mb-4 rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
       style={{
         width: "100vw",
-        backgroundColor: toast?.type === "success" ? "#4BB543" : toast?.type === 'sending' ? tokens.colors.brand.cta : "#FF0000",
-        color: "#FFF",
+        backgroundColor:
+          toast?.type === "success"
+            ? tokens.colors.feedback.successPure
+            : toast?.type === "sending"
+            ? tokens.colors.brand.cta
+            : tokens.colors.feedback.errorPure,
+        color: tokens.colors.brand.light,
         position: "fixed",
         bottom: "0px",
         left: "20px",
@@ -21,8 +26,14 @@ export default function Toast() {
         visibility: toast ? "visible" : "hidden",
       }}
     >
-      <p style={{ textAlign: "right", color: "#FFF" }}>{toast?.message}</p>
-      {toast?.type === "success" ? <SuccessIcon /> :  toast?.type === 'sending' ? <ClockIcon/> :null}
+      <p style={{ textAlign: "right", color: tokens.colors.brand.light }}>
+        {toast?.message}
+      </p>
+      {toast?.type === "success" ? (
+        <SuccessIcon />
+      ) : toast?.type === "sending" ? (
+        <ClockIcon />
+      ) : null}
     </div>
   )
 }

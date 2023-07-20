@@ -11,6 +11,7 @@ import Link from "next/link"
 import Hamburguer from "../Hamburguer"
 import CtaButton from "../CtaButton"
 import { useApp } from "@/context/appContext"
+import { tokens } from "@/utils/tokens"
 
 const Header: React.FC = () => {
   const { isMobile, isTablet, isDesktop } = useDevice()
@@ -122,8 +123,8 @@ const Header: React.FC = () => {
               {navBar}
               <CtaButton
                 style={{
-                  border: "1px solid #fff",
-                  color: "#fff",
+                  border: "1px solid "+tokens.colors.brand.light,
+                  color: tokens.colors.brand.light,
                   }}
                   href="#purposeForm"
               >

@@ -19,7 +19,7 @@ const News: React.FC<Props> = ({ news }) => {
   useEffect(() => {
     if (!news) return
     setNewsList(news)
-  }, [news])
+  }, [news,setNewsList])
 
   return (
     <C.BlogContainer>
@@ -27,7 +27,7 @@ const News: React.FC<Props> = ({ news }) => {
       {!news ? (
         <>
           <ContentBox
-            bgColor="#fff"
+            bgColor={tokens.colors.brand.light}
             py={tokens.space.sizeXl}
             style={{
               width: "100%",

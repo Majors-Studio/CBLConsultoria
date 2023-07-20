@@ -12,8 +12,8 @@ position: relative;
     props.bgColor ? props.bgColor : "transparent"};
   padding-top: ${(props) => (props.py ? props.py : 0)};
   padding-bottom: ${(props) => (props.py ? props.py : 0)};
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: ${tokens.space.sizeXxs};
+  padding-right: ${tokens.space.sizeXxs};
 `
 
 export const Content = styled.div`

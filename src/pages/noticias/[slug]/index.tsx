@@ -39,7 +39,7 @@ const Page: React.FC<any> = () => {
         }
       }
     }
-  }, [id, newsList, getNewsList])
+  }, [id, newsList, getNewsList,router])
 
   if (loading) return <Loading variant="light" hasLogo={false} />
 

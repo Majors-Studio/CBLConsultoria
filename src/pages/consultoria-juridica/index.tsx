@@ -18,7 +18,7 @@ import Anchor from "@/components/Anchor";
 const LegalAdvice: React.FC = () => {
   return (
     <>
-      <HeadBanner title="Consultoria juridica" color="#fff" />
+      <HeadBanner title="Consultoria juridica" color={tokens.colors.brand.light} />
 
       <C.ContainerFluid bgColor={`${tokens.colors.brand.cta}`}>
         <C.Container>
@@ -78,7 +78,7 @@ const LegalAdvice: React.FC = () => {
             >
               Erro médico
             </Title>
-            <Subtitle style={{ color: "#fff", textAlign: "left" }}>
+            <Subtitle style={{ color: tokens.colors.brand.light, textAlign: "left" }}>
               A Organização Mundial da Saúde (OMS) publicou um relatório que
               mostra um aumento na ocorrência de erros médicos em todo o mundo e
               no Brasil não é diferente.

@@ -27,7 +27,7 @@ const SellSteps: React.FC = () => {
       <C.StepsList>
         {stepsList.map((step) => (
           <li key={step.id}>
-            <C.StepsItemIcon style={{ color: "#fff" }}>
+            <C.StepsItemIcon style={{ color: tokens.colors.brand.light }}>
               {step.icon}
             </C.StepsItemIcon>
             <Subtitle

@@ -6,11 +6,11 @@ export const Subtitle = styled.p<SubtitleProps>`
   color: #121212;
   font-family: ${tokens.font.family.secondary};
   font-size: ${tokens.font.sizes.sm};
-  font-weight: 400;
+  font-weight: ${tokens.font.weight.regular};
   line-height: 20px;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     font-size: ${tokens.font.sizes.xs};
   }
 `;

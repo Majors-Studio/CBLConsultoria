@@ -1,6 +1,6 @@
 "use client";
 
-import { bebasNeue, lastica, montserrat, poppins } from "@/pages/_app";
+import { montserrat, poppins } from "@/pages/_app";
 
 export const tokens = {
   breakpoints: {

@@ -17,7 +17,7 @@ const MainNews: React.FC = () => {
     if (!newsList.length) {
       getNewsList()
     }
-  }, [])
+  }, [getNewsList, newsList.length])
 
   return (
     <ContentBox
