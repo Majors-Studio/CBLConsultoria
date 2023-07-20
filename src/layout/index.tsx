@@ -40,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <meta name="robots" content="index, follow" />
       <link rel="icon" href="/favicon/favicon.ico" />
 
-      <meta property="og:image" content="/images/og.png" />
+      <meta property="og:image" content="public\assets\images\og.png" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
