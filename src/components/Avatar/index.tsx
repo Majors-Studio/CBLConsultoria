@@ -3,15 +3,20 @@ import React from "react"
 import * as S from "./styles"
 
 interface AvatarProps {
-    size?: "small" | "medium" | "large"
-  src: string
+  size?: "small" | "medium" | "large"
+  img: any
   alt?: string
 }
 
-const Avatar: React.FC<AvatarProps> = ({ size = 'medium',src, alt = "Avatar" }) => {
+const Avatar: React.FC<AvatarProps> = ({
+  size = "medium",
+  img,
+  alt = "Avatar",
+}) => {
+  console.log(img)
   return (
     <S.Container size={size}>
-      <S.Image alt={alt} src={src} />
+      <S.Image alt={alt} src={img.src} />
     </S.Container>
   )
 }

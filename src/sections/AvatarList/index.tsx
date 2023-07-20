@@ -1,11 +1,11 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
 
-import * as C from "./styles";
-import { Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import { tokens } from "@/utils/tokens";
-import { avatarData } from "@/utils/dataObjects";
+import * as C from "./styles"
+import { Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import { tokens } from "@/utils/tokens"
+import { avatarData } from "@/utils/dataObjects"
+import Avatar from "@/components/Avatar"
 
 const AvatarList: React.FC = () => {
   return (
@@ -21,19 +21,13 @@ const AvatarList: React.FC = () => {
         {avatarData.map((avatar, index) => (
           <C.Item key={index}>
             <C.AvatarCharge>{avatar.charge}</C.AvatarCharge>
-            <Image
-              src={avatar.img}
-              alt="avatar"
-              style={{ borderRadius: "505%" }}
-              width={60}
-              height={60}
-            />
+            <Avatar img={avatar.img} alt={avatar.name} size="large" />
             <C.AvatarName>{avatar.name}</C.AvatarName>
           </C.Item>
         ))}
       </C.List>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default AvatarList;
+export default AvatarList

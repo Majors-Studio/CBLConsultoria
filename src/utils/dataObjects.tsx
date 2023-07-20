@@ -7,7 +7,9 @@ import bannerImg2 from "@/assets/png/banner-2.png";
 import bannerImg3 from "@/assets/png/banner-3.png";
 import bannerImg4 from "@/assets/png/banner-4.png";
 import bannerImg5 from "@/assets/png/banner-5.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
+import caue from '@/assets/jpg/caue_1_copy.jpg'
 
 export const feedbackList: {
   id: number;
@@ -115,12 +117,12 @@ export const newsList: {
 ];
 
 export const avatarData: {
-  img: string;
+  img: StaticImageData;
   name: string;
   charge: string;
 }[] = [
   {
-    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+    img: caue,
     name: "Caue Blasiolli",
     charge: "Coordinator",
   },

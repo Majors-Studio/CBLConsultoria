@@ -5,6 +5,7 @@ import SpeechBox from "../SpeechBox"
 import Avatar from "../Avatar"
 
 import * as C from "./styles"
+import { StaticImageData } from "next/image"
 
 interface SpeechCarouselProps {
   data: {
@@ -33,7 +34,7 @@ const SpeechCarousel: React.FC<SpeechCarouselProps> = ({ data }) => {
           <C.WhatItem>
             <SpeechBox text={item.text} />
             <C.WhatTexts>
-              <Avatar src={item.avatar} size="large" />
+              <Avatar img={item.avatar} size="large" />
               <C.WhatName>{item.name}</C.WhatName>
               {item.city && item.state && item.country && (
                 <C.WhatPlace>

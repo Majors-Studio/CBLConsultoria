@@ -5,14 +5,12 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
     background-color: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow: hidden;
     ${props => props.size === 'small' && `
         width: 40px;
         height: 40px;
@@ -32,6 +30,7 @@ export const Image = styled.img`
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top;
 
-
+    transform: scale(1.4);
 `

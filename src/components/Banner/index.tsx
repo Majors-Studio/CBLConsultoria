@@ -38,7 +38,8 @@ const Banner: React.FC = () => {
           overflow: "hidden",
         }}
       >
-        {bannerList.map((item, index) => (
+        {bannerList.map((item, index) => {
+          return (
           <SwiperSlide
             key={index}
             style={{
@@ -61,7 +62,7 @@ const Banner: React.FC = () => {
               }}
             />
           </SwiperSlide>
-        ))}
+        )})}
       </Swiper>
       {isTop && (
         <S.ArrowDown href="#videoshowcase">
