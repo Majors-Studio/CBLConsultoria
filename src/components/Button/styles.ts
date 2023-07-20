@@ -7,7 +7,7 @@ export const Button = styled.button<iButton>`
   padding: ${(props) => props.padding || "10px 25px"};
   background: ${(props) => props?.bgColor};
   color: ${(props) => props.color || tokens.colors.brand.pure};
-  font-weight: ${(props) => props.fontWeight || "bold"};
+  font-weight: ${(props) => props.fontWeight || tokens.font.weight.bold};
   font-size: 1.1rem;
   transition: background 0.2s;
 

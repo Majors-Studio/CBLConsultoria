@@ -1,7 +1,7 @@
-import { useDevice } from "@/hooks/useDevice"
 import React from "react"
 
 import * as S from "./styles"
+import Description from "../Description"
 
 interface VideoProps {
   src?: string
@@ -9,7 +9,6 @@ interface VideoProps {
 }
 
 const Video: React.FC<VideoProps> = ({ src }) => {
-  const { isMobile, isTablet } = useDevice()
   return (
     <S.VideoWrapper>
       {src ? (
@@ -22,7 +21,7 @@ const Video: React.FC<VideoProps> = ({ src }) => {
         ></iframe>
       ) : (
         <S.NoVideo>
-          <p>No video</p>
+          <Description>No video</Description>
         </S.NoVideo>
       )}
     </S.VideoWrapper>

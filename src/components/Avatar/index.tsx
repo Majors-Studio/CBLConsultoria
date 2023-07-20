@@ -13,7 +13,6 @@ const Avatar: React.FC<AvatarProps> = ({
   img,
   alt = "Avatar",
 }) => {
-  console.log(img)
   return (
     <S.Container size={size}>
       <S.Image alt={alt} src={img.src} />

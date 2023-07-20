@@ -1,6 +1,5 @@
 import React from "react";
 import * as C from "./styles";
-import Title from "@/components/Title";
 
 interface CardProps {
   title: string;

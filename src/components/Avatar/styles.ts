@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens"
 import styled from "styled-components"
 
 interface ContainerProps {
@@ -5,30 +6,29 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-    border-radius: 50%;
-    background-color: #121212;
+    border-radius: ${tokens.border.radius.circular}%;
+    background-color: ${tokens.colors.brand.dark};
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     ${props => props.size === 'small' && `
-        width: 40px;
-        height: 40px;
+        width: ${tokens.space.sizeSm};
+        height: ${tokens.space.sizeSm};
     `}
     ${props => props.size === 'medium' && `
-        width: 60px;
-        height: 60px;
+        width: ${tokens.space.sizeXl};
+        height: ${tokens.space.sizeXl};
     `}
     ${props => props.size === 'large' && `
-        width: 80px;
-        height: 80px;
+        width: ${tokens.space.sizeXxl};
+        height: ${tokens.space.sizeXxl};
     `}
 `
 
 export const Image = styled.img`
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
     object-position: top;
 

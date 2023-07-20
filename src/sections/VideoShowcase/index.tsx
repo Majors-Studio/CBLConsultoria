@@ -9,7 +9,7 @@ import React from "react"
 const VideoShowcase: React.FC = () => {
   return (
     <ContentBox
-      py={"60px"}
+      py={tokens.space.sizeXl}
       bgColor={tokens.colors.brand.light}
       contentStyle={{
         display: "flex",

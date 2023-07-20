@@ -2,7 +2,7 @@ import { tokens } from "@/utils/tokens"
 import styled from "styled-components"
 
 export const List = styled.ul`
-  margin-top: 60px;
+  margin-top: ${tokens.space.sizeXl};
 
   box-shadow: 0px 3px 10px 0px #00000029;
 `
@@ -11,20 +11,20 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding: 0 24px 20px;
+  padding: 0 ${tokens.space.sizeXxs} ${tokens.space.sizeXxxs};
 
   height: 100%;
 
   transition: max-height 0.4s ease-in-out;
 
-  background-color: #fff;
+  background-color: ${tokens.colors.brand.light};
   overflow: hidden;
 
   border-bottom: 3px solid ${tokens.colors.brand.pure};
 `
 
 export const Header = styled.div`
-  height: 84px;
+  height: ${tokens.space.sizeXxl};
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,6 +33,6 @@ export const Header = styled.div`
 `
 
 export const Icon = styled.div`
-  width: 20px;
-  height: 20px;
+  width: ${tokens.space.sizeXxs};
+  height: ${tokens.space.sizeXxs};
 `

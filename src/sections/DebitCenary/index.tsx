@@ -11,7 +11,7 @@ import { Balancer } from "react-wrap-balancer";
 
 const DebitCenary: React.FC = () => {
   return (
-    <ContentBox bgColor={tokens.colors.brand.dark} py={"60px"}>
+    <ContentBox bgColor={tokens.colors.brand.dark} py={tokens.space.sizeXl}>
       <Anchor id="data" />
       <Title style={{ marginBottom: "50px" }} variant="secondary">
         Cenário da Dívida Nacional em Precatórios

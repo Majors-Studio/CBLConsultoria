@@ -11,6 +11,7 @@ import * as S from "./styles";
 import { useApp } from "@/context/appContext";
 import { Autoplay } from "swiper";
 import { bannerList } from "@/utils/dataObjects"
+import { tokens } from "@/utils/tokens";
 
 
 const Banner: React.FC = () => {
@@ -20,11 +21,11 @@ const Banner: React.FC = () => {
     <div
       style={{
         position: "relative",
-        height: screenSizeH - 120,
+        height: screenSizeH - tokens.spaceNumber.sizeXxxl,
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        marginTop: "120px",
+        marginTop: tokens.space.sizeXxxl,
       }}
     >
       <Swiper
@@ -34,7 +35,7 @@ const Banner: React.FC = () => {
         loop={true}
         autoplay={{ delay: 3000 }}
         style={{
-          maxHeight: screenSizeH - 120,
+          maxHeight: screenSizeH - tokens.spaceNumber.sizeXxxl,
           overflow: "hidden",
         }}
       >
@@ -51,14 +52,14 @@ const Banner: React.FC = () => {
             <Image
               src={item.img}
               width={screenSizeW}
-              height={screenSizeH - 120}
+              height={screenSizeH - tokens.spaceNumber.sizeXxxl}
               alt="img"
               loading="eager"
               priority
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
-                height: screenSizeH - 120,
+                height: screenSizeH - tokens.spaceNumber.sizeXxxl,
               }}
             />
           </SwiperSlide>

@@ -45,11 +45,11 @@ const NationalRanking: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.cta}
-      py={"60px"}
+      py={tokens.space.sizeXl}
       contentStyle={{
         display: "grid",
         gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-        gridGap: isMobile ? "60px" : "32px",
+        gridGap: isMobile ? tokens.space.sizeXl : "32px",
       }}
     >
       <C.RankingInfos>

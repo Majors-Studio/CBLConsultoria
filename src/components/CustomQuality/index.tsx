@@ -1,25 +1,25 @@
-import React from "react";
-import * as C from "./styles";
+import React from "react"
+import * as C from "./styles"
 
-import Image from "next/image";
-import { Title, Subtitle } from "@/components";
+import Image from "next/image"
+import { Title, Subtitle } from "@/components"
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper"
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
-import { useDevice } from "@/hooks/useDevice";
-import ContentBox from "../ContentBox";
-import { tokens } from "@/utils/tokens";
-import { qualityList } from "@/utils/dataObjects";
+import { useDevice } from "@/hooks/useDevice"
+import ContentBox from "../ContentBox"
+import { tokens } from "@/utils/tokens"
+import { qualityList } from "@/utils/dataObjects"
 
 const CustomQuality: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isMobile } = useDevice()
   return (
-    <ContentBox bgColor={tokens.colors.brand.lightCream} py={"60px"}>
+    <ContentBox bgColor={tokens.colors.brand.lightCream} py={tokens.space.sizeXl}>
       {isMobile ? (
         <Swiper
           spaceBetween={50}
@@ -53,7 +53,16 @@ const CustomQuality: React.FC = () => {
           <C.Content>
             {qualityList.map((item, index) => (
               <C.Item key={index}>
-                <Image src={item.img} width={50} height={50} alt="img" />
+                <Image
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  alt="img"
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                  }}
+                />
                 <Title
                   style={{
                     fontSize: "1.5rem",
@@ -68,7 +77,7 @@ const CustomQuality: React.FC = () => {
         </C.Container>
       )}
     </ContentBox>
-  );
-};
+  )
+}
 
-export default CustomQuality;
+export default CustomQuality

@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens";
 import styled, { keyframes } from "styled-components";
 
 const bounce = keyframes`
@@ -15,12 +16,10 @@ const bounce = keyframes`
 
 export const ArrowDown = styled.a`
   position: absolute;
-  bottom: 50px;
+  bottom: ${tokens.space.sizeLg};
   display: flex;
   justify-content: center;
   z-index: 999;
-
-
 
   cursor: pointer;
   transition: 0.3s;

@@ -31,7 +31,7 @@ const VideoHistory: React.FC = () => {
   }, [showMore]);
 
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>
+    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.light}>
       <Subtitle style={{ textAlign: "justify" }}>
         <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com
         <b>profissionais capacitados</b> para atender, de forma individualizada,

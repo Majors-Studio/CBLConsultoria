@@ -15,7 +15,7 @@ const CardSteps: React.FC = () => {
   const { isMobile } = useDevice()
 
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.highlight.dark}>
+    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.highlight.dark}>
       <Title
         variant="secondary"
         style={{

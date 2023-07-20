@@ -2,7 +2,7 @@ import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const Button = styled.button`
-  font-weight: 700;
+  font-weight: ${tokens.font.weight.bold};
   border-radius: 0.5rem;
   border: 2px solid ${tokens.colors.brand.cta};
   box-shadow: inset 0 0 0 0px ${tokens.colors.brand.cta};
@@ -19,8 +19,7 @@ export const Button = styled.button`
   white-space: nowrap;
 
   &:hover {
-    color: #e7e7e7;
-    /* border-radius: 50%; */
+    color: ${tokens.colors.brand.lightCream};
     box-shadow: inset 0 0 0 40px ${tokens.colors.brand.cta};
     transition-delay: 0s, 0s, 0.2s;
     border: 2px solid transparent;

@@ -12,7 +12,7 @@ const WhatIsPrecatory: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.highlight.light}
-      py={"60px"}
+      py={tokens.space.sizeXl}
       contentStyle={{
         display: "flex",
         flexDirection: isMobile ? "column" : "row",

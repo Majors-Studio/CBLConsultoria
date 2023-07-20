@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: ${tokens.space.sizeXxxs};
 
   border-bottom: 2px solid ${tokens.colors.brand.pure};
   transition: all 0.2s ease-in-out;
@@ -17,9 +17,9 @@ export const Container = styled.div`
 
 export const Text = styled.p`
   font-size: 1.2rem;
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 10px;
+  font-weight: ${tokens.font.weight.regular};
+  color: ${tokens.colors.highlight.medium};
+  margin-bottom: ${tokens.space.sizeNano};
   font-family: ${tokens.font.family.secondary};
 `
 
@@ -29,7 +29,7 @@ export const Image = styled.img`
   max-height: 250px;
   min-height: 250px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: ${tokens.border.radius.md}px;
   object-fit: cover;
   background-position: center;
   background-size: cover;
@@ -44,15 +44,15 @@ export const NoImage = styled.div`
   justify-content: center;
 
   background-color: ${tokens.colors.neutral.lowLight};
-  border-radius: 10px;
+  border-radius: ${tokens.border.radius.md}px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 18px;
+  font-size: ${tokens.font.sizes.xs};
   color: ${tokens.colors.neutral.lowDark};
-  font-weight: 400;
+  font-weight: ${tokens.font.weight.regular};
   line-height: 30px;
   font-family: ${tokens.font.family.secondary};
 `

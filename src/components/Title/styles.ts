@@ -19,15 +19,14 @@ export const Title = styled.h3<TitleProps>`
       : tokens.colors.brand.dark};
 
   strong {
-    /* text-decoration: underline; */
     font-family: ${tokens.font.family.primary};
   }
 
-  @media (max-width: 920px) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     font-size: ${tokens.font.sizes.lg};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     font-size: ${tokens.font.sizes.sm};
     margin-top: 10px;
   }

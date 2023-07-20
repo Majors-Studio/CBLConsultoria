@@ -7,6 +7,7 @@ import { useApp } from "@/context/appContext"
 import ContentBox from "@/components/ContentBox"
 import Link from "next/link"
 import { createClient } from "contentful"
+import { tokens } from "@/utils/tokens"
 
 interface Props {
   news: any
@@ -18,7 +19,6 @@ const News: React.FC<Props> = ({ news }) => {
   useEffect(() => {
     if (!news) return
     setNewsList(news)
-    console.log(news)
   }, [news])
 
   return (
@@ -28,7 +28,7 @@ const News: React.FC<Props> = ({ news }) => {
         <>
           <ContentBox
             bgColor="#fff"
-            py="60px"
+            py={tokens.space.sizeXl}
             style={{
               width: "100%",
             }}

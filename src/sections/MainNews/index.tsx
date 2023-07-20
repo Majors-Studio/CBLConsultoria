@@ -21,12 +21,12 @@ const MainNews: React.FC = () => {
 
   return (
     <ContentBox
-      py={"60px"}
+      py={tokens.space.sizeXl}
       bgColor={tokens.colors.brand.light}
       contentStyle={{
         display: "grid",
         gridTemplateColumns: isMobile ? "1fr" : "1fr 2fr",
-        gap: isMobile ? "60px" : "32px",
+        gap: isMobile ? tokens.space.sizeXl : "32px",
       }}
     >
       <div>

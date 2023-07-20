@@ -11,7 +11,7 @@ import { Balancer } from "react-wrap-balancer";
 
 const SellSteps: React.FC = () => {
   return (
-    <ContentBox bgColor={tokens.colors.brand.cta} py={"60px"}>
+    <ContentBox bgColor={tokens.colors.brand.cta} py={tokens.space.sizeXl}>
       <Title style={{ fontWeight: "bold" }} variant="secondary">
         Receba a antecipação do seu precatório em apenas 4 passos
       </Title>

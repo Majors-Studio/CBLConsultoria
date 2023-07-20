@@ -1,35 +1,5 @@
 "use client";
 
-/*
- * 
-  Exemplos:
-  
-    Uso em uma props de css:
-    
-    Possibilidade 1:
-      const Div = styled.div`
-        background-color: ${tokens.colors.brand.pure}
-      `
-      
-    Possibilidade 2 (desestruturando):
-      const {
-        brand: { pure },
-      } = tokens.colors
-      
-      const Div = styled.div`
-        background-color: ${pure}
-      `
-      
-    Possibilidade 3 (desestruturando e renomeando):
-      const {
-        brand: { pure: brandPure },
-      } = tokens.colors
-      
-      const Div = styled.div`
-        background-color: ${brandPure}
-      `
- */
-
 import { bebasNeue, lastica, montserrat, poppins } from "@/pages/_app";
 
 export const tokens = {
@@ -42,9 +12,6 @@ export const tokens = {
   },
   colors: {
     brand: {
-      // pure: "#253861",
-      // medium: "#1D3A6E",
-      // cta: "#11294f",
       pure: "#8c9cb9",
       medium: "#808cbc",
       cta: "#253861",
@@ -79,42 +46,8 @@ export const tokens = {
       successDark: "#205A24",
     },
   },
-  shadow: {
-    shadowLevel1: {
-      shadowColor: "#707070",
-      shadowOffset: {
-        width: -2,
-        height: 8,
-      },
-      shadowOpacity: 0.1,
-      shadowRadius: 6,
-      elevation: 1,
-    },
-    shadowLevel2: {
-      shadowColor: "#707070",
-      shadowOffset: {
-        width: 4,
-        height: 12,
-      },
-      shadowOpacity: 0.15,
-      shadowRadius: 8,
-      elevation: 1,
-    },
-    shadowLevel3: {
-      shadowColor: "#707070",
-      shadowOffset: {
-        width: 0,
-        height: 12,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 14,
-      elevation: 1,
-    },
-  },
   font: {
     family: {
-      // primary: lastica?.style.fontFamily,
-      // secondary: bebasNeue?.style.fontFamily,
       secondary: poppins.style.fontFamily,
       primary: montserrat.style.fontFamily,
     },

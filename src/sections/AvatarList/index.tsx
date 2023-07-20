@@ -9,7 +9,7 @@ import Avatar from "@/components/Avatar"
 
 const AvatarList: React.FC = () => {
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.lightCream}>
       <Title
         style={{ marginTop: "50px", textAlign: "center" }}
         variant="tertiary"
