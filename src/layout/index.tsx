@@ -1,52 +1,59 @@
-import { Header, Footer } from "@/components";
-import React, { useEffect, useState } from "react";
+import { Header, Footer } from "@/components"
+import React, { useEffect, useState } from "react"
 
-import Whatsapp from "@/components/Whatsapp";
-import { AppProvider, useApp } from "@/context/appContext";
+import Whatsapp from "@/components/Whatsapp"
+import { AppProvider, useApp } from "@/context/appContext"
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
-import { Toast } from "@/components";
-import { SuccessIcon } from "@/assets/icons";
-import Head from "next/head";
-import Loading from "@/components/Loading";
-import { navitems } from "@/utils/navitems";
+import { Toast } from "@/components"
+import { SuccessIcon } from "@/assets/icons"
+import Head from "next/head"
+import Loading from "@/components/Loading"
+import { navitems } from "@/utils/navitems"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { isTop, toastMessage, showToast, type } = useApp();
-  const [timeoutId, setTimeoutId] = useState(true);
+  const { isTop, toastMessage, showToast, type } = useApp()
+  const [timeoutId, setTimeoutId] = useState(true)
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setTimeoutId(false);
-    }, 2000);
+      setTimeoutId(false)
+    }, 2000)
 
     return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-    };
-  }, []);
+      if (timeoutId) clearTimeout(timeoutId)
+    }
+  }, [])
 
   const head = (
     <Head>
+      <meta
+        name="description"
+        content="CBL Consultoria - Ajudamos você a investir em precatórios federais e estaduais"
+      />
+      <meta
+        name="keywords"
+        content="Precatórios, Precatórios federais, Precatórios estaduais, Precatórios municipais, Precatórios judiciais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais, Precatórios judiciais federais, Precatórios judiciais estaduais, Precatórios judiciais municipais"
+      />
+      <meta name="author" content="Majors Studios" />
+      <meta name="robots" content="index, follow" />
+      <link rel="icon" href="/favicon/favicon.ico" />
+
+      <meta property="og:image" content="/images/og.png" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      {/* <meta name="robots" content="index, follow" /> */}
-      <link rel="shortcut icon" color="#fff" href="/favicon/favicon.ico" />
-
-      {/* <meta property="og:image" content="/images/og/harmony.png" /> */}
-      {/* <link rel="manifest" href="site.webmanifest" /> */}
-      <link rel="shortcut icon" href="../../public/favicon/favicon.ico" />
       <title>
-        {typeof window === "undefined"
+        {typeof window === "undefined" || window.location.pathname === "/"
           ? "CBL Consultoria"
           : navitems.find((item) => item.url == window.location.pathname)
               ?.title}
       </title>
     </Head>
-  );
+  )
 
   return (
     <>
@@ -69,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </AppProvider>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
