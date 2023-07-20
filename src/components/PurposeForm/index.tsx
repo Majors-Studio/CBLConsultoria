@@ -1,37 +1,42 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import * as S from "./styles";
-import CtaButton from "../CtaButton";
-// import Toast from "@/components/Toast";
-import { useApp } from "@/context/appContext";
+import React, { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
+import * as S from "./styles"
+import CtaButton from "../CtaButton"
+import { useApp } from "@/context/appContext"
 
-import { MaskedInput } from "@/components";
-import Anchor from "../Anchor";
-// import { TIMEOUT } from "dns";
+import { MaskedInput } from "@/components"
+import Anchor from "../Anchor"
+
 const PurposeForm: React.FC = () => {
-  const form = useRef();
+  const form = useRef()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     cpf: "",
     message: "",
-  });
+  })
 
-  const { setShowToast, setToastMessage, setType, showToast }: any = useApp();
-  const [sending, setSending] = useState<boolean>(false);
+  const { setToast } = useApp()
+  const [sending, setSending] = useState<boolean>(false)
 
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSending(true);
+    e.preventDefault()
+    setSending(true)
 
+    setToast({
+      message: "Enviando...",
+      type: "sending",
+    })
+
+    setTimeout(() => {
     emailjs
       .sendForm(
         process.env.SERVICE_ID as string,
@@ -40,30 +45,33 @@ const PurposeForm: React.FC = () => {
         process.env.PUBLIC_KEY
       )
       .then(() => {
-        setShowToast(true);
-        setToastMessage("Proposta enviada com sucesso!");
-        setType("success");
+        setToast({
+          message: "Proposta enviada com sucesso!",
+          type: "success",
+        })
         setFormData({
           name: "",
           email: "",
           phone: "",
           cpf: "",
           message: "",
-        });
-        setTimeout(() => {
-          setShowToast(false);
-        }, 3000);
-        setSending(false);
+        })
+        setSending(false)
       })
       .catch(() => {
-        setShowToast(true);
-        setToastMessage("Erro no envio da proposta!");
-        setType("error");
+        setToast({
+          message: "Erro no envio da proposta!",
+          type: "error",
+        })
+      })
+      .finally(() => {
         setTimeout(() => {
-          setShowToast(false);
-        }, 3000);
-      });
-  };
+          setToast(null)
+          setSending(false)
+        }, 3000)
+      })
+    }, 500)
+  }
 
   return (
     <S.Container>
@@ -110,7 +118,7 @@ const PurposeForm: React.FC = () => {
         </S.Form>
       </S.Content>
     </S.Container>
-  );
-};
+  )
+}
 
-export default PurposeForm;
+export default PurposeForm

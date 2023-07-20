@@ -17,15 +17,17 @@ interface AppContextProps {
   setMenuOpened: (value: boolean) => void
   submenuOpened: number | null
   setSubmenuOpened: (index: number | null) => void
-  toastMessage: null | string
-  setToastMessage: (value: null | string) => void
-  showToast: boolean
-  setShowToast: (value: boolean) => void
-  type: string
-  setType: (value: string) => void
   setNewsList: (value: any[]) => void
   newsList: any[]
   getNewsList: () => void
+  setToast: (value: null | {
+    message: string
+    type: 'success' | 'error' | 'sending'
+  }) => void
+  toast: null | {
+    message: string
+    type: 'success' | 'error' | 'sending'
+  }
 }
 
 const AppContext = createContext<AppContextProps>({} as any)
@@ -37,9 +39,13 @@ export function AppProvider({ children }: any) {
   const [screenSizeH, setScreenSizeH] = useState(window.innerHeight)
   const [menuOpened, setMenuOpened] = useState(false)
   const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
-  const [toastMessage, setToastMessage] = useState<null | string>(null)
-  const [showToast, setShowToast] = useState<boolean>(false)
-  const [type, setType] = useState<string>("")
+  
+  const [toast, setToast] = useState<null | {
+    message: string
+    type: 'success' | 'error' | 'sending'
+  }>(null)
+  
+  
 
   const [newsList, setNewsList] = useState<any[]>([])
 
@@ -106,15 +112,11 @@ export function AppProvider({ children }: any) {
     submenuOpened,
     setSubmenuOpened,
     setMenuOpened,
-    toastMessage,
-    setToastMessage,
-    showToast,
-    setShowToast,
-    type,
-    setType,
     newsList,
     setNewsList,
     getNewsList,
+    setToast,
+    toast
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

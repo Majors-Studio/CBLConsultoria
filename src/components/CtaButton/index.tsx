@@ -14,7 +14,7 @@ const CtaButton: React.FC<Props> = ({
   text,
   children = <>Fale Conosco!</>,
   style,
-  href = "",
+  href,
   ...props
 }) => {
   return (

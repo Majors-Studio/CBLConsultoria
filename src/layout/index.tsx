@@ -13,7 +13,7 @@ import Loading from "@/components/Loading"
 import { navitems } from "@/utils/navitems"
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { isTop, toastMessage, showToast, type } = useApp()
+  const { isTop, toast } = useApp()
   const [timeoutId, setTimeoutId] = useState(true)
 
   useEffect(() => {
@@ -66,13 +66,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
           <Footer />
           {isTop ? null : <Whatsapp />}
-          {showToast && (
             <Toast
-              type={type}
-              icon={type == "success" ? <SuccessIcon /> : null}
-              message={toastMessage as string}
+              
             />
-          )}
         </AppProvider>
       )}
     </>

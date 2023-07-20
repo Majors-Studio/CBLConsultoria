@@ -124,7 +124,8 @@ const Header: React.FC = () => {
                 style={{
                   border: "1px solid #fff",
                   color: "#fff",
-                }}
+                  }}
+                  href="#purposeForm"
               >
                 Fale Conosco
               </CtaButton>
