@@ -1,24 +1,24 @@
-"use client";
-import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons";
-import { newsTextMock } from "./newsTextMock";
-import ContractIcon from "@/assets/icons/ContractIcon";
-import bannerImg1 from "@/assets/png/banner-1.png";  
-import bannerImg2 from "@/assets/png/banner-2.png";
-import bannerImg3 from "@/assets/png/banner-3.png";
-import bannerImg4 from "@/assets/png/banner-4.png";
-import bannerImg5 from "@/assets/png/banner-5.png";
-import Image, { StaticImageData } from "next/image";
+"use client"
+import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons"
+import { newsTextMock } from "./newsTextMock"
+import ContractIcon from "@/assets/icons/ContractIcon"
+import bannerImg1 from "@/assets/png/banner-1.png"
+import bannerImg2 from "@/assets/png/banner-2.png"
+import bannerImg3 from "@/assets/png/banner-3.png"
+import bannerImg4 from "@/assets/png/banner-4.png"
+import bannerImg5 from "@/assets/png/banner-5.png"
+import Image, { StaticImageData } from "next/image"
 
-import caue from '@/assets/jpg/caue_1_copy.jpg'
+import caue from "@/assets/jpg/caue_1_copy.jpg"
 
 export const feedbackList: {
-  id: number;
-  name: string;
-  city: string;
-  state: string;
-  country: string;
-  text: string;
-  avatar: string;
+  id: number
+  name: string
+  city: string
+  state: string
+  country: string
+  text: string
+  avatar: string
 }[] = [
   {
     id: 0,
@@ -30,17 +30,17 @@ export const feedbackList: {
     avatar:
       "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
   },
-];
+]
 
 export const newsList: {
-  id: number;
-  image: string;
-  title: string;
-  date: Date;
-  author: string;
-  text: string;
-  source: string;
-  link: string;
+  id: number
+  image: string
+  title: string
+  date: Date
+  author: string
+  text: string
+  source: string
+  link: string
 }[] = [
   {
     id: 0,
@@ -114,25 +114,25 @@ export const newsList: {
     source: "Google",
     link: "https://www.google.com",
   },
-];
+]
 
 export const avatarData: {
-  img: StaticImageData;
-  name: string;
-  charge: string;
+  img: StaticImageData
+  name: string
+  charge: string
 }[] = [
   {
     img: caue,
     name: "Caue Blasiolli",
     charge: "Coordinator",
   },
-];
+]
 
 export const qualityList: {
-  id: number;
-  img: string;
-  title: string;
-  subtitle: string;
+  id: number
+  img: string
+  title: string
+  subtitle: string
 }[] = [
   {
     id: 1,
@@ -162,12 +162,12 @@ export const qualityList: {
     subtitle:
       "Nossa equipe altamente qualificada está preparada para agir rapidamente, utilizando metodologias eficientes e tecnologias avançadas.",
   },
-];
+]
 
 export const cardsList: {
-  id: number;
-  title: string;
-  description: string;
+  id: number
+  title: string
+  description: string
 }[] = [
   {
     id: 0,
@@ -187,11 +187,11 @@ export const cardsList: {
     description:
       "Já negociamos mais de R$ 1 bilhão em precatórios e contamos com a satisfação de mais de 7 mil clientes.",
   },
-];
+]
 
 export const whyToSellList: {
-  id: number;
-  text: React.ReactNode;
+  id: number
+  text: React.ReactNode
 }[] = [
   {
     id: 0,
@@ -232,13 +232,13 @@ export const whyToSellList: {
       </>
     ),
   },
-];
+]
 
 export const stepsList: {
-  id: number;
-  title: string;
-  text: React.ReactNode;
-  icon: React.ReactNode;
+  id: number
+  title: string
+  text: React.ReactNode
+  icon: React.ReactNode
 }[] = [
   {
     id: 0,
@@ -286,10 +286,10 @@ export const stepsList: {
     ),
     icon: <MoneyIcon />,
   },
-];
+]
 
 export const bannerList: {
-  img: any ;
+  img: any
 }[] = [
   {
     img: bannerImg1,
@@ -306,11 +306,11 @@ export const bannerList: {
   {
     img: bannerImg5,
   },
-];
+]
 
 export const civelList: {
-  id: number;
-  title: string;
+  id: number
+  title: string
 }[] = [
   {
     id: 0,
@@ -328,11 +328,11 @@ export const civelList: {
     id: 3,
     title: "Estratégias personalizadas",
   },
-];
+]
 
 export const infoList: {
-  id: number;
-  title: string;
+  id: number
+  title: string
 }[] = [
   {
     id: 0,
@@ -350,13 +350,13 @@ export const infoList: {
     id: 3,
     title: "Vasta experiência no mercado",
   },
-];
+]
 
 export const cardList: {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
+  id: number
+  title: string
+  description: string
+  icon: React.ReactNode
 }[] = [
   {
     id: 0,
@@ -386,16 +386,16 @@ export const cardList: {
       "Contrato assinado e o dinheiro na sua conta, você recebe à vista e sem burocracia;",
     icon: <MoneyIcon />,
   },
-];
+]
 
 export const chooseList: {
-  id: number;
-  title: string;
+  id: number
+  title: string
   list: {
-    id: number;
-    text: string;
-    status: string;
-  }[];
+    id: number
+    text: string
+    status: string
+  }[]
 }[] = [
   {
     id: 0,
@@ -449,13 +449,13 @@ export const chooseList: {
       },
     ],
   },
-];
+]
 
 export const whyList: {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
+  id: number
+  title: string
+  description: string
+  icon: React.ReactNode
 }[] = [
   {
     id: 0,
@@ -464,7 +464,12 @@ export const whyList: {
       "Nós cuidamos para que o processo de negociação seja 100% seguro e transparente, desde a análise até o recebimento do seu precatório.",
     icon: (
       <>
-        <Image width={55} height={55} alt='atendimento' src="https://cdn-icons-png.flaticon.com/512/0/769.png" />
+        <Image
+          width={55}
+          height={55}
+          alt="atendimento"
+          src="https://cdn-icons-png.flaticon.com/512/0/769.png"
+        />
       </>
     ),
   },
@@ -476,7 +481,8 @@ export const whyList: {
     icon: (
       <>
         <Image
-          width={55} height={55}
+          width={55}
+          height={55}
           src="https://cdn-icons-png.flaticon.com/512/4947/4947118.png"
           alt="money"
         />
@@ -490,7 +496,12 @@ export const whyList: {
       "Empresa consolidada, com mais de uma década no mercado de precatórios.",
     icon: (
       <>
-        <Image width={55} height={55} alt='seguranca' src="https://cdn-icons-png.flaticon.com/512/159/159448.png" />
+        <Image
+          width={55}
+          height={55}
+          alt="seguranca"
+          src="https://cdn-icons-png.flaticon.com/512/159/159448.png"
+        />
       </>
     ),
   },
@@ -502,42 +513,56 @@ export const whyList: {
     icon: (
       <>
         <Image
-          width={55} height={55}
+          width={55}
+          height={55}
           src="https://cdn.icon-icons.com/icons2/37/PNG/512/cardpayment_tarjet_3771.png"
           alt="pgto. a vista"
         />
       </>
     ),
   },
-];
+]
 
 export const faqList: {
-  id: number;
-  title: string;
-  description: string;
+  id: number
+  title: string
+  description: string
 }[] = [
   {
     id: 0,
-    title: "Como funciona a antecipação de precatórios?",
+    title: "Cuidado com golpes.",
     description:
-      "A antecipação de precatórios é uma operação financeira que consiste na compra de precatórios federais, estaduais e municipais. A CBL Consultoria realiza a compra do seu precatório e você recebe o valor à vista, sem burocracia e sem esperar anos para receber do Governo.",
+      "Infelizmente há uma verdadeira epidemia de golpes, e os criminosos também praticam GOLPES com precatórios. Certifique que estão falando com você de fato, ligação em vídeo e visitas presenciais são sempre muito bem vindas. Caso esteja desconfiado, opte por um cartório de sua confiança. Para saber os GOLPES mais comuns, acompanham nossas dicas nas mídias sociais.",
   },
   {
     id: 1,
-    title: "Quais são os tipos de precatórios?",
+    title: "Quanto irei receber pela venda do precatório?",
     description:
-      "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
+      "Depende. A proposta é feita de acordo com cada caso levando em consideração inúmeras variáveis, como análise precedente e atual da Lei Orçamentária Anual (LOA), conjuntura macroeconômica, situação processual, entre outras.",
   },
   {
     id: 2,
-    title: "Quais são os tipos de precatórios?",
+    title: "Tenho um precatório. Preciso esperar anos para receber?",
     description:
-      "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
+      "Não. O tempo de espera para recebimento dos valores dos precatórios variam de acordo com cada ente federativo (União, Estados e Municípios) e respectivas entidades da administração indireta sujeitas ao regime. Este tempo pode demorar anos e, por vezes, até décadas. Portanto, a venda de seu precatório pode trazer o benefício do recebimento imediato dos valores, de acordo com a proposta feita.",
   },
   {
     id: 3,
-    title: "Quais são os tipos de precatórios?",
+    title: "Como terei segurança de que receberei o dinheiro?",
     description:
-      "Precatórios Federais: são os precatórios emitidos pela União, autarquias e fundações públicas federais. Precatórios Estaduais: são os precatórios emitidos pelos Estados e Distrito Federal. Precatórios Municipais: são os precatórios emitidos pelos Municípios.",
+      "Todos os instrumentos de Cessão vem com cláusula de multa para atraso no pagamento, e se preferirem, tudo pode ser feito presencialmente no cartório, embora exista a possibilidade de se fazer online. A CBL atua na confecção e acompanhamento do negócio jurídico, analisando e validando a documentação para que o cliente tenha segurança jurídica, recebimento célere e eficiente.",
   },
-];
+  {
+    id: 4,
+    title:
+      "Sou herdeiro(a). Recebi um precatório como parte da herança. Posso vender?",
+    description:
+      "Sim. Os herdeiros são detentores dos direitos creditórios, assim como são dos demais bens, de forma que podem, se assim quiserem, vender o precatório.",
+  },
+  {
+    id: 5,
+    title: "Qual benefício tenho em vender meu precatório?",
+    description:
+      "O primeiro é o recebimento imediato dos valores. Em segundo plano, apesar de ser uma análise individual, o recebimento rápido de valores pode te livrar de juros relacionados a outros contratos, proporcionando um custo-benefício econômico ao credor. Terceiro, você não precisa mais se preocupar com o processo ou advogados, cuidamos de tudo.",
+  },
+]
