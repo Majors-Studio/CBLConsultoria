@@ -16,6 +16,7 @@ export const RankingInfos = styled.div`
 
 export const RankingChart = styled.div`
   width: 100%;
+max-width: 650px;
   flex-shrink: 0;
   display: flex;
 `
