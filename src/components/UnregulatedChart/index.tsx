@@ -1,12 +1,11 @@
-import React from "react";
-import { Bar } from "react-chartjs-2";
+import React from "react"
+import { Bar } from "react-chartjs-2"
+import { ChartData, Chart as ChartJS, registerables } from "chart.js/auto"
 
-import * as C from "./styles";
+import * as S from "./styles"
 
-import { ChartData, Chart as ChartJS, registerables } from "chart.js/auto";
-
-const Chart: React.FC = () => {
-  ChartJS.register(...registerables);
+const UnregulatedChart: React.FC = () => {
+  ChartJS.register(...registerables)
 
   const data = {
     labels: ["2018", "2019", "2020", "2021", "2022"],
@@ -31,10 +30,9 @@ const Chart: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"bar", number[], string>;
-
+  } as ChartData<"bar", number[], string>
   return (
-    <C.ChartContainer>
+    <S.Container>
       <Bar
         data={data}
         width={400}
@@ -91,8 +89,8 @@ const Chart: React.FC = () => {
           },
         }}
       />
-    </C.ChartContainer>
-  );
-};
+    </S.Container>
+  )
+}
 
-export default Chart;
+export default UnregulatedChart

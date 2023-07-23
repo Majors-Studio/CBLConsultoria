@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useApp } from "@/context/appContext";
+import React from "react";
 import * as S from "./styles";
 import Link from "next/link";
 
@@ -8,6 +7,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   style?: React.CSSProperties;
   href?: string;
+  variant?: "primary" | "secondary";
 }
 
 const CtaButton: React.FC<Props> = ({
@@ -15,10 +15,11 @@ const CtaButton: React.FC<Props> = ({
   children = <>Fale Conosco!</>,
   style,
   href,
+  variant = "primary",
   ...props
 }) => {
   return (
-    <S.Button style={style} {...props}>
+    <S.Button style={style} {...props} variant={variant}>
       {!!href ? (
         <Link href={href}>{text ? text : children}</Link>
       ) : text ? (

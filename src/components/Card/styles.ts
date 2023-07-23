@@ -45,21 +45,12 @@ export const CardContainer = styled.div`
     }
   }
 `
+export const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: ${tokens.colors.brand.pure};
 
-export const Title = styled.h1`
-  font-size: ${tokens.font.sizes.md};
-  font-weight: ${tokens.font.weight.bold};
-  color: ${tokens.colors.brand.pure};
-  margin-bottom: ${tokens.space.sizeXxxs};
-  font-family: ${tokens.font.family.primary};
-`
-
-export const Description = styled.p`
-  font-size: ${tokens.font.sizes.sm};
-  font-weight: ${tokens.font.weight.regular};
-  color: ${tokens.colors.highlight.medium};
-  margin-bottom: ${tokens.space.sizeXxxs};
-  font-family: ${tokens.font.family.secondary};
+  margin: 20px 0;
 `
 
 export const CardIndex = styled.div`

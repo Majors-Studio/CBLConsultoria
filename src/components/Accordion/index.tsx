@@ -6,6 +6,7 @@ import Subtitle from "../Subtitle"
 import Description from "../Description"
 
 interface FaqItemProps {
+  style?: React.CSSProperties
   data: {
     id: number
     title: string
@@ -13,11 +14,11 @@ interface FaqItemProps {
   }[]
 }
 
-const Accordion: React.FC<FaqItemProps> = ({ data }) => {
+const Accordion: React.FC<FaqItemProps> = ({ data,style }) => {
   const [faqOpened, setFaqOpened] = useState<number | null>(null)
 
   return (
-    <S.List>
+    <S.List style={style}>
       {data.map((item, index) => (
         <S.Item
           key={item.id}
