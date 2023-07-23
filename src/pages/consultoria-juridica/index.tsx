@@ -203,6 +203,7 @@ const LegalAdvice: React.FC = () => {
                 maxWidth: "400px",
               }}
               variant="secondary"
+              href='#purposeForm'
             >
               Fale conosco!
             </CtaButton>

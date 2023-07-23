@@ -1,10 +1,9 @@
 import React from "react";
 import { CustomQuality } from "@/components";
 import HeadBanner from "@/components/HeadBanner";
-import Purpose from "@/sections/Purpose";
 import AvatarList from "@/sections/AvatarList";
-import SlabList from "@/sections/SlabList";
 import VideoHistory from "@/sections/VideoHistory";
+import PurposeForm from "@/components/PurposeForm";
 
 const About: React.FC = () => {
   return (
@@ -17,7 +16,7 @@ const About: React.FC = () => {
 
       <AvatarList />
 
-      <Purpose />
+      <PurposeForm />
     </>
   );
 };
