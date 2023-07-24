@@ -8,6 +8,7 @@ import ContentBox from "@/components/ContentBox"
 import Link from "next/link"
 import { createClient } from "contentful"
 import { tokens } from "@/utils/tokens"
+import { Title } from "@/components"
 
 interface Props {
   news: any
@@ -23,8 +24,8 @@ const News: React.FC<Props> = ({ news }) => {
 
   return (
     <C.BlogContainer>
-      <HeadBanner title="Notícias" />
-      {!news ? (
+      <HeadBanner title="Notícias e Artigos - CBL CONSULTORIA" />
+      {news.length === 0 ? (
         <>
           <ContentBox
             bgColor={tokens.colors.brand.light}
@@ -36,9 +37,10 @@ const News: React.FC<Props> = ({ news }) => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              gap: tokens.space.sizeXs,
             }}
           >
-            <C.Title>Não encontramos nenhuma notícia</C.Title>
+            <Title>Não encontramos nenhuma notícia</Title>
 
             <Link href="/">
               <C.Button>Voltar para a página inicial</C.Button>

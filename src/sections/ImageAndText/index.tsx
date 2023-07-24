@@ -12,7 +12,8 @@ interface ImageAndTextProps {
   children?: React.ReactNode
   title: React.ReactNode | string
   subtitle: React.ReactNode | string
-  image: string | StaticImageData
+  image?: string | StaticImageData
+  chart?: React.ReactNode
   reverse?: boolean
   anchor?: string
 }
@@ -24,6 +25,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
   title,
   anchor,
   reverse,
+  chart,
 }) => {
   const { isMobile } = useDevice()
   return (
@@ -43,7 +45,11 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
         }}
       >
         <C.BoxImage>
-          <Image src={image} alt="Image" priority />
+          {image ? (
+            <Image src={image} alt="Image" priority />
+          ) : chart ? (
+            chart
+          ) : null}
         </C.BoxImage>
         <C.BoxText>
           {anchor && <Anchor id={anchor} />}

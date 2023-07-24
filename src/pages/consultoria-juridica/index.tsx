@@ -15,9 +15,10 @@ import Accordion from "@/components/Accordion"
 import CtaButton from "@/components/CtaButton"
 import MistakesChart from "@/components/MistakesChart"
 import { useDevice } from "@/hooks/useDevice"
+import JudicialForm from "@/components/JudicialForm"
 
 const LegalAdvice: React.FC = () => {
-  const {isMobile}=useDevice()
+  const { isMobile } = useDevice()
   return (
     <>
       <HeadBanner
@@ -132,7 +133,7 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "24px",
             }}
-            href='#purposeForm'
+            href="#purposeForm"
           >
             Regularize seu Imóvel
           </CtaButton>
@@ -142,7 +143,7 @@ const LegalAdvice: React.FC = () => {
       <ImageAndText
         anchor="medical-error"
         title="ERRO MÉDICO"
-        image={img3}
+        chart={<MistakesChart />}
         subtitle={
           <>
             A Organização Mundial da Saúde (OMS) publicou um relatório que
@@ -165,51 +166,61 @@ const LegalAdvice: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <MistakesChart />
-
           <Subtitle
             style={{
               marginTop: "32px",
               color: tokens.colors.brand.light,
               textAlign: "left",
+              width: "100%",
+            }}
+          >
+            Passo a passo para comprovar o erro médico:
+          </Subtitle>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
+              gap: "24px",
+              marginTop: "24px",
+              width: "100%",
+            }}
+          >
+            {[
+              {
+                id: 0,
+                title: "Entendendo o Erro Médico",
+              },
+              {
+                id: 1,
+                title: "Comprovando o Erro Médico",
+              },
+              {
+                id: 2,
+                title: "Direitos do Paciente",
+              },
+              {
+                id: 3,
+                title: "Processo Legal e Etapas",
+              },
+            ].map((item) => (
+              <Card key={item.id} title={item.title} index={item.id} />
+            ))}
+          </div>
+
+          <Subtitle
+            style={{
+              marginTop: "32px",
+              color: tokens.colors.brand.light,
+              textAlign: "start",
+              lineHeight: "1.5",
             }}
           >
             Aqui na CBL Consultoria, entendemos a importância de proteger seus
             direitos e garantir justiça em casos envolvendo negligência médica.
             Nossa equipe de consultores jurídicos especializados está pronta
             para oferecer suporte e orientação durante todo o processo.
-            <br/>
-            <br />
-            Passo a passo para comprovar o erro médico:
           </Subtitle>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-            gap: '24px',
-            marginTop: '24px',
-          }}>
-          {[
-            {
-              id: 0,
-              title: "Entendendo o Erro Médico",
-            },
-            {
-              id: 1,
-              title: "Comprovando o Erro Médico",
-            },
-            {
-              id: 2,
-              title: "Direitos do Paciente",
-            },
-            {
-              id: 3,
-              title: "Processo Legal e Etapas",
-            },
-          ].map((item) => (
-            <Card key={item.id} title={item.title} index={item.id} />
-          ))}
-          </div>
 
           <CtaButton
             style={{
@@ -324,7 +335,7 @@ const LegalAdvice: React.FC = () => {
         </ContentBox>
       </ImageAndText>
 
-      <PurposeForm />
+      <JudicialForm />
     </>
   )
 }

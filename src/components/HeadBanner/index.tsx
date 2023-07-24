@@ -6,7 +6,7 @@ import img1 from "../../assets/png/legal-advice.png"
 import { tokens } from "@/utils/tokens";
 
 interface HeadBannerProps {
-  title?: string
+  title?: string | React.ReactNode
   source?: string 
   color?: string
 }

@@ -1,14 +1,12 @@
 import React from "react";
-import { useDevice } from "@/hooks/useDevice";
 const BrazilGraph: React.FC = () => {
-  const { isMobile } = useDevice();
   return (
     <svg
       viewBox="0.295 0.95 643.532 584.811"
       preserveAspectRatio="xMidYMid meet"
       data-bbox="0.295 0.95 643.532 584.811"
-      height={isMobile ? "420" : "586"}
-      width={isMobile ? "420" : "586"}
+      height='100%'
+      width='100%'
       data-type="color"
       role="presentation"
       aria-hidden="true"

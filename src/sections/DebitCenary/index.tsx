@@ -19,7 +19,14 @@ const DebitCenary: React.FC = () => {
       </Title>
 
       <C.CenaryInfoContainer>
+        <div style={{
+          width: isMobile ? '100%' : '50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
         <BrazilGraph />
+        </div>
 
         <C.CenaryTextContainer>
           <C.CenaryText>

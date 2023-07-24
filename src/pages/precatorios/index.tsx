@@ -1,18 +1,25 @@
-import React from "react";
+import React from "react"
 
-import HeadBanner from "@/components/HeadBanner";
-import DebitCenary from "@/sections/DebitCenary";
-import NationalRanking from "@/sections/NationalRanking";
-import WhyToSell from "@/sections/WhyToSell";
-import WhatIsPrecatory from "@/sections/WhatIsPrecatory";
-import SellSteps from "@/sections/SellSteps";
-import { Faq, WhyBetter } from "@/sections";
-import PurposeForm from "@/components/PurposeForm";
+import HeadBanner from "@/components/HeadBanner"
+import DebitCenary from "@/sections/DebitCenary"
+import NationalRanking from "@/sections/NationalRanking"
+import WhyToSell from "@/sections/WhyToSell"
+import WhatIsPrecatory from "@/sections/WhatIsPrecatory"
+import SellSteps from "@/sections/SellSteps"
+import { Faq, WhyBetter } from "@/sections"
+import PurposeForm from "@/components/PurposeForm"
 
 const Precatory: React.FC = () => {
   return (
     <>
-      <HeadBanner title="Precatórios" />
+      <HeadBanner
+        title={
+          <>
+            <b>Agora</b> se tornou mais <b>prático e seguro antecipar</b> seu
+            precatório
+          </>
+        }
+      />
 
       <WhatIsPrecatory />
 
@@ -21,16 +28,16 @@ const Precatory: React.FC = () => {
       <WhyBetter />
 
       <NationalRanking />
-      
+
       <WhyToSell />
-      
+
       <SellSteps />
 
       <Faq />
 
       <PurposeForm />
     </>
-  );
-};
+  )
+}
 
-export default Precatory;
+export default Precatory

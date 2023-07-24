@@ -9,18 +9,6 @@ export const BlogContainer = styled.div`
 `
 
 
-export const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 1rem 0;
-  color: #000;
-  text-align: center;
-
-  font-family: ${tokens.font.family.primary};
-
-
-`
-
 export const Button = styled.button`
   width: 100%;
 max-width: 20rem;
