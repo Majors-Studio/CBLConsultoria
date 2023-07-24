@@ -7,14 +7,13 @@ export const CardContainer = styled.div`
   align-items: center;
 
   width: 100%;
-  height: fit-content;
+  min-height: 150px;
   background: #ffffff;
   box-shadow: -1px 3px 10px 0px #000;
   border-radius: ${tokens.border.radius.lg}px;
 
   position: relative;
 
-  margin: 20px 0;
   padding: 50px 20px;
 
   transition: all 0.3s ease-in-out;

@@ -14,8 +14,10 @@ import Description from "@/components/Description"
 import Accordion from "@/components/Accordion"
 import CtaButton from "@/components/CtaButton"
 import MistakesChart from "@/components/MistakesChart"
+import { useDevice } from "@/hooks/useDevice"
 
 const LegalAdvice: React.FC = () => {
+  const {isMobile}=useDevice()
   return (
     <>
       <HeadBanner
@@ -178,17 +180,24 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "64px",
               color: tokens.colors.brand.light,
+              textAlign: "left",
             }}
           >
             Aqui na CBL Consultoria, entendemos a importância de proteger seus
             direitos e garantir justiça em casos envolvendo negligência médica.
-            
-            <br/>
-            <br/>
             Nossa equipe de consultores jurídicos especializados está pronta
             para oferecer suporte e orientação durante todo o processo.
+            <br/>
+            <br />
+            Passo a passo para comprovar o erro médico:
           </Subtitle>
 
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+            gap: '24px',
+            marginTop: '24px',
+          }}>
           {[
             {
               id: 0,
@@ -209,6 +218,7 @@ const LegalAdvice: React.FC = () => {
           ].map((item) => (
             <Card key={item.id} title={item.title} index={item.id} />
           ))}
+          </div>
 
           <CtaButton
             style={{
@@ -312,6 +322,9 @@ const LegalAdvice: React.FC = () => {
             },
           ].map((item) => (
             <Card
+              style={{
+                marginTop: "24px",
+              }}
               key={item.id}
               title={item.title}
               index={item.id}
