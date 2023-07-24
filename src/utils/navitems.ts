@@ -1,17 +1,12 @@
 export const navitems = [
   {
-    id: 1,
-    title: "Início",
+    id: 0,
+    title: "Página Inicial",
     url: "/",
   },
 
   {
-    id: 2,
-    title: "Quem somos",
-    url: "/sobre",
-  },
-  {
-    id: 3,
+    id: 1,
     title: "Precatórios",
     url: "/precatorios",
     subpaths: [
@@ -26,7 +21,7 @@ export const navitems = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     title: "Consultoria Jurídica",
     url: "/consultoria-juridica",
     subpaths: [
@@ -48,9 +43,19 @@ export const navitems = [
       },
     ],
   },
+    {
+    id: 3,
+    title: "Nossa História",
+    url: "/sobre",
+  },
+  {
+    id: 4,
+    title: "Blog",
+    url: "/noticias",
+  },
   {
     id: 5,
-    title: "Notícias & Artigos",
-    url: "/noticias",
+    title: "Gestão de Recursos",
+    url: "/gestao-de-recursos",
   },
 ];

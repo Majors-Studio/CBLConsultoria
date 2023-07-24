@@ -336,11 +336,11 @@ export const infoList: {
 }[] = [
   {
     id: 0,
-    title: "Foco em resutados",
+    title: "Recebimento à vista",
   },
   {
     id: 1,
-    title: "Atendimento Personalizado",
+    title: "Agilidade na venda",
   },
   {
     id: 2,

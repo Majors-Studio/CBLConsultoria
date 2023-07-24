@@ -1,16 +1,12 @@
 import React from "react"
-import { ConfirmIcon } from "@/assets/icons"
 
-import * as C from "@/styles/legalAdvice"
 import PurposeForm from "@/components/PurposeForm"
 import HeadBanner from "@/components/HeadBanner"
 import img2 from "../../assets/png/chaves.png"
 import img3 from "../../assets/png/medic.png"
-import img4 from "../../assets/png/reunion.png"
 import img5 from "../../assets/png/consult.jpg"
 import { tokens } from "@/utils/tokens"
 import { Card, Subtitle, Title } from "@/components"
-import { civelList } from "@/utils/dataObjects"
 import ImageAndText from "@/sections/ImageAndText"
 import ContentBox from "@/components/ContentBox"
 import UnregulatedChart from "@/components/UnregulatedChart"
@@ -18,7 +14,6 @@ import Description from "@/components/Description"
 import Accordion from "@/components/Accordion"
 import CtaButton from "@/components/CtaButton"
 import MistakesChart from "@/components/MistakesChart"
-import List from "@/components/List"
 
 const LegalAdvice: React.FC = () => {
   return (
@@ -49,21 +44,35 @@ const LegalAdvice: React.FC = () => {
       >
         {" "}
         <ContentBox py={"30px"} bgColor={tokens.colors.brand.light}>
-          <Subtitle>
-            Taxa de imóveis desregularizados no Brasil nos últimos anos
+          <Subtitle
+            style={{
+              textAlign: "left",
+            }}
+          >
+            Taxa de imóveis desregularizados no Brasil nos últimos anos:
           </Subtitle>
 
           <UnregulatedChart />
 
-          <Subtitle
+          <Title
             style={{
               marginTop: "60px",
             }}
           >
             Nossa equipe de especialistas altamente qualificados está pronta
             para ajudá-lo a regularizar seu imóvel de maneira eficiente e
-            confiável. Confira abaixo o checklist de benefícios ao contar com os
-            nossos serviços:
+            confiável.
+          </Title>
+
+          <Subtitle
+            style={{
+              marginTop: "60px",
+
+              textAlign: "left",
+            }}
+          >
+            Confira abaixo o checklist de benefícios ao contar com os nossos
+            serviços:
           </Subtitle>
 
           <Accordion
@@ -122,6 +131,7 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "24px",
             }}
+            href='#purposeForm'
           >
             Regularize seu Imóvel
           </CtaButton>

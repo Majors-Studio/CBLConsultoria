@@ -1,16 +1,16 @@
-import React from "react";
-import ContentBox from "@/components/ContentBox";
-import Video from "@/components/Video";
-import { Subtitle } from "@/components";
-import { tokens } from "@/utils/tokens";
+import React from "react"
+import ContentBox from "@/components/ContentBox"
+import Video from "@/components/Video"
+import { Subtitle } from "@/components"
+import { tokens } from "@/utils/tokens"
 
-import * as C from "./styles";
-import gsap from "gsap";
+import * as C from "./styles"
+import gsap from "gsap"
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = React.useState<boolean>(false);
+  const [showMore, setShowMore] = React.useState<boolean>(false)
 
-  const showMoreRef = React.useRef<HTMLParagraphElement>(null);
+  const showMoreRef = React.useRef<HTMLParagraphElement>(null)
 
   React.useEffect(() => {
     if (showMoreRef.current) {
@@ -19,21 +19,21 @@ const VideoHistory: React.FC = () => {
           height: "auto",
           duration: 0.3,
           ease: "power2.inOut",
-        });
+        })
       } else {
         gsap.to(showMoreRef.current, {
           height: "0px",
           duration: 0.3,
           ease: "power2.inOut",
-        });
+        })
       }
     }
-  }, [showMore]);
+  }, [showMore])
 
   return (
     <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.light}>
       <Subtitle style={{ textAlign: "justify" }}>
-        <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com
+        <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com{' '}
         <b>profissionais capacitados</b> para atender, de forma individualizada,
         a necessidade do cliente. O fato de não atuar com demandas de massa
         permite a CBL Consultoria desempenhar sempre o melhor atendimento ao
@@ -57,17 +57,23 @@ const VideoHistory: React.FC = () => {
         especializada no mercado, com vasta experiência. Fundada justamente pela
         percepção das dificuldades enfrentadas na venda de precatórios, nossa
         missão é oferecer segurança e qualidade em todos os aspectos do
-        processo. Nossa equipe de consultores jurídicos altamente qualificados
-        está pronta para guiar você de forma assertiva e transparente. Com
-        conhecimento atualizado sobre as leis, regulamentos e jurisprudências
-        mais recentes, proporcionamos orientação precisa para sua situação
-        específica. Seja você um indivíduo, empresa ou instituição, temos a
-        expertise necessária para lidar com todas as complexidades legais
-        envolvidas. Já auxiliamos inúmeras pessoas e empresas a venderem seus
-        precatórios com sucesso, obtendo o retoConsutrno financeiro esperado. Se
-        você enfrenta dificuldades na venda de precatórios e busca uma
-        consultoria jurídica confiável, segura e comprovada, não hesite em
-        contar com a CBL Consultoria.
+        processo.
+        <br />
+        <br />
+        Nossa equipe de consultores jurídicos altamente qualificados está pronta
+        para guiar você de forma assertiva e transparente. Com conhecimento
+        atualizado sobre as leis, regulamentos e jurisprudências mais recentes,
+        proporcionamos orientação precisa para sua situação específica. Seja
+        você um indivíduo, empresa ou instituição, temos a expertise necessária
+        para lidar com todas as complexidades legais envolvidas.
+        <br />
+        <br />
+        Já auxiliamos inúmeras pessoas e empresas a venderem seus precatórios
+        com sucesso, obtendo o retoConsutrno financeiro esperado. Se você
+        enfrenta dificuldades na venda de precatórios e busca uma consultoria
+        jurídica confiável, segura e comprovada, não hesite em contar com a CBL
+        Consultoria. Estamos aqui para proporcionar tranquilidade e garantir o
+        sucesso em suas negociações.
       </Subtitle>
       <div
         ref={showMoreRef}
@@ -80,16 +86,17 @@ const VideoHistory: React.FC = () => {
             textAlign: "justify",
           }}
         >
-          Estamos aqui para proporcionar tranquilidade e garantir o sucesso em
-          suas negociações. Nossa reputação é construída sobre resultados
-          consistentes e clientes satisfeitos. São dezenas de imóveis
-          regularizados pelo país, inúmeros clientes indenizados por erro médico
-          e demais ações de ressarcimento, bem como uma consultoria jurídica
-          consistente e coesa, buscando o melhor resultado para o cliente. Ao
-          escolher a CBL Consultoria, você terá um serviço personalizado,
-          voltado às suas necessidades. Nosso compromisso é ouvir suas
-          preocupações e metas, para assim desenvolver estratégias eficazes e
-          garantir o melhor resultado possível.
+          Nossa reputação é construída sobre resultados consistentes e clientes
+          satisfeitos. São dezenas de imóveis regularizados pelo país, inúmeros
+          clientes indenizados por erro médico e demais ações de ressarcimento,
+          bem como uma consultoria jurídica consistente e coesa, buscando o
+          melhor resultado para o cliente.
+          <br />
+          <br />
+          Ao escolher a CBL Consultoria, você terá um serviço
+          personalizado, voltado às suas necessidades. Nosso compromisso é ouvir
+          suas preocupações e metas, para assim desenvolver estratégias eficazes
+          e garantir o melhor resultado possível.
         </Subtitle>
       </div>
       <C.ShowMoreButton onClick={() => setShowMore(!showMore)}>
@@ -114,7 +121,7 @@ const VideoHistory: React.FC = () => {
         </svg>
       </C.ShowMoreButton>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default VideoHistory;
+export default VideoHistory

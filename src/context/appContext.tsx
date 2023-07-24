@@ -15,8 +15,6 @@ interface AppContextProps {
   isScrollingTop: boolean
   menuOpened: boolean
   setMenuOpened: (value: boolean) => void
-  submenuOpened: number | null
-  setSubmenuOpened: (index: number | null) => void
   setNewsList: (value: any[]) => void
   newsList: any[]
   getNewsList: () => void
@@ -38,7 +36,7 @@ export function AppProvider({ children }: any) {
   const [screenSizeW, setScreenSizeW] = useState(window.innerWidth)
   const [screenSizeH, setScreenSizeH] = useState(window.innerHeight)
   const [menuOpened, setMenuOpened] = useState(false)
-  const [submenuOpened, setSubmenuOpened] = useState<number | null>(null)
+
   
   const [toast, setToast] = useState<null | {
     message: string
@@ -109,8 +107,6 @@ export function AppProvider({ children }: any) {
     screenSizeW,
     isScrollingTop,
     menuOpened,
-    submenuOpened,
-    setSubmenuOpened,
     setMenuOpened,
     newsList,
     setNewsList,

@@ -1,31 +1,10 @@
-"use client";
+"use client"
 
-import styled from "styled-components";
-import { tokens } from "@/utils/tokens";
-
-interface IProps {
-  show: boolean;
-}
-
-export const Container = styled.header<IProps>`
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 99999;
-  background-color: ${tokens.colors.brand.cta};
-  /* border-bottom: 1px solid ${tokens.colors.brand.cta}; */
-
-  height: 120px;
-  padding: 0 24px;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-
-  transition: all 0.4s ease-in-out;
-
-  ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
-`;
+import styled from "styled-components"
+import { tokens } from "@/utils/tokens"
 
 interface IPropsMenu {
-  show: boolean;
+  show: boolean
 }
 
 export const MenuMobile = styled.div<IPropsMenu>`
@@ -43,16 +22,7 @@ export const MenuMobile = styled.div<IPropsMenu>`
 
   ${({ show }) => (show ? `top: 0;` : `top: -100%;`)}
   overflow: hidden;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  max-width: ${tokens.breakpoints.desktop};
-  margin: 0 auto;
-`;
+`
 
 export const Logo = styled.img`
   width: 200px;
@@ -63,20 +33,7 @@ export const Logo = styled.img`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`;
-export const Navbar = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-
-  @media (max-width: ${tokens.breakpoints.desktop}) {
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-    height: fit-content;
-  }
-`;
+`
 
 export const NavbarItem = styled.div`
   color: #fff;
@@ -106,35 +63,13 @@ export const NavbarItem = styled.div`
       }
     }
   }
-`;
+`
 
-export const AccordionItem = styled.div`
-  padding: 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-`;
-
-interface SubmenuProps {
-  show: boolean;
-}
-
-export const Submenu = styled.div<SubmenuProps>`
+export const Submenu = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   padding: 10px;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: fit-content;
-  background-color: ${tokens.colors.brand.cta};
-
-  ${({ show }) => (show ? `opacity: 1;` : `opacity: 0;`)}
-  ${({ show }) => (show ? `visibility: visible;` : `visibility: hidden;`)}
-
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
 
   hr {
     margin: 10px 0;
@@ -147,24 +82,22 @@ export const Submenu = styled.div<SubmenuProps>`
     font-family: ${tokens.font.family.secondary};
   }
 
-  @media (max-width: ${tokens.breakpoints.desktop}) {
-    width: 100%;
-    background-color: transparent;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 0;
-    padding: 0 0 0 35px;
-    position: relative;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    visibility: visible;
+  width: 100%;
+  background-color: transparent;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0;
+  padding: 0 0 0 35px;
+  position: relative;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
 
-    margin: 20px 0 20px 35px;
-    border-left: 1px solid ${tokens.colors.brand.light};
+  margin: 20px 0 20px 35px;
+  border-left: 1px solid ${tokens.colors.brand.light};
 
-    a {
-      font-size: 0.9rem;
-    }
+  a {
+    font-size: 0.9rem;
   }
-`;
+`

@@ -18,7 +18,9 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${tokens.font.family.primary};
 
   color: ${({ variant }) =>
-    variant === "primary" ? tokens.colors.brand.cta : tokens.colors.brand.light};
+    variant === "primary"
+      ? tokens.colors.brand.cta
+      : tokens.colors.brand.light};
   border: 2px solid
     ${({ variant }) =>
       variant === "primary"
@@ -50,5 +52,29 @@ export const Button = styled.button<ButtonProps>`
   @media (max-width: ${tokens.breakpoints.tablet}) {
     margin: 0 auto;
     font-size: ${tokens.font.sizes.xs};
+  }
+`
+
+export const Link = styled.a<ButtonProps>`
+  font-weight: ${tokens.font.weight.bold};
+  border-radius: 0.5rem;
+  transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+  padding-inline: 1.5rem;
+  height: 45px;
+  width: fit-content;
+  font-size: ${tokens.font.sizes.sm};
+  font-family: ${tokens.font.family.primary};
+
+  color: ${({ variant }) =>
+    variant === "primary"
+      ? tokens.colors.brand.cta
+      : tokens.colors.brand.light};
+
+  &:hover {
+    color: ${({ variant }) =>
+      variant === "primary"
+        ? tokens.colors.brand.lightCream
+        : tokens.colors.brand.cta};
   }
 `
