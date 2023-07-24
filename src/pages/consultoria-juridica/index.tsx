@@ -182,8 +182,11 @@ const LegalAdvice: React.FC = () => {
           >
             Aqui na CBL Consultoria, entendemos a importância de proteger seus
             direitos e garantir justiça em casos envolvendo negligência médica.
+            
+            <br/>
+            <br/>
             Nossa equipe de consultores jurídicos especializados está pronta
-            para oferecer suporte e orientação durante todo o processo:
+            para oferecer suporte e orientação durante todo o processo.
           </Subtitle>
 
           {[

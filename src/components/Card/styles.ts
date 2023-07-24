@@ -25,6 +25,8 @@ export const CardContainer = styled.div`
   &:hover {
     background-color: ${tokens.colors.brand.pure};
     h1,
+    h2,
+    h3,
     div,
     p {
       color: ${tokens.colors.brand.light};
@@ -45,11 +47,8 @@ export const CardContainer = styled.div`
     }
   }
 `
-export const Divider = styled.div`
+export const Divider = styled.hr`
   width: 100%;
-  height: 1px;
-  background-color: ${tokens.colors.brand.pure};
-
   margin: 20px 0;
 `
 

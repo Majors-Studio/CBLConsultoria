@@ -74,26 +74,20 @@ const Footer: React.FC = () => {
       >
         <S.Midia>
           <Logo />
-            <S.BiggerText>
-              We growing up your business with personal AI manager.
-            </S.BiggerText>
-            <Subtitle
-              style={{
-                color: tokens.colors.brand.light,
-                textAlign: "left",
-              }}
-            >
-              caue@cblconsultoria.com.br
-            </Subtitle>
-            <CtaButton
-              href="#purposeForm"
-              style={{
-                border: "1px solid "+tokens.colors.brand.light,
-                color: tokens.colors.brand.light,
-              }}
-            >
-              Entre em contato
-            </CtaButton>
+          <S.BiggerText>
+            We growing up your business with personal AI manager.
+          </S.BiggerText>
+          <Subtitle
+            style={{
+              color: tokens.colors.brand.light,
+              textAlign: "left",
+            }}
+          >
+            caue@cblconsultoria.com.br
+          </Subtitle>
+          <CtaButton href="#purposeForm" variant="secondary">
+            Entre em contato
+          </CtaButton>
         </S.Midia>
         <S.ContainerInfo>
           {footerData.map((item, index) => (
@@ -114,7 +108,6 @@ const Footer: React.FC = () => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
-          
         }}
         py={tokens.space.sizeXxs}
       >
