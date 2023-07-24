@@ -2,11 +2,9 @@
 import { ListIcon, MagnifyingIcon, MoneyIcon, NewsIcon } from "@/assets/icons"
 import { newsTextMock } from "./newsTextMock"
 import ContractIcon from "@/assets/icons/ContractIcon"
-import bannerImg1 from "@/assets/png/banner-1.png"
-import bannerImg2 from "@/assets/png/banner-2.png"
-import bannerImg3 from "@/assets/png/banner-3.png"
-import bannerImg4 from "@/assets/png/banner-4.png"
-import bannerImg5 from "@/assets/png/banner-5.png"
+import bannerImg1 from "@/assets/jpg/banner-1.jpg"
+import bannerImg2 from "@/assets/jpg/banner-2.jpg"
+import bannerImg3 from "@/assets/jpg/banner-3.jpg"
 import Image, { StaticImageData } from "next/image"
 
 import caue from "@/assets/jpg/caue_1_copy.jpg"
@@ -299,12 +297,6 @@ export const bannerList: {
   },
   {
     img: bannerImg3,
-  },
-  {
-    img: bannerImg4,
-  },
-  {
-    img: bannerImg5,
   },
 ]
 

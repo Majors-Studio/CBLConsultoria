@@ -58,7 +58,7 @@ const Banner: React.FC = () => {
               priority
               style={{
                 objectFit: "cover",
-                objectPosition: "center",
+                objectPosition: "top",
                 height: screenSizeH - tokens.spaceNumber.sizeXxxl,
               }}
             />
