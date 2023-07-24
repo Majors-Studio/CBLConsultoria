@@ -27,9 +27,14 @@ export const MidiaItem = styled.a`
 export const ContainerInfo = styled.div`
   display: flex;
   gap: ${tokens.space.sizeMd};
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 350px;
+width: 100%;
+
+  justify-content: space-between;
+
+
 `
 
 export const Info = styled.div`

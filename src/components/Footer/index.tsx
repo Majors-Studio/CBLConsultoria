@@ -11,6 +11,7 @@ import ContentBox from "../ContentBox"
 import { useDevice } from "@/hooks/useDevice"
 import InstagramIcon from "@/assets/icons/InstagramIcon"
 import Description from "../Description"
+import { navitems } from "@/utils/navitems"
 
 const Footer: React.FC = () => {
   const { isDesktop } = useDevice()
@@ -25,34 +26,21 @@ const Footer: React.FC = () => {
   const footerData = [
     {
       title: "Mapa do site",
-      subtitle: [
-        {
-          name: "Home",
-          url: "/",
-        },
-        {
-          name: "Quem somos",
-          url: "/about",
-        },
-        {
-          name: "Notícias",
-          url: "/news",
-        },
-      ],
+      subtitle: navitems,
     },
     {
       title: "Recursos",
       subtitle: [
         {
-          name: "Documentação",
+          title: "Documentação",
           url: "/",
         },
         {
-          name: "Conferências",
+          title: "Conferências",
           url: "/",
         },
         {
-          name: "Consultoria",
+          title: "Consultoria",
           url: "/legal-advice",
         },
       ],
@@ -85,11 +73,18 @@ const Footer: React.FC = () => {
             style={{
               color: tokens.colors.brand.light,
               textAlign: "left",
+              width: "100%",
             }}
           >
             caue@cblconsultoria.com.br
           </Description>
-          <CtaButton href="#purposeForm" variant="secondary">
+          <CtaButton
+            href="#purposeForm"
+            variant="secondary"
+            style={{
+              width: "100%",
+            }}
+          >
             Entre em contato
           </CtaButton>
         </S.Midia>
@@ -113,7 +108,7 @@ const Footer: React.FC = () => {
                       textAlign: "center",
                     }}
                   >
-                    {subitem.name}
+                    {subitem.title}
                   </Description>
                 </Link>
               ))}
