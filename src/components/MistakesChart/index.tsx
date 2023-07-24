@@ -1,21 +1,18 @@
 import React from "react"
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  ChartData,
-} from "chart.js"
-import { Doughnut } from "react-chartjs-2"
-import * as S from "./styles"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, ChartData } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+import * as S from "./styles"
+import { tokens } from "@/utils/tokens";
 
 const MistakesChart: React.FC = () => {
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
     datasets: [
       {
+        
         label: "Valor em %",
         data: [5, 4, 33, 9, 25],
         backgroundColor: [
@@ -35,27 +32,42 @@ const MistakesChart: React.FC = () => {
         borderWidth: 1,
       },
     ],
-  } as ChartData<"doughnut", number[], string>
+  } as ChartData<"pie", number[], string>
   return (
     <S.Container>
-      <Doughnut
+      <Pie
         data={chartData}
-        width={320}
+        width={500}
         style={{ marginTop: "30px" }}
-        height={320}
+        height={500}
         options={{
           responsive: true,
+          
           maintainAspectRatio: false,
           plugins: {
+            title: {
+              text: "Erros médicos no Brasil nos últimos anos",
+              position: "top",
+              display: true,
+              color: tokens.colors.brand.light,
+              padding: {
+                  bottom: 12,
+              },
+              font: {
+                size: 24,
+                weight: "500",
+                family: tokens.font.family.primary,
+              }
+            },
             legend: {
               display: true,
               rtl: true,
               fullSize: true,
-              position: "left",
+              position: "bottom",
               labels: {
                 color: "#EEE",
                 font: {
-                  size: 14,
+                  size: 18,
                 },
               },
             },

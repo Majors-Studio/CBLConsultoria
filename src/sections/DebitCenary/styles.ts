@@ -11,13 +11,20 @@ export const CenaryInfoContainer = styled.div`
 export const CenaryTextContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 120px;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  gap: 24px;
 
   padding: 0 24px;
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
+
+  @media (max-width: ${tokens.breakpoints.tablet}) { 
+    gap: 32px;
+    padding: 0;
+    flex-direction: column;
+  }
+
 `;
 
 export const CenaryText = styled.p`
@@ -37,24 +44,11 @@ export const CenaryText = styled.p`
   }
 `;
 
-export const TotalDebt = styled.h1`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 27px;
-  font-weight: 700;
-  text-align: center;
-  width: 100%;
-`;
-
 export const SourceContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  text-align: left;
-  margin: 0 auto;
+  width: 100%;
 `;
 
 export const SourceText = styled.p`

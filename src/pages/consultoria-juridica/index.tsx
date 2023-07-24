@@ -44,7 +44,6 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        {" "}
         <ContentBox py={"30px"} bgColor={tokens.colors.brand.light}>
           <Subtitle
             style={{
@@ -157,7 +156,6 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        {" "}
         <ContentBox
           py={"30px"}
           bgColor={tokens.colors.brand.cta}
@@ -167,18 +165,11 @@ const LegalAdvice: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <Subtitle
-            style={{
-              color: tokens.colors.brand.light,
-            }}
-          >
-            Erros médicos no Brasil nos últimos anos
-          </Subtitle>
           <MistakesChart />
 
           <Subtitle
             style={{
-              marginTop: "64px",
+              marginTop: "32px",
               color: tokens.colors.brand.light,
               textAlign: "left",
             }}
@@ -263,7 +254,6 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        {" "}
         <ContentBox py={"30px"} bgColor={tokens.colors.brand.light}>
           <Title>
             O escritório conta com advogados experientes e grande know-how em

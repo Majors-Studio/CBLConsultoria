@@ -8,6 +8,8 @@ import React, { useEffect } from "react"
 import * as C from "./styles"
 import { useApp } from "@/context/appContext"
 import { getDate } from "@/utils/getDate"
+import Loading from "@/components/Loading"
+import LoadingIcon from "@/assets/icons/LoadingIcon"
 
 const MainNews: React.FC = () => {
   const { isMobile } = useDevice()
@@ -65,30 +67,66 @@ const MainNews: React.FC = () => {
       </div>
 
       <C.NewsList>
-        {newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
-          return (
-            <C.NewsItem key={newsIndex}>
-              <C.NewsItemTop>
-                <C.NewsItemInfo>
-                  {news.fields.sourceAuthor && news.fields.sourceAuthor + " | "}
-                  {getDate(news.fields.publishedDate)}
-                </C.NewsItemInfo>
-                <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
-              </C.NewsItemTop>
-              <Link
-                href={{
-                  pathname: "noticias/post/",
-                  query: { id: news.sys.id },
-                }}
+        {newsList ? (
+          newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
+            return (
+              <C.NewsItem key={newsIndex}>
+                <C.NewsItemTop>
+                  <C.NewsItemInfo>
+                    {news.fields.sourceAuthor &&
+                      news.fields.sourceAuthor + " | "}
+                    {getDate(news.fields.publishedDate)}
+                  </C.NewsItemInfo>
+                  <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
+                </C.NewsItemTop>
+                <Link
+                  href={{
+                    pathname: "noticias/post/",
+                    query: { id: news.sys.id },
+                  }}
+                  style={{
+                    color: "#e2a141",
+                  }}
+                >
+                  Leia mais
+                </Link>
+              </C.NewsItem>
+            )
+          })
+        ) : (
+          <>
+            <style>
+              {`
+              @keyframes rotate {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+            `}
+            </style>
+              <div style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "12px",
+              }}>
+              <div
                 style={{
-                  color: "#e2a141",
+                  width: "24px",
+                  height: "24px",
+                  transform: "rotate(0deg)",
+                  animation: "rotate 0.8s infinite",
+                  color: tokens.colors.brand.dark,
                 }}
               >
-                Leia mais
-              </Link>
-            </C.NewsItem>
-          )
-        })}
+                <LoadingIcon />
+              </div>
+              <p>Carregando Notícias</p>
+            </div>
+          </>
+        )}
         {isMobile && (
           <Link
             href={{

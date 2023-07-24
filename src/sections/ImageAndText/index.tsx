@@ -50,7 +50,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
           <Title
             style={{
               fontWeight: "bold",
-              textAlign: reverse ? "left" : "right",
+              textAlign: reverse || isMobile ? "left" : "right",
               marginBottom: isMobile ? "24px" : "32px",
               textTransform: "uppercase",
             }}
@@ -60,7 +60,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
           </Title>
           <Subtitle
             style={{
-              textAlign: reverse ? "left" : "right",
+              textAlign: reverse || isMobile ? "left" : "right",
               color: reverse
                 ? tokens.colors.brand.cta
                 : tokens.colors.brand.light,

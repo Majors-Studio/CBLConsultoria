@@ -7,9 +7,10 @@ import React from "react";
 import * as C from "./styles";
 import Anchor from "@/components/Anchor";
 
-import { Balancer } from "react-wrap-balancer";
+import { useDevice } from "@/hooks/useDevice";
 
 const DebitCenary: React.FC = () => {
+  const { isMobile } = useDevice();
   return (
     <ContentBox bgColor={tokens.colors.brand.dark} py={tokens.space.sizeXl}>
       <Anchor id="data" />
@@ -22,7 +23,7 @@ const DebitCenary: React.FC = () => {
 
         <C.CenaryTextContainer>
           <C.CenaryText>
-            A <strong>dívida total Brasileira</strong> é de{" "}
+            A <b>dívida total Brasileira</b> é de{" "}
             <span style={{ fontSize: 32 }}>
               R$
               <span style={{ fontSize: 53, marginLeft: "10px" }}>273,1</span>
@@ -32,14 +33,14 @@ const DebitCenary: React.FC = () => {
           </C.CenaryText>
 
           <C.CenaryText>
-            Atualmente a <strong>espera</strong> é de até
+            Atualmente a <b>espera</b> é de até
             <br /> <span style={{ fontSize: 53 }}>20</span>{" "}
             <span style={{ fontSize: 27 }}>anos</span>
           </C.CenaryText>
 
           <C.CenaryText>
-            O estado de <strong>São Paulo</strong> está{" "}
-            <strong>pagando em 2022</strong> os precatórios de{" "}
+            O estado de <b>São Paulo</b> está{" "}
+            <b>pagando em 2022</b> os precatórios de{" "}
             <span style={{ fontSize: 53 }}>2009</span>
           </C.CenaryText>
         </C.CenaryTextContainer>
@@ -48,10 +49,13 @@ const DebitCenary: React.FC = () => {
       <C.CenaryInfoContainer
         style={{
           marginTop: 42,
-          alignItems: "center",
+          alignItems:  isMobile ?'left' : "center",
         }}
       >
-        <C.TotalDebt>União R$ 85,4 Bi</C.TotalDebt>
+        <Title variant="secondary" style={{
+          textAlign: 'left',
+          width: '100%',
+        }}>União R$ 85,4 Bi</Title>
 
         <C.SourceContainer>
           <C.SourceText>

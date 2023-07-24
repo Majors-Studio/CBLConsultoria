@@ -10,12 +10,15 @@ import CtaButton from "../CtaButton"
 import { useApp } from "@/context/appContext"
 import { tokens } from "@/utils/tokens"
 import ContentBox from "../ContentBox"
+import { useRouter } from "next/router"
 
 const Header: React.FC = () => {
   const { isMobile, isDesktop } = useDevice()
 
   const { isScrollingTop, menuOpened, setMenuOpened } = useApp()
 
+  const path = useRouter().pathname
+  
   return (
     <>
       <C.MenuMobile show={menuOpened}>
@@ -40,13 +43,14 @@ const Header: React.FC = () => {
                     gap: "6px",
                   }}
                 >
-                  <div
+                  <p
                     style={{
                       marginLeft: isMobile ? "24px" : "0",
+                      fontWeight: path === item.url ? "bold" : "normal"
                     }}
                   >
-                    {item.title}{" "}
-                  </div>
+                    {item.title}
+                  </p>
                   {item.subpaths && isDesktop && (
                     <div
                       style={{
@@ -89,7 +93,7 @@ const Header: React.FC = () => {
                                 : undefined
                             }
                           >
-                            <p style={{ width: "180px" }}>{subitem.title}</p>
+                            <p style={{ width: "180px", textAlign: 'left'  }}>{subitem.title}</p>
                           </Link>
                           {subindex === item.subpaths.length - 1 ? null : (
                             <hr />
