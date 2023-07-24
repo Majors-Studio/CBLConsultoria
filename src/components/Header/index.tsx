@@ -102,6 +102,11 @@ const Header: React.FC = () => {
               </C.NavbarItem>
             )
           })}
+          {isDesktop || (
+            <CtaButton href="#purposeForm" variant="secondary">
+              Quero vender meu precatório
+            </CtaButton>
+          )}
         </ContentBox>
       </C.MenuMobile>
       <ContentBox
@@ -131,12 +136,11 @@ const Header: React.FC = () => {
             gap: "24px",
           }}
         >
-          <CtaButton
-            href="#purposeForm"
-            variant="secondary"
-          >
-            Quero vender meu precatório
-          </CtaButton>
+          {isDesktop && (
+            <CtaButton href="#purposeForm" variant="secondary">
+              Quero vender meu precatório
+            </CtaButton>
+          )}
           <Hamburguer isOpen={menuOpened} setIsOpen={setMenuOpened} />
         </div>
       </ContentBox>
