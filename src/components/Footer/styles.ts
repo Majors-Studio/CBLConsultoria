@@ -1,21 +1,6 @@
 import { tokens } from "@/utils/tokens"
 import styled from "styled-components"
 
-export const BiggerText = styled.h1`
-  color: ${tokens.colors.brand.light};
-  font-size: ${tokens.font.sizes.md};
-  font-weight: ${tokens.font.weight.bold};
-
-  @media (max-width: ${tokens.breakpoints.tablet}) {
-    font-size: ${tokens.font.sizes.sm};
-  }
-`
-
-export const Text = styled.h2`
-  color: ${tokens.colors.brand.light};
-  font-size: ${tokens.font.sizes.xxs};
-`
-
 export const Midia = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,17 +12,6 @@ export const Midia = styled.div`
     align-items: center;
     gap: ${tokens.space.sizeXxs};
   }
-
-  @media (max-width: ${tokens.breakpoints.tablet}) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
-export const MidiaItems = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${tokens.space.sizeXxxs};
 `
 
 export const MidiaItem = styled.a`
@@ -45,6 +19,9 @@ export const MidiaItem = styled.a`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: ${tokens.colors.brand.light};
 `
 
 export const ContainerInfo = styled.div`
@@ -65,18 +42,4 @@ export const Info = styled.div`
     gap: 12px;
     margin-top: ${tokens.space.sizeXxs};
   }
-`
-
-export const Subtitle = styled.p`
-  color: ${tokens.colors.brand.light};
-  font-size: ${tokens.font.sizes.xs};
-  font-weight: ${tokens.font.weight.regular};
-  line-height: ${tokens.font.sizes.md};
-`
-
-export const InfoText = styled.p`
-  color: ${tokens.colors.brand.light};
-  font-size: ${tokens.font.sizes.xxs};
-  font-weight: ${tokens.font.weight.regular};
-  line-height: ${tokens.font.sizes.md};
 `

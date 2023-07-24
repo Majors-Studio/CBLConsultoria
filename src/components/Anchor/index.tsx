@@ -10,7 +10,7 @@ const Anchor: React.FC<Props> = ({ id }) => {
       id={id}
       style={{
         position: "absolute",
-        top: "-100px",
+        top: "-0",
       }}
     />
   )

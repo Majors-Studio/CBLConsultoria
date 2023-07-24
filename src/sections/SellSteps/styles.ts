@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens";
 import styled from "styled-components";
 
 export const StepsSubtitle = styled.h2`
@@ -9,23 +10,14 @@ export const StepsSubtitle = styled.h2`
 export const StepsList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-top: 42px;
-  margin-bottom: 32px;
-  padding: 24px;
+  gap: 24px;
+  margin: 32px 0;
 
-  padding-bottom: 32px;
-  border-bottom: 2px solid #fff;
-
-  @media (max-width: 920px) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    grid-gap: 60px;
-    padding-bottom: 0;
-    border-bottom: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -36,9 +28,13 @@ export const StepsItemIcon = styled.div`
   color: #ccc;
 `;
 
-export const StepsInfoText = styled.p`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-`;
+export const StepItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+border: 1px solid #ccc;
+  padding: 24px;
+  border-radius: 8px;
+
+
+`

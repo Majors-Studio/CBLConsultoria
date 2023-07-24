@@ -13,6 +13,7 @@ interface AppContextProps {
   screenSizeW: number
   screenSizeH: number
   isScrollingTop: boolean
+  setIsScrollingTop: (value: boolean) => void
   menuOpened: boolean
   setMenuOpened: (value: boolean) => void
   setNewsList: (value: any[]) => void
@@ -112,6 +113,7 @@ export function AppProvider({ children }: any) {
     setNewsList,
     getNewsList,
     setToast,
+    setIsScrollingTop,
     toast
   }
 

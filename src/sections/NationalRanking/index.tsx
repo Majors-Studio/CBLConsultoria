@@ -15,7 +15,7 @@ import * as C from "./styles";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const NationalRanking: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isMobile,isTablet } = useDevice();
 
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
@@ -84,23 +84,35 @@ const NationalRanking: React.FC = () => {
       <C.RankingChart>
         <Doughnut
           data={chartData}
-          width={320}
-          style={{ marginTop: "30px" }}
-          height={320}
+          width={isMobile ?  250 : 320}
+          height={isMobile ? 250 : 320}
           options={{
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
               legend: {
                 display: true,
-                rtl: true,
                 fullSize: true,
-                position: "left",
+                
+                title: {
+                  display: true,
+                  text: 'Ranking de estados que possuem mais precatórios',
+                  position: 'center',
+                  padding: 20,
+                  color: tokens.colors.brand.light,
+                  font: {
+                    size: isMobile ? 16 : 20,
+                    weight: '500',
+                    family: tokens.font.family.primary,
+                  },
+                },
+                position: 'bottom',
                 labels: {
                   color: "#EEE",
                   font: {
                     size: 14,
                   },
+                  
                 },
               },
             },

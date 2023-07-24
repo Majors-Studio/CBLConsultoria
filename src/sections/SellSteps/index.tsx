@@ -1,13 +1,11 @@
-import { Subtitle, Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import Description from "@/components/Description";
-import { tokens } from "@/utils/tokens";
-import React from "react";
-
-import * as C from "./styles";
-import { stepsList } from "@/utils/dataObjects";
-
-import { Balancer } from "react-wrap-balancer";
+import { Subtitle, Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import Description from "@/components/Description"
+import { tokens } from "@/utils/tokens"
+import React from "react"
+import * as C from "./styles"
+import { stepsList } from "@/utils/dataObjects"
+import { Balancer } from "react-wrap-balancer"
 
 const SellSteps: React.FC = () => {
   return (
@@ -25,40 +23,41 @@ const SellSteps: React.FC = () => {
       </Subtitle>
 
       <C.StepsList>
-        {stepsList.map((step) => (
-          <li key={step.id}>
-            <C.StepsItemIcon style={{ color: tokens.colors.brand.light }}>
-              {step.icon}
-            </C.StepsItemIcon>
-            <Subtitle
-              style={{
-                color: tokens.colors.highlight.light,
-                textAlign: "left",
-                fontWeight: "600",
-                marginTop: 12,
-                marginBottom: 32,
-                height: 32,
-              }}
-            >
-              {step.title}
-            </Subtitle>
-            <Description
-              style={{
-                color: tokens.colors.highlight.light,
-                textAlign: "left",
-                lineHeight: "22px",
-              }}
-            >
-              <Balancer>{step.text}</Balancer>
-            </Description>
-          </li>
+        {stepsList.map((step, index) => (
+          <>
+            <C.StepItem key={step.id}>
+              <C.StepsItemIcon style={{ color: tokens.colors.brand.light }}>
+                {step.icon}
+              </C.StepsItemIcon>
+              <Subtitle
+                style={{
+                  color: tokens.colors.highlight.light,
+                  textAlign: "left",
+                  fontWeight: "600",
+                  marginTop: 12,
+                  marginBottom: 32,
+                  height: 32,
+                }}
+              >
+                {step.title}
+              </Subtitle>
+              <Description
+                style={{
+                  color: tokens.colors.highlight.light,
+                  textAlign: "left",
+                  lineHeight: "22px",
+                }}
+              >
+                <Balancer>{step.text}</Balancer>
+              </Description>
+            </C.StepItem>
+          </>
         ))}
       </C.StepsList>
 
       <Description
         style={{
           color: tokens.colors.highlight.light,
-          padding: "24px",
         }}
       >
         A venda do precatório é realizada com muita segurança e agilidade, todo
@@ -69,7 +68,7 @@ const SellSteps: React.FC = () => {
         capacitada para analisar todos os processos e documentos necessários.
       </Description>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default SellSteps;
+export default SellSteps
