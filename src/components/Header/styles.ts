@@ -21,7 +21,6 @@ export const Submenu = styled.div<NavbarItemProps>`
   position: relative;
 
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  border-radius: 8px;
 
   display: flex;
   flex-direction: column;
@@ -55,6 +54,7 @@ export const Submenu = styled.div<NavbarItemProps>`
     background-color: ${tokens.colors.brand.cta};
     border-left: 0;
     margin: 0;
+  border-radius: 8px;
 
     width: fit-content;
   }

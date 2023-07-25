@@ -50,6 +50,7 @@ const Header: React.FC = () => {
                   ? tokens.colors.brand.lightCream
                   : tokens.colors.neutral.highPure,
               fontWeight: path === item.url ? "bold" : "normal",
+              fontSize: "18px",
             }}
           >
             {item.title}
