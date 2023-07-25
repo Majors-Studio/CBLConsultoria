@@ -8,7 +8,6 @@ import { tokens } from "@/utils/tokens"
 import ContentBox from "@/components/ContentBox"
 import Video from "@/components/Video"
 import CtaButton from "@/components/CtaButton"
-import Description from "@/components/Description"
 
 const About: React.FC = () => {
   return (
