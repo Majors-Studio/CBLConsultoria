@@ -15,7 +15,7 @@ import * as C from "./styles";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const NationalRanking: React.FC = () => {
-  const { isMobile,isTablet } = useDevice();
+  const { isMobile } = useDevice();
 
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
