@@ -10,7 +10,7 @@ import { StaticImageData } from "next/image"
 interface SpeechCarouselProps {
   data: {
     name: string
-    avatar: string
+    avatar: StaticImageData
     text: string
     city?: string
     state?: string
