@@ -11,6 +11,7 @@ export const Midia = styled.div`
     flex-direction: column;
     align-items: center;
     gap: ${tokens.space.sizeXxs};
+    max-width: 100%;
   }
 `
 
@@ -30,11 +31,13 @@ export const ContainerInfo = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   max-width: 350px;
-width: 100%;
+  width: 100%;
 
   justify-content: space-between;
 
-
+  @media (max-width: ${tokens.breakpoints.desktop}) {
+    max-width: 100%;
+  }
 `
 
 export const Info = styled.div`
