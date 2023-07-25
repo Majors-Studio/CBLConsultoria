@@ -49,7 +49,7 @@ const WhatIsResources: React.FC = () => {
               lineHeight: "32px",
             }}
           >
-            Na CBL Consultoria, entendemos que a Gestão de Recursos é um aspecto
+            Na <b>CBL Consultoria</b>, entendemos que a Gestão de Recursos é um aspecto
             fundamental para o sucesso de qualquer empreendimento. Seja você um
             indivíduo, uma pequena empresa ou uma grande corporação, é essencial
             maximizar o retorno dos seus investimentos e gerir seus recursos de

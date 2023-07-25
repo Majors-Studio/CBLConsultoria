@@ -1,6 +1,6 @@
-import { tokens } from "@/utils/tokens";
-import styled from "styled-components";
-import { SubtitleProps } from ".";
+import { tokens } from "@/utils/tokens"
+import styled from "styled-components"
+import { SubtitleProps } from "."
 
 export const Subtitle = styled.p<SubtitleProps>`
   color: #121212;
@@ -13,4 +13,10 @@ export const Subtitle = styled.p<SubtitleProps>`
   @media (max-width: ${tokens.breakpoints.tablet}) {
     font-size: ${tokens.font.sizes.xs};
   }
-`;
+
+  strong,
+  b {
+    font-weight: ${tokens.font.weight.bold};
+    font-family: ${tokens.font.family.secondary};
+  }
+`

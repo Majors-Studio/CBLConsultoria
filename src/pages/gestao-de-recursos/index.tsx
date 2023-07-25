@@ -6,8 +6,8 @@ const Gestao: React.FC = () => {
   return (
     <>
       <WhatIsResources />
-  
-          <PurposeResources />
+
+      <PurposeResources />
     </>
   )
 }
