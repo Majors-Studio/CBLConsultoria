@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const BoxImage = styled.div`
   width: 450px;
   height: 300px;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   @media (max-width: ${tokens.breakpoints.tablet}) {
     width: 100%;

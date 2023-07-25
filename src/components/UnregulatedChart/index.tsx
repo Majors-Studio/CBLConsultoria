@@ -9,17 +9,13 @@ const UnregulatedChart: React.FC = () => {
   ChartJS.register(...registerables)
 
   const data = {
-    labels: ["2018", "2019", "2020", "2021", "2022"],
+    labels: ["2017", "2019"],
     datasets: [
       {
-        // label: "Evolução dos precatórios em R$ (Bilhões)",
-        data: [36.6, 41.3, 51.9, 54.7, 89.1],
+        data: [26000, 1300000000],
         backgroundColor: [
           tokens.colors.chart[0],
           tokens.colors.chart[1],
-          tokens.colors.chart[2],
-          tokens.colors.chart[3],
-          tokens.colors.chart[4],
         ],
         borderWidth: 0,
       },
@@ -39,47 +35,30 @@ const UnregulatedChart: React.FC = () => {
               beginAtZero: true,
             },
           },
-          datasets: {
-            bar: {
-              borderWidth: 1,
-              borderColor: "rgba(0,0,0,0.2)",
-              hoverBorderColor: "rgba(0,0,0,0.5)",
-              hoverBorderWidth: 1,
-              borderSkipped: "bottom",
-            },
-          },
-          elements: {
-            bar: {
-              borderWidth: 1,
-              borderColor: "rgba(0,0,0,0.2)",
-              hoverBorderColor: "rgba(0,0,0,0.5)",
-              hoverBorderWidth: 2,
-              borderSkipped: "bottom",
-            },
-          },
           resizeDelay: 50,
           devicePixelRatio: 2,
-          skipNull: true,
           locale: "pt-BR",
           normalized: true,
           responsive: true,
-          // legendas
           plugins: {
-            legend: {
-              fullSize: true,
-              rtl: true,
-              display: false,
-
-              position: "bottom",
-              labels: {
-                color: "#000",
-                font: {
-                  size: 14,
-                },
+            title: {
+              display: true,
+              text: "Erros médicos no Brasil nos últimos anos",
+              align: "center",
+              position: 'top',
+              padding: {
+                bottom: 24,
               },
+              font: {
+                size: 18,
+                weight: "normal",
+              },
+              color: "#fff",
             },
-
-            // tooltip
+            legend: {
+              display: false,
+              
+            }
           },
         }}
       />

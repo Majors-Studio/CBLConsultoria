@@ -349,7 +349,7 @@ const LegalAdvice: React.FC = () => {
           ))}
         </ContentBox>
       </ImageAndText>
-
+{/* 
       <ContentBox
         bgColor={tokens.colors.brand.lightCream}
         contentStyle={{
@@ -377,7 +377,7 @@ const LegalAdvice: React.FC = () => {
         >
           <HasConsultCompanyChart />
         </div>
-      </ContentBox>
+      </ContentBox> */}
       <JudicialForm />
     </>
   )
