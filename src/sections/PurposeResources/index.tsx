@@ -21,8 +21,7 @@ const PurposeResources: React.FC = () => {
     >
       <S.Info>
         <Title variant="primary">
-          Quero <b>vender</b> meu precatório <br /> Quero meus{" "}
-          <b>cálculos atualizados</b> de graça.
+          Converse com um de <b>nossos especialistas</b> para receber um <b>atendimento Personalizado</b>
         </Title>
       </S.Info>
       <PurposeForm />

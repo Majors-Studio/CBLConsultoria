@@ -46,17 +46,19 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        <ContentBox bgColor={tokens.colors.brand.lightCream} contentStyle={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        
-        }}>
+        <ContentBox
+          bgColor={tokens.colors.brand.lightCream}
+          contentStyle={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <div
             style={{
-              width: '100%',
+              width: "100%",
               maxWidth: 800,
-              height: '100%',
+              height: "100%",
               minHeight: isMobile ? 350 : 450,
               maxHeight: 450,
               display: "flex",
@@ -349,7 +351,7 @@ const LegalAdvice: React.FC = () => {
           ))}
         </ContentBox>
       </ImageAndText>
-{/* 
+      {/* 
       <ContentBox
         bgColor={tokens.colors.brand.lightCream}
         contentStyle={{

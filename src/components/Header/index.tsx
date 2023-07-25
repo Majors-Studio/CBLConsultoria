@@ -89,7 +89,7 @@ const Header: React.FC = () => {
               )
             })}
             {item.title === "Precatórios" && isDesktop && (
-              <CtaButton href="#purposeForm" variant="secondary" style={{marginTop:24}}>
+              <CtaButton href="precatorios#purposeForm" variant="secondary" style={{marginTop:24}}>
                 Quero vender meu precatório
               </CtaButton>
             )}
