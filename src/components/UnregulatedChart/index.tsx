@@ -12,7 +12,7 @@ const UnregulatedChart: React.FC = () => {
     labels: ["2017", "2019"],
     datasets: [
       {
-        data: [26000, 1300000000],
+        data: [26000, 1300000],
         backgroundColor: [
           tokens.colors.chart[0],
           tokens.colors.chart[1],
