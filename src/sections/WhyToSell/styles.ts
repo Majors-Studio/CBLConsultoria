@@ -20,6 +20,7 @@ export const WhyToSellItem = styled.li`
 export const WhyToSellItemIcon = styled.div`
   width: 45px;
   height: 45px;
+color: ${tokens.colors.brand.lightCream};
 `
 
 export const WhyToSellItemText = styled.p`

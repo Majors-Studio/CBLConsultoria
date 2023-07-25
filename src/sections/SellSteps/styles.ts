@@ -1,11 +1,5 @@
-import { tokens } from "@/utils/tokens";
-import styled from "styled-components";
-
-export const StepsSubtitle = styled.h2`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-`;
+import { tokens } from "@/utils/tokens"
+import styled from "styled-components"
 
 export const StepsList = styled.ul`
   display: grid;
@@ -20,21 +14,18 @@ export const StepsList = styled.ul`
   @media (max-width: ${tokens.breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
-`;
+`
 
 export const StepsItemIcon = styled.div`
   width: 45px;
   height: 45px;
-  color: #ccc;
-`;
+`
 
 export const StepItem = styled.li`
   display: flex;
   flex-direction: column;
   gap: 16px;
-border: 1px solid #ccc;
+  border: 1px solid ${tokens.colors.brand.cta};
   padding: 24px;
   border-radius: 8px;
-
-
 `

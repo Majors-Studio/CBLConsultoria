@@ -4,16 +4,12 @@ import styled from "styled-components"
 export const VideoWrapper = styled.div`
   width: 100%;
   height: 400px;
-  margin: 10px auto;
-  border-radius: ${tokens.border.radius.md};
+  margin: 0 auto;
+  border-radius: ${tokens.border.radius.lg}px;
   overflow: hidden;
 
-  @media (min-width: ${tokens.breakpoints.desktop}) {
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     height: 300px;
-  }
-
-  @media (min-width: ${tokens.breakpoints.tablet}) {
-    height: 200px;
   }
 `
 

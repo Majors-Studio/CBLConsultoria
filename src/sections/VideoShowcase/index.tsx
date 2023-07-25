@@ -8,26 +8,28 @@ import React from "react"
 
 const VideoShowcase: React.FC = () => {
   return (
-    <ContentBox
-      py={tokens.space.sizeXl}
-      bgColor={tokens.colors.brand.light}
-      contentStyle={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      
-      }}
-    >
-      <Anchor id='videoshowcase'/>
-      <Title variant="primary">
-        Há mais de uma década no mercado, somos a maior empresa na antecipação
-        de precatórios do Brasil
-      </Title>
+    <>
+      <Anchor id="videoshowcase" />
+      <ContentBox
+        py={tokens.space.sizeXl}
+        bgColor={tokens.colors.brand.light}
+        contentStyle={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: tokens.space.sizeXxs,
+        }}
+      >
+        <Title variant="primary">
+          Há mais de uma década no mercado, somos a maior empresa na antecipação
+          de precatórios do Brasil
+        </Title>
 
-      <Video />
+        <Video />
 
-      <CtaButton>Acesso nosso catálogo</CtaButton>
-    </ContentBox>
+        <CtaButton>Acesso nosso catálogo</CtaButton>
+      </ContentBox>
+    </>
   )
 }
 

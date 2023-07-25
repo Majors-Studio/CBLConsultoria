@@ -9,13 +9,16 @@ import { Balancer } from "react-wrap-balancer"
 
 const SellSteps: React.FC = () => {
   return (
-    <ContentBox bgColor={tokens.colors.brand.cta} py={tokens.space.sizeXl}>
-      <Title style={{ fontWeight: "bold" }} variant="secondary">
-        Receba a antecipação do seu precatório em apenas 4 passos
+    <ContentBox
+      bgColor={tokens.colors.brand.lightCream}
+      py={tokens.space.sizeXl}
+    >
+      <Title>
+        <b>Agora</b> se tornou mais <b>prático e seguro antecipar</b> seu
+        precatório
       </Title>
       <Subtitle
         style={{
-          color: tokens.colors.highlight.light,
           marginTop: 12,
         }}
       >
@@ -23,41 +26,39 @@ const SellSteps: React.FC = () => {
       </Subtitle>
 
       <C.StepsList>
-        {stepsList.map((step, index) => (
-          <>
-            <C.StepItem key={step.id}>
-              <C.StepsItemIcon style={{ color: tokens.colors.brand.light }}>
-                {step.icon}
-              </C.StepsItemIcon>
-              <Subtitle
-                style={{
-                  color: tokens.colors.highlight.light,
-                  textAlign: "left",
-                  fontWeight: "600",
-                  marginTop: 12,
-                  marginBottom: 32,
-                  height: 32,
-                }}
-              >
-                {step.title}
-              </Subtitle>
-              <Description
-                style={{
-                  color: tokens.colors.highlight.light,
-                  textAlign: "left",
-                  lineHeight: "22px",
-                }}
-              >
-                <Balancer>{step.text}</Balancer>
-              </Description>
-            </C.StepItem>
-          </>
+        {stepsList.map((step) => (
+          <C.StepItem key={step.id}>
+            <C.StepsItemIcon style={{ color: tokens.colors.brand.cta }}>
+              {step.icon}
+            </C.StepsItemIcon>
+            <Subtitle
+              style={{
+                color: tokens.colors.brand.cta,
+                textAlign: "left",
+                fontWeight: "600",
+                marginTop: 12,
+                marginBottom: 32,
+                height: 32,
+              }}
+            >
+              {step.title}
+            </Subtitle>
+            <Description
+              style={{
+                color: tokens.colors.brand.cta,
+                textAlign: "left",
+                lineHeight: "22px",
+              }}
+            >
+              <Balancer>{step.text}</Balancer>
+            </Description>
+          </C.StepItem>
         ))}
       </C.StepsList>
 
       <Description
         style={{
-          color: tokens.colors.highlight.light,
+          color: tokens.colors.brand.cta,
         }}
       >
         A venda do precatório é realizada com muita segurança e agilidade, todo

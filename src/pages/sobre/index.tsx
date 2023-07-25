@@ -8,7 +8,7 @@ import PurposeForm from "@/components/PurposeForm";
 const About: React.FC = () => {
   return (
     <>
-      <HeadBanner title="Conheça a CBL Consultoria!" />
+      <HeadBanner title="Sobre nós" />
 
       <CustomQuality />
 

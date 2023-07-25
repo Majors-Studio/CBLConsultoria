@@ -11,9 +11,9 @@ import Anchor from "@/components/Anchor"
 
 const WhyToSell: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.cta}>
       <Anchor id="benefits" />
-      <Title variant="primary">Por que vender seus precatórios?</Title>
+      <Title variant="secondary">Por que vender seus precatórios?</Title>
 
       <C.WhyToSellList>
         {whyToSellList.map((why) => (
@@ -26,6 +26,7 @@ const WhyToSell: React.FC = () => {
               style={{
                 textAlign: "left",
                 lineHeight: "32px",
+                color: tokens.colors.brand.lightCream,
               }}
             >
               {why.text}

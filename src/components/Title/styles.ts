@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { tokens } from "@/utils/tokens";
-import { TitleProps } from ".";
+import styled from "styled-components"
+import { tokens } from "@/utils/tokens"
+import { TitleProps } from "."
 
 export const Title = styled.h3<TitleProps>`
   font-size: ${tokens.font.sizes.lg};
@@ -18,7 +18,8 @@ export const Title = styled.h3<TitleProps>`
       ? tokens.colors.brand.light
       : tokens.colors.brand.dark};
 
-  strong {
+  strong,
+  b {
     font-family: ${tokens.font.family.primary};
   }
 
@@ -30,4 +31,4 @@ export const Title = styled.h3<TitleProps>`
     font-size: ${tokens.font.sizes.sm};
     margin-top: 10px;
   }
-`;
+`

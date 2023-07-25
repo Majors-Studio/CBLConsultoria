@@ -15,11 +15,20 @@ import { useDevice } from "@/hooks/useDevice"
 import ContentBox from "../ContentBox"
 import { tokens } from "@/utils/tokens"
 import { qualityList } from "@/utils/dataObjects"
+import Video from "../Video"
+import Description from "../Description"
 
 const CustomQuality: React.FC = () => {
   const { isMobile } = useDevice()
   return (
     <ContentBox bgColor={tokens.colors.brand.lightCream} py={tokens.space.sizeXl}>
+      <Title>Conheça a CBL Consultoria!</Title>
+      <Video
+      
+      />
+
+
+      
       {isMobile ? (
         <Swiper
           spaceBetween={50}
@@ -43,38 +52,38 @@ const CustomQuality: React.FC = () => {
                   alt="img"
                 />
                 <Title>{item.title}</Title>
-                <Subtitle>{item.subtitle}</Subtitle>
+                <Description>{item.subtitle}</Description>
               </C.Item>
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
-        <C.Container>
-          <C.Content>
-            {qualityList.map((item, index) => (
-              <C.Item key={index}>
-                <Image
-                  src={item.img}
-                  width={50}
-                  height={50}
-                  alt="img"
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                  }}
-                />
-                <Title
-                  style={{
-                    fontSize: "1.5rem",
-                  }}
-                >
-                  {item.title}
-                </Title>
-                <Subtitle>{item.subtitle}</Subtitle>
-              </C.Item>
-            ))}
-          </C.Content>
-        </C.Container>
+        <C.Content>
+          {qualityList.map((item, index) => (
+            <C.Item key={index}>
+              <Image
+                src={item.img}
+                width={50}
+                height={50}
+                alt="img"
+                style={{
+                  width: "50px",
+                  height: "50px",
+                }}
+              />
+              <Title
+                style={{
+                  fontSize: "1.5rem",
+                }}
+              >
+                {item.title}
+              </Title>
+              <Description style={{
+                textAlign: "center"
+              }}>{item.subtitle}</Description>
+            </C.Item>
+          ))}
+        </C.Content>
       )}
     </ContentBox>
   )

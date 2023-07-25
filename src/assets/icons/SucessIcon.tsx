@@ -4,7 +4,7 @@ const SuccessIcon: React.FC = (props) => {
   return (
     <svg
       viewBox="0 0 1024 1024"
-      fill="green"
+      fill="currentColor"
       height="25px"
       width="25px"
       {...props}

@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <PurposeHome />
       <VideoShowcase />
       <WhyToChoose />
-      <PurposeHome />
       <MainNews />
     </>
   )

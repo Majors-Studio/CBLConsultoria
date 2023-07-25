@@ -6,36 +6,28 @@ import NationalRanking from "@/sections/NationalRanking"
 import WhyToSell from "@/sections/WhyToSell"
 import WhatIsPrecatory from "@/sections/WhatIsPrecatory"
 import SellSteps from "@/sections/SellSteps"
-import { Faq, WhyBetter } from "@/sections"
-import PurposeForm from "@/components/PurposeForm"
+import { Faq, PurposeHome, WhyBetter } from "@/sections"
 
 const Precatory: React.FC = () => {
   return (
     <>
-      <HeadBanner
-        title={
-          <>
-            <b>Agora</b> se tornou mais <b>prático e seguro antecipar</b> seu
-            precatório
-          </>
-        }
-      />
+      <HeadBanner title={"Precatórios"} />
 
       <WhatIsPrecatory />
 
-      <DebitCenary />
-
+      <SellSteps />
+      
+      <WhyToSell />
+      
       <WhyBetter />
 
+      <DebitCenary />
+      
       <NationalRanking />
 
-      <WhyToSell />
-
-      <SellSteps />
-
       <Faq />
-
-      <PurposeForm />
+      
+      <PurposeHome />
     </>
   )
 }

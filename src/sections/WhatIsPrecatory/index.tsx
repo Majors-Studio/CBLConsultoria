@@ -8,10 +8,10 @@ import React from "react"
 import * as C from "./styles"
 
 const WhatIsPrecatory: React.FC = () => {
-    const { isMobile,isTablet} = useDevice()
+  const { isMobile } = useDevice()
   return (
     <ContentBox
-      bgColor={tokens.colors.highlight.light}
+      bgColor={tokens.colors.brand.cta}
       py={tokens.space.sizeXl}
       contentStyle={{
         display: "flex",
@@ -19,8 +19,11 @@ const WhatIsPrecatory: React.FC = () => {
       }}
     >
       <Title
+        variant="secondary"
         style={{
-          borderRight: isMobile ? "none" : "1px solid #e2a141",
+          borderRight: isMobile
+            ? "none"
+            : "1px solid " + tokens.colors.brand.pure,
           paddingRight: isMobile ? 0 : 42,
           marginBottom: isMobile ? 32 : 0,
           textAlign: isMobile ? "center" : "left",
@@ -36,7 +39,7 @@ const WhatIsPrecatory: React.FC = () => {
         <Subtitle
           style={{
             marginBottom: 42,
-            color: tokens.colors.neutral.lowLight,
+            color: tokens.colors.brand.lightCream,
             textAlign: "left",
             lineHeight: "32px",
           }}
@@ -50,7 +53,7 @@ const WhatIsPrecatory: React.FC = () => {
         <Subtitle
           style={{
             marginBottom: 42,
-            color: tokens.colors.neutral.lowLight,
+            color: tokens.colors.brand.lightCream,
             textAlign: "left",
             lineHeight: "32px",
           }}
@@ -69,17 +72,17 @@ const WhatIsPrecatory: React.FC = () => {
           <C.WhatIsCategory>
             <Subtitle
               style={{
-                color: tokens.colors.neutral.lowLight,
+                color: tokens.colors.brand.lightCream,
                 textAlign: "left",
                 lineHeight: "32px",
-                borderBottom: "1px solid #e2a141",
+                borderBottom: "1px solid " + tokens.colors.brand.pure,
               }}
             >
               Comuns
             </Subtitle>
             <Description
               style={{
-                color: tokens.colors.neutral.lowLight,
+                color: tokens.colors.brand.lightCream,
               }}
             >
               Desapropriação, tributações, entre outros (para pessoas jurídicas
@@ -90,17 +93,17 @@ const WhatIsPrecatory: React.FC = () => {
           <C.WhatIsCategory>
             <Subtitle
               style={{
-                color: tokens.colors.neutral.lowLight,
+                color: tokens.colors.brand.lightCream,
                 textAlign: "left",
                 lineHeight: "32px",
-                borderBottom: "1px solid #e2a141",
+                borderBottom: "1px solid " + tokens.colors.brand.pure,
               }}
             >
               Alimentares
             </Subtitle>
             <Description
               style={{
-                color: tokens.colors.neutral.lowLight,
+                color: tokens.colors.brand.lightCream,
               }}
             >
               Originam de questões salariais, pensões, aposentadorias, verbas de
@@ -111,7 +114,7 @@ const WhatIsPrecatory: React.FC = () => {
 
         <Description
           style={{
-            color: tokens.colors.neutral.lowLight,
+            color: tokens.colors.brand.lightCream,
           }}
         >
           *O pagamento dos precatórios obedece uma ordem cronológica e uma ordem

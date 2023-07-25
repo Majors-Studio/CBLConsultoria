@@ -56,7 +56,7 @@ const NationalRanking: React.FC = () => {
         <Title
           variant="secondary"
           style={{
-            borderBottom: "1px solid #e2a141",
+            borderBottom: "1px solid "+ tokens.colors.brand.lightCream,
             textAlign: "left",
             paddingBottom: 12,
           }}
