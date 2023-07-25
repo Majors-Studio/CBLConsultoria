@@ -96,7 +96,7 @@ const NationalRanking: React.FC = () => {
                 
                 title: {
                   display: true,
-                  text: 'Ranking de estados que possuem mais precatórios',
+                  text: 'Estados que possuem mais precatórios',
                   position: 'center',
                   padding: 20,
                   color: tokens.colors.neutral.highPure,
