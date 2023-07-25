@@ -1,6 +1,5 @@
 import React from "react"
 
-import PurposeForm from "@/components/PurposeForm"
 import HeadBanner from "@/components/HeadBanner"
 import img2 from "../../assets/png/chaves.png"
 import img5 from "../../assets/png/consult.jpg"
@@ -23,7 +22,7 @@ const LegalAdvice: React.FC = () => {
   return (
     <>
       <HeadBanner
-        title="Consultoria juridica"
+        title="Consultoria jurídica"
         color={tokens.colors.neutral.highPure}
       />
 
