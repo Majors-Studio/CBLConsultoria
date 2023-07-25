@@ -77,6 +77,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsScrollingTop(false)}
                     href={item.url + subitem.anchor}
                     style={{
+                      overflow: 'visible',
                       whiteSpace: "nowrap",
                       textOverflow: "ellipsis",
                     }}
@@ -128,6 +129,7 @@ const Header: React.FC = () => {
               display: "grid",
               gridTemplateColumns: `repeat(${navitems.length}, auto)`,
               gap: "24px",
+              height: "100px",
             }}
           >
             {navBar}

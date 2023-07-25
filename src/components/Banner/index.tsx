@@ -49,6 +49,7 @@ const Banner: React.FC = () => {
                 maxHeight: "100vh",
                 overflow: "hidden",
                 position: "relative",
+                width: "100vw",
               }}
             >
               <div

@@ -5,6 +5,7 @@ export const NavbarItem = styled.div`
   color: #fff;
   cursor: pointer;
   position: relative;
+height: 100%;
 
   @media (min-width: ${tokens.breakpoints.desktop}) {
     display: flex;
