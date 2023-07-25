@@ -8,8 +8,10 @@ import { MaskedInput, Title } from "@/components"
 import Anchor from "../Anchor"
 import ContentBox from "../ContentBox"
 import { tokens } from "@/utils/tokens"
+import { useDevice } from "@/hooks/useDevice"
 
 const JudicialForm: React.FC = () => {
+  const{isMobile}=useDevice()
   const form = useRef()
   const [formData, setFormData] = useState({
     name: "",
@@ -33,8 +35,6 @@ const JudicialForm: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setSending(true)
-
-    console.log(formData)
 
     setToast({
       message: "Enviando...",
@@ -78,7 +78,7 @@ const JudicialForm: React.FC = () => {
   }
 
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox py={isMobile ?'30px':"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Anchor id="purposeForm" />
       <S.Container>
       <Title>Receba uma proposta personalizada</Title>

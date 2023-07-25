@@ -168,7 +168,7 @@ const LegalAdvice: React.FC = () => {
         >
           <Title
             style={{
-              marginTop: "32px",
+              marginTop: isMobile ?'0' :"32px",
               color: tokens.colors.neutral.highPure,
               width: "100%",
             }}
@@ -225,7 +225,7 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "32px",
               width: "100%",
-              maxWidth: "400px",
+              maxWidth: isMobile ?'100%':"400px",
             }}
             variant="secondary"
             href="#purposeForm"

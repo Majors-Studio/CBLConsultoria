@@ -31,8 +31,10 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
   return (
     <>
       <ContentBox
-        py={"60px"}
-        bgColor={reverse ? tokens.colors.brand.lightCream : tokens.colors.brand.cta}
+        py={isMobile ? "30px" : "60px"}
+        bgColor={
+          reverse ? tokens.colors.brand.lightCream : tokens.colors.brand.cta
+        }
         contentStyle={{
           display: "flex",
           justifyContent: "space-between",
