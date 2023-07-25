@@ -23,7 +23,7 @@ const LegalAdvice: React.FC = () => {
     <>
       <HeadBanner
         title="Consultoria juridica"
-        color={tokens.colors.brand.light}
+        color={tokens.colors.neutral.highPure}
       />
 
       <ImageAndText
@@ -45,7 +45,7 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        <ContentBox py={"30px"} bgColor={tokens.colors.brand.light}>
+        <ContentBox py={"30px"} bgColor={tokens.colors.brand.lightCream}>
           <Subtitle
             style={{
               textAlign: "left",
@@ -166,16 +166,15 @@ const LegalAdvice: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <Subtitle
+          <Title
             style={{
               marginTop: "32px",
-              color: tokens.colors.brand.light,
-              textAlign: "left",
+              color: tokens.colors.neutral.highPure,
               width: "100%",
             }}
           >
             Passo a passo para comprovar o erro médico:
-          </Subtitle>
+          </Title>
 
           <div
             style={{
@@ -211,7 +210,7 @@ const LegalAdvice: React.FC = () => {
           <Subtitle
             style={{
               marginTop: "32px",
-              color: tokens.colors.brand.light,
+              color: tokens.colors.neutral.highPure,
               textAlign: "start",
               lineHeight: "1.5",
             }}
@@ -255,17 +254,21 @@ const LegalAdvice: React.FC = () => {
             <br />
             1. Conhecimento Especializado
             <br />
+            <br />
             2. Análise do Caso
+            <br />
             <br />
             3. Representação Efetiva
             <br />
+            <br />
             4. Estratégias Personalizadas
+            <br />
             <br />
             5. Redução de Estresse e Tempo
           </>
         }
       >
-        <ContentBox py={"30px"} bgColor={tokens.colors.brand.light}>
+        <ContentBox py={"30px"} bgColor={tokens.colors.brand.lightCream}>
           <Title>
             O escritório conta com advogados experientes e grande know-how em
             demandas cíveis para solucionar o seu problema!

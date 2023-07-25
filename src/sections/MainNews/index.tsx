@@ -24,7 +24,7 @@ const MainNews: React.FC = () => {
   return (
     <ContentBox
       py={tokens.space.sizeXl}
-      bgColor={tokens.colors.brand.light}
+      bgColor={tokens.colors.neutral.highPure}
       contentStyle={{
         display: "grid",
         gridTemplateColumns: isMobile ? "1fr" : "1fr 2fr",

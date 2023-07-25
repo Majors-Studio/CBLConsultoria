@@ -16,14 +16,12 @@ export const tokens = {
       medium: "#808cbc",
       low: "#D6DAE3",
       cta: "#253861",
-      light: "#fff",
       lightCream: "#F8F8F8",
-      dark: "#000",
+      dark: "#292929",
     },
     highlight: {
       dark: "#121212",
       medium: "#666666",
-      light: "#FFFFFF",
       pure: "#F5F5F5",
     },
     neutral: {
@@ -46,6 +44,18 @@ export const tokens = {
       successMedium: "#78CE7E",
       successDark: "#205A24",
     },
+    chart: {
+      0: "#D6DAE3",
+      1: "#8C9CB9",
+      2: "#808CBC",
+      3: "#6C7FA0",
+      4: "#5C6A8A",
+      5: "#4C5574",
+      6: "#3C405E",
+      7: "#2C2A48",
+      8: "#1C1A32",
+      9: "#0C081C",
+    }
   },
   font: {
     family: {

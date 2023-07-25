@@ -19,7 +19,7 @@ const CardSteps: React.FC = () => {
       <Title
         variant="secondary"
         style={{
-          color: tokens.colors.brand.light,
+          color: tokens.colors.neutral.highPure,
         }}
       >
         <span>Agora</span> se tornou mais{" "}

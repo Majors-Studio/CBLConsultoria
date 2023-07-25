@@ -17,7 +17,7 @@ export default function Toast() {
             : toast?.type === "sending"
             ? tokens.colors.brand.cta
             : tokens.colors.feedback.errorPure,
-        color: tokens.colors.brand.light,
+        color: tokens.colors.neutral.highPure,
         position: "fixed",
         bottom: "0px",
         left: "20px",
@@ -26,7 +26,7 @@ export default function Toast() {
         visibility: toast ? "visible" : "hidden",
       }}
     >
-      <p style={{ textAlign: "right", color: tokens.colors.brand.light }}>
+      <p style={{ textAlign: "right", color: tokens.colors.neutral.highPure }}>
         {toast?.message}
       </p>
       {toast?.type === "success" ? (

@@ -2,8 +2,9 @@ import { tokens } from "@/utils/tokens"
 import styled from "styled-components"
 
 export const BoxImage = styled.div`
-  width: 500px;
-  height: 100%;
+  width: 450px;
+  height: 300px;
+  overflow: hidden;
 
   @media (max-width: ${tokens.breakpoints.tablet}) {
     width: 100%;

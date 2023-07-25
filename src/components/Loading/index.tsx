@@ -53,7 +53,7 @@ const Loading: React.FC<Props> = ({ hasLogo = true, variant = 'dark' }) => {
           position: "relative",
           gap: "20px",
           overflow: "hidden",
-          backgroundColor: variant === 'dark' ? tokens.colors.brand.dark : tokens.colors.brand.light,
+          backgroundColor: variant === 'dark' ? tokens.colors.brand.dark : tokens.colors.neutral.highPure,
           animation: "fadeout 2s linear forwards",
         }}
       >
@@ -65,7 +65,7 @@ const Loading: React.FC<Props> = ({ hasLogo = true, variant = 'dark' }) => {
             left: "50%",
             transform: "rotate(0deg)",
             animation: "rotate 0.8s infinite",
-            color: variant === 'dark' ? tokens.colors.brand.light : tokens.colors.brand.dark,
+            color: variant === 'dark' ? tokens.colors.neutral.highPure : tokens.colors.brand.dark,
           }}
         >
           <LoadingIcon />

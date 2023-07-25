@@ -66,7 +66,7 @@ const NationalRanking: React.FC = () => {
 
         <Subtitle
           style={{
-            color: tokens.colors.brand.light,
+            color: tokens.colors.neutral.highPure,
             textAlign: "left",
             lineHeight: "26px",
           }}
@@ -99,7 +99,7 @@ const NationalRanking: React.FC = () => {
                   text: 'Ranking de estados que possuem mais precatórios',
                   position: 'center',
                   padding: 20,
-                  color: tokens.colors.brand.light,
+                  color: tokens.colors.neutral.highPure,
                   font: {
                     size: isMobile ? 16 : 20,
                     weight: '500',

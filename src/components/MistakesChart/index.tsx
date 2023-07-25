@@ -14,46 +14,44 @@ import { tokens } from "@/utils/tokens"
 
 const MistakesChart: React.FC = () => {
   const chartData = {
-    labels: ["RJ", "PR", "SP", "RS", "União"],
+    labels: [
+      "Diagnóstico Errado",
+      "Erro Cirúrgico",
+      "Medicação Incorreta",
+      "Comunicação Deficiente",
+      "Infecções Hospitalares",
+    ],
     datasets: [
       {
         label: "Valor em %",
         data: [5, 4, 33, 9, 25],
         backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
+          tokens.colors.chart[0],
+          tokens.colors.chart[1],
+          tokens.colors.chart[2],
+          tokens.colors.chart[3],
+          tokens.colors.chart[4],
         ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-        ],
-        borderWidth: 1,
+
+        borderWidth: 0,
       },
     ],
   } as ChartData<"pie", number[], string>
   return (
     <Pie
       data={chartData}
-      width={350}
-      height={350}
+      width={"100%"}
+      height={"100%"}
       options={{
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         plugins: {
           title: {
             text: "Erros médicos no Brasil nos últimos anos",
-            position: "bottom",
+            position: "top",
             display: true,
-            color: tokens.colors.brand.light,
-            padding: {
-              top: 12,
-            },
+            color: tokens.colors.neutral.highPure,
+
             font: {
               size: 16,
               weight: "500",
@@ -62,13 +60,13 @@ const MistakesChart: React.FC = () => {
           },
           legend: {
             display: true,
-            rtl: true,
             fullSize: true,
-            position: "bottom",
+            position: "left",
+
             labels: {
               color: "#EEE",
               font: {
-                size: 18,
+                size: 12,
               },
             },
           },

@@ -64,14 +64,14 @@ const Footer: React.FC = () => {
           <Subtitle
             style={{
               textAlign: "left",
-              color: tokens.colors.brand.light,
+              color: tokens.colors.neutral.highPure,
             }}
           >
             We growing up your business with personal AI manager.
           </Subtitle>
           <Description
             style={{
-              color: tokens.colors.brand.light,
+              color: tokens.colors.neutral.highPure,
               textAlign: "left",
               width: "100%",
             }}
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
               <Subtitle
                 style={{
                   textAlign: "center",
-                  color: tokens.colors.brand.light,
+                  color: tokens.colors.neutral.highPure,
                   fontWeight: "bold",
                 }}
               >
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
                 <Link href={subitem.url} key={subindex}>
                   <Description
                     style={{
-                      color: tokens.colors.brand.light,
+                      color: tokens.colors.neutral.highPure,
                       textAlign: "center",
                     }}
                   >
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
       >
         <Description
           style={{
-            color: tokens.colors.brand.light,
+            color: tokens.colors.neutral.highPure,
           }}
         >
           © 2023 CBLCONSULTORIA. All rights reserved.

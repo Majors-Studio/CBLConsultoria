@@ -3,6 +3,7 @@ import { Bar } from "react-chartjs-2"
 import { ChartData, Chart as ChartJS, registerables } from "chart.js/auto"
 
 import * as S from "./styles"
+import { tokens } from "@/utils/tokens"
 
 const UnregulatedChart: React.FC = () => {
   ChartJS.register(...registerables)
@@ -14,20 +15,13 @@ const UnregulatedChart: React.FC = () => {
         // label: "Evolução dos precatórios em R$ (Bilhões)",
         data: [36.6, 41.3, 51.9, 54.7, 89.1],
         backgroundColor: [
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(255, 99, 132, 0.2)",
+          tokens.colors.chart[0],
+          tokens.colors.chart[1],
+          tokens.colors.chart[2],
+          tokens.colors.chart[3],
+          tokens.colors.chart[4],
         ],
-        borderColor: [
-          "rgba(75, 192, 192, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(255, 99, 132, 1)",
-        ],
-        borderWidth: 1,
+        borderWidth: 0,
       },
     ],
   } as ChartData<"bar", number[], string>

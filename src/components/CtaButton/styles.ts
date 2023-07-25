@@ -20,17 +20,17 @@ export const Button = styled.button<ButtonProps>`
   color: ${({ variant }) =>
     variant === "primary"
       ? tokens.colors.brand.cta
-      : tokens.colors.brand.light};
+      : tokens.colors.neutral.highPure};
   border: 2px solid
     ${({ variant }) =>
       variant === "primary"
         ? tokens.colors.brand.cta
-        : tokens.colors.brand.light};
+        : tokens.colors.neutral.highPure};
   box-shadow: inset 0 0 0 0px
     ${({ variant }) =>
       variant === "primary"
         ? tokens.colors.brand.cta
-        : tokens.colors.brand.light};
+        : tokens.colors.neutral.highPure};
 
   white-space: nowrap;
 
@@ -69,7 +69,7 @@ export const Link = styled.a<ButtonProps>`
   color: ${({ variant }) =>
     variant === "primary"
       ? tokens.colors.brand.cta
-      : tokens.colors.brand.light};
+      : tokens.colors.neutral.highPure};
 
   &:hover {
     color: ${({ variant }) =>

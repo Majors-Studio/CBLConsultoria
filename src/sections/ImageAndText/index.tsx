@@ -32,7 +32,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
     <>
       <ContentBox
         py={"60px"}
-        bgColor={reverse ? tokens.colors.brand.light : tokens.colors.brand.cta}
+        bgColor={reverse ? tokens.colors.brand.lightCream : tokens.colors.brand.cta}
         contentStyle={{
           display: "flex",
           justifyContent: "space-between",
@@ -69,7 +69,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
               textAlign: reverse || isMobile ? "left" : "right",
               color: reverse
                 ? tokens.colors.brand.cta
-                : tokens.colors.brand.light,
+                : tokens.colors.neutral.highPure,
             }}
           >
             {subtitle}

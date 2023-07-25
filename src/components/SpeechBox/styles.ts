@@ -13,7 +13,7 @@ export const SpeechBox = styled.div`
 `;
 
 export const SpeechBoxText = styled.p`
-  color: ${tokens.colors.brand.light};
+  color: ${tokens.colors.neutral.highPure};
   font-family: ${tokens.font.family.secondary};
   font-size: 16px;
   font-weight: 400;

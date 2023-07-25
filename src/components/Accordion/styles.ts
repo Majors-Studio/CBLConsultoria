@@ -17,7 +17,7 @@ export const Item = styled.li`
 
   transition: max-height 0.4s ease-in-out;
 
-  background-color: ${tokens.colors.brand.light};
+  background-color: ${tokens.colors.neutral.highPure};
   overflow: hidden;
 
   border-bottom: 3px solid ${tokens.colors.brand.pure};

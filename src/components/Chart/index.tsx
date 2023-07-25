@@ -4,6 +4,7 @@ import { Bar } from "react-chartjs-2";
 import * as C from "./styles";
 
 import { ChartData, Chart as ChartJS, registerables } from "chart.js/auto";
+import { tokens } from "@/utils/tokens";
 
 const Chart: React.FC = () => {
   ChartJS.register(...registerables);
@@ -12,21 +13,13 @@ const Chart: React.FC = () => {
     labels: ["2018", "2019", "2020", "2021", "2022"],
     datasets: [
       {
-        // label: "Evolução dos precatórios em R$ (Bilhões)",
         data: [36.6, 41.3, 51.9, 54.7, 89.1],
         backgroundColor: [
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(255, 99, 132, 0.2)",
-        ],
-        borderColor: [
-          "rgba(75, 192, 192, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(255, 99, 132, 1)",
+          tokens.colors.chart[0],
+          tokens.colors.chart[1],
+          tokens.colors.chart[2],
+          tokens.colors.chart[3],
+          tokens.colors.chart[4],
         ],
         borderWidth: 1,
       },

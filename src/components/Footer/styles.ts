@@ -21,7 +21,7 @@ export const MidiaItem = styled.a`
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: ${tokens.colors.brand.light};
+  color: ${tokens.colors.neutral.highPure};
 `
 
 export const ContainerInfo = styled.div`

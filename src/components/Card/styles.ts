@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   align-items: center;
 
   width: 100%;
-  min-height: 150px;
+  min-height: 120px;
   background: #ffffff;
   box-shadow: -1px 3px 10px 0px #000;
   border-radius: ${tokens.border.radius.lg}px;
@@ -28,7 +28,7 @@ export const CardContainer = styled.div`
     h3,
     div,
     p {
-      color: ${tokens.colors.brand.light};
+      color: ${tokens.colors.neutral.highPure};
     }
     svg {
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)

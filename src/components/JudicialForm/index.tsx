@@ -78,8 +78,9 @@ const JudicialForm: React.FC = () => {
   }
 
   return (
-    <ContentBox py={"60px"} bgColor={tokens.colors.brand.light}>
+    <ContentBox py={"60px"} bgColor={tokens.colors.brand.lightCream}>
       <Anchor id="purposeForm" />
+      <S.Container>
       <Title>Receba uma proposta personalizada</Title>
       <S.Form action="#" onSubmit={sendEmail} ref={form}>
         <S.Input
@@ -121,6 +122,7 @@ const JudicialForm: React.FC = () => {
           Enviar
         </CtaButton>
       </S.Form>
+      </S.Container>
     </ContentBox>
   )
 }

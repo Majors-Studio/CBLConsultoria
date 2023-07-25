@@ -6,7 +6,7 @@ export const NavbarItem = styled.div`
   position: relative;
   cursor: pointer;
   font-size: ${tokens.font.sizes.sm};
-  color: ${tokens.colors.brand.light};
+  color: ${tokens.colors.neutral.highPure};
   position: relative;
   text-align: center;
 
@@ -47,7 +47,7 @@ export const Submenu = styled.div`
   visibility: visible;
 
   margin: 20px 0 0 35px;
-  border-left: 1px solid ${tokens.colors.brand.light};
+  border-left: 1px solid ${tokens.colors.neutral.highPure};
 
   hr {
     margin: 10px 0;
@@ -57,7 +57,7 @@ export const Submenu = styled.div`
     font-size: 0.9rem;
     padding: 0;
     font-size: ${tokens.font.sizes.xs};
-    color: ${tokens.colors.brand.light};
+    color: ${tokens.colors.neutral.highPure};
     font-family: ${tokens.font.family.secondary};
   }
 

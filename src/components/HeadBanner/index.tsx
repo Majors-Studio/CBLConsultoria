@@ -11,7 +11,7 @@ interface HeadBannerProps {
   color?: string
 }
 
-const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color =tokens.colors.brand.light}) => {
+const HeadBanner: React.FC<HeadBannerProps> = ({ title ,  source, color =tokens.colors.neutral.highPure}) => {
   return (
     <C.Container>
      <C.Overlay>

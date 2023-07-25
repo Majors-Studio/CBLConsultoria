@@ -15,7 +15,7 @@ export const Title = styled.h3<TitleProps>`
     variant === "primary"
       ? tokens.colors.brand.cta
       : variant === "secondary"
-      ? tokens.colors.brand.light
+      ? tokens.colors.neutral.highPure
       : tokens.colors.brand.dark};
 
   strong,

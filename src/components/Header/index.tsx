@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                     color:
                       path === item.url
                         ? tokens.colors.brand.lightCream
-                        : tokens.colors.brand.light,
+                        : tokens.colors.neutral.highPure,
                     fontWeight: path === item.url ? "bold" : "normal",
                   }}
                 >
