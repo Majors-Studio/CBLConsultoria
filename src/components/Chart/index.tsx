@@ -21,7 +21,7 @@ const Chart: React.FC = () => {
           tokens.colors.chart[3],
           tokens.colors.chart[4],
         ],
-        borderWidth: 1,
+        borderWidth: 0,
       },
     ],
   } as ChartData<"bar", number[], string>;

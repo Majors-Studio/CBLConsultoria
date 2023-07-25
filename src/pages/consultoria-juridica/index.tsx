@@ -3,7 +3,6 @@ import React from "react"
 import PurposeForm from "@/components/PurposeForm"
 import HeadBanner from "@/components/HeadBanner"
 import img2 from "../../assets/png/chaves.png"
-import img3 from "../../assets/png/medic.png"
 import img5 from "../../assets/png/consult.jpg"
 import { tokens } from "@/utils/tokens"
 import { Card, Subtitle, Title } from "@/components"
@@ -16,6 +15,8 @@ import CtaButton from "@/components/CtaButton"
 import MistakesChart from "@/components/MistakesChart"
 import { useDevice } from "@/hooks/useDevice"
 import JudicialForm from "@/components/JudicialForm"
+import HasConsultPeopleChart from "@/components/HasConsultPeopleChart"
+import HasConsultCompanyChart from "@/components/HasConsultCompanyChart"
 
 const LegalAdvice: React.FC = () => {
   const { isMobile } = useDevice()
@@ -338,6 +339,31 @@ const LegalAdvice: React.FC = () => {
         </ContentBox>
       </ImageAndText>
 
+      <ContentBox
+        bgColor={tokens.colors.brand.lightCream}
+        py={"30px"}
+        contentStyle={{
+          display: "grid",
+          gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
+          gap: "24px",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+          }}
+        >
+          <HasConsultPeopleChart />
+        </div>
+
+        <div
+          style={{
+            width: "100%",
+          }}
+        >
+          <HasConsultCompanyChart />
+        </div>
+      </ContentBox>
       <JudicialForm />
     </>
   )
