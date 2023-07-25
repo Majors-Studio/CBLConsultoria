@@ -9,7 +9,7 @@ const UnregulatedChart: React.FC = () => {
   ChartJS.register(...registerables)
 
   const data = {
-    labels: ["2017", "2019"],
+    labels: ["2017", "2020"],
     datasets: [
       {
         data: [26000, 1300000],
