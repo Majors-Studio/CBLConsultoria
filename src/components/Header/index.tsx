@@ -14,12 +14,89 @@ import { useRouter } from "next/router"
 import Subtitle from "../Subtitle"
 
 const Header: React.FC = () => {
-  const { isDesktop } = useDevice()
+  const { isDesktop, isMobile } = useDevice()
 
   const { isScrollingTop, menuOpened, setMenuOpened, setIsScrollingTop } =
     useApp()
 
+  const [subMenuOpened, setSubMenuOpened] = React.useState<number | null>(null)
+
   const path = useRouter().pathname
+
+  const navBar = navitems.map((item, index) => {
+    return (
+      <C.NavbarItem
+        key={index}
+        onClick={() => setMenuOpened(false)}
+        onMouseEnter={() => setSubMenuOpened(index)}
+        onMouseLeave={() => setSubMenuOpened(null)}
+      >
+        <Link
+          href={item.url}
+          style={{
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
+          <Subtitle
+            style={{
+              textAlign: "left",
+              color:
+                path === item.url
+                  ? tokens.colors.brand.lightCream
+                  : tokens.colors.neutral.highPure,
+              fontWeight: path === item.url ? "bold" : "normal",
+            }}
+          >
+            {item.title}
+          </Subtitle>
+          {item.subpaths && (
+            <svg
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+            >
+              <path
+                fillRule="evenodd"
+                d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z"
+              />
+            </svg>
+          )}
+        </Link>
+        {item.subpaths && (
+          <C.Submenu active={subMenuOpened === index || isMobile}>
+            {item.subpaths.map((subitem, subindex) => {
+              return (
+                <React.Fragment key={subindex}>
+                  <Link
+                    onClick={() => setIsScrollingTop(false)}
+                    href={item.url + subitem.anchor}
+                    style={{
+                      whiteSpace: "nowrap",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    <p>{subitem.title}</p>
+                  </Link>
+                  {subindex === item.subpaths.length - 1 ? null : <hr />}
+                </React.Fragment>
+              )
+            })}
+            {item.title === "Precatórios" && isDesktop && (
+              <CtaButton href="#purposeForm" variant="secondary" style={{marginTop:24}}>
+                Quero vender meu precatório
+              </CtaButton>
+            )}
+          </C.Submenu>
+        )}
+      </C.NavbarItem>
+    )
+  })
 
   return (
     <>
@@ -40,98 +117,58 @@ const Header: React.FC = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-            width: "100%",
+          width: "100%",
         }}
       >
         <Logo />
 
-        <div
+        {isDesktop ? (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: `repeat(${navitems.length}, auto)`,
+              gap: "24px",
+            }}
+          >
+            {navBar}
+          </div>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "24px",
+            }}
+          >
+            <Hamburguer isOpen={menuOpened} setIsOpen={setMenuOpened} />
+          </div>
+        )}
+      </ContentBox>
+      {isDesktop || (
+        <ContentBox
+          bgColor={tokens.colors.brand.cta}
           style={{
+            position: "fixed",
+            top: menuOpened ? "0" : "-100%",
+            transition: "top 0.5s ease-in-out",
+            zIndex: 9998,
+            paddingTop: "144px",
+            paddingBottom: "24px",
+            width: "100%",
+          }}
+          contentStyle={{
             display: "flex",
-            alignItems: "center",
+            flexDirection: "column",
             gap: "24px",
+            justifyContent: "space-between",
           }}
         >
-          {isDesktop && (
-            <CtaButton href="#purposeForm" variant="secondary">
-              Quero vender meu precatório
-            </CtaButton>
-          )}
-          <Hamburguer isOpen={menuOpened} setIsOpen={setMenuOpened} />
-        </div>
-      </ContentBox>
-      <ContentBox
-        bgColor={tokens.colors.brand.cta}
-        style={{
-          position: "fixed",
-          top: menuOpened ? "0" : "-100%",
-          transition: "top 0.5s ease-in-out",
-          zIndex: 9998,
-          paddingTop: "144px",
-          paddingBottom: "24px",
-          width: "100%",
-        }}
-        contentStyle={{
-          display: "flex",
-          flexDirection: isDesktop ? "row" : "column",
-          gap: "24px",
-          justifyContent: "space-between",
-        }}
-      >
-        {navitems.map((item, index) => {
-          return (
-            <C.NavbarItem key={index} onClick={() => setMenuOpened(false)}>
-              <Link
-                href={item.url}
-                style={{
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                }}
-              >
-                <Subtitle
-                  style={{
-                    textAlign: "left",
-                    color:
-                      path === item.url
-                        ? tokens.colors.brand.lightCream
-                        : tokens.colors.neutral.highPure,
-                    fontWeight: path === item.url ? "bold" : "normal",
-                  }}
-                >
-                  {item.title}
-                </Subtitle>
-              </Link>
-              {item.subpaths && (
-                <C.Submenu>
-                  {item.subpaths.map((subitem, subindex) => {
-                    return (
-                      <React.Fragment key={subindex}>
-                        <Link
-                          onClick={() => setIsScrollingTop(false)}
-                          href={item.url + subitem.anchor}
-                          style={{
-                            whiteSpace: "nowrap",
-                            textOverflow: "ellipsis",
-                          }}
-                        >
-                          <p>{subitem.title}</p>
-                        </Link>
-                        {subindex === item.subpaths.length - 1 ? null : <hr />}
-                      </React.Fragment>
-                    )
-                  })}
-                </C.Submenu>
-              )}
-            </C.NavbarItem>
-          )
-        })}
-        {isDesktop || (
+          {navBar}
           <CtaButton href="#purposeForm" variant="secondary">
             Quero vender meu precatório
           </CtaButton>
-        )}
-      </ContentBox>
+        </ContentBox>
+      )}
     </>
   )
 }

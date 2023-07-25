@@ -3,51 +3,36 @@ import { tokens } from "@/utils/tokens"
 
 export const NavbarItem = styled.div`
   color: #fff;
-  position: relative;
   cursor: pointer;
-  font-size: ${tokens.font.sizes.sm};
-  color: ${tokens.colors.neutral.highPure};
   position: relative;
-  text-align: center;
 
   @media (min-width: ${tokens.breakpoints.desktop}) {
-    font-size: 1rem;
-
-    &:after {
-      content: "";
-      left: 0;
-      bottom: -5px;
-      width: 0;
-      height: 2px;
-      background-color: #fff;
-      transition: all 0.3s ease-in-out;
-    }
-    &:hover {
-      color: #fff;
-      &:after {
-        width: 100%;
-      }
-    }
+    display: flex;
+    justify-content: center;
   }
 `
 
-export const Submenu = styled.div`
+interface NavbarItemProps {
+  active?: boolean
+}
+
+export const Submenu = styled.div<NavbarItemProps>`
+  position: relative;
+
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border-radius: 8px;
+
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   width: 100%;
   background-color: transparent;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 35px;
-  position: relative;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  visibility: visible;
+  border-left: 1px solid ${tokens.colors.neutral.highPure};
 
   margin: 20px 0 0 35px;
-  border-left: 1px solid ${tokens.colors.neutral.highPure};
+  padding: 0 0 0 35px;
 
   hr {
     margin: 10px 0;
@@ -61,8 +46,17 @@ export const Submenu = styled.div`
     font-family: ${tokens.font.family.secondary};
   }
 
-@media (min-width: ${tokens.breakpoints.desktop}) {
-  margin: 20px 0 0 0;
+  @media (min-width: ${tokens.breakpoints.desktop}) {
+    padding: 20px;
+    position: absolute;
+    top: 100%;
 
-}
+    background-color: ${tokens.colors.brand.cta};
+    border-left: 0;
+    margin: 0;
+
+    width: fit-content;
+  }
+
+  visibility: ${({ active }) => (active ? "visible" : "hidden")};
 `
