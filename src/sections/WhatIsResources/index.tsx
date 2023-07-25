@@ -14,7 +14,6 @@ const WhatIsResources: React.FC = () => {
     <>
       <ContentBox
         bgColor={tokens.colors.brand.cta}
-        py={tokens.space.sizeXl}
         style={{
           marginTop: 120,
         }}

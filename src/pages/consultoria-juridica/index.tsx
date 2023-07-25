@@ -45,7 +45,7 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        <ContentBox py={"30px"} bgColor={tokens.colors.brand.lightCream}>
+        <ContentBox bgColor={tokens.colors.brand.lightCream}>
           <Subtitle
             style={{
               textAlign: "left",
@@ -158,7 +158,6 @@ const LegalAdvice: React.FC = () => {
         }
       >
         <ContentBox
-          py={"30px"}
           bgColor={tokens.colors.brand.cta}
           contentStyle={{
             display: "flex",
@@ -268,7 +267,7 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        <ContentBox py={"30px"} bgColor={tokens.colors.brand.lightCream}>
+        <ContentBox bgColor={tokens.colors.brand.lightCream}>
           <Title>
             O escritório conta com advogados experientes e grande know-how em
             demandas cíveis para solucionar o seu problema!
@@ -340,7 +339,6 @@ const LegalAdvice: React.FC = () => {
 
       <ContentBox
         bgColor={tokens.colors.brand.lightCream}
-        py={"30px"}
         contentStyle={{
           display: "grid",
           gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",

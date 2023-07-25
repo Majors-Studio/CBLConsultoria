@@ -6,7 +6,7 @@ import React from "react"
 
 const SlabList: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.neutral.highPure}>
+    <ContentBox  bgColor={tokens.colors.neutral.highPure}>
       {cardsList.map((card, index) => (
         <Card
           key={index}

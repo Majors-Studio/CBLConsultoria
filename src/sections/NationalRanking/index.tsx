@@ -45,7 +45,6 @@ const NationalRanking: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.cta}
-      py={tokens.space.sizeXl}
       contentStyle={{
         display: "grid",
         gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",

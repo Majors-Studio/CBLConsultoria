@@ -16,7 +16,6 @@ const About: React.FC = () => {
 
       <ContentBox
         bgColor={tokens.colors.brand.lightCream}
-        py={tokens.space.sizeXl}
         contentStyle={{
           display: "flex",
           flexDirection: "column",
@@ -36,7 +35,6 @@ const About: React.FC = () => {
       <AvatarList />
 
       <ContentBox
-        py={"30px"}
         bgColor={tokens.colors.neutral.highLight}
         contentStyle={{
           gap: tokens.space.sizeXxs,

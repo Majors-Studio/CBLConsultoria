@@ -7,7 +7,7 @@ import React from "react";
 
 const Faq: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox  bgColor={tokens.colors.brand.lightCream}>
       <Title
         style={{ textAlign: "center", marginBottom: "20px" }}
         variant="primary"

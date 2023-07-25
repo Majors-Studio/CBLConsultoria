@@ -24,7 +24,6 @@ const Header: React.FC = () => {
   return (
     <>
       <ContentBox
-        py={"24px"}
         bgColor={tokens.colors.brand.cta}
         style={{
           top: isScrollingTop ? "0" : "-100%",

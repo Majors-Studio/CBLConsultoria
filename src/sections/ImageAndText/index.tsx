@@ -31,7 +31,6 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
   return (
     <>
       <ContentBox
-        py={isMobile ? "30px" : "60px"}
         bgColor={
           reverse ? tokens.colors.brand.lightCream : tokens.colors.brand.cta
         }

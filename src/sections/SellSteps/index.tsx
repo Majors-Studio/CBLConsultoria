@@ -11,7 +11,6 @@ const SellSteps: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
-      py={tokens.space.sizeXl}
     >
       <Title>
         <b>Agora</b> se tornou mais <b>prático e seguro antecipar</b> seu

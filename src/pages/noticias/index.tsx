@@ -29,7 +29,6 @@ const News: React.FC<Props> = ({ news }) => {
         <>
           <ContentBox
             bgColor={tokens.colors.neutral.highPure}
-            py={tokens.space.sizeXl}
             style={{
               width: "100%",
             }}

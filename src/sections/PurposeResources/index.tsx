@@ -10,7 +10,6 @@ import { tokens } from "@/utils/tokens"
 const PurposeResources: React.FC = () => {
   return (
     <ContentBox
-      py={"60px"}
       style={{}}
       bgColor={tokens.colors.brand.lightCream}
       contentStyle={{

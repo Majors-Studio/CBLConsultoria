@@ -9,7 +9,6 @@ const Purpose: React.FC = () => {
   const { isMobile } = useDevice();
   return (
     <ContentBox
-      py={tokens.space.sizeXl}
       bgColor={tokens.colors.brand.lightCream}
       contentStyle={{
         display: "grid",

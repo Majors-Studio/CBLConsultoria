@@ -22,7 +22,6 @@ const CustomQuality: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
-      py={tokens.space.sizeXl}
     >
       <Title style={{ marginBottom: 24 }}>
         Maximize o seu potencial financeiro com antecipações de precatórios de

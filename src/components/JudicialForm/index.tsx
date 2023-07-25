@@ -78,7 +78,7 @@ const JudicialForm: React.FC = () => {
   }
 
   return (
-    <ContentBox py={isMobile ?'30px':"60px"} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox bgColor={tokens.colors.brand.lightCream}>
       <Anchor id="purposeForm" />
       <S.Container>
       <Title>Receba uma proposta personalizada</Title>

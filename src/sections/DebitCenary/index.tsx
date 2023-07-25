@@ -12,7 +12,7 @@ import { useDevice } from "@/hooks/useDevice";
 const DebitCenary: React.FC = () => {
   const { isMobile } = useDevice();
   return (
-    <ContentBox bgColor={tokens.colors.brand.cta} py={tokens.space.sizeXl}>
+    <ContentBox bgColor={tokens.colors.brand.cta}>
       <Anchor id="data" />
       <Title style={{ marginBottom: "50px" }} variant="secondary">
         Cenário da Dívida Nacional em Precatórios

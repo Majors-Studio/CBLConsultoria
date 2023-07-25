@@ -23,7 +23,6 @@ const MainNews: React.FC = () => {
 
   return (
     <ContentBox
-      py={tokens.space.sizeXl}
       bgColor={tokens.colors.neutral.highPure}
       contentStyle={{
         display: "grid",

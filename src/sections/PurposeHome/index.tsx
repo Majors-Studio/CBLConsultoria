@@ -13,7 +13,6 @@ const PurposeHome: React.FC = () => {
   const { isDesktop } = useDevice()
   return (
     <ContentBox
-      py={"60px"}
       style={{}}
       bgColor={tokens.colors.brand.lightCream}
       contentStyle={{

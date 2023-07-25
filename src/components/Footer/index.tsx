@@ -50,7 +50,6 @@ const Footer: React.FC = () => {
   return (
     <>
       <ContentBox
-        py={tokens.space.sizeXl}
         bgColor={tokens.colors.brand.cta}
         contentStyle={{
           display: "flex",
@@ -123,7 +122,6 @@ const Footer: React.FC = () => {
           alignItems: "center",
           justifyContent: "space-between",
         }}
-        py={tokens.space.sizeXxs}
       >
         <Description
           style={{

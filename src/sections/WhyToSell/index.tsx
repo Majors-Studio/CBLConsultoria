@@ -11,7 +11,7 @@ import Anchor from "@/components/Anchor"
 
 const WhyToSell: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.cta}>
+    <ContentBox  bgColor={tokens.colors.brand.cta}>
       <Anchor id="benefits" />
       <Title variant="secondary">Por que vender seus precatórios?</Title>
 

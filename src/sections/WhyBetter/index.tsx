@@ -10,7 +10,7 @@ import { chooseList } from "@/utils/dataObjects";
 
 const WhyBetter: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.brand.lightCream}>
+    <ContentBox bgColor={tokens.colors.brand.lightCream}>
       <Title variant="primary">
         A CBL Consultoria é a melhor opção para você que deseja antecipar o seu
         precatório

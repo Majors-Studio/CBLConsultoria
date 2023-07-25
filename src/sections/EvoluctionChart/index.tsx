@@ -6,7 +6,7 @@ import { tokens } from "@/utils/tokens"
 
 const EvoluctionChart: React.FC = () => {
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.neutral.highLight}>
+    <ContentBox bgColor={tokens.colors.neutral.highLight}>
       <Title variant="primary">
         Evolução de investimentos em precatórios{" "}
         <span style={{ fontSize: "18px" }}>(2018 - 2022)</span>
