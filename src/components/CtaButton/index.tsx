@@ -17,9 +17,7 @@ const CtaButton: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <S.Button style={style} {...props} variant={variant}>
-      {!!href ? <S.Link variant={variant} href={href}>{children}</S.Link> : children}
-    </S.Button>
+    !!href ? <Link href={href}><S.Button style={style} {...props} variant={variant}>{children}</S.Button></Link> : <S.Button style={style} {...props} variant={variant}>{children}</S.Button>
   )
 }
 
