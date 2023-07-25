@@ -46,16 +46,26 @@ const LegalAdvice: React.FC = () => {
           </>
         }
       >
-        <ContentBox bgColor={tokens.colors.brand.lightCream}>
-          <Subtitle
+        <ContentBox bgColor={tokens.colors.brand.lightCream} contentStyle={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        
+        }}>
+          <div
             style={{
-              textAlign: "left",
+              width: '100%',
+              maxWidth: 800,
+              height: '100%',
+              minHeight: isMobile ? 350 : 450,
+              maxHeight: 450,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            Taxa de imóveis desregularizados no Brasil nos últimos anos:
-          </Subtitle>
-
-          <UnregulatedChart />
+            <MistakesChart />
+          </div>
 
           <Title
             style={{
@@ -144,7 +154,7 @@ const LegalAdvice: React.FC = () => {
       <ImageAndText
         anchor="medical-error"
         title="ERRO MÉDICO"
-        chart={<MistakesChart />}
+        chart={<UnregulatedChart />}
         subtitle={
           <>
             A Organização Mundial da Saúde (OMS) publicou um relatório que

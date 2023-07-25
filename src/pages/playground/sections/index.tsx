@@ -22,7 +22,7 @@ const PlaygroundSection: React.FC = () => {
             >
               {Item.name}
             </Title>
-            <Item />
+            {/* <Item /> */}
           </React.Fragment>
         ))}
       </>
