@@ -167,7 +167,7 @@ const LegalAdvice: React.FC = () => {
         >
           <Title
             style={{
-              marginTop: isMobile ?'0' :"32px",
+              marginTop: isMobile ? "0" : "32px",
               color: tokens.colors.neutral.highPure,
               width: "100%",
             }}
@@ -224,7 +224,7 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "32px",
               width: "100%",
-              maxWidth: isMobile ?'100%':"400px",
+              maxWidth: isMobile ? "100%" : "400px",
             }}
             variant="secondary"
             href="#purposeForm"
@@ -343,11 +343,14 @@ const LegalAdvice: React.FC = () => {
           display: "grid",
           gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
           gap: "24px",
+          overflow: "hidden",
+          height: "fit-content",
         }}
       >
         <div
           style={{
             width: "100%",
+            height: "100%",
           }}
         >
           <HasConsultPeopleChart />
@@ -356,6 +359,7 @@ const LegalAdvice: React.FC = () => {
         <div
           style={{
             width: "100%",
+            height: "100%",
           }}
         >
           <HasConsultCompanyChart />
