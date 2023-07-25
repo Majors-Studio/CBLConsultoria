@@ -17,7 +17,7 @@ const PurposeHome: React.FC = () => {
       bgColor={tokens.colors.brand.lightCream}
       contentStyle={{
         display: "grid",
-        gridTemplateColumns: isDesktop ? "1fr 1fr" : "1fr",
+        gridTemplateColumns: isDesktop ? "1.8fr 1fr" : "1fr",
         width: "100%",
         gap: tokens.space.sizeXxs,
       }}

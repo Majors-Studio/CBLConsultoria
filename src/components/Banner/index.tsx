@@ -14,9 +14,11 @@ import { bannerList } from "@/utils/dataObjects"
 import { tokens } from "@/utils/tokens"
 import Title from "../Title"
 import Logo from "../Logo"
+import { useDevice } from "@/hooks/useDevice"
 
 const Banner: React.FC = () => {
   const { isTop, screenSizeH, screenSizeW } = useApp()
+  const { isDesktop, isMobile } = useDevice()
 
   return (
     <div
@@ -55,16 +57,24 @@ const Banner: React.FC = () => {
               <div
                 style={{
                   position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
+                  top: index === 0 && isDesktop ? "30%" : "50%",
+                  left: index === 0 && isDesktop ? "55%" : "50%",
+                  transform:
+                    index !== 0
+                      ? "translate(-50%, -50%)"
+                      : isMobile
+                      ? "translate(-50%, -50%)"
+                      : undefined,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                 }}
               >
-                {index === 0 && <Logo />}
-                <Title variant="secondary">
+                {index === 0 && <Logo size="large" />}
+                <Title
+                  variant={index === 2 ? "tertiary" : "secondary"}
+                  style={{ fontWeight: 600 }}
+                >
                   {item.title}
                 </Title>
               </div>
@@ -77,7 +87,7 @@ const Banner: React.FC = () => {
                 style={{
                   position: "absolute",
                   objectFit: "cover",
-                  objectPosition: "top",
+                  objectPosition: index !== 0 ? "0% 30%" : "top",
                   zIndex: -1,
                   height: "100%",
                 }}
