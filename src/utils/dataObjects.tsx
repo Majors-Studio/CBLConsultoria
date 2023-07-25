@@ -146,17 +146,17 @@ export const qualityList: {
     subtitle:
       "Nossa equipe está pronta para oferecer suporte especializado em todas as etapas da negociação do seu precatório.",
   },
-  // {
-  //   id: 3,
-  //   img: "https://svgsilh.com/svg_v2/1414791.svg",
-  //   title: "Credibilidade",
-  //   subtitle:
-  //     "Somos a maior empresa especializada na antecipação de precatórios em todo o Brasil, já negociamos mais de R$ 1 bilhão em precatórios para mais de 7 mil clientes",
-  // },
   {
     id: 3,
     img: "https://svgsilh.com/svg_v2/1414791.svg",
-    title: "Agilidade e eficiência na negociação",
+    title: "Credibilidade",
+    subtitle:
+      "Com anos de experiência no mercado, somos uma das maiores empresas especializadas na antecipação de precatórios em todo o Brasil",
+  },
+  {
+    id: 4,
+    img: "https://svgsilh.com/svg/47878.svg",
+    title: "Agilidade ",
     subtitle:
       "Nossa equipe altamente qualificada está preparada para agir rapidamente, utilizando metodologias eficientes e tecnologias avançadas.",
   },

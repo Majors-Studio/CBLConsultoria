@@ -1,18 +1,18 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import ContentBox from "@/components/ContentBox"
 import Video from "@/components/Video"
-import { Subtitle } from "@/components"
+import { Subtitle, Title } from "@/components"
 import { tokens } from "@/utils/tokens"
 
 import * as C from "./styles"
 import gsap from "gsap"
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = React.useState<boolean>(false)
+  const [showMore, setShowMore] = useState<boolean>(false)
 
-  const showMoreRef = React.useRef<HTMLParagraphElement>(null)
+  const showMoreRef = useRef<HTMLParagraphElement>(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (showMoreRef.current) {
       if (showMore) {
         gsap.to(showMoreRef.current, {
@@ -31,9 +31,18 @@ const VideoHistory: React.FC = () => {
   }, [showMore])
 
   return (
-    <ContentBox py={tokens.space.sizeXl} bgColor={tokens.colors.neutral.highPure}>
+    <ContentBox
+      py={tokens.space.sizeXl}
+      bgColor={tokens.colors.neutral.highPure}
+      contentStyle={{
+        display: "flex",
+        flexDirection: "column",
+        gap: tokens.space.sizeXxs,
+      }}
+    >
+      <Title style={{marginBottom: 24}}>Estamos na vanguarda das antecipações de precatórios no Brasil!</Title>
       <Subtitle style={{ textAlign: "justify" }}>
-        <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com{' '}
+        <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com{" "}
         <b>profissionais capacitados</b> para atender, de forma individualizada,
         a necessidade do cliente. O fato de não atuar com demandas de massa
         permite a CBL Consultoria desempenhar sempre o melhor atendimento ao
@@ -48,8 +57,6 @@ const VideoHistory: React.FC = () => {
       <Subtitle
         style={{
           textAlign: "justify",
-          marginTop: "20px",
-          marginBottom: "20px",
         }}
       >
         Sua busca por uma consultoria jurídica confiável e experiente em
@@ -93,10 +100,10 @@ const VideoHistory: React.FC = () => {
           melhor resultado para o cliente.
           <br />
           <br />
-          Ao escolher a CBL Consultoria, você terá um serviço
-          personalizado, voltado às suas necessidades. Nosso compromisso é ouvir
-          suas preocupações e metas, para assim desenvolver estratégias eficazes
-          e garantir o melhor resultado possível.
+          Ao escolher a CBL Consultoria, você terá um serviço personalizado,
+          voltado às suas necessidades. Nosso compromisso é ouvir suas
+          preocupações e metas, para assim desenvolver estratégias eficazes e
+          garantir o melhor resultado possível.
         </Subtitle>
       </div>
       <C.ShowMoreButton onClick={() => setShowMore(!showMore)}>

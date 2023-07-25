@@ -20,25 +20,6 @@ export const Content = styled.div`
   margin: 0 auto;
 `;
 
-export const Title = styled.h1`
-  color: ${tokens.colors.brand.cta};
-  font-size: ${tokens.font.sizes.lg};
-  font-weight: ${tokens.font.weight.bold};
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1;
-  margin-bottom: 40px;
-  font-family: ${tokens.font.family.primary};
-
-  @media (max-width: 1024px) {
-    font-size: ${tokens.font.sizes.lg};
-  }
-
-  @media (max-width: 768px) {
-    font-size: ${tokens.font.sizes.md};
-  }
-`;
-
 interface iForm {
   ref: any;
 }

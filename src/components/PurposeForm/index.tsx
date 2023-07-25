@@ -4,10 +4,15 @@ import * as S from "./styles"
 import CtaButton from "../CtaButton"
 import { useApp } from "@/context/appContext"
 
-import { MaskedInput } from "@/components"
+import { MaskedInput, Title } from "@/components"
 import Anchor from "../Anchor"
 
-const PurposeForm: React.FC = () => {
+interface FormData {
+  title?: string 
+  
+}
+
+const PurposeForm: React.FC<FormData> = ({title = 'Entre em contato'}) => {
   const form = useRef()
   const [formData, setFormData] = useState({
     name: "",
@@ -77,7 +82,7 @@ const PurposeForm: React.FC = () => {
     <S.Container>
       <Anchor id="purposeForm" />
       <S.Content>
-        <S.Title>Entre em contato</S.Title>
+        <Title>{title}</Title>
         <S.Form action="#" onSubmit={sendEmail} ref={form}>
           <S.Input
             placeholder="Nome"

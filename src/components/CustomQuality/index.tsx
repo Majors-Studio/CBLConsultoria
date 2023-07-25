@@ -2,7 +2,7 @@ import React from "react"
 import * as C from "./styles"
 
 import Image from "next/image"
-import { Title, Subtitle } from "@/components"
+import { Subtitle, Title } from "@/components"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
@@ -15,20 +15,19 @@ import { useDevice } from "@/hooks/useDevice"
 import ContentBox from "../ContentBox"
 import { tokens } from "@/utils/tokens"
 import { qualityList } from "@/utils/dataObjects"
-import Video from "../Video"
 import Description from "../Description"
 
 const CustomQuality: React.FC = () => {
   const { isMobile } = useDevice()
   return (
-    <ContentBox bgColor={tokens.colors.brand.lightCream} py={tokens.space.sizeXl}>
-      <Title>Conheça a CBL Consultoria!</Title>
-      <Video
-      
-      />
-
-
-      
+    <ContentBox
+      bgColor={tokens.colors.brand.lightCream}
+      py={tokens.space.sizeXl}
+    >
+      <Title style={{ marginBottom: 24 }}>
+        Maximize o seu potencial financeiro com antecipações de precatórios de
+        líderes confiáveis
+      </Title>
       {isMobile ? (
         <Swiper
           spaceBetween={50}
@@ -78,9 +77,13 @@ const CustomQuality: React.FC = () => {
               >
                 {item.title}
               </Title>
-              <Description style={{
-                textAlign: "center"
-              }}>{item.subtitle}</Description>
+              <Description
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {item.subtitle}
+              </Description>
             </C.Item>
           ))}
         </C.Content>
