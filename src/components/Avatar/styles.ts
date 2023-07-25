@@ -13,16 +13,16 @@ export const Container = styled.div<ContainerProps>`
     justify-content: center;
     overflow: hidden;
     ${props => props.size === 'small' && `
-        width: ${tokens.space.sizeSm};
-        height: ${tokens.space.sizeSm};
-    `}
-    ${props => props.size === 'medium' && `
         width: ${tokens.space.sizeXl};
         height: ${tokens.space.sizeXl};
     `}
-    ${props => props.size === 'large' && `
+    ${props => props.size === 'medium' && `
         width: ${tokens.space.sizeXxl};
         height: ${tokens.space.sizeXxl};
+    `}
+    ${props => props.size === 'large' && `
+        width: ${tokens.space.sizeHuge};
+        height: ${tokens.space.sizeHuge};
     `}
 `
 

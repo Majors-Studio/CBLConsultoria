@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               color: tokens.colors.neutral.highPure,
             }}
           >
-            We growing up your business with personal AI manager.
+            Transformando desafios em oportunidades.
           </Subtitle>
           <Description
             style={{

@@ -16,6 +16,7 @@ import { useDevice } from "@/hooks/useDevice"
 import JudicialForm from "@/components/JudicialForm"
 import HasConsultPeopleChart from "@/components/HasConsultPeopleChart"
 import HasConsultCompanyChart from "@/components/HasConsultCompanyChart"
+import Anchor from "@/components/Anchor"
 
 const LegalAdvice: React.FC = () => {
   const { isMobile } = useDevice()
@@ -268,11 +269,13 @@ const LegalAdvice: React.FC = () => {
         }
       >
         <ContentBox bgColor={tokens.colors.brand.lightCream}>
+          <Anchor id="civil-causes" />
           <Title>
             O escritório conta com advogados experientes e grande know-how em
             demandas cíveis para solucionar o seu problema!
           </Title>
 
+          <Anchor id="causes" />
           {[
             {
               id: 0,

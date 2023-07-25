@@ -29,10 +29,7 @@ export const navitems = [
         title: "Regularização de Imóveis",
         anchor: "#real-estate",
       },
-      {
-        title: "Quais causas defendemos?",
-        anchor: "#causes",
-      },
+
       {
         title: "Erro Médico",
         anchor: "#medical-error",
@@ -40,6 +37,10 @@ export const navitems = [
       {
         title: "Causas Cíveis no Geral",
         anchor: "#civil-causes",
+      },
+            {
+        title: "Quais causas defendemos?",
+        anchor: "#causes",
       },
     ],
   },

@@ -6,7 +6,6 @@ import { tokens } from "@/utils/tokens"
 import React from "react"
 
 import * as C from "./styles"
-import CtaButton from "@/components/CtaButton"
 
 const WhatIsResources: React.FC = () => {
   const { isMobile } = useDevice()
@@ -14,27 +13,16 @@ const WhatIsResources: React.FC = () => {
     <>
       <ContentBox
         bgColor={tokens.colors.brand.cta}
-        style={{
-          marginTop: 120,
-        }}
+        style={
+          {
+            // marginTop: 120,
+          }
+        }
         contentStyle={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
         }}
       >
-        <Title
-          variant="secondary"
-          style={{
-            borderRight: isMobile
-              ? "none"
-              : "1px solid " + tokens.colors.brand.pure,
-            paddingRight: isMobile ? 0 : 42,
-            marginBottom: isMobile ? 32 : 0,
-            textAlign: isMobile ? "center" : "left",
-          }}
-        >
-          Gestão de Recusos
-        </Title>
         <div
           style={{
             marginLeft: isMobile ? 0 : 72,
@@ -48,13 +36,13 @@ const WhatIsResources: React.FC = () => {
               lineHeight: "32px",
             }}
           >
-            Na <b>CBL Consultoria</b>, entendemos que a Gestão de Recursos é um aspecto
-            fundamental para o sucesso de qualquer empreendimento. Seja você um
-            indivíduo, uma pequena empresa ou uma grande corporação, é essencial
-            maximizar o retorno dos seus investimentos e gerir seus recursos de
-            forma inteligente. É exatamente nesse ponto que entramos em ação,
-            oferecendo soluções jurídicas personalizadas que otimizam seus
-            processos e potencializam seus resultados.
+            Na <b>CBL Consultoria</b>, entendemos que a Gestão de Recursos é um
+            aspecto fundamental para o sucesso de qualquer empreendimento. Seja
+            você um indivíduo, uma pequena empresa ou uma grande corporação, é
+            essencial maximizar o retorno dos seus investimentos e gerir seus
+            recursos de forma inteligente. É exatamente nesse ponto que entramos
+            em ação, oferecendo soluções jurídicas personalizadas que otimizam
+            seus processos e potencializam seus resultados.
           </Subtitle>
 
           <Subtitle
@@ -80,7 +68,13 @@ const WhatIsResources: React.FC = () => {
               gap: 32,
             }}
           >
-            <C.WhatIsCategory>
+            <C.WhatIsCategory
+              style={{
+                border: "2px solid " + tokens.colors.brand.pure,
+                padding: 32,
+                borderRadius: 8,
+              }}
+            >
               <Subtitle
                 style={{
                   color: tokens.colors.brand.lightCream,
@@ -101,7 +95,13 @@ const WhatIsResources: React.FC = () => {
               </Description>
             </C.WhatIsCategory>
 
-            <C.WhatIsCategory>
+            <C.WhatIsCategory
+              style={{
+                border: "2px solid " + tokens.colors.brand.pure,
+                borderRadius: 8,
+                padding: 32,
+              }}
+            >
               <Subtitle
                 style={{
                   color: tokens.colors.brand.lightCream,
@@ -128,7 +128,13 @@ const WhatIsResources: React.FC = () => {
                 cronológica.
               </Description>
             </C.WhatIsCategory>
-            <C.WhatIsCategory>
+            <C.WhatIsCategory
+              style={{
+                border: "2px solid " + tokens.colors.brand.pure,
+                padding: 32,
+                borderRadius: 8,
+              }}
+            >
               <Subtitle
                 style={{
                   color: tokens.colors.brand.lightCream,
@@ -171,7 +177,6 @@ const WhatIsResources: React.FC = () => {
           </Description>
         </div>
       </ContentBox>
-
     </>
   )
 }

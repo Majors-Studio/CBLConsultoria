@@ -33,4 +33,6 @@ export const List = styled.div`
   justify-content: center;
 
   margin-top: 20px;
+
+width: 'fit-content';
 `;

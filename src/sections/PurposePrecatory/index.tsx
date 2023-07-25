@@ -9,7 +9,7 @@ import { tokens } from "@/utils/tokens"
 import { infoList } from "@/utils/dataObjects"
 import { useDevice } from "@/hooks/useDevice"
 
-const PurposeHome: React.FC = () => {
+const PurposePrecatory: React.FC = () => {
   const { isDesktop } = useDevice()
   return (
     <ContentBox
@@ -24,17 +24,27 @@ const PurposeHome: React.FC = () => {
     >
       <S.Info>
         <Title variant="primary" style={{ textAlign: "left" }}>
-          <b>Junte-se a nós</b> e esteja sempre à frente, tomando{" "}
-          <b>decisões informadas e estratégicas</b> com o suporte da nossa{" "}
-          <b>consultoria jurídica especializada</b>. <br />
-          <br />
-          Sua jornada para um <b>conhecimento mais profundo</b> e uma{" "}
-          <b>orientação confiável</b> começa aqui!
+          <b>Antecipe</b> seu precatório com <b>Segurança</b> e{" "}
+          <b>Velocidade</b>!
         </Title>
+        <ul
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: tokens.space.sizeXxs,
+          }}
+        >
+          {infoList.map((item) => (
+            <S.PrecatoryInfoItem key={item.id}>
+              <ConfirmIcon />
+              <Subtitle>{item.title}</Subtitle>
+            </S.PrecatoryInfoItem>
+          ))}
+        </ul>
       </S.Info>
       <PurposeForm />
     </ContentBox>
   )
 }
 
-export default PurposeHome
+export default PurposePrecatory

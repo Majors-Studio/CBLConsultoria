@@ -12,7 +12,7 @@ const ClientFeedback: React.FC = () => {
   return (
     <S.WhatContainer>
       <Title variant={isDesktop ? "tertiary" : "secondary"}>
-        O que os clientes dizem sobre a CBL Consultoria
+        CONHEÇA NOSSO COORDENADOR
       </Title>
       <SpeechCarousel data={feedbackList} />
     </S.WhatContainer>

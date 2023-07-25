@@ -14,7 +14,7 @@ import { useRouter } from "next/router"
 import Subtitle from "../Subtitle"
 
 const Header: React.FC = () => {
-  const { isMobile, isDesktop } = useDevice()
+  const { isDesktop } = useDevice()
 
   const { isScrollingTop, menuOpened, setMenuOpened, setIsScrollingTop } =
     useApp()
@@ -34,11 +34,13 @@ const Header: React.FC = () => {
           height: "120px",
           boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
           borderBottom: "1px solid " + tokens.colors.brand.pure,
+          display: "flex",
         }}
         contentStyle={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+            width: "100%",
         }}
       >
         <Logo />

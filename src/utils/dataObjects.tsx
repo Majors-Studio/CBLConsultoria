@@ -16,17 +16,16 @@ export const feedbackList: {
   state: string
   country: string
   text: string
-  avatar: string
+  avatar: StaticImageData
 }[] = [
   {
     id: 0,
-    name: "João da Silva",
+    name: "Cauê Blasiolli",
     city: "São Paulo",
     state: "SP",
     country: "Brasil",
     text: "“A CBL Consultoria me ajudou a realizar o sonho de comprar a minha casa própria. Foi tudo muito rápido e seguro, recomendo!”",
-    avatar:
-      "   /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1633332755192-727a05c4013d%3Fixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww%26auto%3Dformat%26fit%3Dcrop%26w%3D500%26q%3D60&w=128&q=75",
+    avatar: caue,
   },
 ]
 
@@ -288,14 +287,18 @@ export const stepsList: {
 
 export const bannerList: {
   img: any
+  title: string
 }[] = [
   {
+title: 'Transformando desafios em oportunidades',
     img: bannerImg1,
   },
-  {
+    {
+    title: 'Construindo um futuro mais justo',
     img: bannerImg2,
   },
-  {
+    {
+    title: 'Juntos, transformamos realidades.',
     img: bannerImg3,
   },
 ]
@@ -467,9 +470,9 @@ export const whyList: {
   },
   {
     id: 1,
-    title: "1 bilhão em precatórios negociados",
+    title: "Vasta experiência no mercado",
     description:
-      "Ao longo da nossa história, foram mais de 7 mil credores satisfeitos com a antecipação de seus precatórios",
+      "Ao longo da nossa história, foram centenas de credores satisfeitos com a antecipação de seus precatórios",
     icon: (
       <>
         <Image

@@ -1,5 +1,5 @@
 import React from "react"
-import { CustomQuality, Title } from "@/components"
+import { CustomQuality, Subtitle, Title } from "@/components"
 import HeadBanner from "@/components/HeadBanner"
 import AvatarList from "@/sections/AvatarList"
 import VideoHistory from "@/sections/VideoHistory"
@@ -8,6 +8,7 @@ import { tokens } from "@/utils/tokens"
 import ContentBox from "@/components/ContentBox"
 import Video from "@/components/Video"
 import CtaButton from "@/components/CtaButton"
+import { ClientFeedback } from "@/sections"
 
 const About: React.FC = () => {
   return (
@@ -38,22 +39,25 @@ const About: React.FC = () => {
         bgColor={tokens.colors.neutral.highLight}
         contentStyle={{
           gap: tokens.space.sizeXxs,
-          display: "grid",
-          gridTemplateColumns: "1fr 1.4fr",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        <Title variant="primary"
+        <Title
+          variant="primary"
           style={{
-            textAlign: "left",
+            textAlign: "center",
+            lineHeight: "48px",
           }}
         >
-          A <b>sua segurança</b> e <b>qualidade</b> na venda de <b>precatórios</b>! Deixe-nos
-          ajudá-lo(a) a <b>superar os desafios</b> e alcançar o <b>sucesso</b> desejado.
-          <br/>
-          <br/>
-          Juntos, iremos além!
+          A <b>sua segurança</b> e <b>qualidade</b> na venda de{" "}
+          <b>precatórios</b>! Deixe-nos ajudá-lo(a) a <b>superar os desafios</b>{" "}
+          e alcançar o <b>sucesso</b> desejado.
         </Title>
-        <PurposeForm />
+        <div style={{ maxWidth: 750, width: '100%' }}>
+          <PurposeForm />
+        </div>
       </ContentBox>
     </>
   )

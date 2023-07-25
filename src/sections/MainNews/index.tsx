@@ -48,20 +48,21 @@ const MainNews: React.FC = () => {
             color: tokens.colors.brand.cta,
           }}
         >
-          Veja a seguir as notícias nos principais veículos da mídia (Folha de
-          São Paulo, Estadão, Valor Investe, Gazeta, entre outros) e matérias
-          dos maiores escritórios de advocacia.
+          Confira a seguir as informações divulgadas pelos{" "}
+          <b>principais canais de mídia</b> (Folha de São Paulo, Estadão, Valor
+          Investe, Gazeta, entre outros) e artigos provenientes dos{" "}
+          <b>grandes escritórios de advocacia</b>.
           <br />
           <br />
-          Os <b>pagamentos</b> que inicialmente deveriam ser realizados{" "}
-          <b>em SP até 2020</b>, foram postergados para <b>2024</b> e novamente
-          prorrogados para
-          <b>2029</b>.
+          Os <b>pagamentos</b>, originalmente agendados para serem feitos em SP
+          até 2020, foram <b>adiados para 2024</b> e, posteriormente, tiveram
+          uma nova prorrogação até 2029.
           <br />
           <br />
-          As notícias abordam justamente os atrasos, a mudança constante na data
-          limite de pagamento e a <b>incerteza</b> no <b>recebimento</b> dos
-          precatórios, que vem <b>prejudicando milhares de credores</b>.
+          As reportagens destacam os <b>atrasos frequentes</b>, a contínua
+          alteração na <b>data final de pagamento</b>, e a <b>incerteza</b>{" "}
+          acerca do recebimento dos <b>precatórios</b>, prejudicando assim{" "}
+          <b>milhares de credores</b>.
         </Subtitle>
       </div>
 
@@ -106,11 +107,13 @@ const MainNews: React.FC = () => {
               }
             `}
             </style>
-              <div style={{
+            <div
+              style={{
                 display: "flex",
                 flexDirection: "row",
                 gap: "12px",
-              }}>
+              }}
+            >
               <div
                 style={{
                   width: "24px",

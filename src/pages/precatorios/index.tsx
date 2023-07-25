@@ -6,7 +6,8 @@ import NationalRanking from "@/sections/NationalRanking"
 import WhyToSell from "@/sections/WhyToSell"
 import WhatIsPrecatory from "@/sections/WhatIsPrecatory"
 import SellSteps from "@/sections/SellSteps"
-import { Faq, PurposeHome, WhyBetter } from "@/sections"
+import { Faq, WhyBetter } from "@/sections"
+import PurposePrecatory from "@/sections/PurposePrecatory"
 
 const Precatory: React.FC = () => {
   return (
@@ -27,7 +28,7 @@ const Precatory: React.FC = () => {
 
       <Faq />
       
-      <PurposeHome />
+      <PurposePrecatory />
     </>
   )
 }
