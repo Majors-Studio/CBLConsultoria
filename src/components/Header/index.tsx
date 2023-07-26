@@ -12,6 +12,7 @@ import { tokens } from "@/utils/tokens";
 import ContentBox from "../ContentBox";
 import { useRouter } from "next/router";
 import Subtitle from "../Subtitle";
+import { before } from "node:test";
 
 const Header: React.FC = () => {
   const { isDesktop, isMobile } = useDevice();
@@ -83,7 +84,7 @@ const Header: React.FC = () => {
                       textOverflow: "ellipsis",
                     }}
                   >
-                    <p>{subitem.title}</p>
+                    <C.NavItemTitle>{subitem.title}</C.NavItemTitle>
                   </Link>
                   {subindex === item.subpaths.length - 1 ? null : <hr />}
                 </React.Fragment>

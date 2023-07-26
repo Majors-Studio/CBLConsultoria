@@ -1,21 +1,43 @@
-import styled from "styled-components"
-import { tokens } from "@/utils/tokens"
+import styled from "styled-components";
+import { tokens } from "@/utils/tokens";
 
 export const NavbarItem = styled.div`
   color: #fff;
   cursor: pointer;
   position: relative;
-height: 100%;
+  height: 100%;
 
   @media (min-width: ${tokens.breakpoints.desktop}) {
     display: flex;
     justify-content: center;
   }
-`
+`;
 
 interface NavbarItemProps {
-  active?: boolean
+  active?: boolean;
 }
+
+export const NavItemTitle = styled.p`
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: ${tokens.colors.brand.lightCream};
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+`;
 
 export const Submenu = styled.div<NavbarItemProps>`
   position: relative;
@@ -54,10 +76,10 @@ export const Submenu = styled.div<NavbarItemProps>`
     background-color: ${tokens.colors.brand.cta};
     border-left: 0;
     margin: 0;
-  border-radius: 8px;
+    border-radius: 8px;
 
     width: fit-content;
   }
 
   visibility: ${({ active }) => (active ? "visible" : "hidden")};
-`
+`;
