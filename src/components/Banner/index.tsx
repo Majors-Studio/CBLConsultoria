@@ -1,24 +1,24 @@
-import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import Image from "next/image"
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
-import "swiper/css"
-import "swiper/css/autoplay"
+import "swiper/css";
+import "swiper/css/autoplay";
 
-import ArrowDownIcon from "@/assets/icons/ArrowDownIcon"
+import ArrowDownIcon from "@/assets/icons/ArrowDownIcon";
 
-import * as S from "./styles"
-import { useApp } from "@/context/appContext"
-import { Autoplay } from "swiper"
-import { bannerList } from "@/utils/dataObjects"
-import { tokens } from "@/utils/tokens"
-import Title from "../Title"
-import Logo from "../Logo"
-import { useDevice } from "@/hooks/useDevice"
+import * as S from "./styles";
+import { useApp } from "@/context/appContext";
+import { Autoplay } from "swiper";
+import { bannerList } from "@/utils/dataObjects";
+import { tokens } from "@/utils/tokens";
+import Title from "../Title";
+import Logo from "../Logo";
+import { useDevice } from "@/hooks/useDevice";
 
 const Banner: React.FC = () => {
-  const { isTop, screenSizeH, screenSizeW } = useApp()
-  const { isDesktop, isMobile } = useDevice()
+  const { isTop, screenSizeH, screenSizeW } = useApp();
+  const { isDesktop, isMobile } = useDevice();
 
   return (
     <div
@@ -93,7 +93,7 @@ const Banner: React.FC = () => {
                 }}
               />
             </SwiperSlide>
-          )
+          );
         })}
       </Swiper>
       {isTop && (
@@ -102,7 +102,7 @@ const Banner: React.FC = () => {
         </S.ArrowDown>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

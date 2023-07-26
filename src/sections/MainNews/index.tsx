@@ -1,25 +1,26 @@
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import { useDevice } from "@/hooks/useDevice"
-import { tokens } from "@/utils/tokens"
-import Link from "next/link"
-import React, { useEffect } from "react"
+import { Button, Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import { useDevice } from "@/hooks/useDevice";
+import { tokens } from "@/utils/tokens";
+import Link from "next/link";
+import React, { useEffect } from "react";
 
-import * as C from "./styles"
-import { useApp } from "@/context/appContext"
-import { getDate } from "@/utils/getDate"
-import Loading from "@/components/Loading"
-import LoadingIcon from "@/assets/icons/LoadingIcon"
+import * as C from "./styles";
+import { useApp } from "@/context/appContext";
+import { getDate } from "@/utils/getDate";
+import Loading from "@/components/Loading";
+import LoadingIcon from "@/assets/icons/LoadingIcon";
+import CtaButton from "@/components/CtaButton";
 
 const MainNews: React.FC = () => {
-  const { isMobile } = useDevice()
-  const { newsList, getNewsList } = useApp()
+  const { isMobile } = useDevice();
+  const { newsList, getNewsList } = useApp();
 
   useEffect(() => {
     if (!newsList.length) {
-      getNewsList()
+      getNewsList();
     }
-  }, [getNewsList, newsList.length])
+  }, [getNewsList, newsList.length]);
 
   return (
     <ContentBox
@@ -66,37 +67,38 @@ const MainNews: React.FC = () => {
         </Subtitle>
       </div>
 
-      <C.NewsList>
-        {newsList ? (
-          newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
-            return (
-              <C.NewsItem key={newsIndex}>
-                <C.NewsItemTop>
-                  <C.NewsItemInfo>
-                    {news.fields.sourceAuthor &&
-                      news.fields.sourceAuthor + " | "}
-                    {getDate(news.fields.publishedDate)}
-                  </C.NewsItemInfo>
-                  <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
-                </C.NewsItemTop>
-                <Link
-                  href={{
-                    pathname: "noticias/post/",
-                    query: { id: news.sys.id },
-                  }}
-                  style={{
-                    color: "#e2a141",
-                  }}
-                >
-                  Leia mais
-                </Link>
-              </C.NewsItem>
-            )
-          })
-        ) : (
-          <>
-            <style>
-              {`
+      {newsList.length > 0 ? (
+        <C.NewsList>
+          {newsList ? (
+            newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
+              return (
+                <C.NewsItem key={newsIndex}>
+                  <C.NewsItemTop>
+                    <C.NewsItemInfo>
+                      {news.fields.sourceAuthor &&
+                        news.fields.sourceAuthor + " | "}
+                      {getDate(news.fields.publishedDate)}
+                    </C.NewsItemInfo>
+                    <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
+                  </C.NewsItemTop>
+                  <Link
+                    href={{
+                      pathname: "noticias/post/",
+                      query: { id: news.sys.id },
+                    }}
+                    style={{
+                      color: "#e2a141",
+                    }}
+                  >
+                    Leia mais
+                  </Link>
+                </C.NewsItem>
+              );
+            })
+          ) : (
+            <>
+              <style>
+                {`
               @keyframes rotate {
                 from {
                   transform: rotate(0deg);
@@ -106,45 +108,57 @@ const MainNews: React.FC = () => {
                 }
               }
             `}
-            </style>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "12px",
-              }}
-            >
+              </style>
               <div
                 style={{
-                  width: "24px",
-                  height: "24px",
-                  transform: "rotate(0deg)",
-                  animation: "rotate 0.8s infinite",
-                  color: tokens.colors.brand.dark,
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: "12px",
                 }}
               >
-                <LoadingIcon />
+                <div
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    transform: "rotate(0deg)",
+                    animation: "rotate 0.8s infinite",
+                    color: tokens.colors.brand.dark,
+                  }}
+                >
+                  <LoadingIcon />
+                </div>
+                <p>Carregando Notícias</p>
               </div>
-              <p>Carregando Notícias</p>
-            </div>
-          </>
-        )}
-        {isMobile && (
-          <Link
-            href={{
-              pathname: "noticias/",
-            }}
-            style={{
-              color: "#e2a141",
-              margin: "0 auto",
-            }}
-          >
-            Ver todas as notícias
-          </Link>
-        )}
-      </C.NewsList>
+            </>
+          )}
+          {isMobile && (
+            <Link
+              href={{
+                pathname: "noticias/",
+              }}
+              style={{
+                color: "#e2a141",
+                margin: "0 auto",
+              }}
+            >
+              Ver todas as notícias
+            </Link>
+          )}
+        </C.NewsList>
+      ) : (
+        <C.NewsList
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Title>Não foram encontradas notícias no momento</Title>
+          <CtaButton href="#purposeForm" />
+        </C.NewsList>
+      )}
     </ContentBox>
-  )
-}
+  );
+};
 
-export default MainNews
+export default MainNews;
