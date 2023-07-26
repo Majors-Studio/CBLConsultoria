@@ -1,5 +1,5 @@
-import { tokens } from "@/utils/tokens"
-import styled from "styled-components"
+import { tokens } from "@/utils/tokens";
+import styled from "styled-components";
 
 export const StepsList = styled.ul`
   display: grid;
@@ -14,12 +14,12 @@ export const StepsList = styled.ul`
   @media (max-width: ${tokens.breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const StepsItemIcon = styled.div`
   width: 45px;
   height: 45px;
-`
+`;
 
 export const StepItem = styled.li`
   display: flex;
@@ -28,4 +28,4 @@ export const StepItem = styled.li`
   border: 1px solid ${tokens.colors.brand.cta};
   padding: 24px;
   border-radius: 8px;
-`
+`;

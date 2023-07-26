@@ -18,12 +18,11 @@ export const CenaryTextContainer = styled.div`
   max-width: ${tokens.breakpoints.desktopMd};
   margin: 0 auto;
 
-  @media (max-width: ${tokens.breakpoints.tablet}) { 
+  @media (max-width: ${tokens.breakpoints.tablet}) {
     gap: 32px;
     padding: 0;
     flex-direction: column;
   }
-
 `;
 
 export const CenaryText = styled.p`
@@ -38,7 +37,7 @@ export const CenaryText = styled.p`
   }
 
   span {
-    color: #D6DAE3;
+    color: #d6dae3;
     font-weight: 700;
   }
 `;

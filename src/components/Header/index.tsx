@@ -1,27 +1,27 @@
-import React from "react"
-import * as C from "./styles"
-import Logo from "../Logo"
-import { useDevice } from "@/hooks/useDevice"
+import React from "react";
+import * as C from "./styles";
+import Logo from "../Logo";
+import { useDevice } from "@/hooks/useDevice";
 
-import { navitems } from "@/utils/navitems"
-import Link from "next/link"
-import Hamburguer from "../Hamburguer"
-import CtaButton from "../CtaButton"
-import { useApp } from "@/context/appContext"
-import { tokens } from "@/utils/tokens"
-import ContentBox from "../ContentBox"
-import { useRouter } from "next/router"
-import Subtitle from "../Subtitle"
+import { navitems } from "@/utils/navitems";
+import Link from "next/link";
+import Hamburguer from "../Hamburguer";
+import CtaButton from "../CtaButton";
+import { useApp } from "@/context/appContext";
+import { tokens } from "@/utils/tokens";
+import ContentBox from "../ContentBox";
+import { useRouter } from "next/router";
+import Subtitle from "../Subtitle";
 
 const Header: React.FC = () => {
-  const { isDesktop, isMobile } = useDevice()
+  const { isDesktop, isMobile } = useDevice();
 
   const { isScrollingTop, menuOpened, setMenuOpened, setIsScrollingTop } =
-    useApp()
+    useApp();
 
-  const [subMenuOpened, setSubMenuOpened] = React.useState<number | null>(null)
+  const [subMenuOpened, setSubMenuOpened] = React.useState<number | null>(null);
 
-  const path = useRouter().pathname
+  const path = useRouter().pathname;
 
   const navBar = navitems.map((item, index) => {
     return (
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsScrollingTop(false)}
                     href={item.url + subitem.anchor}
                     style={{
-                      overflow: 'visible',
+                      overflow: "visible",
                       whiteSpace: "nowrap",
                       textOverflow: "ellipsis",
                     }}
@@ -87,18 +87,22 @@ const Header: React.FC = () => {
                   </Link>
                   {subindex === item.subpaths.length - 1 ? null : <hr />}
                 </React.Fragment>
-              )
+              );
             })}
             {item.title === "Precatórios" && isDesktop && (
-              <CtaButton href="precatorios#purposeForm" variant="secondary" style={{marginTop:24}}>
+              <CtaButton
+                href="precatorios#purposeForm"
+                variant="secondary"
+                style={{ marginTop: 24 }}
+              >
                 Quero vender meu precatório
               </CtaButton>
             )}
           </C.Submenu>
         )}
       </C.NavbarItem>
-    )
-  })
+    );
+  });
 
   return (
     <>
@@ -162,7 +166,7 @@ const Header: React.FC = () => {
           contentStyle={{
             display: "flex",
             flexDirection: "column",
-            gap: "24px",
+            // gap: "24px",
             justifyContent: "space-between",
           }}
         >
@@ -173,7 +177,7 @@ const Header: React.FC = () => {
         </ContentBox>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
