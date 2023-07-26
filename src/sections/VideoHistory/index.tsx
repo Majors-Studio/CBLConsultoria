@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from "react"
-import ContentBox from "@/components/ContentBox"
-import Video from "@/components/Video"
-import { Subtitle, Title } from "@/components"
-import { tokens } from "@/utils/tokens"
+import React, { useEffect, useRef, useState } from "react";
+import ContentBox from "@/components/ContentBox";
+import Video from "@/components/Video";
+import { Subtitle, Title } from "@/components";
+import { tokens } from "@/utils/tokens";
 
-import * as C from "./styles"
-import gsap from "gsap"
+import * as C from "./styles";
+import gsap from "gsap";
 
 const VideoHistory: React.FC = () => {
-  const [showMore, setShowMore] = useState<boolean>(false)
+  const [showMore, setShowMore] = useState<boolean>(false);
 
-  const showMoreRef = useRef<HTMLParagraphElement>(null)
+  const showMoreRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     if (showMoreRef.current) {
@@ -19,16 +19,16 @@ const VideoHistory: React.FC = () => {
           height: "auto",
           duration: 0.3,
           ease: "power2.inOut",
-        })
+        });
       } else {
         gsap.to(showMoreRef.current, {
           height: "0px",
           duration: 0.3,
           ease: "power2.inOut",
-        })
+        });
       }
     }
-  }, [showMore])
+  }, [showMore]);
 
   return (
     <ContentBox
@@ -39,7 +39,9 @@ const VideoHistory: React.FC = () => {
         gap: tokens.space.sizeXxs,
       }}
     >
-      <Title style={{marginBottom: 24}}>Estamos na vanguarda das antecipações de precatórios no Brasil!</Title>
+      <Title style={{ marginBottom: 24 }}>
+        Estamos na vanguarda das antecipações de precatórios no Brasil!
+      </Title>
       <Subtitle style={{ textAlign: "justify" }}>
         <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com{" "}
         <b>profissionais capacitados</b> para atender, de forma individualizada,
@@ -127,7 +129,7 @@ const VideoHistory: React.FC = () => {
         </svg>
       </C.ShowMoreButton>
     </ContentBox>
-  )
-}
+  );
+};
 
-export default VideoHistory
+export default VideoHistory;
