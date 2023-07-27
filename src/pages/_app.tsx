@@ -5,8 +5,8 @@ import Layout from "@/layout"
 import { GlobalStyle } from "@/theme/global-styles"
 import "@/styles/global.css"
 import { Analytics } from "@vercel/analytics/react"
-import { Bebas_Neue, Montserrat, Poppins } from "@next/font/google"
-import localFont from "@next/font/local"
+import { Bebas_Neue, Montserrat, Poppins } from "next/font/google"
+import localFont from "next/font/local"
 
 export const bebasNeue = Bebas_Neue({
   weight: "400",
