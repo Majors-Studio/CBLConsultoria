@@ -9,9 +9,7 @@ import { Balancer } from "react-wrap-balancer"
 
 const SellSteps: React.FC = () => {
   return (
-    <ContentBox
-      bgColor={tokens.colors.brand.lightCream}
-    >
+    <ContentBox bgColor={tokens.colors.brand.lightCream}>
       <Title>
         <b>Agora</b> se tornou mais <b>prático e seguro antecipar</b> seu
         precatório
@@ -60,12 +58,13 @@ const SellSteps: React.FC = () => {
           color: tokens.colors.brand.cta,
         }}
       >
-        A venda do precatório é realizada com muita segurança e agilidade, todo
-        o procedimento é reconhecido em cartório e o ente público, o devedor,
-        não se opõe a cessões de crédito, trata-se de um ato TOTALMENTE LEGAL.
+        A venda do precatório, após análise das documentações pela CBL, é
+        realizada com segurança e agilidade e todo o procedimento é
+        reconhecido em cartório.
         <br />
-        <br />A CESSÃO É SEGURA, mas sempre deve ser realizada por uma empresa
-        capacitada para analisar todos os processos e documentos necessários.
+        <br />A CESSÃO É SEGURA, mas sempre deve ser realizada por um
+        acompanhamento jurídico capacitado para analisar todos os processos e
+        documentos necessários.
       </Description>
     </ContentBox>
   )

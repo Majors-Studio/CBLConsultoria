@@ -12,6 +12,7 @@
     "@apollo/client": "^3.7.17",
     "@contentful/rich-text-react-renderer": "^15.17.0",
     "@emailjs/browser": "^3.11.0",
+    "@next/font": "^13.4.12",
     "@react-google-maps/api": "^2.18.1",
     "@studio-freight/lenis": "^1.0.16",
     "@types/node": "20.2.5",

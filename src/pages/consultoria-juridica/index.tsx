@@ -42,7 +42,7 @@ const LegalAdvice: React.FC = () => {
             <br />
             Os donos de imóveis rurais são impedidos de participar de
             privilégios na obtenção de créditos. Resguarde o seu patrimônio e
-            regularize agora o seu imóvel
+            regularize agora o seu imóvel.
           </>
         }
       >
@@ -291,7 +291,7 @@ const LegalAdvice: React.FC = () => {
           {[
             {
               id: 0,
-              title: "Quais causas defendem?",
+              title: "Quais causas atuamos?",
               description: (
                 <>
                   Responsabilidade civil, Contratos, Direito do consumidor,
@@ -329,9 +329,9 @@ const LegalAdvice: React.FC = () => {
                   prevenindo litígios e futuros desgastes.
                   <br />
                   <br />
-                  Muitos empreendedores, especialmente proprietários de pequenas
-                  empresas e startups, podem ter dúvidas ao contratar esse tipo
-                  de serviço. Considerando que pequenos negócios geralmente têm
+                  Muitos empreendedores, especialmente proprietários de empresas
+                  e startups, podem ter dúvidas ao contratar esse tipo de
+                  serviço. Considerando que pequenos negócios geralmente têm
                   orçamentos limitados, alguns podem acreditar que vale mais a
                   pena correr o risco de enfrentar problemas no futuro do que
                   pagar para resolver questões agora.

@@ -12,7 +12,6 @@ const WhatIsPrecatory: React.FC = () => {
   return (
     <ContentBox
       bgColor={tokens.colors.brand.cta}
-      
       contentStyle={{
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
@@ -45,9 +44,11 @@ const WhatIsPrecatory: React.FC = () => {
           }}
         >
           Precatórios são requisições de pagamento expedidas pelo Judiciário
-          para cobrar de municípios, estados ou da União, assim como de
-          autarquias, fundações e universidades, o pagamento de valores devidos
-          após condenação judicial definitiva.
+          para cobrar de Municípios, Estados, União, ou respectivos entes
+          da Administração Indireta, como autarquias, Fundações e
+          Universidades Públicas, assim como de autarquias, fundações e
+          universidades, o pagamento de valores devidos após condenação judicial
+          definitiva.
         </Subtitle>
 
         <Subtitle

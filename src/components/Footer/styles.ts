@@ -33,7 +33,7 @@ export const ContainerInfo = styled.div`
   max-width: 350px;
   width: 100%;
 
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: ${tokens.breakpoints.desktop}) {
     max-width: 100%;

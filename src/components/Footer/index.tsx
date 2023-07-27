@@ -14,7 +14,7 @@ import Description from "../Description"
 import { navitems } from "@/utils/navitems"
 
 const Footer: React.FC = () => {
-  const { isDesktop } = useDevice()
+  const { isDesktop,isMobile } = useDevice()
   const midiaItems = [
     {
       name: "Instagram",
@@ -28,23 +28,23 @@ const Footer: React.FC = () => {
       title: "Mapa do site",
       subtitle: navitems,
     },
-    {
-      title: "Recursos",
-      subtitle: [
-        {
-          title: "Documentação",
-          url: "/",
-        },
-        {
-          title: "Conferências",
-          url: "/",
-        },
-        {
-          title: "Consultoria",
-          url: "/legal-advice",
-        },
-      ],
-    },
+    // {
+    //   title: "Recursos",
+    //   subtitle: [
+    //     {
+    //       title: "Documentação",
+    //       url: "/",
+    //     },
+    //     {
+    //       title: "Conferências",
+    //       url: "/",
+    //     },
+    //     {
+    //       title: "Consultoria",
+    //       url: "/legal-advice",
+    //     },
+    //   ],
+    // },
   ]
 
   return (
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           <Description
             style={{
               color: tokens.colors.neutral.highPure,
-              textAlign: "left",
+              textAlign: isMobile ? 'center' : "left",
               width: "100%",
             }}
           >

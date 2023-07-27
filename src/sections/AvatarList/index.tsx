@@ -43,10 +43,13 @@ const AvatarList: React.FC = () => {
           ))}
         </C.List>
         <Subtitle>
-          Caue Basiolli é o CEO e Coordenador da CBL Consultoria, com vasta
-          experiência no direito e visão inovadora. Sua liderança estratégica
-          impulsiona a empresa a níveis superiores, sempre em busca da
-          excelência e soluções eficazes.
+          Caue Basiolli é graduado em 2013 pela Pontifícia Universidade Católica
+          de São Paulo - PUC-SP, e Pós-Graduado em Regularização de Imóveis. Fez
+          inúmeros cursos relacionados a Direito Médico, com atuação marcada nas
+          esferas judicial e extrajudicial. É o CEO e Coordenador da CBL
+          Consultoria, com vasta experiência no direito e visão inovadora. Sua
+          liderança estratégica impulsiona a empresa a níveis superiores, sempre
+          em busca da excelência e soluções eficazes.
           <br />
           <br />
           Como líder inspirador, valoriza a equipe e preza pelo atendimento

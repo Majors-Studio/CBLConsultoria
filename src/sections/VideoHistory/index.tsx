@@ -40,7 +40,7 @@ const VideoHistory: React.FC = () => {
       }}
     >
       <Title style={{ marginBottom: 24 }}>
-        Estamos na vanguarda das antecipações de precatórios no Brasil!
+        Estamos na vanguarda das antecipações de Precatórios, Regularização Imobiliária e Direito Médico no Brasil!
       </Title>
       <Subtitle style={{ textAlign: "justify" }}>
         <b>A CBL Consultoria possui vasta experiência no mercado</b> e conta com{" "}
@@ -74,14 +74,6 @@ const VideoHistory: React.FC = () => {
         proporcionamos orientação precisa para sua situação específica. Seja
         você um indivíduo, empresa ou instituição, temos a expertise necessária
         para lidar com todas as complexidades legais envolvidas.
-        <br />
-        <br />
-        Já auxiliamos inúmeras pessoas e empresas a venderem seus precatórios
-        com sucesso, obtendo o retoConsutrno financeiro esperado. Se você
-        enfrenta dificuldades na venda de precatórios e busca uma consultoria
-        jurídica confiável, segura e comprovada, não hesite em contar com a CBL
-        Consultoria. Estamos aqui para proporcionar tranquilidade e garantir o
-        sucesso em suas negociações.
       </Subtitle>
       <div
         ref={showMoreRef}

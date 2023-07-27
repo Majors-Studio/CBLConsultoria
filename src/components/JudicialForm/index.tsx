@@ -83,7 +83,7 @@ const JudicialForm: React.FC = () => {
     <ContentBox bgColor={tokens.colors.brand.lightCream}>
       <Anchor id="purposeForm" />
       <S.Container>
-        <Title>Receba uma proposta personalizada</Title>
+        <Title>Receba um atendimento personalizado</Title>
         <S.Form action="#" onSubmit={sendEmail} ref={form}>
           <S.Input
             placeholder="Nome"

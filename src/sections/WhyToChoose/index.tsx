@@ -1,11 +1,11 @@
-import { Subtitle, Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import Description from "@/components/Description";
-import { tokens } from "@/utils/tokens";
-import React from "react";
+import { Subtitle, Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import Description from "@/components/Description"
+import { tokens } from "@/utils/tokens"
+import React from "react"
 
-import * as S from "./styles";
-import { whyList } from "@/utils/dataObjects";
+import * as S from "./styles"
+import { whyList } from "@/utils/dataObjects"
 
 const WhyToChoose: React.FC = () => {
   return (
@@ -15,11 +15,12 @@ const WhyToChoose: React.FC = () => {
         style={{ color: "#FFF", marginTop: "40px", fontSize: "17px" }}
       >
         A CBL Consultoria estabeleceu-se como uma autoridade inquestionável no
-        campo de investimentos em precatórios e consultoria jurídica. Com anos
-        de experiência e um histórico comprovado de resultados bem-sucedidos, a
-        empresa conquistou a confiança de clientes exigentes em todo o país. A
-        equipe altamente capacitada da CBL possui profundo conhecimento jurídico
-        e financeiro, garantindo a elaboração de estratégias personalizadas e
+        campo de investimentos em precatórios e consultoria jurídica em direito
+        imobiliário, direito médico, e causas cíveis. Com anos de experiência e
+        um histórico comprovado de resultados bem-sucedidos, a empresa
+        conquistou a confiança de clientes exigentes em todo o país. A equipe
+        altamente capacitada da CBL possui profundo conhecimento jurídico e
+        financeiro, garantindo a elaboração de estratégias personalizadas e
         soluções inovadoras para cada cliente. Seja você um investidor em busca
         de oportunidades lucrativas ou um indivíduo que necessita de consultoria
         jurídica especializada, a CBL Consultoria é a escolha certa para
@@ -61,7 +62,7 @@ const WhyToChoose: React.FC = () => {
         nós.
       </Description>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default WhyToChoose;
+export default WhyToChoose

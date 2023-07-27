@@ -143,14 +143,14 @@ export const qualityList: {
     img: "https://svgsilh.com/svg/2029303.svg",
     title: "Atendimento personalizado",
     subtitle:
-      "Nossa equipe está pronta para oferecer suporte especializado em todas as etapas da negociação do seu precatório.",
+      "Nossa equipe está pronta para oferecer suporte especializado, com atendimento artesanal e especializado em todas as etapas do serviço prestado.",
   },
   {
     id: 3,
     img: "https://svgsilh.com/svg_v2/1414791.svg",
     title: "Credibilidade",
     subtitle:
-      "Com anos de experiência no mercado, somos uma das maiores empresas especializadas na antecipação de precatórios em todo o Brasil",
+      "Com anos de experiência no mercado, somos uma das maiores consultorias especializadas em nossas áreas de atuação em todo o Brasil",
   },
   {
     id: 4,
@@ -243,7 +243,7 @@ export const stepsList: {
     text: (
       <>
         Nosso time jurídico faz uma análise criteriosa do processo judicial do
-        seu precatório para garantir <strong>segurança e transparência</strong>{" "}
+        seu precatório para garantir <b>segurança e transparência</b>{" "}
         em todo o processo de compra.
       </>
     ),
@@ -253,7 +253,10 @@ export const stepsList: {
     id: 1,
     title: "Proposta de Valor",
     text: (
-      <>Oferecemos o melhor valor do mercado com propostas éticas e justas.</>
+      <>
+        Intermediamos negócios jurídicos para o oferecimento do melhor valor do
+        mercado com propostas éticas e justas
+      </>
     ),
     icon: <ListIcon />,
   },
@@ -262,9 +265,9 @@ export const stepsList: {
     title: "Assinatura do Contrato",
     text: (
       <>
-        Após o aceite da proposta, <strong>assinamos o contrato</strong> de
-        venda <strong>no cartório</strong>, seguindo todas as obrigações legais,
-        de forma <strong>rápida e segura</strong>.
+        Após o aceite da proposta, <b>assinamos o contrato</b> de
+        venda <b>no cartório</b>, seguindo todas as obrigações legais,
+        de forma <b>rápida e segura</b>.
       </>
     ),
     icon: <ContractIcon />,
@@ -274,11 +277,8 @@ export const stepsList: {
     title: "Pagamento no ato da assinatura",
     text: (
       <>
-        À vista e sem burocracia direto na sua conta.{" "}
-        <strong>
-          O dinheiro é creditado em conta no momento da assinatura
-        </strong>{" "}
-        e o comprovante de transferência entregue ao credor.
+        Trabalhamos na análise de contratos e negociações somente com o
+        pagamento à vista e sem burocracia.
       </>
     ),
     icon: <MoneyIcon />,
@@ -290,15 +290,15 @@ export const bannerList: {
   title: string
 }[] = [
   {
-title: 'Transformando desafios em oportunidades',
+    title: "Transformando desafios em oportunidades",
     img: bannerImg1,
   },
-    {
-    title: 'Construindo um futuro mais justo',
+  {
+    title: "Construindo um futuro mais justo",
     img: bannerImg2,
   },
-    {
-    title: 'Juntos, transformamos realidades.',
+  {
+    title: "Juntos, transformamos realidades.",
     img: bannerImg3,
   },
 ]
@@ -456,7 +456,7 @@ export const whyList: {
     id: 0,
     title: "Atendimento Personalizado",
     description:
-      "Nós cuidamos para que o processo de negociação seja 100% seguro e transparente, desde a análise até o recebimento do seu precatório.",
+      "A CBL se diferencia por realizar uma prestação de serviço artesanal. Não trabalhamos com processos de massa. Cada caso é único, e nossos advogados não trabalham com modelos, com cada peça processual sendo confeccionada especificamente para a necessidade do cliente.",
     icon: (
       <>
         <Image
@@ -472,7 +472,7 @@ export const whyList: {
     id: 1,
     title: "Vasta experiência no mercado",
     description:
-      "Ao longo da nossa história, foram centenas de credores satisfeitos com a antecipação de seus precatórios",
+      "Ao longo da nossa história, foram centenas de clientes satisfeitos com a antecipação de seus precatórios",
     icon: (
       <>
         <Image
@@ -486,9 +486,9 @@ export const whyList: {
   },
   {
     id: 2,
-    title: "Total segurança na negociação",
+    title: "Segurança acadêmica",
     description:
-      "Empresa consolidada, com mais de uma década no mercado de precatórios.",
+      "Nossos advogados são graduados e pós-graduados nas melhores universidades do país, com nota máxima no MEC, e reconhecidas pela comunidade científica",
     icon: (
       <>
         <Image
@@ -502,9 +502,9 @@ export const whyList: {
   },
   {
     id: 3,
-    title: "Pagamento à vista",
+    title: "Especialização na prestação de serviços",
     description:
-      "O pagamento da antecipação do seu precatório é feito à vista, no ato da formalização em cartório de notas da sua cidade.",
+      "Em um mundo jurídico dinâmico, vasto e contemporâneo, é preciso estar atento às inovações nas esferas nacionais e internacionais inerentes a atuação do operador do direito. Por isso, é de suma importância contar com profissionais especializados. A CBL apenas trabalha com causas relacionadas às suas áreas de atuação e conta com um time altamente qualificado de forma a trazer o melhor desempenho e resultados ao cliente",
     icon: (
       <>
         <Image
