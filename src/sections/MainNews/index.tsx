@@ -55,14 +55,7 @@ const MainNews: React.FC = () => {
           <b>grandes escritórios de advocacia</b>.
           <br />
           <br />
-          Os <b>pagamentos</b>, originalmente agendados para serem feitos em SP
-          até 2020, foram <b>adiados para 2024</b> e, posteriormente, tiveram
-          uma nova prorrogação até 2029.
-          <br />
-          <br />
-          As reportagens destacam os <b>atrasos frequentes</b>, a contínua
-          alteração na <b>data final de pagamento</b>, prejudicando assim{" "}
-          <b>milhares de credores</b>.
+          As reportagens destacam as <b>dificuldades</b> de milhares de pessoas dentro do <b>território judicial</b>, novidades e atrasos de pagamentos da justiça.
         </Subtitle>
       </div>
 

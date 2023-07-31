@@ -12,6 +12,7 @@ import { useDevice } from "@/hooks/useDevice"
 import InstagramIcon from "@/assets/icons/InstagramIcon"
 import Description from "../Description"
 import { navitems } from "@/utils/navitems"
+import FacebookIcon from "@/assets/icons/FacebookIcon"
 
 const Footer: React.FC = () => {
   const { isDesktop,isMobile } = useDevice()
@@ -21,6 +22,11 @@ const Footer: React.FC = () => {
       url: "https://www.instagram.com/cbl_cj/",
       logo: <InstagramIcon />,
     },
+    {
+      name: 'Facebook',
+      url: 'https://m.facebook.com/p/CBLConsultoria-100094063807429/?refid=52&__tn__=C-R&wtsid=rdr_0dek66DkkpEtmOwc2&_rdr',
+      logo: <FacebookIcon />,
+    }
   ]
 
   const footerData = [
