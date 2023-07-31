@@ -329,9 +329,8 @@ const LegalAdvice: React.FC = () => {
                   prevenindo litígios e futuros desgastes.
                   <br />
                   <br />
-                  Muitos empreendedores, especialmente proprietários de empresas
-                  e startups, podem ter dúvidas ao contratar esse tipo de
-                  serviço. Considerando que pequenos negócios geralmente têm
+                  Muitos empreendedores, podem ter dúvidas ao contratar esse tipo de
+                  serviço. Considerando que negócios geralmente têm
                   orçamentos limitados, alguns podem acreditar que vale mais a
                   pena correr o risco de enfrentar problemas no futuro do que
                   pagar para resolver questões agora.

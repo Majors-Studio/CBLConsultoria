@@ -472,7 +472,7 @@ export const whyList: {
     id: 1,
     title: "Vasta experiência no mercado",
     description:
-      "Ao longo da nossa história, foram centenas de clientes satisfeitos com a antecipação de seus precatórios",
+      "Ao longo da nossa história, foram centenas de clientes satisfeitos.",
     icon: (
       <>
         <Image

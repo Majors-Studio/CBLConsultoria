@@ -32,5 +32,5 @@ export const Image = styled.img`
     object-fit: cover;
     object-position: top;
 
-    transform: scale(1.4);
+    transform: scale(1.3);
 `
