@@ -504,7 +504,7 @@ export const whyList: {
     id: 3,
     title: "Especialização na prestação de serviços",
     description:
-      "Em um mundo jurídico dinâmico, vasto e contemporâneo, é preciso estar atento às inovações nas esferas nacionais e internacionais inerentes a atuação do operador do direito. Por isso, é de suma importância contar com profissionais especializados. A CBL apenas trabalha com causas relacionadas às suas áreas de atuação e conta com um time altamente qualificado de forma a trazer o melhor desempenho e resultados ao cliente",
+      "Em um mundo jurídico dinâmico, vasto e contemporâneo, é preciso estar atento às inovações nas esferas nacionais e internacionais inerentes a atuação do operador do direito. Por isso, é de suma importância contar com profissionais especializados. A CBL apenas trabalha com causas relacionadas às suas áreas de atuação e conta com um time altamente qualificado de forma a trazer o melhor desempenho e resultados ao cliente.",
     icon: (
       <>
         <Image
