@@ -15,7 +15,7 @@ import Subtitle from "../Subtitle";
 import { before } from "node:test";
 
 const Header: React.FC = () => {
-  const { isDesktop, isMobile } = useDevice();
+  const { isDesktop, isMobile, isTablet } = useDevice();
 
   const { isScrollingTop, menuOpened, setMenuOpened, setIsScrollingTop } =
     useApp();
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
           )}
         </Link>
         {item.subpaths && (
-          <C.Submenu active={subMenuOpened === index || isMobile}>
+          <C.Submenu active={subMenuOpened === index || (isMobile||isTablet)}>
             {item.subpaths.map((subitem, subindex) => {
               return (
                 <React.Fragment key={subindex}>
