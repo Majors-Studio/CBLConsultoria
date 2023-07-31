@@ -6,6 +6,7 @@ import { tokens } from "@/utils/tokens"
 import React from "react"
 
 import * as C from "./styles"
+import Anchor from "@/components/Anchor"
 
 const WhatIsResources: React.FC = () => {
   const { isMobile } = useDevice()
@@ -23,6 +24,7 @@ const WhatIsResources: React.FC = () => {
           flexDirection: isMobile ? "column" : "row",
         }}
       >
+      <Anchor id='gestao'/>
         <div
           style={{
             marginLeft: isMobile ? 0 : 72,

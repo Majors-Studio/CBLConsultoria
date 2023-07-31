@@ -12,7 +12,6 @@ import { tokens } from "@/utils/tokens";
 import ContentBox from "../ContentBox";
 import { useRouter } from "next/router";
 import Subtitle from "../Subtitle";
-import { before } from "node:test";
 
 const Header: React.FC = () => {
   const { isDesktop, isMobile, isTablet } = useDevice();

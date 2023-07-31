@@ -18,6 +18,10 @@ export const navitems = [
         title: "Dados do Brasil",
         anchor: "#data",
       },
+      {
+        title: "Gestão de Recursos",
+        anchor: "#gestao",
+      }
     ],
   },
   {
@@ -53,10 +57,5 @@ export const navitems = [
     id: 4,
     title: "Blog",
     url: "/noticias",
-  },
-  {
-    id: 5,
-    title: "Gestão de Recursos",
-    url: "/gestao-de-recursos",
   },
 ];
