@@ -61,8 +61,7 @@ const MainNews: React.FC = () => {
           <br />
           <br />
           As reportagens destacam os <b>atrasos frequentes</b>, a contínua
-          alteração na <b>data final de pagamento</b>, e a <b>incerteza</b>{" "}
-          acerca do recebimento dos <b>precatórios</b>, prejudicando assim{" "}
+          alteração na <b>data final de pagamento</b>, prejudicando assim{" "}
           <b>milhares de credores</b>.
         </Subtitle>
       </div>

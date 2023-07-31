@@ -39,7 +39,7 @@ export const navitems = [
         anchor: "#civil-causes",
       },
             {
-        title: "Quais causas defendemos?",
+        title: "Quais causas atuamos?",
         anchor: "#causes",
       },
     ],
