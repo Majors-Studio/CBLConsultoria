@@ -1,5 +1,5 @@
-import { tokens } from "@/utils/tokens"
-import styled from "styled-components"
+import { tokens } from "@/utils/tokens";
+import styled from "styled-components";
 
 export const Midia = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const Midia = styled.div`
     gap: ${tokens.space.sizeXxs};
     max-width: 100%;
   }
-`
+`;
 
 export const MidiaItem = styled.a`
   display: flex;
@@ -23,7 +23,7 @@ export const MidiaItem = styled.a`
   width: 40px;
   height: 40px;
   color: ${tokens.colors.neutral.highPure};
-`
+`;
 
 export const ContainerInfo = styled.div`
   display: flex;
@@ -32,13 +32,14 @@ export const ContainerInfo = styled.div`
   flex-wrap: wrap;
   max-width: 350px;
   width: 100%;
+  margin-top: 30px;
 
   justify-content: center;
 
   @media (max-width: ${tokens.breakpoints.desktop}) {
     max-width: 100%;
   }
-`
+`;
 
 export const Info = styled.div`
   display: flex;
@@ -50,4 +51,4 @@ export const Info = styled.div`
     gap: 12px;
     margin-top: ${tokens.space.sizeXxs};
   }
-`
+`;
