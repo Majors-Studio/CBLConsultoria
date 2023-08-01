@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           )}
         </Link>
         {item.subpaths && (
-          <C.Submenu active={subMenuOpened === index || (isMobile||isTablet)}>
+          <C.Submenu active={subMenuOpened === index || isMobile || isTablet}>
             {item.subpaths.map((subitem, subindex) => {
               return (
                 <React.Fragment key={subindex}>
@@ -159,14 +159,14 @@ const Header: React.FC = () => {
             top: menuOpened ? "0" : "-100%",
             transition: "top 0.5s ease-in-out",
             zIndex: 9998,
-            paddingTop: "144px",
+            paddingTop: "135px",
             paddingBottom: "24px",
             width: "100%",
           }}
           contentStyle={{
             display: "flex",
             flexDirection: "column",
-            // gap: "24px",
+            gap: "12px",
             justifyContent: "space-between",
           }}
         >

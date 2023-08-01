@@ -1,10 +1,10 @@
-import { Title } from "@/components"
-import Anchor from "@/components/Anchor"
-import ContentBox from "@/components/ContentBox"
-import CtaButton from "@/components/CtaButton"
-import Video from "@/components/Video"
-import { tokens } from "@/utils/tokens"
-import React from "react"
+import { Title } from "@/components";
+import Anchor from "@/components/Anchor";
+import ContentBox from "@/components/ContentBox";
+import CtaButton from "@/components/CtaButton";
+import Video from "@/components/Video";
+import { tokens } from "@/utils/tokens";
+import React from "react";
 
 const VideoShowcase: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const VideoShowcase: React.FC = () => {
         {/* <CtaButton>Acesso nosso catálogo</CtaButton> */}
       </ContentBox>
     </>
-  )
-}
+  );
+};
 
-export default VideoShowcase
+export default VideoShowcase;

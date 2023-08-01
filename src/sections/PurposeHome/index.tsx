@@ -1,16 +1,16 @@
-import { ConfirmIcon } from "@/assets/icons"
-import { Subtitle, Title } from "@/components"
-import ContentBox from "@/components/ContentBox"
-import PurposeForm from "@/components/PurposeForm"
-import React from "react"
+import { ConfirmIcon } from "@/assets/icons";
+import { Subtitle, Title } from "@/components";
+import ContentBox from "@/components/ContentBox";
+import PurposeForm from "@/components/PurposeForm";
+import React from "react";
 
-import * as S from "./styles"
-import { tokens } from "@/utils/tokens"
-import { infoList } from "@/utils/dataObjects"
-import { useDevice } from "@/hooks/useDevice"
+import * as S from "./styles";
+import { tokens } from "@/utils/tokens";
+import { infoList } from "@/utils/dataObjects";
+import { useDevice } from "@/hooks/useDevice";
 
 const PurposeHome: React.FC = () => {
-  const { isDesktop } = useDevice()
+  const { isDesktop } = useDevice();
   return (
     <ContentBox
       style={{}}
@@ -22,7 +22,7 @@ const PurposeHome: React.FC = () => {
         gap: tokens.space.sizeXxs,
       }}
     >
-      <S.Info>
+      <S.Info id="videoshowcase">
         <Title variant="primary" style={{ textAlign: "left" }}>
           <b>Junte-se a nós</b> e esteja sempre à frente, tomando{" "}
           <b>decisões informadas e estratégicas</b> com o suporte da nossa{" "}
@@ -34,7 +34,7 @@ const PurposeHome: React.FC = () => {
       </S.Info>
       <PurposeForm />
     </ContentBox>
-  )
-}
+  );
+};
 
-export default PurposeHome
+export default PurposeHome;

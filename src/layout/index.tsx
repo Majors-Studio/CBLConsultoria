@@ -1,30 +1,30 @@
-import { Header, Footer } from "@/components"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import { Header, Footer } from "@/components";
 
-import Whatsapp from "@/components/Whatsapp"
-import { AppProvider, useApp } from "@/context/appContext"
+import Whatsapp from "@/components/Whatsapp";
+import { AppProvider, useApp } from "@/context/appContext";
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
-import { Toast } from "@/components"
-import { SuccessIcon } from "@/assets/icons"
-import Head from "next/head"
-import Loading from "@/components/Loading"
-import { navitems } from "@/utils/navitems"
+import { Toast } from "@/components";
+// import { SuccessIcon } from "@/assets/icons";
+import Head from "next/head";
+import Loading from "@/components/Loading";
+import { navitems } from "@/utils/navitems";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const { isTop, toast } = useApp()
-  const [timeoutId, setTimeoutId] = useState(true)
+  const { isTop } = useApp();
+  const [timeoutId, setTimeoutId] = useState(true);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setTimeoutId(false)
-    }, 2000)
+      setTimeoutId(false);
+    }, 2000);
 
     return () => {
-      if (timeoutId) clearTimeout(timeoutId)
-    }
-  }, [])
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
 
   const head = (
     <Head>
@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               ?.title}
       </title>
     </Head>
-  )
+  );
 
   return (
     <>
@@ -66,13 +66,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
           <Footer />
           {isTop ? null : <Whatsapp />}
-            <Toast
-              
-            />
+          <Toast />
         </AppProvider>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
