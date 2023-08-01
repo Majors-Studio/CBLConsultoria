@@ -159,7 +159,7 @@ const Header: React.FC = () => {
             top: menuOpened ? "0" : "-100%",
             transition: "top 0.5s ease-in-out",
             zIndex: 9998,
-            paddingTop: "135px",
+            paddingTop: "144px",
             paddingBottom: "24px",
             width: "100%",
           }}
