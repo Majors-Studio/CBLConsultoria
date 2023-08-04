@@ -9,7 +9,7 @@ import Avatar from "@/components/Avatar"
 import { useDevice } from "@/hooks/useDevice"
 
 const AvatarList: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
@@ -29,7 +29,7 @@ const AvatarList: React.FC = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+          gridTemplateColumns: !isDesktop ? "1fr" : "1fr 1fr",
           gap: tokens.space.sizeXl,
         }}
       >

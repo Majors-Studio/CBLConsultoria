@@ -12,7 +12,7 @@ import * as S from "./styles"
 import { cardList } from "@/utils/dataObjects"
 
 const CardSteps: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
 
   return (
     <ContentBox bgColor={tokens.colors.highlight.dark}>
@@ -26,7 +26,7 @@ const CardSteps: React.FC = () => {
         <span>prático e seguro antecipar</span> seu precatório
       </Title>
 
-      {isMobile ? (
+      {!isDesktop ? (
         <Swiper
           spaceBetween={50}
           slidesPerView={1}

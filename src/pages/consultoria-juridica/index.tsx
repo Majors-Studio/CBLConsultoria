@@ -14,12 +14,10 @@ import CtaButton from "@/components/CtaButton"
 import MistakesChart from "@/components/MistakesChart"
 import { useDevice } from "@/hooks/useDevice"
 import JudicialForm from "@/components/JudicialForm"
-import HasConsultPeopleChart from "@/components/HasConsultPeopleChart"
-import HasConsultCompanyChart from "@/components/HasConsultCompanyChart"
 import Anchor from "@/components/Anchor"
 
 const LegalAdvice: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <>
       <HeadBanner
@@ -59,7 +57,7 @@ const LegalAdvice: React.FC = () => {
               width: "100%",
               maxWidth: 800,
               height: "100%",
-              minHeight: isMobile ? 350 : 450,
+              minHeight: !isDesktop ? 350 : 450,
               maxHeight: 450,
               display: "flex",
               justifyContent: "center",
@@ -180,7 +178,7 @@ const LegalAdvice: React.FC = () => {
         >
           <Title
             style={{
-              marginTop: isMobile ? "0" : "32px",
+              marginTop: !isDesktop ? "0" : "32px",
               color: tokens.colors.neutral.highPure,
               width: "100%",
             }}
@@ -191,7 +189,7 @@ const LegalAdvice: React.FC = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
+              gridTemplateColumns: !isDesktop ? "1fr" : "repeat(2, 1fr)",
               gap: "24px",
               marginTop: "24px",
               width: "100%",
@@ -237,7 +235,7 @@ const LegalAdvice: React.FC = () => {
             style={{
               marginTop: "32px",
               width: "100%",
-              maxWidth: isMobile ? "100%" : "400px",
+              maxWidth: !isDesktop ? "100%" : "400px",
             }}
             variant="secondary"
             href="#purposeForm"
@@ -350,35 +348,6 @@ const LegalAdvice: React.FC = () => {
           ))}
         </ContentBox>
       </ImageAndText>
-      {/* 
-      <ContentBox
-        bgColor={tokens.colors.brand.lightCream}
-        contentStyle={{
-          display: "grid",
-          gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
-          gap: "24px",
-          overflow: "hidden",
-          height: "fit-content",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <HasConsultPeopleChart />
-        </div>
-
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <HasConsultCompanyChart />
-        </div>
-      </ContentBox> */}
       <JudicialForm />
     </>
   )

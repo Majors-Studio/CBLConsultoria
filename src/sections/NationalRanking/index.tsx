@@ -15,7 +15,7 @@ import * as C from "./styles";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const NationalRanking: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isDesktop } = useDevice();
 
   const chartData = {
     labels: ["RJ", "PR", "SP", "RS", "União"],
@@ -41,8 +41,8 @@ const NationalRanking: React.FC = () => {
       bgColor={tokens.colors.brand.cta}
       contentStyle={{
         display: "grid",
-        gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-        gridGap: isMobile ? tokens.space.sizeXl : "32px",
+        gridTemplateColumns: !isDesktop ? "1fr" : "1fr 1fr",
+        gridGap: !isDesktop ? tokens.space.sizeXl : "32px",
       }}
     >
       <C.RankingInfos>
@@ -77,8 +77,8 @@ const NationalRanking: React.FC = () => {
       <C.RankingChart>
         <Doughnut
           data={chartData}
-          width={isMobile ?  250 : 320}
-          height={isMobile ? 250 : 320}
+          width={!isDesktop ?  250 : 320}
+          height={!isDesktop ? 250 : 320}
           options={{
             responsive: true,
             maintainAspectRatio: false,
@@ -94,7 +94,7 @@ const NationalRanking: React.FC = () => {
                   padding: 20,
                   color: tokens.colors.neutral.highPure,
                   font: {
-                    size: isMobile ? 16 : 20,
+                    size: !isDesktop ? 16 : 20,
                     weight: '500',
                     family: tokens.font.family.primary,
                   },

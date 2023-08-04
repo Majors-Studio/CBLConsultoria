@@ -6,13 +6,13 @@ import { tokens } from "@/utils/tokens";
 import React from "react";
 
 const Purpose: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isDesktop } = useDevice();
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
       contentStyle={{
         display: "grid",
-        gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+        gridTemplateColumns: !isDesktop ? "1fr" : "1fr 1fr",
         gap: "32px",
       }}
     >

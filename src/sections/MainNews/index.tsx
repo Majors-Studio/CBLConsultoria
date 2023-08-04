@@ -13,7 +13,7 @@ import LoadingIcon from "@/assets/icons/LoadingIcon";
 import CtaButton from "@/components/CtaButton";
 
 const MainNews: React.FC = () => {
-  const { isMobile } = useDevice();
+  const { isDesktop } = useDevice();
   const { newsList, getNewsList } = useApp();
 
   useEffect(() => {
@@ -27,8 +27,8 @@ const MainNews: React.FC = () => {
       bgColor={tokens.colors.neutral.highPure}
       contentStyle={{
         display: "grid",
-        gridTemplateColumns: isMobile ? "1fr" : "1fr 2fr",
-        gap: isMobile ? tokens.space.sizeXl : "32px",
+        gridTemplateColumns: !isDesktop ? "1fr" : "1fr 2fr",
+        gap: !isDesktop ? tokens.space.sizeXl : "32px",
       }}
     >
       <div>
@@ -62,7 +62,7 @@ const MainNews: React.FC = () => {
       {newsList.length > 0 ? (
         <C.NewsList>
           {newsList ? (
-            newsList.slice(0, isMobile ? 2 : 4).map((news, newsIndex) => {
+            newsList.slice(0, !isDesktop ? 2 : 4).map((news, newsIndex) => {
               return (
                 <C.NewsItem key={newsIndex}>
                   <C.NewsItemTop>
@@ -123,7 +123,7 @@ const MainNews: React.FC = () => {
               </div>
             </>
           )}
-          {isMobile && (
+          {!isDesktop && (
             <Link
               href={{
                 pathname: "noticias/",

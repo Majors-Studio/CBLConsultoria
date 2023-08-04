@@ -14,7 +14,7 @@ import { tokens } from "@/utils/tokens"
 import { useDevice } from "@/hooks/useDevice"
 
 const MistakesChart: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   const chartData = {
     labels: ["Imóveis Desregularizados", "Imóveis Regularizados"],
     datasets: [
@@ -39,7 +39,7 @@ const MistakesChart: React.FC = () => {
             display: true,
             text: "Taxa de imóveis desregularizados no Brasil nos últimos anos",
             font: {
-              size: isMobile ? 18 : 24,
+              size: !isDesktop ? 18 : 24,
               weight: "normal",
             },
             padding: {
@@ -53,7 +53,7 @@ const MistakesChart: React.FC = () => {
             labels: {
               color: tokens.colors.brand.dark,
               font: {
-                size: isMobile ? 12 : 18,
+                size: !isDesktop ? 12 : 18,
               },
             },
           },

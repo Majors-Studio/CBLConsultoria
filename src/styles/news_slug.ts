@@ -39,7 +39,7 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 4fr;
   grid-gap: 20px;
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     grid-template-columns: 1fr;
   }
 `

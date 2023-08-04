@@ -6,7 +6,7 @@ export const BoxImage = styled.div`
   height: 300px;
   /* overflow: hidden; */
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     width: 100%;
   }
 `
@@ -16,7 +16,7 @@ export const BoxText = styled.div`
   max-width: 500px;
   flex-direction: column;
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     max-width: 100%;
   }
 `

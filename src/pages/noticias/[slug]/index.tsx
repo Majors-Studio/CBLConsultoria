@@ -13,7 +13,7 @@ import { markdownOptions } from "@/utils/markdownOptions"
 import { useDevice } from "@/hooks/useDevice"
 
 const Page: React.FC<any> = () => {
-  const { isMobile } = useDevice()
+  const {  isDesktop } = useDevice()
   const { newsList, getNewsList } = useApp()
   const router = useRouter()
   const {
@@ -54,7 +54,7 @@ const Page: React.FC<any> = () => {
 
   const newsPath = title
     ? title.length > 30
-      ? title.slice(0, isMobile ? 15 : 30) + "..."
+      ? title.slice(0, !isDesktop ? 15 : 30) + "..."
       : title?.toString()
     : "Notícia"
 

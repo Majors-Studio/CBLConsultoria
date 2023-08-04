@@ -11,7 +11,6 @@ import { tokens } from "@/utils/tokens";
 import { useDevice } from "@/hooks/useDevice";
 
 const JudicialForm: React.FC = () => {
-  const { isMobile } = useDevice();
   const form = useRef();
   const [formData, setFormData] = useState({
     name: "",

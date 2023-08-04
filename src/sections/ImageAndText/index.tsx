@@ -27,7 +27,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
   reverse,
   chart,
 }) => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <>
       <ContentBox
@@ -37,12 +37,12 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
         contentStyle={{
           display: "flex",
           justifyContent: "space-between",
-          flexDirection: isMobile
+          flexDirection: !isDesktop
             ? "column-reverse"
             : reverse
             ? "row-reverse"
             : "row",
-          gap: isMobile ? "24px" : undefined,
+          gap: !isDesktop ? "24px" : undefined,
         }}
       >
         <C.BoxImage>
@@ -57,8 +57,8 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
           <Title
             style={{
               fontWeight: "bold",
-              textAlign: reverse || isMobile ? "left" : "right",
-              marginBottom: isMobile ? "24px" : "32px",
+              textAlign: reverse || !isDesktop ? "left" : "right",
+              marginBottom: !isDesktop ? "24px" : "32px",
               textTransform: "uppercase",
             }}
             variant={reverse ? "primary" : "secondary"}
@@ -67,7 +67,7 @@ const ImageAndText: React.FC<ImageAndTextProps> = ({
           </Title>
           <Subtitle
             style={{
-              textAlign: reverse || isMobile ? "left" : "right",
+              textAlign: reverse || !isDesktop ? "left" : "right",
               color: reverse
                 ? tokens.colors.brand.cta
                 : tokens.colors.neutral.highPure,

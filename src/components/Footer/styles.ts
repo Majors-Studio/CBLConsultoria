@@ -28,12 +28,10 @@ export const MidiaItem = styled.a`
 export const ContainerInfo = styled.div`
   display: flex;
   gap: ${tokens.space.sizeMd};
-  align-items: flex-start;
   flex-wrap: wrap;
   width: fit-content;
   margin-top: 30px;
 
-  justify-content: center;
 
   @media (max-width: ${tokens.breakpoints.desktop}) {
     max-width: 100%;
@@ -43,11 +41,13 @@ export const ContainerInfo = styled.div`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: ${tokens.space.sizeXxs};
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     gap: 12px;
     margin-top: ${tokens.space.sizeXxs};
+  align-items: center;
+
   }
 `;

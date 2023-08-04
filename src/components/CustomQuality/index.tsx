@@ -18,7 +18,7 @@ import { qualityList } from "@/utils/dataObjects"
 import Description from "../Description"
 
 const CustomQuality: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <ContentBox
       bgColor={tokens.colors.brand.lightCream}
@@ -27,7 +27,7 @@ const CustomQuality: React.FC = () => {
         Maximize o seu potencial financeiro com antecipações de precatórios de
         líderes confiáveis
       </Title>
-      {isMobile ? (
+      {!isDesktop ? (
         <Swiper
           spaceBetween={50}
           slidesPerView={1}

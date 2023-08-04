@@ -10,7 +10,7 @@ export const Subtitle = styled.p<SubtitleProps>`
   line-height: 25px;
   text-align: center;
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     font-size: ${tokens.font.sizes.xs};
   }
 

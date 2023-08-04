@@ -49,7 +49,7 @@ export const Button = styled.button<ButtonProps>`
     border: 2px solid transparent;
   }
 
-  @media (max-width: ${tokens.breakpoints.tablet}) {
+  @media (max-width: ${tokens.breakpoints.desktop}) {
     margin: 0 auto;
     font-size: ${tokens.font.sizes.xs};
   }

@@ -8,31 +8,31 @@ import React from "react"
 import * as C from "./styles"
 
 const WhatIsPrecatory: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <ContentBox
       bgColor={tokens.colors.brand.cta}
       contentStyle={{
         display: "flex",
-        flexDirection: isMobile ? "column" : "row",
+        flexDirection: !isDesktop ? "column" : "row",
       }}
     >
       <Title
         variant="secondary"
         style={{
-          borderRight: isMobile
+          borderRight: !isDesktop
             ? "none"
             : "1px solid " + tokens.colors.brand.pure,
-          paddingRight: isMobile ? 0 : 42,
-          marginBottom: isMobile ? 32 : 0,
-          textAlign: isMobile ? "center" : "left",
+          paddingRight: !isDesktop ? 0 : 42,
+          marginBottom: !isDesktop ? 32 : 0,
+          textAlign: !isDesktop ? "center" : "left",
         }}
       >
         O que é um precatório?
       </Title>
       <div
         style={{
-          marginLeft: isMobile ? 0 : 72,
+          marginLeft: !isDesktop ? 0 : 72,
         }}
       >
         <Subtitle
