@@ -7,21 +7,14 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 scroll-behavior: smooth !important;
-}
-
-
-body {
-  overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
-  background-color: #324f87;
-  position: relative;
 
   &::-webkit-scrollbar {
   width: 0.5rem;
 
   &-track {
     background: #f1f1f1;
+    border-radius: 0.5rem;
+
   }
 
   &-thumb {
@@ -35,6 +28,17 @@ body {
   }
 
   }
+
+}
+
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #324f87;
+  position: relative;
+
 }
 
 `

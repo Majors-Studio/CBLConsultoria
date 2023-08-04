@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           >
             {item.title}
           </Subtitle>
-          {item.subpaths && (
+          {item.subpaths && isDesktop && (
             <svg
               fill="currentColor"
               viewBox="0 0 16 16"
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           )}
         </Link>
         {item.subpaths && (
-          <C.Submenu active={subMenuOpened === index || isMobile || isTablet}>
+          <C.Submenu active={subMenuOpened === index || !isDesktop}>
             {item.subpaths.map((subitem, subindex) => {
               return (
                 <React.Fragment key={subindex}>
@@ -135,6 +135,7 @@ const Header: React.FC = () => {
               gridTemplateColumns: `repeat(${navitems.length}, auto)`,
               gap: "24px",
               height: "100px",
+              alignItems: "center",
             }}
           >
             {navBar}
@@ -159,15 +160,21 @@ const Header: React.FC = () => {
             top: menuOpened ? "0" : "-100%",
             transition: "top 0.5s ease-in-out",
             zIndex: 9998,
-            paddingTop: "144px",
-            paddingBottom: "24px",
+            marginTop: "24px",
+            paddingTop: "120px",
+            paddingBottom: "0",
             width: "100%",
+            // backgroundColor: 'green',
+            height: '100%',
+            
           }}
           contentStyle={{
             display: "flex",
             flexDirection: "column",
             gap: "12px",
-            justifyContent: "space-between",
+            height: "100%",
+            overflow: "auto",
+            overflowX: "hidden",
           }}
         >
           {navBar}
