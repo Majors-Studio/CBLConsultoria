@@ -9,25 +9,20 @@ import * as C from "./styles"
 import Anchor from "@/components/Anchor"
 
 const WhatIsResources: React.FC = () => {
-  const { isMobile } = useDevice()
+  const { isDesktop } = useDevice()
   return (
     <>
       <ContentBox
         bgColor={tokens.colors.brand.cta}
-        style={
-          {
-            // marginTop: 120,
-          }
-        }
         contentStyle={{
           display: "flex",
-          flexDirection: isMobile ? "column" : "row",
+          flexDirection: !isDesktop ? "column" : "row",
         }}
       >
       <Anchor id='gestao'/>
         <div
           style={{
-            marginLeft: isMobile ? 0 : 72,
+            marginLeft: !isDesktop ? 0 : 72,
           }}
         >
           <Subtitle
@@ -66,7 +61,7 @@ const WhatIsResources: React.FC = () => {
             style={{
               marginBottom: 42,
               display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
+              gridTemplateColumns: isDesktop ? "1fr 1fr 1fr" : '1fr',
               gap: 32,
             }}
           >
