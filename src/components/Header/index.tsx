@@ -160,13 +160,10 @@ const Header: React.FC = () => {
             top: menuOpened ? "0" : "-100%",
             transition: "top 0.5s ease-in-out",
             zIndex: 9998,
-            marginTop: "24px",
-            paddingTop: "120px",
+            paddingTop: "144px",
             paddingBottom: "0",
             width: "100%",
-            // backgroundColor: 'green',
             height: '100%',
-            
           }}
           contentStyle={{
             display: "flex",

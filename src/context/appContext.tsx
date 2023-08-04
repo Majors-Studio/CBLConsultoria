@@ -67,7 +67,7 @@ export function AppProvider({ children }: any) {
       if(isDesktop)
       setMenuOpened(false)
       const st = window.pageYOffset || document.documentElement.scrollTop
-      if (isDesktop) {
+      if (isDesktop || !menuOpened) {
       if (st > lastScrollTop) {
         setIsScrollingTop(st < 250)
       } else {
