@@ -30,8 +30,7 @@ export const ContainerInfo = styled.div`
   gap: ${tokens.space.sizeMd};
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 350px;
-  width: 100%;
+  width: fit-content;
   margin-top: 30px;
 
   justify-content: center;
