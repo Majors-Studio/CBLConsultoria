@@ -127,6 +127,7 @@ const Header: React.FC = () => {
         alignItems: "center",
         height: isDesktop ? 'fit-content' : "120px",
         width: "100%",
+        padding: '0 24px'
       }}
     >
       <div
