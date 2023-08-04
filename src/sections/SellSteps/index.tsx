@@ -6,8 +6,10 @@ import React from "react"
 import * as C from "./styles"
 import { stepsList } from "@/utils/dataObjects"
 import { Balancer } from "react-wrap-balancer"
+import { useDevice } from "@/hooks/useDevice"
 
 const SellSteps: React.FC = () => {
+  const {isDesktop} = useDevice()
   return (
     <ContentBox bgColor={tokens.colors.brand.lightCream}>
       <Title>
@@ -34,7 +36,7 @@ const SellSteps: React.FC = () => {
                 textAlign: "left",
                 fontWeight: "600",
                 marginTop: 12,
-                marginBottom: 32,
+                marginBottom: isDesktop ? 32 : 12,
                 height: 32,
               }}
             >

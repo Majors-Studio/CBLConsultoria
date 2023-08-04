@@ -1,6 +1,5 @@
-import { tokens } from "@/utils/tokens";
-import styled from "styled-components";
-
+import { tokens } from "@/utils/tokens"
+import styled from "styled-components"
 
 export const WhyToSellList = styled.ul`
   display: flex;
@@ -20,7 +19,16 @@ export const WhyToSellItem = styled.li`
 export const WhyToSellItemIcon = styled.div`
   width: 45px;
   height: 45px;
-color: ${tokens.colors.brand.lightCream};
+  color: ${tokens.colors.brand.lightCream};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (max-width: ${tokens.breakpoints.desktop}) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 export const WhyToSellItemText = styled.p`
