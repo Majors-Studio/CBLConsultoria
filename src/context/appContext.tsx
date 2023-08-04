@@ -47,38 +47,37 @@ export function AppProvider({ children }: any) {
   }>(null)
 
   const [newsList, setNewsList] = useState<any[]>([])
-  
-  const {isDesktop}=useDevice()
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenSizeW(window.innerWidth)
-      setScreenSizeH(window.innerHeight)
-    }
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+  const { isDesktop } = useDevice()
 
   useEffect(() => {
     let lastScrollTop = 0
     const handleScroll = () => {
-      if(isDesktop)
-      setMenuOpened(false)
+      if (isDesktop) setMenuOpened(false)
       const st = window.pageYOffset || document.documentElement.scrollTop
-      if (isDesktop || !menuOpened) {
-      if (st > lastScrollTop) {
-        setIsScrollingTop(st < 250)
-      } else {
-        setIsScrollingTop(true)
-      }
+        console.log(isDesktop, menuOpened)
+      
+      if (isDesktop || menuOpened === false) {
+        if (st > lastScrollTop) {
+          setIsScrollingTop(st < 250)
+        } else {
+          setIsScrollingTop(true)
+        }
       }
       lastScrollTop = st <= 0 ? 0 : st
     }
+
+    const handleResize = () => {
+      setScreenSizeW(window.innerWidth)
+      setScreenSizeH(window.innerHeight)
+    }
+
     window.addEventListener("scroll", handleScroll)
+    window.addEventListener("resize", handleResize)
+
     return () => {
       window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", handleResize)
     }
   }, [])
 

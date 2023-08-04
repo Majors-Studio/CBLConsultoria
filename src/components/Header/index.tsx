@@ -1,27 +1,27 @@
-import React from "react";
-import * as C from "./styles";
-import Logo from "../Logo";
-import { useDevice } from "@/hooks/useDevice";
+import React from "react"
+import * as C from "./styles"
+import Logo from "../Logo"
+import { useDevice } from "@/hooks/useDevice"
 
-import { navitems } from "@/utils/navitems";
-import Link from "next/link";
-import Hamburguer from "../Hamburguer";
-import CtaButton from "../CtaButton";
-import { useApp } from "@/context/appContext";
-import { tokens } from "@/utils/tokens";
-import ContentBox from "../ContentBox";
-import { useRouter } from "next/router";
-import Subtitle from "../Subtitle";
+import { navitems } from "@/utils/navitems"
+import Link from "next/link"
+import Hamburguer from "../Hamburguer"
+import CtaButton from "../CtaButton"
+import { useApp } from "@/context/appContext"
+import { tokens } from "@/utils/tokens"
+import ContentBox from "../ContentBox"
+import { useRouter } from "next/router"
+import Subtitle from "../Subtitle"
 
 const Header: React.FC = () => {
-  const { isDesktop, isMobile, isTablet } = useDevice();
+  const { isDesktop } = useDevice()
 
   const { isScrollingTop, menuOpened, setMenuOpened, setIsScrollingTop } =
-    useApp();
+    useApp()
 
-  const [subMenuOpened, setSubMenuOpened] = React.useState<number | null>(null);
+  const [subMenuOpened, setSubMenuOpened] = React.useState<number | null>(null)
 
-  const path = useRouter().pathname;
+  const path = useRouter().pathname
 
   const navBar = navitems.map((item, index) => {
     return (
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                   </Link>
                   {subindex === item.subpaths.length - 1 ? null : <hr />}
                 </React.Fragment>
-              );
+              )
             })}
             {item.title === "Precatórios" && isDesktop && (
               <CtaButton
@@ -101,29 +101,41 @@ const Header: React.FC = () => {
           </C.Submenu>
         )}
       </C.NavbarItem>
-    );
-  });
+    )
+  })
 
   return (
-    <>
-      <ContentBox
-        bgColor={tokens.colors.brand.cta}
+    <ContentBox
+      bgColor={tokens.colors.brand.cta}
+      style={{
+        top: isScrollingTop ? "0" : "-100%",
+        position: "fixed",
+        transition: "top 0.5s ease-in-out",
+        zIndex: 9999,
+        width: "100%",
+        height: isDesktop ? "120px" : "auto",
+        boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        borderBottom: "1px solid " + tokens.colors.brand.pure,
+        display: "flex",
+        alignItems: "center",
+        padding: 0,
+      }}
+      contentStyle={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "center",
+        height: isDesktop ? 'fit-content' : "120px",
+        width: "100%",
+      }}
+    >
+      <div
         style={{
-          top: isScrollingTop ? "0" : "-100%",
-          position: "fixed",
-          transition: "top 0.5s ease-in-out",
-          zIndex: 9999,
-          width: "100%",
-          height: "120px",
-          boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-          borderBottom: "1px solid " + tokens.colors.brand.pure,
-          display: "flex",
-        }}
-        contentStyle={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
+          height: "100%",
         }}
       >
         <Logo />
@@ -151,37 +163,33 @@ const Header: React.FC = () => {
             <Hamburguer isOpen={menuOpened} setIsOpen={setMenuOpened} />
           </div>
         )}
-      </ContentBox>
-      {isDesktop || (
-        <ContentBox
-          bgColor={tokens.colors.brand.cta}
+      </div>
+      {!isDesktop && (
+        <div
           style={{
-            position: "fixed",
-            top: menuOpened ? "0" : "-100%",
-            transition: "top 0.5s ease-in-out",
-            zIndex: 9998,
-            paddingTop: "144px",
-            paddingBottom: "0",
-            width: "100%",
-            height: '100%',
-          }}
-          contentStyle={{
             display: "flex",
             flexDirection: "column",
             gap: "12px",
+            width: "100%",
             height: "100%",
             overflow: "auto",
             overflowX: "hidden",
+            position: 'fixed',
+            top: menuOpened ? 0 : '-100%',
+            transition: 'top 0.5s ease-in-out',
+            backgroundColor: tokens.colors.brand.cta,
+            paddingTop: 75,
+            paddingLeft: 24,
           }}
         >
           {navBar}
           <CtaButton href="#purposeForm" variant="secondary">
             Quero vender meu precatório
           </CtaButton>
-        </ContentBox>
+        </div>
       )}
-    </>
-  );
-};
+    </ContentBox>
+  )
+}
 
-export default Header;
+export default Header
