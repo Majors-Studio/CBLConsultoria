@@ -24,12 +24,6 @@ export const ChooseItem = styled.li`
 
 export const ChooseItemTitle = styled.h1`
   background-color: ${tokens.colors.brand.cta};
-  color: ${tokens.colors.neutral.highPure};
-  font-family: ${tokens.font.family.primary};
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28px;
-  text-align: center;
   padding: 20px 12px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

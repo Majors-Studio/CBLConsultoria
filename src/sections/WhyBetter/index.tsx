@@ -1,12 +1,12 @@
-import React from "react";
-import ContentBox from "@/components/ContentBox";
-import { Subtitle, Title } from "@/components";
-import Description from "@/components/Description";
-import { DangerIcon, SuccessIcon } from "@/assets/icons";
+import React from "react"
+import ContentBox from "@/components/ContentBox"
+import { Subtitle, Title } from "@/components"
+import Description from "@/components/Description"
+import { DangerIcon, SuccessIcon } from "@/assets/icons"
 
-import * as S from "./styles";
-import { tokens } from "@/utils/tokens";
-import { chooseList } from "@/utils/dataObjects";
+import * as S from "./styles"
+import { tokens } from "@/utils/tokens"
+import { chooseList } from "@/utils/dataObjects"
 
 const WhyBetter: React.FC = () => {
   return (
@@ -23,7 +23,15 @@ const WhyBetter: React.FC = () => {
       <S.ChooseList>
         {chooseList.map((item) => (
           <S.ChooseItem key={item.id}>
-            <S.ChooseItemTitle>{item.title}</S.ChooseItemTitle>
+            <S.ChooseItemTitle>
+              <Subtitle
+                style={{
+                  color: tokens.colors.neutral.highPure,
+                }}
+              >
+                {item.title}
+              </Subtitle>
+            </S.ChooseItemTitle>
             <S.ChooseItemList>
               {item.list.map((listItem) => (
                 <S.ChooseItemListItem key={listItem.id}>
@@ -43,7 +51,7 @@ const WhyBetter: React.FC = () => {
         ))}
       </S.ChooseList>
     </ContentBox>
-  );
-};
+  )
+}
 
-export default WhyBetter;
+export default WhyBetter

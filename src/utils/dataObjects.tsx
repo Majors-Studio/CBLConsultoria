@@ -389,7 +389,7 @@ export const chooseList: {
   list: {
     id: number
     text: string
-    status: string
+    status: 'success' | 'danger'
   }[]
 }[] = [
   {

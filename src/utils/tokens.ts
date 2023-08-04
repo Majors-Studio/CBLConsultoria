@@ -59,8 +59,8 @@ export const tokens = {
   },
   font: {
     family: {
-      secondary: poppins.style.fontFamily,
       primary: montserrat.style.fontFamily,
+      secondary: poppins.style.fontFamily,
     },
     weight: {
       regular: 400,
