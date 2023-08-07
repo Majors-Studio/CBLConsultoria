@@ -18,7 +18,7 @@ import { useDevice } from "@/hooks/useDevice";
 
 const Banner: React.FC = () => {
   const { isTop, screenSizeH, screenSizeW } = useApp();
-  const { isDesktop, isMobile } = useDevice();
+  const { isDesktop } = useDevice();
 
   return (
     <div
@@ -62,7 +62,7 @@ const Banner: React.FC = () => {
                   transform:
                     index !== 0
                       ? "translate(-50%, -50%)"
-                      : isMobile
+                      : !isDesktop
                       ? "translate(-50%, -50%)"
                       : undefined,
                   display: "flex",

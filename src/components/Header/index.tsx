@@ -108,7 +108,7 @@ const Header: React.FC = () => {
     <ContentBox
       bgColor={tokens.colors.brand.cta}
       style={{
-        top: isScrollingTop ? "0" : "-100%",
+        top: isScrollingTop || menuOpened ? "0" : "-100%",
         position: "fixed",
         transition: "top 0.5s ease-in-out",
         zIndex: 9999,
