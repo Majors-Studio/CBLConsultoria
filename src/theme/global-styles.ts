@@ -1,3 +1,4 @@
+import { tokens } from "@/utils/tokens"
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
@@ -28,8 +29,11 @@ export const GlobalStyle = createGlobalStyle`
 
   }
 
+  &::placeholder {
+    color: ${tokens.colors.neutral.lowLight} !important;
+    font-family: ${tokens.font.family.primary}, sans-serif !important;
+  }
 }
-
 
 body {
   overflow-x: hidden;
@@ -37,7 +41,6 @@ body {
   height: 100vh;
   background-color: #324f87;
   position: relative;
-
 }
 
 `

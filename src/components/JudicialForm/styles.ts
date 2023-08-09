@@ -35,31 +35,24 @@ export const Input = styled.input`
   color: #333;
   width: 100%;
   outline: none;
-  ::placeholder {
-    font-family: ${tokens.font.family.secondary};
-  }
 `;
 
 export const Select = styled.select`
-    background-color: #f8f8f8;
-    padding: 5px 14px;
-    border-radius: 15px;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    ::placeholder {
-        font-family: ${tokens.font.family.secondary};
-    }
+/* appearance: none; */
+  background-color: #f8f8f8;
+  padding: 5px 14px;
+  border-radius: 15px;
+  height: 50px;
+  width: 100%;
+  outline: none;
+
+  font-family: ${tokens.font.family.primary};
+  color: ${tokens.colors.neutral.lowLight};
 
 
-
-option {
-    font-family: ${tokens.font.family.secondary};
-    color: #333;
-
-
-}
-
+  option {
+    font-family: ${tokens.font.family.primary};
+  } 
 `
 
 export const TextArea = styled.textarea`
@@ -68,7 +61,4 @@ export const TextArea = styled.textarea`
   border-radius: 15px;
   width: 100%;
   outline: none;
-  ::placeholder {
-    font-family: ${tokens.font.family.secondary};
-  }
 `;
