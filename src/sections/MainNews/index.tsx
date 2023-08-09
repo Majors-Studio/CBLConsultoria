@@ -145,11 +145,16 @@ const MainNews: React.FC = () => {
                 pathname: "noticias/",
               }}
               style={{
-                color: "#e2a141",
                 margin: "0 auto",
               }}
             >
-              Ver todas as notícias
+              <Description
+                style={{
+                  color: "#e2a141",
+                }}
+              >
+                Ver todas as notícias
+              </Description>
             </Link>
           )}
         </C.NewsList>

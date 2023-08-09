@@ -10,6 +10,7 @@ export const WhyList = styled.ul`
 
   @media (max-width: 920px) {
     grid-gap: 10px;
+    margin-top: 24px;
   }
 
   @media (max-width: 768px) {
