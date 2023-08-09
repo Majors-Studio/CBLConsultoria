@@ -5,8 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 
   &::-webkit-scrollbar {
   width: 0.5rem;

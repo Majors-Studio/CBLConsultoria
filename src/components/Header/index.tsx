@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import * as C from "./styles"
 import Logo from "../Logo"
 import { useDevice } from "@/hooks/useDevice"
@@ -103,12 +103,21 @@ const Header: React.FC = () => {
       </C.NavbarItem>
     )
   })
+  
+  
+  useEffect(() => {
+    if (!isDesktop && menuOpened) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [menuOpened])
 
   return (
     <ContentBox
       bgColor={tokens.colors.brand.cta}
       style={{
-        top: isScrollingTop ? "0" : "-100%",
+        top: isScrollingTop || menuOpened ? "0" : "-100%",
         position: "fixed",
         transition: "top 0.5s ease-in-out",
         zIndex: 9999,
