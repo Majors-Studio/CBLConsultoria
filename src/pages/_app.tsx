@@ -32,14 +32,14 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Analytics />
       <GlobalStyle />
-      <title>
+      {/* <title>
       Site off até o pagamento
-      </title>
-        {/* <main style={bebasNeue.style}>
+      </title> */}
+        <main style={bebasNeue.style}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </main> */}
+        </main>
     </>
   )
 }
