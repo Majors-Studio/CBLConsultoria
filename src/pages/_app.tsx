@@ -32,11 +32,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Analytics />
       <GlobalStyle />
-        <main style={bebasNeue.style}>
+        {/* <main style={bebasNeue.style}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </main>
+        </main> */}
     </>
   )
 }
