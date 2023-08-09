@@ -1,26 +1,27 @@
-import { Button, Subtitle, Title } from "@/components";
-import ContentBox from "@/components/ContentBox";
-import { useDevice } from "@/hooks/useDevice";
-import { tokens } from "@/utils/tokens";
-import Link from "next/link";
-import React, { useEffect } from "react";
+import { Button, Subtitle, Title } from "@/components"
+import ContentBox from "@/components/ContentBox"
+import { useDevice } from "@/hooks/useDevice"
+import { tokens } from "@/utils/tokens"
+import Link from "next/link"
+import React, { useEffect } from "react"
 
-import * as C from "./styles";
-import { useApp } from "@/context/appContext";
-import { getDate } from "@/utils/getDate";
-import Loading from "@/components/Loading";
-import LoadingIcon from "@/assets/icons/LoadingIcon";
-import CtaButton from "@/components/CtaButton";
+import * as C from "./styles"
+import { useApp } from "@/context/appContext"
+import { getDate } from "@/utils/getDate"
+import Loading from "@/components/Loading"
+import LoadingIcon from "@/assets/icons/LoadingIcon"
+import CtaButton from "@/components/CtaButton"
+import Description from "@/components/Description"
 
 const MainNews: React.FC = () => {
-  const { isDesktop } = useDevice();
-  const { newsList, getNewsList } = useApp();
+  const { isDesktop } = useDevice()
+  const { newsList, getNewsList } = useApp()
 
   useEffect(() => {
     if (!newsList.length) {
-      getNewsList();
+      getNewsList()
     }
-  }, [getNewsList, newsList.length]);
+  }, [getNewsList, newsList.length])
 
   return (
     <ContentBox
@@ -55,7 +56,9 @@ const MainNews: React.FC = () => {
           <b>grandes escritórios de advocacia</b>.
           <br />
           <br />
-          As reportagens destacam as <b>dificuldades</b> de milhares de pessoas dentro do <b>território judicial</b>, novidades e atrasos de pagamentos da justiça.
+          As reportagens destacam as <b>dificuldades</b> de milhares de pessoas
+          dentro do <b>território judicial</b>, novidades e atrasos de
+          pagamentos da justiça.
         </Subtitle>
       </div>
 
@@ -65,27 +68,40 @@ const MainNews: React.FC = () => {
             newsList.slice(0, !isDesktop ? 2 : 4).map((news, newsIndex) => {
               return (
                 <C.NewsItem key={newsIndex}>
-                  <C.NewsItemTop>
-                    <C.NewsItemInfo>
-                      {news.fields.sourceAuthor &&
-                        news.fields.sourceAuthor + " | "}
-                      {getDate(news.fields.publishedDate)}
-                    </C.NewsItemInfo>
-                    <C.NewsItemTitle>{news.fields.title}</C.NewsItemTitle>
-                  </C.NewsItemTop>
+                  <Description
+                    style={{
+                      textDecoration: "underline",
+                      color: tokens.colors.brand.cta,
+                    }}
+                  >
+                    {news.fields.sourceAuthor &&
+                      news.fields.sourceAuthor + " | "}
+                    {getDate(news.fields.publishedDate)}
+                  </Description>
+                  <Subtitle
+                    style={{
+                      color: tokens.colors.brand.dark,
+                      textAlign: "left",
+                    }}
+                  >
+                    {news.fields.title}
+                  </Subtitle>
                   <Link
                     href={{
                       pathname: "noticias/post/",
                       query: { id: news.sys.id },
                     }}
-                    style={{
-                      color: "#e2a141",
-                    }}
                   >
-                    Leia mais
+                    <Description
+                      style={{
+                        color: "#e2a141",
+                      }}
+                    >
+                      Leia mais
+                    </Description>
                   </Link>
                 </C.NewsItem>
-              );
+              )
             })
           ) : (
             <>
@@ -150,7 +166,7 @@ const MainNews: React.FC = () => {
         </C.NewsList>
       )}
     </ContentBox>
-  );
-};
+  )
+}
 
-export default MainNews;
+export default MainNews

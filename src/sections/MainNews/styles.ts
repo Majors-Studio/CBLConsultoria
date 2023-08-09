@@ -21,6 +21,7 @@ export const NewsItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 12px;
   padding: 24px;
   background-color: #fff;
   height: 100%;
@@ -28,23 +29,3 @@ export const NewsItem = styled.div`
   box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.17);
 `;
 
-export const NewsItemTop = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const NewsItemInfo = styled.p`
-  margin-bottom: 32px;
-  color: #8e989f;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: underline;
-`;
-
-export const NewsItemTitle = styled.h1`
-  color: #2c3b50;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-`;
