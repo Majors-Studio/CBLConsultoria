@@ -292,8 +292,7 @@ const LegalAdvice: React.FC = () => {
               title: "Quais causas atuamos?",
               description: (
                 <>
-                  Responsabilidade civil, Contratos, Direito do consumidor,
-                  Questões de propriedade e muitas outras!
+                  Responsabilidade civil, Contratos, Direito do consumidor, Propriedade, Compliance, Proteção de Dados e ESG
                   <br />
                   <br />
                   Não subestime a importância de buscar o aconselhamento
