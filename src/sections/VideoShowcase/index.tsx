@@ -20,7 +20,7 @@ const VideoShowcase: React.FC = () => {
         }}
       >
         <Title variant="primary">
-          Conheça a CBL Consultoria
+          Conheça a CBL Consultoria!
         </Title>
 
         <Video />
