@@ -16,11 +16,11 @@ export const navitems = [
       },
       {
         title: "Dados do Brasil",
-        anchor: "#data",
+        anchor: "#divida-nacional",
       },
       {
         title: "Gestão de Recursos",
-        anchor: "#gestao",
+        anchor: "#gestao-de-recursos",
       }
     ],
   },

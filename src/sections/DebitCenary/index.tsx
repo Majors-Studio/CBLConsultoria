@@ -13,7 +13,7 @@ const DebitCenary: React.FC = () => {
   const { isDesktop } = useDevice()
   return (
     <ContentBox bgColor={tokens.colors.brand.cta}>
-      <Anchor id="data" />
+      <Anchor id="divida-nacional" />
       <Title style={{ marginBottom: "50px" }} variant="secondary">
         Cenário da Dívida Nacional em Precatórios
       </Title>

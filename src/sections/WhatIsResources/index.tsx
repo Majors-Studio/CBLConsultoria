@@ -19,7 +19,7 @@ const WhatIsResources: React.FC = () => {
           flexDirection: !isDesktop ? "column" : "row",
         }}
       >
-      <Anchor id='gestao'/>
+      <Anchor id='gestao-de-recursos'/>
         <div
           style={{
             marginLeft: !isDesktop ? 0 : 72,
