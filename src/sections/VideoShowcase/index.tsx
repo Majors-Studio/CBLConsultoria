@@ -19,10 +19,9 @@ const VideoShowcase: React.FC = () => {
           gap: tokens.space.sizeXxs,
         }}
       >
-        {/* <Title variant="primary">
-          Há mais de uma década no mercado, somos a maior empresa na antecipação
-          de precatórios do Brasil
-        </Title> */}
+        <Title variant="primary">
+          Conheça a CBL Consultoria
+        </Title>
 
         <Video />
 
