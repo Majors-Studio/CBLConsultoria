@@ -9,8 +9,20 @@ export const Container = styled.div`
   transform: translateX(-50%);
   border-radius: 10px;
 
-  width: 450px;
+  width: 500px;
   height: 200px;
+  animation: showUp 1s ease-in-out;
+
+  @keyframes showUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 100%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
 
   display: flex;
   flex-direction: column;
@@ -20,6 +32,10 @@ export const Container = styled.div`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 
   z-index: 99999;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const Title = styled.p`
