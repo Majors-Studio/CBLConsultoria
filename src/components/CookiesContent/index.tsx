@@ -38,10 +38,12 @@ export const CookiesContent = () => {
           </Description>
           <S.InputArea>
             <S.AcceptButton onClick={() => acceptCookie()}>
-              Aceitar
+              <Title style={{ fontSize: "16px" }} variant="secondary">
+                Aceitar
+              </Title>
             </S.AcceptButton>
             <S.DeclineButton onClick={() => setShowCookieBanner(false)}>
-              Negar
+              <Title style={{ fontSize: "16px" }}>Negar</Title>
             </S.DeclineButton>
           </S.InputArea>
         </S.Container>
