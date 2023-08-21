@@ -34,7 +34,7 @@ export const CookiesContent = () => {
           <Description style={{ color: "#000", marginTop: "10px" }}>
             Nós armazenamos dados temporariamente para melhorar a sua
             experiência de navegação e recomendar conteúdo de seu interesse. Ao
-            atualizar nossos serviços, você concorda com tal monitoramento.
+            autorizar nossos serviços, você concorda com tal monitoramento.
           </Description>
           <S.InputArea>
             <S.AcceptButton onClick={() => acceptCookie()}>
