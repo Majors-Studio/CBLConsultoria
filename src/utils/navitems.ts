@@ -12,15 +12,15 @@ export const navitems = [
     subpaths: [
       {
         title: "Benefícios de venda com a CBL Consultoria",
-        anchor: "#benefits",
+        anchor: "#beneficios",
       },
       {
         title: "Dados do Brasil",
-        anchor: "#data",
+        anchor: "#divida-nacional",
       },
       {
         title: "Gestão de Recursos",
-        anchor: "#gestao",
+        anchor: "#gestao-de-recursos",
       }
     ],
   },
@@ -31,20 +31,20 @@ export const navitems = [
     subpaths: [
       {
         title: "Regularização de Imóveis",
-        anchor: "#real-estate",
+        anchor: "#imoveis",
       },
 
       {
         title: "Erro Médico",
-        anchor: "#medical-error",
+        anchor: "#erros-medicos",
       },
       {
         title: "Causas Cíveis no Geral",
-        anchor: "#civil-causes",
+        anchor: "#causas-civeis",
       },
             {
         title: "Quais causas atuamos?",
-        anchor: "#causes",
+        anchor: "#causas",
       },
     ],
   },

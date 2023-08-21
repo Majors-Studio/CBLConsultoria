@@ -26,7 +26,7 @@ const LegalAdvice: React.FC = () => {
       />
 
       <ImageAndText
-        anchor="real-estate"
+        anchor="imoveis"
         title="REGULARIZAÇÃO DE IMÓVEIS"
         image={img2}
         reverse
@@ -152,7 +152,7 @@ const LegalAdvice: React.FC = () => {
       </ImageAndText>
 
       <ImageAndText
-        anchor="medical-error"
+        anchor="erros-medicos"
         title="ERRO MÉDICO"
         chart={<UnregulatedChart />}
         subtitle={
@@ -246,7 +246,7 @@ const LegalAdvice: React.FC = () => {
       </ImageAndText>
 
       <ImageAndText
-        anchor="civil-causes"
+        anchor="causas-civeis"
         title="CAUSAS CÍVEIS"
         image={img5}
         reverse
@@ -279,21 +279,19 @@ const LegalAdvice: React.FC = () => {
         }
       >
         <ContentBox bgColor={tokens.colors.brand.lightCream}>
-          <Anchor id="civil-causes" />
+          <Anchor id="causas" />
           <Title>
             O escritório conta com advogados experientes e grande know-how em
             demandas cíveis para solucionar o seu problema!
           </Title>
 
-          <Anchor id="causes" />
           {[
             {
               id: 0,
               title: "Quais causas atuamos?",
               description: (
                 <>
-                  Responsabilidade civil, Contratos, Direito do consumidor,
-                  Questões de propriedade e muitas outras!
+                  Responsabilidade civil, Contratos, Direito do consumidor, Propriedade, Compliance, Proteção de Dados e ESG
                   <br />
                   <br />
                   Não subestime a importância de buscar o aconselhamento

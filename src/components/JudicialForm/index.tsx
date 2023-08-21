@@ -8,7 +8,6 @@ import { MaskedInput, Title } from "@/components";
 import Anchor from "../Anchor";
 import ContentBox from "../ContentBox";
 import { tokens } from "@/utils/tokens";
-import { useDevice } from "@/hooks/useDevice";
 
 const JudicialForm: React.FC = () => {
   const form = useRef();
@@ -109,6 +108,7 @@ const JudicialForm: React.FC = () => {
             name="subject"
             required
             onChange={handleInputChange}
+            
           >
             <option disabled selected value="selecione">
               Selecione um assunto

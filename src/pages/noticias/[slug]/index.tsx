@@ -11,6 +11,7 @@ import ArrowRight from "@/assets/icons/ArrowRightIcon"
 import Loading from "@/components/Loading"
 import { markdownOptions } from "@/utils/markdownOptions"
 import { useDevice } from "@/hooks/useDevice"
+import Description from "@/components/Description"
 
 const Page: React.FC<any> = () => {
   const {  isDesktop } = useDevice()
@@ -54,7 +55,7 @@ const Page: React.FC<any> = () => {
 
   const newsPath = title
     ? title.length > 30
-      ? title.slice(0, !isDesktop ? 15 : 30) + "..."
+      ? title.slice(0, !isDesktop ? 25 : 30) + "..."
       : title?.toString()
     : "Notícia"
 
@@ -66,11 +67,21 @@ const Page: React.FC<any> = () => {
     <S.Container>
       <S.Content>
         <S.Tab>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <Description>
+              Home
+          </Description>
+          </Link>
           <ArrowRight style={{ width: "22px", height: "12px" }} />
-          <Link href="/noticias">Notícias</Link>
+          <Link href="/noticias">
+            <Description>
+            Notícias
+            </Description>  
+          </Link>
           <ArrowRight style={{ width: "22px", height: "12px" }} />
+          <Description>
           {newsPath}
+          </Description>
         </S.Tab>
       </S.Content>
       <S.Content

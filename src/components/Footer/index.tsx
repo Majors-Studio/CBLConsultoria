@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             color: tokens.colors.neutral.highPure,
           }}
         >
-          © 2023 CBLCONSULTORIA. All rights reserved.
+          © 2023 CBLCONSULTORIA. Todos os direitos reservados.
         </Description>
         <div
           style={{

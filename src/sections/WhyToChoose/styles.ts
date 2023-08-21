@@ -6,10 +6,11 @@ export const WhyList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
-  margin-top: 70px;
+  margin-top: 32px;
 
   @media (max-width: 920px) {
     grid-gap: 10px;
+    margin-top: 24px;
   }
 
   @media (max-width: 768px) {
