@@ -11,6 +11,7 @@ import { Toast } from "@/components";
 import Head from "next/head";
 import Loading from "@/components/Loading";
 import { navitems } from "@/utils/navitems";
+import { CookiesContent } from "@/components/CookiesContent";
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { isTop } = useApp();
@@ -67,6 +68,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Footer />
           {isTop ? null : <Whatsapp />}
           <Toast />
+          <CookiesContent />
         </AppProvider>
       )}
     </>
