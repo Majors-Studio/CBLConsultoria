@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: rgb(0, 0, 0);
-  color: #fff;
+  background-color: #fff;
   padding: 20px;
   position: fixed;
   bottom: 20px;
@@ -12,12 +11,13 @@ export const Container = styled.div`
 
   width: 450px;
   height: 200px;
-  border: 1px solid #222;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 
   z-index: 99999;
 `;
@@ -47,14 +47,17 @@ export const AcceptButton = styled.button`
   color: #fff;
   background-color: rgb(37, 56, 97);
   padding: 5px 10px;
-  border: 1px solid #333;
   border-radius: 5px;
+  font-size: 19px;
+  letter-spacing: 2px;
   cursor: pointer;
 `;
 
 export const DeclineButton = styled.button`
-  color: #fff;
-  padding: 5px 10px;
+  color: #000;
+  padding: 5px 15px;
+  font-size: 19px;
   border-radius: 5px;
+  letter-spacing: 2px;
   cursor: pointer;
 `;

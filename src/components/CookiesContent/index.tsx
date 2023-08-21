@@ -3,6 +3,9 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 import Cookies from "js-cookie";
+import Title from "../Title";
+import Description from "../Description";
+import Subtitle from "../Subtitle";
 
 export const CookiesContent = () => {
   const [showCookieBanner, setShowCookieBanner] = useState<boolean>(false);
@@ -25,12 +28,14 @@ export const CookiesContent = () => {
     <>
       {showCookieBanner && (
         <S.Container>
-          <S.Title>Esse site usa cookies</S.Title>
-          <S.Description>
+          <Subtitle style={{ color: "#000", textAlign: "left", width: "100%" }}>
+            Esse site usa cookies
+          </Subtitle>
+          <Description style={{ color: "#000", marginTop: "10px" }}>
             Nós armazenamos dados temporariamente para melhorar a sua
             experiência de navegação e recomendar conteúdo de seu interesse. Ao
             atualizar nossos serviços, você concorda com tal monitoramento.
-          </S.Description>
+          </Description>
           <S.InputArea>
             <S.AcceptButton onClick={() => acceptCookie()}>
               Aceitar
