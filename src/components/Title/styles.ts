@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { tokens } from "@/utils/tokens"
-import { TitleProps } from "."
+import styled from "styled-components";
+import { tokens } from "@/utils/tokens";
+import { TitleProps } from ".";
 
 export const Title = styled.h3<TitleProps>`
   font-size: ${tokens.font.sizes.lg};
@@ -29,6 +29,6 @@ export const Title = styled.h3<TitleProps>`
 
   @media (max-width: ${tokens.breakpoints.tablet}) {
     font-size: ${tokens.font.sizes.sm};
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
-`
+`;
