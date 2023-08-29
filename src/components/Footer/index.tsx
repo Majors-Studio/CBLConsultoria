@@ -1,21 +1,21 @@
-import React from "react"
+import React from "react";
 
-import * as S from "./styles"
-import Logo from "../Logo"
+import * as S from "./styles";
+import Logo from "../Logo";
 
-import Link from "next/link"
-import CtaButton from "../CtaButton"
-import Subtitle from "../Subtitle"
-import { tokens } from "@/utils/tokens"
-import ContentBox from "../ContentBox"
-import { useDevice } from "@/hooks/useDevice"
-import InstagramIcon from "@/assets/icons/InstagramIcon"
-import Description from "../Description"
-import { navitems } from "@/utils/navitems"
-import FacebookIcon from "@/assets/icons/FacebookIcon"
+import Link from "next/link";
+import CtaButton from "../CtaButton";
+import Subtitle from "../Subtitle";
+import { tokens } from "@/utils/tokens";
+import ContentBox from "../ContentBox";
+import { useDevice } from "@/hooks/useDevice";
+import InstagramIcon from "@/assets/icons/InstagramIcon";
+import Description from "../Description";
+import { navitems } from "@/utils/navitems";
+import FacebookIcon from "@/assets/icons/FacebookIcon";
 
 const Footer: React.FC = () => {
-  const { isDesktop } = useDevice()
+  const { isDesktop } = useDevice();
   const midiaItems = [
     {
       name: "Instagram",
@@ -23,18 +23,18 @@ const Footer: React.FC = () => {
       logo: <InstagramIcon />,
     },
     {
-      name: 'Facebook',
-      url: 'https://m.facebook.com/p/CBLConsultoria-100094063807429/?refid=52&__tn__=C-R&wtsid=rdr_0dek66DkkpEtmOwc2&_rdr',
+      name: "Facebook",
+      url: "https://m.facebook.com/p/CBLConsultoria-100094063807429/?refid=52&__tn__=C-R&wtsid=rdr_0dek66DkkpEtmOwc2&_rdr",
       logo: <FacebookIcon />,
-    }
-  ]
+    },
+  ];
 
   const footerData = [
     {
       title: "Mapa do site",
       subtitle: navitems,
     },
-  ]
+  ];
 
   return (
     <>
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
           <Description
             style={{
               color: tokens.colors.neutral.highPure,
-              textAlign: !isDesktop ? 'center' : "left",
+              textAlign: !isDesktop ? "center" : "left",
               width: "100%",
             }}
           >
@@ -112,13 +112,23 @@ const Footer: React.FC = () => {
           justifyContent: "space-between",
         }}
       >
-        <Description
-          style={{
-            color: tokens.colors.neutral.highPure,
-          }}
-        >
-          © 2023 CBLCONSULTORIA. Todos os direitos reservados.
-        </Description>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Description
+            style={{
+              color: tokens.colors.neutral.highPure,
+            }}
+          >
+            © 2023 CBLCONSULTORIA. Todos os direitos reservados.
+          </Description>
+          <Description
+            style={{
+              color: tokens.colors.neutral.highPure,
+            }}
+          >
+            CNPJ: 49.586.970/0001-00
+          </Description>
+        </div>
+
         <div
           style={{
             display: "flex",
@@ -135,7 +145,7 @@ const Footer: React.FC = () => {
         </div>
       </ContentBox>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
