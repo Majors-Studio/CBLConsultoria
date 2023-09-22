@@ -6,7 +6,6 @@ export const VideoWrapper = styled.div`
   height: 400px;
   margin: 0 auto;
   border-radius: ${tokens.border.radius.lg}px;
-  overflow: hidden;
 
   @media (max-width: ${tokens.breakpoints.tablet}) {
     height: 300px;

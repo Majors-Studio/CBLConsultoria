@@ -25,7 +25,6 @@ const About: React.FC = () => {
         }}
       >
         <Title>Conheça a CBL Consultoria!</Title>
-        <Video />
         <CtaButton href="#purposeForm">Entre em contato</CtaButton>
       </ContentBox>
 

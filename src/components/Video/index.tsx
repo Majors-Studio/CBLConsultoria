@@ -2,6 +2,7 @@ import React from "react"
 
 import * as S from "./styles"
 import Description from "../Description"
+import ReactPlayer from "react-player"
 
 interface VideoProps {
   src?: string
@@ -12,13 +13,20 @@ const Video: React.FC<VideoProps> = ({ src }) => {
   return (
     <S.VideoWrapper>
       {src ? (
-        <iframe
-          allowFullScreen
-          uk-video="automute: true"
+        <ReactPlayer
           width="100%"
           height={"100%"}
-          src={src}
-        ></iframe>
+          url={src}
+          controls
+          muted
+          config={{
+            dailymotion: {
+              params: {
+                autoplay: true,
+              },
+            }
+          }}
+        ></ReactPlayer>
       ) : (
         <S.NoVideo>
           <Description>No video</Description>
