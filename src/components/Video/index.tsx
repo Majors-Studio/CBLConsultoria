@@ -4,34 +4,25 @@ import * as S from "./styles"
 import Description from "../Description"
 import ReactPlayer from "react-player"
 
-interface VideoProps {
-  src?: string
-  title?: string
-}
-
-const Video: React.FC<VideoProps> = ({ src }) => {
+const Video: React.FC = () => {
+  // https://youtu.be/lOFdW2UHpa4
+  const url = "https://youtu.be/lOFdW2UHpa4"
   return (
     <S.VideoWrapper>
-      {src ? (
-        <ReactPlayer
-          width="100%"
-          height={"100%"}
-          url={src}
-          controls
-          muted
-          config={{
-            dailymotion: {
-              params: {
-                autoplay: true,
-              },
-            }
-          }}
-        ></ReactPlayer>
-      ) : (
-        <S.NoVideo>
-          <Description>No video</Description>
-        </S.NoVideo>
-      )}
+      <ReactPlayer
+        width="100%"
+        height="100%"
+        url={url}
+        controls
+        muted
+        config={{
+          dailymotion: {
+            params: {
+              autoplay: true,
+            },
+          },
+        }}
+      ></ReactPlayer>
     </S.VideoWrapper>
   )
 }
