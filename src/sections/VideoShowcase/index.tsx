@@ -24,7 +24,6 @@ const VideoShowcase: React.FC = () => {
         </Title>
 
         <Video />
-
       </ContentBox>
     </>
   );

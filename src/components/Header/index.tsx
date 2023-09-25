@@ -104,7 +104,6 @@ const Header: React.FC = () => {
     )
   })
   
-  
   useEffect(() => {
     if (!isDesktop && menuOpened) {
       document.body.style.overflow = "hidden"
