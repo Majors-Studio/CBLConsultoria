@@ -1,29 +1,18 @@
 import React from "react"
-
 import * as S from "./styles"
-import Description from "../Description"
 
-interface VideoProps {
-  src?: string
-  title?: string
-}
+const Video: React.FC = () => {
+  const id = "MT_9EBNS-2o"
 
-const Video: React.FC<VideoProps> = ({ src }) => {
+  const url = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&rel=0&showinfo=0&loop=1`
+
   return (
     <S.VideoWrapper>
-      {src ? (
-        <iframe
-          allowFullScreen
-          uk-video="automute: true"
-          width="100%"
-          height={"100%"}
-          src={src}
-        ></iframe>
-      ) : (
-        <S.NoVideo>
-          <Description>No video</Description>
-        </S.NoVideo>
-      )}
+      <iframe
+        width="100%"
+        height="100%"
+        src={url}
+      ></iframe>
     </S.VideoWrapper>
   )
 }

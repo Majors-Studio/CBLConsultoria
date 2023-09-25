@@ -25,7 +25,6 @@ const VideoShowcase: React.FC = () => {
 
         <Video />
 
-        {/* <CtaButton>Acesso nosso catálogo</CtaButton> */}
       </ContentBox>
     </>
   );
